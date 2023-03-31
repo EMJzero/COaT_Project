@@ -1,0 +1,14 @@
+Compile with:
+clang -S -emit-llvm -o test.ll test.c
+taffo -S -emit-llvm -o test.ll test.c
+
+-> add -lm to use math.h
+-> you may want to place "static inline" on C functions
+
+HLS with:
+/mnt/c/Users/marco/Desktop/COaT_project/PandA-Bambu/bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=min_max --compiler=I386_CLANG12
+
+!!! -> The IR file must have the extension .ll
+
+
+In TAFFO annotating the function return and arguments are two separate things! The return is annotated after the (), the arguments inside the ().
