@@ -1,0 +1,4 @@
+Incorrect result yielded...
+
+The reason is probably with the divisions, that TAFFO still performs in float form.
+Morover, the value range conversion seems incorrect, as precision in lost incrementally over long iterations.

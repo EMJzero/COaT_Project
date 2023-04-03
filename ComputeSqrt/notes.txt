@@ -1,0 +1,2 @@
+Use with "-disable-vra" option in TAFFO.
+The result is correct, but from the IR it is evident that TAFFO did not perform any meaningful optimization.
