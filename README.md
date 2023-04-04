@@ -13,14 +13,14 @@ See the following link for infomation regarding the two tools:
 Currently the repository contains various test cases revolving around floating point operations. Some of the tests originate from examples provided by either TAFFO or PandA-Bambu, as can be understood from their names.
 
 In each folder there are one or more `.c` files containing the test, multiple files are just variations of the same test with minor changes. <br>
-The `note.txt` of each folder reports the current status of that test.
+The `notes.txt` of each folder reports the current status of that test.
 
 Here is the current list of tests:
 
 - **ComputePi**: Computes Pi with the Madhava-Leibniz formula (https://en.wikipedia.org/wiki/Leibniz_formula_for_pi)
 - **ComputeSinCos** Computes $sin(\pi/12)$ and $cos(\pi/6)$ via the Taylor expansion of Cosine (https://en.wikipedia.org/wiki/Taylor_series)
 - **ComputeSqrt**: Compute the Square root of a provided number with the Newton-Raphson method (https://en.wikipedia.org/wiki/Newton%27s_method)
-- **FromPanda_fft_float**: Example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/fft_example
-- **FromPanda_mm_float** Example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/mm_float
+- **FromPanda_fft_float**: Fast Furier Transfom example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/fft_example
+- **FromPanda_mm_float** Matrix multiplication example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/mm_float
 - **FromTaffo_test3** Example from here https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c
 - **SimpleTaffoTest** A trivial test to verify that TAFFO and PandA-Bambu are working properly

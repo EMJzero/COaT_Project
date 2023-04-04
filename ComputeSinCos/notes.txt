@@ -1,4 +1,4 @@
 TAFFO:
 The result is correct BUT...
-The IR contains a fixed point version of sin and cos, however that is NOT the one actually used by main,
-which instead uses a versions doing a mix of fixed point and floating point operations.
+Despite the IR containing a fixed point version of sin and cos, that is NOT the one actually used by main,
+which instead uses a version doing a mix of fixed point and floating point operations.
