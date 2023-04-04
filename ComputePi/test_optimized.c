@@ -3,7 +3,7 @@ int main()
     double __attribute((annotate("target('pi') scalar(range(0, 4) final) backtracking(1)"))) pi = 0;
     int iters;
 
-    printf("How many iterations to calculate pi for? ");
+    printf("Number of iterations to perform: ");
     scanf("%d", &iters);
 
     for (int i = 0; i < iters * 2; i += 4)

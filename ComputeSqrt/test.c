@@ -18,9 +18,9 @@ float NRsqrt(float n __attribute((annotate("scalar()")))) __attribute((annotate(
 }
 
 int main() {
-    float in __attribute((annotate("target('input') backtracking(5) scalar()")));
+    float in __attribute((annotate("target('input') scalar(range(0, 4096))")));
 
-    printf("Sqrt of: ");
+    printf("Sqrt argument (between 0 and 4096): ");
     scanf("%f", &in);
 
     float res = NRsqrt(in);
