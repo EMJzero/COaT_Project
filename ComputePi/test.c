@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main()
 {
     double __attribute((annotate("target('pi') scalar(range(0, 4) final) backtracking(1)"))) pi = 0;

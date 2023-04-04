@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 int main() {
     float in __attribute((annotate("target('input') scalar()")));
 

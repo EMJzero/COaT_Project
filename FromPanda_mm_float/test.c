@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 void mm(float * __restrict__ in_a __attribute((annotate("scalar(range(0, 16))"))),
     float * __restrict__ in_b __attribute((annotate("scalar(range(0, 16))"))),
     float * __restrict__ in_c __attribute((annotate("scalar(range(0, 2200))"))),

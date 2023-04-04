@@ -1,3 +1,5 @@
+#include <stdio.h>
+
 //Square root implemented with the Newton-Raphson method
 float NRsqrt(float n __attribute((annotate("scalar()")))) __attribute((annotate("scalar()"), always_inline)) {
     float lo = n < 1 ? n : 1;
@@ -23,7 +25,7 @@ int main() {
     printf("Sqrt argument (between 0 and 4096): ");
     scanf("%f", &in);
 
-    float res = NRsqrt(in);
+    float res __attribute((annotate("target('result') scalar(range(0, 4096))"))) = NRsqrt(in);
     printf("Result: %f\n", res);
 
     return 0;

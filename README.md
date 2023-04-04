@@ -17,7 +17,8 @@ The `note.txt` of each folder reports the current status of that test.
 
 Here is the current list of tests:
 
-- **ComputePi**: Compute Pi with the Madhava-Leibniz formula (https://en.wikipedia.org/wiki/Leibniz_formula_for_pi)
+- **ComputePi**: Computes Pi with the Madhava-Leibniz formula (https://en.wikipedia.org/wiki/Leibniz_formula_for_pi)
+- **ComputeSinCos** Computes $sin(\pi/12)$ and $cos(\pi/6)$ via the Taylor expansion of Cosine (https://en.wikipedia.org/wiki/Taylor_series)
 - **ComputeSqrt**: Compute the Square root of a provided number with the Newton-Raphson method (https://en.wikipedia.org/wiki/Newton%27s_method)
 - **FromPanda_fft_float**: Example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/fft_example
 - **FromPanda_mm_float** Example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/mm_float
