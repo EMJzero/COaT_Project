@@ -1,0 +1,3 @@
+TAFFO:
+Incorrect result, the computed norm is 0...
+Weird behavior around "zext" instructions *-* (.ll line 51 and 52)

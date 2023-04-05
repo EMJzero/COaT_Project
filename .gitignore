@@ -37,3 +37,8 @@
 *.tcl
 *.v
 *.sh
+
+# Files with no extension
+*
+!/**/
+!*.*
