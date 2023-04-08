@@ -1,4 +1,6 @@
 TAFFO:
-The result is correct BUT...
-Despite the IR containing a fixed point version of sin and cos, that is NOT the one actually used by main,
-which instead uses a version doing a mix of fixed point and floating point operations.
+The result is correct.
+I'm a little thrown off by the many operations in "if.then11", but whatever!
+
+HLS:
+To be tested...

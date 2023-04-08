@@ -7,7 +7,7 @@
 int compare_float(double f1 __attribute((annotate("scalar(range(-1, 1))"))), double f2 __attribute((annotate("scalar(range(-1, 1))"))))
 {
     //double precision = 0.00000000000000000001;
-    double precision = 0.00000001;
+    double precision __attribute((annotate("scalar(range(0, 1))"))) = 0.00000001;
     if ((f1 - precision) < f2)
     {
         return -1;
@@ -50,8 +50,8 @@ double sin(double x __attribute((annotate("scalar(range(0, 6.2831853))")))) __at
 
 int main()
 {
-    float res_cos __attribute((annotate("target('res_cos') scalar(range(-1, 1))"))) = cos(M_PI/6);
-    float res_sin __attribute((annotate("target('res_sin') scalar(range(-1, 1))"))) = sin(M_PI/12);
+    float res_cos __attribute((annotate("target('res_cos') scalar(range(-1, 1)) backtracking(true)"))) = cos(M_PI/6);
+    float res_sin __attribute((annotate("target('res_sin') scalar(range(-1, 1)) backtracking(true)"))) = sin(M_PI/12);
     printf("Cos(Pi/6) = %f\nSin(Pi/12) = %f\n", res_cos, res_sin);
     
     return 0;

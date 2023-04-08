@@ -1,6 +1,6 @@
 Compile with:
-clang -S -emit-llvm -o test.ll test.c
-taffo -S -emit-llvm -o test.ll test.c
+clang -fno-discard-value-names -S -emit-llvm -o test.ll test.c
+taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.c
 
 -> add -lm to use math.h
 -> you may want to place "static inline" on C functions

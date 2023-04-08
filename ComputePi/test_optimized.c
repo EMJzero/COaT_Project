@@ -2,7 +2,7 @@
 
 int main()
 {
-    double __attribute((annotate("target('pi') scalar(range(0, 4) final) backtracking(1)"))) pi = 0;
+    double __attribute((annotate("target('pi') scalar(range(0, 4) final) backtracking(true)"))) pi = 0;
     int iters;
 
     printf("Number of iterations to perform: ");

@@ -1,3 +1,9 @@
 TAFFO:
-Use with "-disable-vra" option in TAFFO.
-The result is correct, but from the IR it is evident that TAFFO did not perform any meaningful optimization.
+Works as expected.
+
+Important:
+Do not annotate "in", it causes the wrong read from "scanf".
+Use "-Xvra -max-unroll=0" if using TAFFO "master" branch.
+
+HLS:
+To be tested...
