@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 //Square root implemented with the Newton-Raphson method
-float NRsqrt(float n __attribute((annotate("scalar(range(0, 4096) final)")))) __attribute((annotate("scalar(range(0, 64) final)"))) {
+float NRsqrt(float n __attribute((annotate("scalar(range(0, 4096) final)")))) __attribute((annotate("scalar(range(0, 64) final)")))
+{
     float lo __attribute((annotate("scalar(range(0, 4096) final)"))) = n < 1 ? n : 1;
     float hi __attribute((annotate("scalar(range(0, 4096) final)"))) = n > 1 ? n : 1;
     float mid __attribute((annotate("scalar(range(0, 4096) final)")));
@@ -21,7 +22,8 @@ float NRsqrt(float n __attribute((annotate("scalar(range(0, 4096) final)")))) __
     return mid;
 }
 
-int main() {
+int main()
+{
     //float in __attribute((annotate("target('input') scalar(range(0, 4096) final) backtracking(true)")));
     float in;
 

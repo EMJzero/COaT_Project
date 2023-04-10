@@ -1,5 +1,7 @@
 TAFFO:
-Incorrect result yielded...
-TAFFO does not optimize the multiplication in 'sum += a * b'...
+Works as expected.
 
-Despite the correct ranges being already provided most of the time, the few derived ranges sometimes make little sense. (!46 is quite weird...)
+The "main" requires a silly trick with the input matrices being filled in a separate step, but that is not relevant since
+the goal has always been to optimize the "mm" function, and that is properly accomplished.
+
+The specified ranges are for commodity, they can be all removed without any issue.
