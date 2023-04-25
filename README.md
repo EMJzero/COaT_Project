@@ -23,5 +23,5 @@ Here is the current list of tests:
 - **FromPanda_fft_float**: Fast Furier Transfom example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/fft_example
 - **FromPanda_mm_float**: Matrix multiplication example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/mm_float
 - **FromTaffo_test3**: Example from here https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c
-- **NormalizeVector**: Transform a vector to have a unitary norm (Uses `math.h`'s `sqrtf` function)
+- **NormalizeVector**: Transforms a vector to have a unitary norm (Uses `math.h`'s `sqrtf` function)
 - **SimpleTaffoTest**: A trivial test to verify that TAFFO and PandA-Bambu are working properly

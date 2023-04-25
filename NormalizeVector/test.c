@@ -1,5 +1,7 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
+#include <time.h>
 
 #define SIZE 8
 
@@ -43,7 +45,8 @@ void normalize(float * in_v __attribute((annotate("scalar(range(0, 256))"))), fl
 
 int main()
 {
-    float source[] = {4, 2, 7, 8, 2, 1, 5, 11};
+    //float source[] = {4, 2, 7, 8, 2, 1, 5, 11};
+    srand((unsigned int)time(NULL));
 
     float in_v[SIZE] __attribute((annotate("target('in_vector') scalar(range(0, 256))")));
     float out_v[SIZE] __attribute((annotate("target('out_vector') scalar(range(0, 1))")));
@@ -56,7 +59,8 @@ int main()
     */
 
     for (int i = 0; i < SIZE; i++)
-        in_v[i] = source[i];
+        in_v[i] = (float)rand()/(float)(16777216);  //16777216  = 2^24
+        //in_v[i] = source[i];
 
     printf("Initial vector: ");
     for (int i = 0; i < SIZE; i++)
