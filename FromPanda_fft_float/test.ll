@@ -1,644 +1,785 @@
-; ModuleID = 'test.c'
+; ModuleID = '/tmp/tmp.czsH8g0Lyl/test.ll.4.taffotmp.ll'
 source_filename = "test.c"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
 
-@.str = private unnamed_addr constant [9 x i8] c"scalar()\00", section "llvm.metadata"
-@.str.1 = private unnamed_addr constant [7 x i8] c"test.c\00", section "llvm.metadata"
-@.str.2 = private unnamed_addr constant [44 x i8] c"target('input_signal') scalar(range(-1, 1))\00", section "llvm.metadata"
-@.str.3 = private unnamed_addr constant [45 x i8] c"target('output_signal') scalar(range(-1, 1))\00", section "llvm.metadata"
-@.str.4 = private unnamed_addr constant [10 x i8] c"%d %e %e\0A\00", align 1
-@.str.5 = private unnamed_addr constant [2 x i8] c"\0A\00", align 1
-@llvm.global.annotations = appending global [2 x { i8*, i8*, i8*, i32, i8* }] [{ i8*, i8*, i8*, i32, i8* } { i8* bitcast (float (float)* @myFabsf to i8*), i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 4, i8* null }, { i8*, i8*, i8*, i32, i8* } { i8* bitcast (float (float)* @mySqrt to i8*), i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 10, i8* null }], section "llvm.metadata"
+@.str.4 = private unnamed_addr constant [10 x i8] c"%d %e %e\0A\00", align 1, !taffo.info !0
+@.str.5 = private unnamed_addr constant [2 x i8] c"\0A\00", align 1, !taffo.info !2
 
-; Function Attrs: noinline nounwind optnone uwtable
-define dso_local float @myFabsf(float %0) #0 {
-  %2 = alloca float, align 4
-  %3 = alloca float, align 4
-  store float %0, float* %3, align 4
-  %4 = bitcast float* %3 to i8*
-  call void @llvm.var.annotation(i8* %4, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 4, i8* null)
-  %5 = load float, float* %3, align 4
-  %6 = fcmp olt float %5, 0.000000e+00
-  br i1 %6, label %7, label %10
+; Function Attrs: noinline nounwind uwtable
+define dso_local signext i16 @FFT(i16 noundef signext %dir, i64 noundef %m, float* noundef %x, float* noundef %y) #0 !taffo.initweight !10 !taffo.equivalentChild !11 !taffo.funinfo !12 {
+entry:
+  br label %for.cond
 
-7:                                                ; preds = %1
-  %8 = load float, float* %3, align 4
-  %9 = fneg float %8
-  store float %9, float* %2, align 4
-  br label %12
+for.cond:                                         ; preds = %for.inc, %entry
+  %i.0 = phi i64 [ 0, %entry ], [ %inc, %for.inc ]
+  %n.0 = phi i64 [ 1, %entry ], [ %mul, %for.inc ]
+  %cmp = icmp slt i64 %i.0, %m
+  br i1 %cmp, label %for.body, label %for.end
 
-10:                                               ; preds = %1
-  %11 = load float, float* %3, align 4
-  store float %11, float* %2, align 4
-  br label %12
+for.body:                                         ; preds = %for.cond
+  %mul = mul nsw i64 %n.0, 2, !taffo.constinfo !13
+  br label %for.inc
 
-12:                                               ; preds = %10, %7
-  %13 = load float, float* %2, align 4
-  ret float %13
-}
+for.inc:                                          ; preds = %for.body
+  %inc = add nsw i64 %i.0, 1, !taffo.constinfo !13
+  br label %for.cond, !llvm.loop !14
 
-; Function Attrs: nofree nosync nounwind willreturn
-declare void @llvm.var.annotation(i8*, i8*, i8*, i32, i8*) #1
+for.end:                                          ; preds = %for.cond
+  %shr = ashr i64 %n.0, 1, !taffo.constinfo !13
+  br label %for.cond12
 
-; Function Attrs: noinline nounwind optnone uwtable
-define dso_local float @mySqrt(float %0) #0 {
-  %2 = alloca float, align 4
-  %3 = alloca float, align 4
-  %4 = alloca float, align 4
-  store float %0, float* %2, align 4
-  %5 = bitcast float* %2 to i8*
-  call void @llvm.var.annotation(i8* %5, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 10, i8* null)
-  %6 = load float, float* %2, align 4
-  %7 = fdiv float %6, 2.000000e+00
-  store float %7, float* %3, align 4
-  %8 = load float, float* %3, align 4
-  %9 = load float, float* %2, align 4
-  %10 = load float, float* %3, align 4
-  %11 = fdiv float %9, %10
-  %12 = fadd float %8, %11
-  %13 = fdiv float %12, 2.000000e+00
-  store float %13, float* %4, align 4
-  br label %14
+for.cond12:                                       ; preds = %for.inc26, %for.end
+  %j.0 = phi i64 [ 0, %for.end ], [ %add, %for.inc26 ]
+  %i.1 = phi i64 [ 0, %for.end ], [ %inc27, %for.inc26 ]
+  %sub = sub nsw i64 %n.0, 1, !taffo.constinfo !13
+  %cmp13 = icmp slt i64 %i.1, %sub
+  br i1 %cmp13, label %for.body14, label %for.end28
 
-14:                                               ; preds = %20, %1
-  %15 = load float, float* %4, align 4
-  %16 = load float, float* %3, align 4
-  %17 = fsub float %15, %16
-  %18 = call float @myFabsf(float %17)
-  %19 = fcmp oge float %18, 0x3F1A36E2E0000000
-  br i1 %19, label %20, label %28
+for.body14:                                       ; preds = %for.cond12
+  %cmp15 = icmp slt i64 %i.1, %j.0
+  br i1 %cmp15, label %if.then, label %if.end
 
-20:                                               ; preds = %14
-  %21 = load float, float* %4, align 4
-  store float %21, float* %3, align 4
-  %22 = load float, float* %3, align 4
-  %23 = load float, float* %2, align 4
-  %24 = load float, float* %3, align 4
-  %25 = fdiv float %23, %24
-  %26 = fadd float %22, %25
-  %27 = fdiv float %26, 2.000000e+00
-  store float %27, float* %4, align 4
-  br label %14, !llvm.loop !2
+if.then:                                          ; preds = %for.body14
+  %arrayidx = getelementptr inbounds float, float* %x, i64 %i.1, !taffo.info !16, !taffo.initweight !17
+  %0 = load float, float* %arrayidx, align 4, !taffo.info !16, !taffo.initweight !18
+  %arrayidx16 = getelementptr inbounds float, float* %y, i64 %i.1, !taffo.info !16, !taffo.initweight !17
+  %1 = load float, float* %arrayidx16, align 4, !taffo.info !16, !taffo.initweight !18
+  %arrayidx17 = getelementptr inbounds float, float* %x, i64 %j.0, !taffo.info !16, !taffo.initweight !17
+  %2 = load float, float* %arrayidx17, align 4, !taffo.info !16, !taffo.initweight !18
+  %arrayidx18 = getelementptr inbounds float, float* %x, i64 %i.1, !taffo.info !16, !taffo.initweight !17
+  store float %2, float* %arrayidx18, align 4, !taffo.info !16
+  %arrayidx19 = getelementptr inbounds float, float* %y, i64 %j.0, !taffo.info !16, !taffo.initweight !17
+  %3 = load float, float* %arrayidx19, align 4, !taffo.info !16, !taffo.initweight !18
+  %arrayidx20 = getelementptr inbounds float, float* %y, i64 %i.1, !taffo.info !16, !taffo.initweight !17
+  store float %3, float* %arrayidx20, align 4, !taffo.info !16
+  %arrayidx21 = getelementptr inbounds float, float* %x, i64 %j.0, !taffo.info !16, !taffo.initweight !17
+  store float %0, float* %arrayidx21, align 4, !taffo.info !16
+  %arrayidx22 = getelementptr inbounds float, float* %y, i64 %j.0, !taffo.info !16, !taffo.initweight !17
+  store float %1, float* %arrayidx22, align 4, !taffo.info !16
+  br label %if.end
 
-28:                                               ; preds = %14
-  %29 = load float, float* %4, align 4
-  ret float %29
-}
+if.end:                                           ; preds = %if.then, %for.body14
+  br label %while.cond
 
-; Function Attrs: noinline nounwind optnone uwtable
-define dso_local i32 @main() #0 {
-  %1 = alloca i32, align 4
-  %2 = alloca i32, align 4
-  %3 = alloca [128 x float], align 16
-  %4 = alloca [128 x float], align 16
-  store i32 0, i32* %1, align 4
-  %5 = bitcast [128 x float]* %3 to i8*
-  call void @llvm.var.annotation(i8* %5, i8* getelementptr inbounds ([44 x i8], [44 x i8]* @.str.2, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 127, i8* null)
-  %6 = bitcast [128 x float]* %4 to i8*
-  call void @llvm.var.annotation(i8* %6, i8* getelementptr inbounds ([45 x i8], [45 x i8]* @.str.3, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 128, i8* null)
-  store i32 0, i32* %2, align 4
-  br label %7
+while.cond:                                       ; preds = %while.body, %if.end
+  %k.0 = phi i64 [ %shr, %if.end ], [ %shr25, %while.body ]
+  %j.1 = phi i64 [ %j.0, %if.end ], [ %sub24, %while.body ]
+  %cmp23 = icmp sle i64 %k.0, %j.1
+  br i1 %cmp23, label %while.body, label %while.end
 
-7:                                                ; preds = %17, %0
-  %8 = load i32, i32* %2, align 4
-  %9 = icmp slt i32 %8, 128
-  br i1 %9, label %10, label %20
+while.body:                                       ; preds = %while.cond
+  %sub24 = sub nsw i64 %j.1, %k.0
+  %shr25 = ashr i64 %k.0, 1, !taffo.constinfo !13
+  br label %while.cond, !llvm.loop !19
 
-10:                                               ; preds = %7
-  %11 = load i32, i32* %2, align 4
-  %12 = sext i32 %11 to i64
-  %13 = getelementptr inbounds [128 x float], [128 x float]* %3, i64 0, i64 %12
-  store float 0.000000e+00, float* %13, align 4
-  %14 = load i32, i32* %2, align 4
-  %15 = sext i32 %14 to i64
-  %16 = getelementptr inbounds [128 x float], [128 x float]* %4, i64 0, i64 %15
-  store float 0.000000e+00, float* %16, align 4
-  br label %17
+while.end:                                        ; preds = %while.cond
+  %add = add nsw i64 %j.1, %k.0
+  br label %for.inc26
 
-17:                                               ; preds = %10
-  %18 = load i32, i32* %2, align 4
-  %19 = add nsw i32 %18, 1
-  store i32 %19, i32* %2, align 4
-  br label %7, !llvm.loop !4
+for.inc26:                                        ; preds = %while.end
+  %inc27 = add nsw i64 %i.1, 1, !taffo.constinfo !13
+  br label %for.cond12, !llvm.loop !20
 
-20:                                               ; preds = %7
-  %21 = getelementptr inbounds [128 x float], [128 x float]* %3, i64 0, i64 0
-  store float 1.000000e+00, float* %21, align 16
-  store i32 1, i32* %2, align 4
-  br label %22
+for.end28:                                        ; preds = %for.cond12
+  br label %for.cond29
 
-22:                                               ; preds = %33, %20
-  %23 = load i32, i32* %2, align 4
-  %24 = icmp sle i32 %23, 10
-  br i1 %24, label %25, label %36
+for.cond29:                                       ; preds = %for.inc80, %for.end28
+  %l.0 = phi i64 [ 0, %for.end28 ], [ %inc81, %for.inc80 ]
+  %l2.0 = phi i64 [ 1, %for.end28 ], [ %shl, %for.inc80 ]
+  %c1.0 = phi float [ -1.000000e+00, %for.end28 ], [ %call79, %for.inc80 ], !taffo.info !16, !taffo.initweight !21
+  %c2.0 = phi float [ 0.000000e+00, %for.end28 ], [ %c2.1, %for.inc80 ], !taffo.info !16, !taffo.initweight !21
+  %cmp30 = icmp slt i64 %l.0, %m
+  br i1 %cmp30, label %for.body31, label %for.end82
 
-25:                                               ; preds = %22
-  %26 = load i32, i32* %2, align 4
-  %27 = sub nsw i32 128, %26
-  %28 = sext i32 %27 to i64
-  %29 = getelementptr inbounds [128 x float], [128 x float]* %3, i64 0, i64 %28
-  store float 1.000000e+00, float* %29, align 4
-  %30 = load i32, i32* %2, align 4
-  %31 = sext i32 %30 to i64
-  %32 = getelementptr inbounds [128 x float], [128 x float]* %3, i64 0, i64 %31
-  store float 1.000000e+00, float* %32, align 4
-  br label %33
+for.body31:                                       ; preds = %for.cond29
+  %shl = shl i64 %l2.0, 1, !taffo.constinfo !13
+  br label %for.cond32
 
-33:                                               ; preds = %25
-  %34 = load i32, i32* %2, align 4
-  %35 = add nsw i32 %34, 1
-  store i32 %35, i32* %2, align 4
-  br label %22, !llvm.loop !5
+for.cond32:                                       ; preds = %for.inc65, %for.body31
+  %j.2 = phi i64 [ 0, %for.body31 ], [ %inc66, %for.inc65 ]
+  %u1.0 = phi float [ 1.000000e+00, %for.body31 ], [ %14, %for.inc65 ], !taffo.info !16, !taffo.initweight !21
+  %u2.0 = phi float [ 0.000000e+00, %for.body31 ], [ %15, %for.inc65 ], !taffo.info !16, !taffo.initweight !21
+  %cmp33 = icmp slt i64 %j.2, %l2.0
+  br i1 %cmp33, label %for.body34, label %for.end67
 
-36:                                               ; preds = %22
-  store i32 0, i32* %2, align 4
-  br label %37
+for.body34:                                       ; preds = %for.cond32
+  br label %for.cond35
 
-37:                                               ; preds = %53, %36
-  %38 = load i32, i32* %2, align 4
-  %39 = icmp slt i32 %38, 128
-  br i1 %39, label %40, label %56
+for.cond35:                                       ; preds = %for.inc57, %for.body34
+  %i.2 = phi i64 [ %j.2, %for.body34 ], [ %add58, %for.inc57 ]
+  %cmp36 = icmp slt i64 %i.2, %n.0
+  br i1 %cmp36, label %for.body37, label %for.end59
 
-40:                                               ; preds = %37
-  %41 = load i32, i32* %2, align 4
-  %42 = load i32, i32* %2, align 4
-  %43 = sext i32 %42 to i64
-  %44 = getelementptr inbounds [128 x float], [128 x float]* %3, i64 0, i64 %43
-  %45 = load float, float* %44, align 4
-  %46 = fpext float %45 to double
-  %47 = load i32, i32* %2, align 4
-  %48 = sext i32 %47 to i64
-  %49 = getelementptr inbounds [128 x float], [128 x float]* %4, i64 0, i64 %48
-  %50 = load float, float* %49, align 4
-  %51 = fpext float %50 to double
-  %52 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.4, i64 0, i64 0), i32 %41, double %46, double %51)
-  br label %53
+for.body37:                                       ; preds = %for.cond35
+  %add38 = add nsw i64 %i.2, %l2.0
+  %arrayidx39 = getelementptr inbounds float, float* %x, i64 %add38, !taffo.info !16, !taffo.initweight !17
+  %4 = load float, float* %arrayidx39, align 4, !taffo.info !16, !taffo.initweight !18
+  %arrayidx41 = getelementptr inbounds float, float* %y, i64 %add38, !taffo.info !16, !taffo.initweight !17
+  %5 = load float, float* %arrayidx41, align 4, !taffo.info !16, !taffo.initweight !18
+  %mul42 = fmul float %u2.0, %5, !taffo.info !16, !taffo.initweight !17
+  %neg = fneg float %mul42, !taffo.info !16, !taffo.initweight !18
+  %6 = call float @llvm.fmuladd.f32(float %u1.0, float %4, float %neg), !taffo.info !16, !taffo.initweight !17, !taffo.constinfo !22
+  %arrayidx43 = getelementptr inbounds float, float* %y, i64 %add38, !taffo.info !16, !taffo.initweight !17
+  %7 = load float, float* %arrayidx43, align 4, !taffo.info !16, !taffo.initweight !18
+  %arrayidx45 = getelementptr inbounds float, float* %x, i64 %add38, !taffo.info !16, !taffo.initweight !17
+  %8 = load float, float* %arrayidx45, align 4, !taffo.info !16, !taffo.initweight !18
+  %mul46 = fmul float %u2.0, %8, !taffo.info !16, !taffo.initweight !17
+  %9 = call float @llvm.fmuladd.f32(float %u1.0, float %7, float %mul46), !taffo.info !16, !taffo.initweight !17, !taffo.constinfo !22
+  %arrayidx47 = getelementptr inbounds float, float* %x, i64 %i.2, !taffo.info !16, !taffo.initweight !17
+  %10 = load float, float* %arrayidx47, align 4, !taffo.info !16, !taffo.initweight !18
+  %sub48 = fsub float %10, %6, !taffo.info !16, !taffo.initweight !17
+  %arrayidx49 = getelementptr inbounds float, float* %x, i64 %add38, !taffo.info !16, !taffo.initweight !17
+  store float %sub48, float* %arrayidx49, align 4, !taffo.info !16
+  %arrayidx50 = getelementptr inbounds float, float* %y, i64 %i.2, !taffo.info !16, !taffo.initweight !17
+  %11 = load float, float* %arrayidx50, align 4, !taffo.info !16, !taffo.initweight !18
+  %sub51 = fsub float %11, %9, !taffo.info !16, !taffo.initweight !17
+  %arrayidx52 = getelementptr inbounds float, float* %y, i64 %add38, !taffo.info !16, !taffo.initweight !17
+  store float %sub51, float* %arrayidx52, align 4, !taffo.info !16
+  %arrayidx53 = getelementptr inbounds float, float* %x, i64 %i.2, !taffo.info !16, !taffo.initweight !17
+  %12 = load float, float* %arrayidx53, align 4, !taffo.info !16, !taffo.initweight !18
+  %add54 = fadd float %12, %6, !taffo.info !16, !taffo.initweight !17
+  store float %add54, float* %arrayidx53, align 4, !taffo.info !16
+  %arrayidx55 = getelementptr inbounds float, float* %y, i64 %i.2, !taffo.info !16, !taffo.initweight !17
+  %13 = load float, float* %arrayidx55, align 4, !taffo.info !16, !taffo.initweight !18
+  %add56 = fadd float %13, %9, !taffo.info !16, !taffo.initweight !17
+  store float %add56, float* %arrayidx55, align 4, !taffo.info !16
+  br label %for.inc57
 
-53:                                               ; preds = %40
-  %54 = load i32, i32* %2, align 4
-  %55 = add nsw i32 %54, 1
-  store i32 %55, i32* %2, align 4
-  br label %37, !llvm.loop !6
+for.inc57:                                        ; preds = %for.body37
+  %add58 = add nsw i64 %i.2, %shl
+  br label %for.cond35, !llvm.loop !23
 
-56:                                               ; preds = %37
-  %57 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str.5, i64 0, i64 0))
-  %58 = getelementptr inbounds [128 x float], [128 x float]* %3, i64 0, i64 0
-  %59 = getelementptr inbounds [128 x float], [128 x float]* %4, i64 0, i64 0
-  %60 = call signext i16 @FFT(i16 signext 1, i64 7, float* %58, float* %59)
-  %61 = sext i16 %60 to i32
-  store i32 %61, i32* %2, align 4
-  store i32 0, i32* %2, align 4
-  br label %62
+for.end59:                                        ; preds = %for.cond35
+  %mul61 = fmul float %u2.0, %c2.0, !taffo.info !16, !taffo.initweight !17
+  %neg62 = fneg float %mul61, !taffo.info !16, !taffo.initweight !18
+  %14 = call float @llvm.fmuladd.f32(float %u1.0, float %c1.0, float %neg62), !taffo.info !16, !taffo.initweight !17, !taffo.constinfo !22
+  %mul64 = fmul float %u2.0, %c1.0, !taffo.info !16, !taffo.initweight !17
+  %15 = call float @llvm.fmuladd.f32(float %u1.0, float %c2.0, float %mul64), !taffo.info !16, !taffo.initweight !17, !taffo.constinfo !22
+  br label %for.inc65
 
-62:                                               ; preds = %82, %56
-  %63 = load i32, i32* %2, align 4
-  %64 = icmp slt i32 %63, 128
-  br i1 %64, label %65, label %85
+for.inc65:                                        ; preds = %for.end59
+  %inc66 = add nsw i64 %j.2, 1, !taffo.constinfo !13
+  br label %for.cond32, !llvm.loop !24
 
-65:                                               ; preds = %62
-  %66 = load i32, i32* %2, align 4
-  %67 = load i32, i32* %2, align 4
-  %68 = sext i32 %67 to i64
-  %69 = getelementptr inbounds [128 x float], [128 x float]* %3, i64 0, i64 %68
-  %70 = load float, float* %69, align 4
-  %71 = call float @mySqrt(float 1.280000e+02)
-  %72 = fdiv float %70, %71
-  %73 = fpext float %72 to double
-  %74 = load i32, i32* %2, align 4
-  %75 = sext i32 %74 to i64
-  %76 = getelementptr inbounds [128 x float], [128 x float]* %4, i64 0, i64 %75
-  %77 = load float, float* %76, align 4
-  %78 = call float @mySqrt(float 1.280000e+02)
-  %79 = fdiv float %77, %78
-  %80 = fpext float %79 to double
-  %81 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.4, i64 0, i64 0), i32 %66, double %73, double %80)
-  br label %82
+for.end67:                                        ; preds = %for.cond32
+  %conv = fpext float %c1.0 to double, !taffo.info !16, !taffo.initweight !17
+  %sub68 = fsub double 1.000000e+00, %conv, !taffo.info !16, !taffo.initweight !18, !taffo.constinfo !25
+  %div = fdiv double %sub68, 2.000000e+00, !taffo.info !16, !taffo.initweight !28, !taffo.constinfo !29
+  %conv69 = fptrunc double %div to float, !taffo.info !16, !taffo.initweight !32
+  %call = call float @sqrtf(float noundef %conv69) #4, !taffo.info !16, !taffo.initweight !33, !taffo.constinfo !13
+  %conv70 = sext i16 %dir to i32
+  %cmp71 = icmp eq i32 %conv70, 1
+  br i1 %cmp71, label %if.then73, label %if.end74
 
-82:                                               ; preds = %65
-  %83 = load i32, i32* %2, align 4
-  %84 = add nsw i32 %83, 1
-  store i32 %84, i32* %2, align 4
-  br label %62, !llvm.loop !7
+if.then73:                                        ; preds = %for.end67
+  %fneg = fneg float %call, !taffo.info !16, !taffo.initweight !17
+  br label %if.end74
 
-85:                                               ; preds = %62
-  ret i32 0
-}
+if.end74:                                         ; preds = %if.then73, %for.end67
+  %c2.1 = phi float [ %fneg, %if.then73 ], [ %call, %for.end67 ], !taffo.info !16, !taffo.initweight !21
+  %conv75 = fpext float %c1.0 to double, !taffo.info !16, !taffo.initweight !17
+  %add76 = fadd double 1.000000e+00, %conv75, !taffo.info !16, !taffo.initweight !18, !taffo.constinfo !25
+  %div77 = fdiv double %add76, 2.000000e+00, !taffo.info !16, !taffo.initweight !28, !taffo.constinfo !29
+  %conv78 = fptrunc double %div77 to float, !taffo.info !16, !taffo.initweight !32
+  %call79 = call float @sqrtf(float noundef %conv78) #4, !taffo.info !16, !taffo.initweight !33, !taffo.constinfo !13
+  br label %for.inc80
 
-declare dso_local i32 @printf(i8*, ...) #2
+for.inc80:                                        ; preds = %if.end74
+  %inc81 = add nsw i64 %l.0, 1, !taffo.constinfo !13
+  br label %for.cond29, !llvm.loop !34
 
-; Function Attrs: noinline nounwind optnone uwtable
-define internal signext i16 @FFT(i16 signext %0, i64 %1, float* %2, float* %3) #0 {
-  %5 = alloca i16, align 2
-  %6 = alloca i64, align 8
-  %7 = alloca float*, align 8
-  %8 = alloca float*, align 8
-  %9 = alloca i64, align 8
-  %10 = alloca i64, align 8
-  %11 = alloca i64, align 8
-  %12 = alloca i64, align 8
-  %13 = alloca i64, align 8
-  %14 = alloca i64, align 8
-  %15 = alloca i64, align 8
-  %16 = alloca i64, align 8
-  %17 = alloca i64, align 8
-  %18 = alloca float, align 4
-  %19 = alloca float, align 4
-  %20 = alloca float, align 4
-  %21 = alloca float, align 4
-  %22 = alloca float, align 4
-  %23 = alloca float, align 4
-  %24 = alloca float, align 4
-  %25 = alloca float, align 4
-  %26 = alloca float, align 4
-  store i16 %0, i16* %5, align 2
-  store i64 %1, i64* %6, align 8
-  store float* %2, float** %7, align 8
-  %27 = bitcast float** %7 to i8*
-  call void @llvm.var.annotation(i8* %27, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 29, i8* null)
-  store float* %3, float** %8, align 8
-  %28 = bitcast float** %8 to i8*
-  call void @llvm.var.annotation(i8* %28, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 29, i8* null)
-  %29 = bitcast float* %18 to i8*
-  call void @llvm.var.annotation(i8* %29, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 32, i8* null)
-  %30 = bitcast float* %19 to i8*
-  call void @llvm.var.annotation(i8* %30, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 33, i8* null)
-  %31 = bitcast float* %20 to i8*
-  call void @llvm.var.annotation(i8* %31, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 34, i8* null)
-  %32 = bitcast float* %21 to i8*
-  call void @llvm.var.annotation(i8* %32, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 35, i8* null)
-  %33 = bitcast float* %22 to i8*
-  call void @llvm.var.annotation(i8* %33, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 36, i8* null)
-  %34 = bitcast float* %23 to i8*
-  call void @llvm.var.annotation(i8* %34, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 37, i8* null)
-  %35 = bitcast float* %24 to i8*
-  call void @llvm.var.annotation(i8* %35, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 38, i8* null)
-  %36 = bitcast float* %25 to i8*
-  call void @llvm.var.annotation(i8* %36, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 39, i8* null)
-  %37 = bitcast float* %26 to i8*
-  call void @llvm.var.annotation(i8* %37, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str, i32 0, i32 0), i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i32 40, i8* null)
-  store i64 1, i64* %9, align 8
-  store i64 0, i64* %10, align 8
-  br label %38
+for.end82:                                        ; preds = %for.cond29
+  %conv83 = sext i16 %dir to i32
+  %cmp84 = icmp eq i32 %conv83, 1
+  br i1 %cmp84, label %if.then86, label %if.end100
 
-38:                                               ; preds = %45, %4
-  %39 = load i64, i64* %10, align 8
-  %40 = load i64, i64* %6, align 8
-  %41 = icmp slt i64 %39, %40
-  br i1 %41, label %42, label %48
+if.then86:                                        ; preds = %for.end82
+  br label %for.cond87
 
-42:                                               ; preds = %38
-  %43 = load i64, i64* %9, align 8
-  %44 = mul nsw i64 %43, 2
-  store i64 %44, i64* %9, align 8
-  br label %45
+for.cond87:                                       ; preds = %for.inc97, %if.then86
+  %i.3 = phi i64 [ 0, %if.then86 ], [ %inc98, %for.inc97 ]
+  %cmp88 = icmp slt i64 %i.3, %n.0
+  br i1 %cmp88, label %for.body90, label %for.end99
 
-45:                                               ; preds = %42
-  %46 = load i64, i64* %10, align 8
-  %47 = add nsw i64 %46, 1
-  store i64 %47, i64* %10, align 8
-  br label %38, !llvm.loop !8
+for.body90:                                       ; preds = %for.cond87
+  %conv91 = sitofp i64 %n.0 to float
+  %arrayidx92 = getelementptr inbounds float, float* %x, i64 %i.3, !taffo.info !16, !taffo.initweight !17
+  %16 = load float, float* %arrayidx92, align 4, !taffo.info !16, !taffo.initweight !18
+  %div93 = fdiv float %16, %conv91, !taffo.info !16, !taffo.initweight !28
+  store float %div93, float* %arrayidx92, align 4, !taffo.info !16
+  %conv94 = sitofp i64 %n.0 to float
+  %arrayidx95 = getelementptr inbounds float, float* %y, i64 %i.3, !taffo.info !16, !taffo.initweight !17
+  %17 = load float, float* %arrayidx95, align 4, !taffo.info !16, !taffo.initweight !18
+  %div96 = fdiv float %17, %conv94, !taffo.info !16, !taffo.initweight !28
+  store float %div96, float* %arrayidx95, align 4, !taffo.info !16
+  br label %for.inc97
 
-48:                                               ; preds = %38
-  %49 = load i64, i64* %9, align 8
-  %50 = ashr i64 %49, 1
-  store i64 %50, i64* %14, align 8
-  store i64 0, i64* %12, align 8
-  store i64 0, i64* %10, align 8
-  br label %51
+for.inc97:                                        ; preds = %for.body90
+  %inc98 = add nsw i64 %i.3, 1, !taffo.constinfo !13
+  br label %for.cond87, !llvm.loop !35
 
-51:                                               ; preds = %107, %48
-  %52 = load i64, i64* %10, align 8
-  %53 = load i64, i64* %9, align 8
-  %54 = sub nsw i64 %53, 1
-  %55 = icmp slt i64 %52, %54
-  br i1 %55, label %56, label %110
+for.end99:                                        ; preds = %for.cond87
+  br label %if.end100
 
-56:                                               ; preds = %51
-  %57 = load i64, i64* %10, align 8
-  %58 = load i64, i64* %12, align 8
-  %59 = icmp slt i64 %57, %58
-  br i1 %59, label %60, label %91
-
-60:                                               ; preds = %56
-  %61 = load float*, float** %7, align 8
-  %62 = load i64, i64* %10, align 8
-  %63 = getelementptr inbounds float, float* %61, i64 %62
-  %64 = load float, float* %63, align 4
-  store float %64, float* %20, align 4
-  %65 = load float*, float** %8, align 8
-  %66 = load i64, i64* %10, align 8
-  %67 = getelementptr inbounds float, float* %65, i64 %66
-  %68 = load float, float* %67, align 4
-  store float %68, float* %21, align 4
-  %69 = load float*, float** %7, align 8
-  %70 = load i64, i64* %12, align 8
-  %71 = getelementptr inbounds float, float* %69, i64 %70
-  %72 = load float, float* %71, align 4
-  %73 = load float*, float** %7, align 8
-  %74 = load i64, i64* %10, align 8
-  %75 = getelementptr inbounds float, float* %73, i64 %74
-  store float %72, float* %75, align 4
-  %76 = load float*, float** %8, align 8
-  %77 = load i64, i64* %12, align 8
-  %78 = getelementptr inbounds float, float* %76, i64 %77
-  %79 = load float, float* %78, align 4
-  %80 = load float*, float** %8, align 8
-  %81 = load i64, i64* %10, align 8
-  %82 = getelementptr inbounds float, float* %80, i64 %81
-  store float %79, float* %82, align 4
-  %83 = load float, float* %20, align 4
-  %84 = load float*, float** %7, align 8
-  %85 = load i64, i64* %12, align 8
-  %86 = getelementptr inbounds float, float* %84, i64 %85
-  store float %83, float* %86, align 4
-  %87 = load float, float* %21, align 4
-  %88 = load float*, float** %8, align 8
-  %89 = load i64, i64* %12, align 8
-  %90 = getelementptr inbounds float, float* %88, i64 %89
-  store float %87, float* %90, align 4
-  br label %91
-
-91:                                               ; preds = %60, %56
-  %92 = load i64, i64* %14, align 8
-  store i64 %92, i64* %13, align 8
-  br label %93
-
-93:                                               ; preds = %97, %91
-  %94 = load i64, i64* %13, align 8
-  %95 = load i64, i64* %12, align 8
-  %96 = icmp sle i64 %94, %95
-  br i1 %96, label %97, label %103
-
-97:                                               ; preds = %93
-  %98 = load i64, i64* %13, align 8
-  %99 = load i64, i64* %12, align 8
-  %100 = sub nsw i64 %99, %98
-  store i64 %100, i64* %12, align 8
-  %101 = load i64, i64* %13, align 8
-  %102 = ashr i64 %101, 1
-  store i64 %102, i64* %13, align 8
-  br label %93, !llvm.loop !9
-
-103:                                              ; preds = %93
-  %104 = load i64, i64* %13, align 8
-  %105 = load i64, i64* %12, align 8
-  %106 = add nsw i64 %105, %104
-  store i64 %106, i64* %12, align 8
-  br label %107
-
-107:                                              ; preds = %103
-  %108 = load i64, i64* %10, align 8
-  %109 = add nsw i64 %108, 1
-  store i64 %109, i64* %10, align 8
-  br label %51, !llvm.loop !10
-
-110:                                              ; preds = %51
-  store float -1.000000e+00, float* %18, align 4
-  store float 0.000000e+00, float* %19, align 4
-  store i64 1, i64* %17, align 8
-  store i64 0, i64* %15, align 8
-  br label %111
-
-111:                                              ; preds = %232, %110
-  %112 = load i64, i64* %15, align 8
-  %113 = load i64, i64* %6, align 8
-  %114 = icmp slt i64 %112, %113
-  br i1 %114, label %115, label %235
-
-115:                                              ; preds = %111
-  %116 = load i64, i64* %17, align 8
-  store i64 %116, i64* %16, align 8
-  %117 = load i64, i64* %17, align 8
-  %118 = shl i64 %117, 1
-  store i64 %118, i64* %17, align 8
-  store float 1.000000e+00, float* %24, align 4
-  store float 0.000000e+00, float* %25, align 4
-  store i64 0, i64* %12, align 8
-  br label %119
-
-119:                                              ; preds = %209, %115
-  %120 = load i64, i64* %12, align 8
-  %121 = load i64, i64* %16, align 8
-  %122 = icmp slt i64 %120, %121
-  br i1 %122, label %123, label %212
-
-123:                                              ; preds = %119
-  %124 = load i64, i64* %12, align 8
-  store i64 %124, i64* %10, align 8
-  br label %125
-
-125:                                              ; preds = %189, %123
-  %126 = load i64, i64* %10, align 8
-  %127 = load i64, i64* %9, align 8
-  %128 = icmp slt i64 %126, %127
-  br i1 %128, label %129, label %193
-
-129:                                              ; preds = %125
-  %130 = load i64, i64* %10, align 8
-  %131 = load i64, i64* %16, align 8
-  %132 = add nsw i64 %130, %131
-  store i64 %132, i64* %11, align 8
-  %133 = load float, float* %24, align 4
-  %134 = load float*, float** %7, align 8
-  %135 = load i64, i64* %11, align 8
-  %136 = getelementptr inbounds float, float* %134, i64 %135
-  %137 = load float, float* %136, align 4
-  %138 = fmul float %133, %137
-  %139 = load float, float* %25, align 4
-  %140 = load float*, float** %8, align 8
-  %141 = load i64, i64* %11, align 8
-  %142 = getelementptr inbounds float, float* %140, i64 %141
-  %143 = load float, float* %142, align 4
-  %144 = fmul float %139, %143
-  %145 = fsub float %138, %144
-  store float %145, float* %22, align 4
-  %146 = load float, float* %24, align 4
-  %147 = load float*, float** %8, align 8
-  %148 = load i64, i64* %11, align 8
-  %149 = getelementptr inbounds float, float* %147, i64 %148
-  %150 = load float, float* %149, align 4
-  %151 = fmul float %146, %150
-  %152 = load float, float* %25, align 4
-  %153 = load float*, float** %7, align 8
-  %154 = load i64, i64* %11, align 8
-  %155 = getelementptr inbounds float, float* %153, i64 %154
-  %156 = load float, float* %155, align 4
-  %157 = fmul float %152, %156
-  %158 = fadd float %151, %157
-  store float %158, float* %23, align 4
-  %159 = load float*, float** %7, align 8
-  %160 = load i64, i64* %10, align 8
-  %161 = getelementptr inbounds float, float* %159, i64 %160
-  %162 = load float, float* %161, align 4
-  %163 = load float, float* %22, align 4
-  %164 = fsub float %162, %163
-  %165 = load float*, float** %7, align 8
-  %166 = load i64, i64* %11, align 8
-  %167 = getelementptr inbounds float, float* %165, i64 %166
-  store float %164, float* %167, align 4
-  %168 = load float*, float** %8, align 8
-  %169 = load i64, i64* %10, align 8
-  %170 = getelementptr inbounds float, float* %168, i64 %169
-  %171 = load float, float* %170, align 4
-  %172 = load float, float* %23, align 4
-  %173 = fsub float %171, %172
-  %174 = load float*, float** %8, align 8
-  %175 = load i64, i64* %11, align 8
-  %176 = getelementptr inbounds float, float* %174, i64 %175
-  store float %173, float* %176, align 4
-  %177 = load float, float* %22, align 4
-  %178 = load float*, float** %7, align 8
-  %179 = load i64, i64* %10, align 8
-  %180 = getelementptr inbounds float, float* %178, i64 %179
-  %181 = load float, float* %180, align 4
-  %182 = fadd float %181, %177
-  store float %182, float* %180, align 4
-  %183 = load float, float* %23, align 4
-  %184 = load float*, float** %8, align 8
-  %185 = load i64, i64* %10, align 8
-  %186 = getelementptr inbounds float, float* %184, i64 %185
-  %187 = load float, float* %186, align 4
-  %188 = fadd float %187, %183
-  store float %188, float* %186, align 4
-  br label %189
-
-189:                                              ; preds = %129
-  %190 = load i64, i64* %17, align 8
-  %191 = load i64, i64* %10, align 8
-  %192 = add nsw i64 %191, %190
-  store i64 %192, i64* %10, align 8
-  br label %125, !llvm.loop !11
-
-193:                                              ; preds = %125
-  %194 = load float, float* %24, align 4
-  %195 = load float, float* %18, align 4
-  %196 = fmul float %194, %195
-  %197 = load float, float* %25, align 4
-  %198 = load float, float* %19, align 4
-  %199 = fmul float %197, %198
-  %200 = fsub float %196, %199
-  store float %200, float* %26, align 4
-  %201 = load float, float* %24, align 4
-  %202 = load float, float* %19, align 4
-  %203 = fmul float %201, %202
-  %204 = load float, float* %25, align 4
-  %205 = load float, float* %18, align 4
-  %206 = fmul float %204, %205
-  %207 = fadd float %203, %206
-  store float %207, float* %25, align 4
-  %208 = load float, float* %26, align 4
-  store float %208, float* %24, align 4
-  br label %209
-
-209:                                              ; preds = %193
-  %210 = load i64, i64* %12, align 8
-  %211 = add nsw i64 %210, 1
-  store i64 %211, i64* %12, align 8
-  br label %119, !llvm.loop !12
-
-212:                                              ; preds = %119
-  %213 = load float, float* %18, align 4
-  %214 = fpext float %213 to double
-  %215 = fsub double 1.000000e+00, %214
-  %216 = fdiv double %215, 2.000000e+00
-  %217 = fptrunc double %216 to float
-  %218 = call float @mySqrt(float %217)
-  store float %218, float* %19, align 4
-  %219 = load i16, i16* %5, align 2
-  %220 = sext i16 %219 to i32
-  %221 = icmp eq i32 %220, 1
-  br i1 %221, label %222, label %225
-
-222:                                              ; preds = %212
-  %223 = load float, float* %19, align 4
-  %224 = fneg float %223
-  store float %224, float* %19, align 4
-  br label %225
-
-225:                                              ; preds = %222, %212
-  %226 = load float, float* %18, align 4
-  %227 = fpext float %226 to double
-  %228 = fadd double 1.000000e+00, %227
-  %229 = fdiv double %228, 2.000000e+00
-  %230 = fptrunc double %229 to float
-  %231 = call float @mySqrt(float %230)
-  store float %231, float* %18, align 4
-  br label %232
-
-232:                                              ; preds = %225
-  %233 = load i64, i64* %15, align 8
-  %234 = add nsw i64 %233, 1
-  store i64 %234, i64* %15, align 8
-  br label %111, !llvm.loop !13
-
-235:                                              ; preds = %111
-  %236 = load i16, i16* %5, align 2
-  %237 = sext i16 %236 to i32
-  %238 = icmp eq i32 %237, 1
-  br i1 %238, label %239, label %263
-
-239:                                              ; preds = %235
-  store i64 0, i64* %10, align 8
-  br label %240
-
-240:                                              ; preds = %259, %239
-  %241 = load i64, i64* %10, align 8
-  %242 = load i64, i64* %9, align 8
-  %243 = icmp slt i64 %241, %242
-  br i1 %243, label %244, label %262
-
-244:                                              ; preds = %240
-  %245 = load i64, i64* %9, align 8
-  %246 = sitofp i64 %245 to float
-  %247 = load float*, float** %7, align 8
-  %248 = load i64, i64* %10, align 8
-  %249 = getelementptr inbounds float, float* %247, i64 %248
-  %250 = load float, float* %249, align 4
-  %251 = fdiv float %250, %246
-  store float %251, float* %249, align 4
-  %252 = load i64, i64* %9, align 8
-  %253 = sitofp i64 %252 to float
-  %254 = load float*, float** %8, align 8
-  %255 = load i64, i64* %10, align 8
-  %256 = getelementptr inbounds float, float* %254, i64 %255
-  %257 = load float, float* %256, align 4
-  %258 = fdiv float %257, %253
-  store float %258, float* %256, align 4
-  br label %259
-
-259:                                              ; preds = %244
-  %260 = load i64, i64* %10, align 8
-  %261 = add nsw i64 %260, 1
-  store i64 %261, i64* %10, align 8
-  br label %240, !llvm.loop !14
-
-262:                                              ; preds = %240
-  br label %263
-
-263:                                              ; preds = %262, %235
+if.end100:                                        ; preds = %for.end99, %for.end82
   ret i16 0
 }
 
-attributes #0 = { noinline nounwind optnone uwtable "disable-tail-calls"="false" "frame-pointer"="all" "less-precise-fpmad"="false" "min-legal-vector-width"="0" "no-infs-fp-math"="false" "no-jump-tables"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
-attributes #1 = { nofree nosync nounwind willreturn }
-attributes #2 = { "disable-tail-calls"="false" "frame-pointer"="all" "less-precise-fpmad"="false" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "no-signed-zeros-fp-math"="false" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" "unsafe-fp-math"="false" "use-soft-float"="false" }
+; Function Attrs: nofree nosync nounwind readnone speculatable willreturn
+declare !taffo.initweight !36 !taffo.funinfo !37 float @llvm.fmuladd.f32(float, float, float) #1
 
-!llvm.module.flags = !{!0}
-!llvm.ident = !{!1}
+; Function Attrs: nounwind
+declare !taffo.initweight !38 !taffo.funinfo !39 float @sqrtf(float noundef) #2
 
-!0 = !{i32 1, !"wchar_size", i32 4}
-!1 = !{!"Ubuntu clang version 12.0.1-19ubuntu3"}
-!2 = distinct !{!2, !3}
-!3 = !{!"llvm.loop.mustprogress"}
-!4 = distinct !{!4, !3}
-!5 = distinct !{!5, !3}
-!6 = distinct !{!6, !3}
-!7 = distinct !{!7, !3}
-!8 = distinct !{!8, !3}
-!9 = distinct !{!9, !3}
-!10 = distinct !{!10, !3}
-!11 = distinct !{!11, !3}
-!12 = distinct !{!12, !3}
-!13 = distinct !{!13, !3}
-!14 = distinct !{!14, !3}
+; Function Attrs: noinline nounwind uwtable
+define dso_local i32 @main() #0 !taffo.initweight !40 !taffo.funinfo !40 !taffo.start !41 {
+entry:
+  %x.s3_29fixp = alloca [128 x i32], align 16, !taffo.info !42, !taffo.target !45
+  %y.s3_29fixp = alloca [128 x i32], align 16, !taffo.info !42, !taffo.target !46
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %i.0 = phi i32 [ 0, %entry ], [ %inc, %for.inc ], !taffo.info !47
+  %cmp = icmp slt i32 %i.0, 128, !taffo.info !49
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %idxprom = sext i32 %i.0 to i64, !taffo.info !51
+  %arrayidx.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %x.s3_29fixp, i64 0, i64 %idxprom, !taffo.info !42, !taffo.target !45
+  store i32 0, i32* %arrayidx.s3_29fixp, align 4, !taffo.info !53, !taffo.constinfo !55, !taffo.target !45
+  %idxprom3 = sext i32 %i.0 to i64, !taffo.info !51
+  %arrayidx4.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %y.s3_29fixp, i64 0, i64 %idxprom3, !taffo.info !42, !taffo.target !46
+  store i32 0, i32* %arrayidx4.s3_29fixp, align 4, !taffo.info !53, !taffo.constinfo !55, !taffo.target !46
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %inc = add nsw i32 %i.0, 1, !taffo.info !58, !taffo.constinfo !13
+  br label %for.cond, !llvm.loop !60
+
+for.end:                                          ; preds = %for.cond
+  %arrayidx5.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %x.s3_29fixp, i64 0, i64 0, !taffo.info !42, !taffo.target !45
+  store i32 536870912, i32* %arrayidx5.s3_29fixp, align 16, !taffo.info !53, !taffo.constinfo !25, !taffo.target !45
+  br label %for.cond6
+
+for.cond6:                                        ; preds = %for.inc13, %for.end
+  %i.1 = phi i32 [ 1, %for.end ], [ %inc14, %for.inc13 ], !taffo.info !61
+  %cmp7 = icmp sle i32 %i.1, 10, !taffo.info !49
+  br i1 %cmp7, label %for.body8, label %for.end15
+
+for.body8:                                        ; preds = %for.cond6
+  %idxprom9 = sext i32 %i.1 to i64, !taffo.info !63
+  %arrayidx10.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %x.s3_29fixp, i64 0, i64 %idxprom9, !taffo.info !42, !taffo.target !45
+  store i32 536870912, i32* %arrayidx10.s3_29fixp, align 4, !taffo.info !53, !taffo.constinfo !25, !taffo.target !45
+  %sub = sub nsw i32 128, %i.1, !taffo.info !65, !taffo.constinfo !13
+  %idxprom11 = sext i32 %sub to i64, !taffo.info !65
+  %arrayidx12.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %x.s3_29fixp, i64 0, i64 %idxprom11, !taffo.info !42, !taffo.target !45
+  store i32 536870912, i32* %arrayidx12.s3_29fixp, align 4, !taffo.info !53, !taffo.constinfo !25, !taffo.target !45
+  br label %for.inc13
+
+for.inc13:                                        ; preds = %for.body8
+  %inc14 = add nsw i32 %i.1, 1, !taffo.info !67, !taffo.constinfo !13
+  br label %for.cond6, !llvm.loop !69
+
+for.end15:                                        ; preds = %for.cond6
+  br label %for.cond16
+
+for.cond16:                                       ; preds = %for.inc24, %for.end15
+  %i.2 = phi i32 [ 0, %for.end15 ], [ %inc25, %for.inc24 ], !taffo.info !47
+  %cmp17 = icmp slt i32 %i.2, 128, !taffo.info !49
+  br i1 %cmp17, label %for.body18, label %for.end26
+
+for.body18:                                       ; preds = %for.cond16
+  %idxprom19 = sext i32 %i.2 to i64, !taffo.info !51
+  %arrayidx20.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %x.s3_29fixp, i64 0, i64 %idxprom19, !taffo.info !42, !taffo.target !45
+  %s3_29fixp1 = load i32, i32* %arrayidx20.s3_29fixp, align 4, !taffo.info !70, !taffo.target !45
+  %conv.s2_30fixp = shl i32 %s3_29fixp1, 1, !taffo.info !70, !taffo.target !45
+  %0 = sitofp i32 %conv.s2_30fixp to double, !taffo.info !70, !taffo.target !45
+  %1 = fdiv double %0, 0x41D0000000000000, !taffo.info !70, !taffo.target !45
+  %idxprom21 = sext i32 %i.2 to i64, !taffo.info !51
+  %arrayidx22.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %y.s3_29fixp, i64 0, i64 %idxprom21, !taffo.info !42, !taffo.target !46
+  %s3_29fixp3 = load i32, i32* %arrayidx22.s3_29fixp, align 4, !taffo.info !70, !taffo.target !46
+  %conv23.s2_30fixp = shl i32 %s3_29fixp3, 1, !taffo.info !70, !taffo.target !46
+  %2 = sitofp i32 %conv23.s2_30fixp to double, !taffo.info !70, !taffo.target !46
+  %3 = fdiv double %2, 0x41D0000000000000, !taffo.info !70, !taffo.target !46
+  %call.flt = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([10 x i8], [10 x i8]* @.str.4, i64 0, i64 0), i32 noundef %i.2, double noundef %1, double noundef %3), !taffo.info !72, !taffo.initweight !28, !taffo.constinfo !73, !taffo.target !45
+  br label %for.inc24
+
+for.inc24:                                        ; preds = %for.body18
+  %inc25 = add nsw i32 %i.2, 1, !taffo.info !58, !taffo.constinfo !13
+  br label %for.cond16, !llvm.loop !74
+
+for.end26:                                        ; preds = %for.cond16
+  %call27 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([2 x i8], [2 x i8]* @.str.5, i64 0, i64 0)), !taffo.constinfo !13
+  %arraydecay.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %x.s3_29fixp, i64 0, i64 0, !taffo.info !42, !taffo.target !45
+  %arraydecay28.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %y.s3_29fixp, i64 0, i64 0, !taffo.info !42, !taffo.target !46
+  %4 = call i16 @FFT.1_fixp(i16 1, i64 7, i32* %arraydecay.s3_29fixp, i32* %arraydecay28.s3_29fixp), !taffo.info !75, !taffo.constinfo !73, !taffo.target !45
+  br label %for.cond31
+
+for.cond31:                                       ; preds = %for.inc45, %for.end26
+  %i.3 = phi i32 [ 0, %for.end26 ], [ %inc46, %for.inc45 ], !taffo.info !47
+  %cmp32 = icmp slt i32 %i.3, 128, !taffo.info !49
+  br i1 %cmp32, label %for.body34, label %for.end47
+
+for.body34:                                       ; preds = %for.cond31
+  %idxprom35 = sext i32 %i.3 to i64, !taffo.info !51
+  %arrayidx36.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %x.s3_29fixp, i64 0, i64 %idxprom35, !taffo.info !42, !taffo.target !45
+  %s3_29fixp = load i32, i32* %arrayidx36.s3_29fixp, align 4, !taffo.info !42, !taffo.target !45
+  %call37 = call float @sqrtf(float noundef 1.280000e+02) #4, !taffo.info !76, !taffo.constinfo !78
+  %5 = fmul float 0x41B0000000000000, %call37, !taffo.info !76, !taffo.constinfo !78
+  %6 = fptoui float %5 to i32, !taffo.info !76
+  %7 = sext i32 %s3_29fixp to i64, !taffo.info !42, !taffo.target !45
+  %8 = shl i64 %7, 27, !taffo.info !42, !taffo.target !45
+  %9 = zext i32 %6 to i64, !taffo.info !76
+  %10 = lshr i64 %9, 1, !taffo.info !76
+  %11 = sdiv i64 %8, %10, !taffo.info !81, !taffo.target !45
+  %div.s3_29fixp = trunc i64 %11 to i32, !taffo.info !84, !taffo.target !45
+  %conv38.s2_30fixp = shl i32 %div.s3_29fixp, 1, !taffo.info !85, !taffo.target !45
+  %12 = sitofp i32 %conv38.s2_30fixp to double, !taffo.info !85, !taffo.target !45
+  %13 = fdiv double %12, 0x41D0000000000000, !taffo.info !85, !taffo.target !45
+  %idxprom39 = sext i32 %i.3 to i64, !taffo.info !51
+  %arrayidx40.s3_29fixp = getelementptr inbounds [128 x i32], [128 x i32]* %y.s3_29fixp, i64 0, i64 %idxprom39, !taffo.info !42, !taffo.target !46
+  %s3_29fixp2 = load i32, i32* %arrayidx40.s3_29fixp, align 4, !taffo.info !42, !taffo.target !46
+  %call41 = call float @sqrtf(float noundef 1.280000e+02) #4, !taffo.info !76, !taffo.constinfo !78
+  %14 = fmul float 0x41B0000000000000, %call41, !taffo.info !76, !taffo.constinfo !78
+  %15 = fptoui float %14 to i32, !taffo.info !76
+  %16 = sext i32 %s3_29fixp2 to i64, !taffo.info !42, !taffo.target !46
+  %17 = shl i64 %16, 27, !taffo.info !42, !taffo.target !46
+  %18 = zext i32 %15 to i64, !taffo.info !76
+  %19 = lshr i64 %18, 1, !taffo.info !76
+  %20 = sdiv i64 %17, %19, !taffo.info !81, !taffo.target !46
+  %div42.s3_29fixp = trunc i64 %20 to i32, !taffo.info !84, !taffo.target !46
+  %conv43.s2_30fixp = shl i32 %div42.s3_29fixp, 1, !taffo.info !85, !taffo.target !46
+  %21 = sitofp i32 %conv43.s2_30fixp to double, !taffo.info !85, !taffo.target !46
+  %22 = fdiv double %21, 0x41D0000000000000, !taffo.info !85, !taffo.target !46
+  %call44.flt = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([10 x i8], [10 x i8]* @.str.4, i64 0, i64 0), i32 noundef %i.3, double noundef %13, double noundef %22), !taffo.info !72, !taffo.initweight !32, !taffo.constinfo !73, !taffo.target !45
+  br label %for.inc45
+
+for.inc45:                                        ; preds = %for.body34
+  %inc46 = add nsw i32 %i.3, 1, !taffo.info !58, !taffo.constinfo !13
+  br label %for.cond31, !llvm.loop !86
+
+for.end47:                                        ; preds = %for.cond31
+  ret i32 0
+}
+
+declare !taffo.initweight !38 !taffo.funinfo !39 i32 @printf(i8* noundef, ...) #3
+
+; Function Attrs: noinline nounwind uwtable
+define internal signext i16 @FFT.1_fixp(i16 noundef signext %dir, i64 noundef %m, i32* noundef %x.s3_29fixp, i32* noundef %y.s3_29fixp) #0 !taffo.initweight !87 !taffo.funinfo !88 !taffo.sourceFunction !91 {
+entry:
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %i.0 = phi i64 [ 0, %entry ], [ %inc, %for.inc ], !taffo.info !49
+  %n.0 = phi i64 [ 1, %entry ], [ %mul, %for.inc ], !taffo.info !92
+  %cmp = icmp slt i64 %i.0, %m, !taffo.info !26
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %mul = mul nsw i64 %n.0, 2, !taffo.info !30, !taffo.constinfo !13
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %inc = add nsw i64 %i.0, 1, !taffo.info !26, !taffo.constinfo !13
+  br label %for.cond, !llvm.loop !94
+
+for.end:                                          ; preds = %for.cond
+  %shr = ashr i64 %n.0, 1, !taffo.info !49, !taffo.constinfo !13
+  br label %for.cond12
+
+for.cond12:                                       ; preds = %for.inc26, %for.end
+  %j.0 = phi i64 [ 0, %for.end ], [ %add, %for.inc26 ], !taffo.info !95
+  %i.1 = phi i64 [ 0, %for.end ], [ %inc27, %for.inc26 ], !taffo.info !49
+  %sub = sub nsw i64 %n.0, 1, !taffo.info !49, !taffo.constinfo !13
+  %cmp13 = icmp slt i64 %i.1, %sub, !taffo.info !49
+  br i1 %cmp13, label %for.body14, label %for.end28
+
+for.body14:                                       ; preds = %for.cond12
+  %cmp15 = icmp slt i64 %i.1, %j.0, !taffo.info !56
+  br i1 %cmp15, label %if.then, label %if.end
+
+if.then:                                          ; preds = %for.body14
+  %arrayidx.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %i.1, !taffo.info !42
+  %s3_29fixp = load i32, i32* %arrayidx.s3_29fixp, align 4, !taffo.info !70
+  %arrayidx16.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %i.1, !taffo.info !42
+  %s3_29fixp15 = load i32, i32* %arrayidx16.s3_29fixp, align 4, !taffo.info !70
+  %arrayidx17.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %j.0, !taffo.info !42
+  %s3_29fixp9 = load i32, i32* %arrayidx17.s3_29fixp, align 4, !taffo.info !70
+  %arrayidx18.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %i.1, !taffo.info !42
+  store i32 %s3_29fixp9, i32* %arrayidx18.s3_29fixp, align 4, !taffo.info !16
+  %arrayidx19.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %j.0, !taffo.info !42
+  %s3_29fixp16 = load i32, i32* %arrayidx19.s3_29fixp, align 4, !taffo.info !70
+  %arrayidx20.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %i.1, !taffo.info !42
+  store i32 %s3_29fixp16, i32* %arrayidx20.s3_29fixp, align 4, !taffo.info !16
+  %arrayidx21.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %j.0, !taffo.info !42
+  store i32 %s3_29fixp, i32* %arrayidx21.s3_29fixp, align 4, !taffo.info !16
+  %arrayidx22.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %j.0, !taffo.info !42
+  store i32 %s3_29fixp15, i32* %arrayidx22.s3_29fixp, align 4, !taffo.info !16
+  br label %if.end
+
+if.end:                                           ; preds = %if.then, %for.body14
+  br label %while.cond
+
+while.cond:                                       ; preds = %while.body, %if.end
+  %k.0 = phi i64 [ %shr, %if.end ], [ %shr25, %while.body ], !taffo.info !49
+  %j.1 = phi i64 [ %j.0, %if.end ], [ %sub24, %while.body ], !taffo.info !96
+  %cmp23 = icmp sle i64 %k.0, %j.1, !taffo.info !49
+  br i1 %cmp23, label %while.body, label %while.end
+
+while.body:                                       ; preds = %while.cond
+  %sub24 = sub nsw i64 %j.1, %k.0, !taffo.info !96
+  %shr25 = ashr i64 %k.0, 1, !taffo.info !56, !taffo.constinfo !13
+  br label %while.cond, !llvm.loop !98
+
+while.end:                                        ; preds = %while.cond
+  %add = add nsw i64 %j.1, %k.0, !taffo.info !95
+  br label %for.inc26
+
+for.inc26:                                        ; preds = %while.end
+  %inc27 = add nsw i64 %i.1, 1, !taffo.info !26, !taffo.constinfo !13
+  br label %for.cond12, !llvm.loop !99
+
+for.end28:                                        ; preds = %for.cond12
+  %0 = lshr i32 0, 2
+  br label %for.cond29
+
+for.cond29:                                       ; preds = %for.inc80, %for.end28
+  %l.0 = phi i64 [ 0, %for.end28 ], [ %inc81, %for.inc80 ], !taffo.info !49
+  %l2.0 = phi i64 [ 1, %for.end28 ], [ %shl, %for.inc80 ], !taffo.info !92
+  %c1.0.s2_30fixp = phi i32 [ -1073741824, %for.end28 ], [ %51, %for.inc80 ], !taffo.info !100
+  %c2.0.s2_30fixp = phi i32 [ %0, %for.end28 ], [ %c2.1.s2_30fixp, %for.inc80 ], !taffo.info !70
+  %cmp30 = icmp slt i64 %l.0, %m, !taffo.info !26
+  br i1 %cmp30, label %for.body31, label %for.end82
+
+for.body31:                                       ; preds = %for.cond29
+  %shl = shl i64 %l2.0, 1, !taffo.info !30, !taffo.constinfo !13
+  %1 = lshr i32 -2147483648, 1
+  br label %for.cond32
+
+for.cond32:                                       ; preds = %for.inc65, %for.body31
+  %j.2 = phi i64 [ 0, %for.body31 ], [ %inc66, %for.inc65 ], !taffo.info !49
+  %u1.0.s2_30fixp = phi i32 [ %1, %for.body31 ], [ %s2_30fixp, %for.inc65 ], !taffo.info !70
+  %u2.0.u0_32fixp = phi i32 [ 0, %for.body31 ], [ %u0_32fixp, %for.inc65 ], !taffo.info !101
+  %cmp33 = icmp slt i64 %j.2, %l2.0, !taffo.info !49
+  br i1 %cmp33, label %for.body34, label %for.end67
+
+for.body34:                                       ; preds = %for.cond32
+  br label %for.cond35
+
+for.cond35:                                       ; preds = %for.inc57, %for.body34
+  %i.2 = phi i64 [ %j.2, %for.body34 ], [ %add58, %for.inc57 ], !taffo.info !103
+  %cmp36 = icmp slt i64 %i.2, %n.0, !taffo.info !49
+  br i1 %cmp36, label %for.body37, label %for.end59
+
+for.body37:                                       ; preds = %for.cond35
+  %add38 = add nsw i64 %i.2, %l2.0, !taffo.info !26
+  %arrayidx39.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %add38, !taffo.info !42
+  %s3_29fixp10 = load i32, i32* %arrayidx39.s3_29fixp, align 4, !taffo.info !70
+  %arrayidx41.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %add38, !taffo.info !42
+  %s3_29fixp17 = load i32, i32* %arrayidx41.s3_29fixp, align 4, !taffo.info !70
+  %2 = zext i32 %u2.0.u0_32fixp to i64, !taffo.info !101
+  %3 = sext i32 %s3_29fixp17 to i64, !taffo.info !70
+  %4 = mul i64 %2, %3, !taffo.info !105
+  %5 = lshr i64 %4, 29, !taffo.info !105
+  %mul42.u0_32fixp = trunc i64 %5 to i32, !taffo.info !108
+  %neg.u0_32fixp = sub i32 0, %mul42.u0_32fixp, !taffo.info !101
+  %6 = lshr i32 %neg.u0_32fixp, 3, !taffo.info !101
+  %7 = sext i32 %u1.0.s2_30fixp to i64, !taffo.info !70
+  %8 = sext i32 %s3_29fixp10 to i64, !taffo.info !70
+  %9 = mul i64 %7, %8, !taffo.info !109
+  %10 = ashr i64 %9, 30
+  %11 = trunc i64 %10 to i32
+  %s3_29fixp23 = add i32 %11, %6, !taffo.info !111
+  %arrayidx43.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %add38, !taffo.info !42
+  %s3_29fixp18 = load i32, i32* %arrayidx43.s3_29fixp, align 4, !taffo.info !70
+  %arrayidx45.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %add38, !taffo.info !42
+  %s3_29fixp11 = load i32, i32* %arrayidx45.s3_29fixp, align 4, !taffo.info !70
+  %12 = zext i32 %u2.0.u0_32fixp to i64, !taffo.info !101
+  %13 = sext i32 %s3_29fixp11 to i64, !taffo.info !70
+  %14 = mul i64 %12, %13, !taffo.info !105
+  %15 = lshr i64 %14, 29, !taffo.info !105
+  %mul46.u0_32fixp = trunc i64 %15 to i32, !taffo.info !108
+  %16 = lshr i32 %mul46.u0_32fixp, 3, !taffo.info !108
+  %17 = sext i32 %u1.0.s2_30fixp to i64, !taffo.info !70
+  %18 = sext i32 %s3_29fixp18 to i64, !taffo.info !70
+  %19 = mul i64 %17, %18, !taffo.info !109
+  %20 = ashr i64 %19, 30
+  %21 = trunc i64 %20 to i32
+  %s3_29fixp22 = add i32 %21, %16, !taffo.info !111
+  %arrayidx47.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %i.2, !taffo.info !42
+  %s3_29fixp12 = load i32, i32* %arrayidx47.s3_29fixp, align 4, !taffo.info !111
+  %sub48.s3_29fixp = sub i32 %s3_29fixp12, %s3_29fixp23, !taffo.info !112
+  %arrayidx49.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %add38, !taffo.info !42
+  store i32 %sub48.s3_29fixp, i32* %arrayidx49.s3_29fixp, align 4, !taffo.info !16
+  %arrayidx50.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %i.2, !taffo.info !42
+  %s3_29fixp19 = load i32, i32* %arrayidx50.s3_29fixp, align 4, !taffo.info !111
+  %sub51.s3_29fixp = sub i32 %s3_29fixp19, %s3_29fixp22, !taffo.info !112
+  %arrayidx52.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %add38, !taffo.info !42
+  store i32 %sub51.s3_29fixp, i32* %arrayidx52.s3_29fixp, align 4, !taffo.info !16
+  %arrayidx53.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %i.2, !taffo.info !42
+  %s3_29fixp13 = load i32, i32* %arrayidx53.s3_29fixp, align 4, !taffo.info !112
+  %add54.s3_29fixp = add i32 %s3_29fixp13, %s3_29fixp23, !taffo.info !42
+  store i32 %add54.s3_29fixp, i32* %arrayidx53.s3_29fixp, align 4, !taffo.info !16
+  %arrayidx55.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %i.2, !taffo.info !42
+  %s3_29fixp20 = load i32, i32* %arrayidx55.s3_29fixp, align 4, !taffo.info !112
+  %add56.s3_29fixp = add i32 %s3_29fixp20, %s3_29fixp22, !taffo.info !42
+  store i32 %add56.s3_29fixp, i32* %arrayidx55.s3_29fixp, align 4, !taffo.info !16
+  br label %for.inc57
+
+for.inc57:                                        ; preds = %for.body37
+  %add58 = add nsw i64 %i.2, %shl, !taffo.info !30
+  br label %for.cond35, !llvm.loop !114
+
+for.end59:                                        ; preds = %for.cond35
+  %22 = zext i32 %u2.0.u0_32fixp to i64, !taffo.info !101
+  %23 = sext i32 %c2.0.s2_30fixp to i64, !taffo.info !70
+  %24 = mul i64 %22, %23, !taffo.info !115
+  %25 = lshr i64 %24, 30, !taffo.info !115
+  %mul61.u0_32fixp = trunc i64 %25 to i32, !taffo.info !101
+  %neg62.u0_32fixp = sub i32 0, %mul61.u0_32fixp, !taffo.info !108
+  %26 = lshr i32 %neg62.u0_32fixp, 2, !taffo.info !108
+  %27 = sext i32 %u1.0.s2_30fixp to i64, !taffo.info !70
+  %28 = sext i32 %c1.0.s2_30fixp to i64, !taffo.info !117
+  %29 = mul i64 %27, %28, !taffo.info !119
+  %30 = ashr i64 %29, 30
+  %31 = trunc i64 %30 to i32
+  %s2_30fixp = add i32 %31, %26, !taffo.info !117
+  %32 = zext i32 %u2.0.u0_32fixp to i64, !taffo.info !101
+  %33 = sext i32 %c1.0.s2_30fixp to i64, !taffo.info !117
+  %34 = mul i64 %32, %33, !taffo.info !121
+  %35 = lshr i64 %34, 30, !taffo.info !121
+  %mul64.u0_32fixp = trunc i64 %35 to i32, !taffo.info !108
+  %36 = sext i32 %u1.0.s2_30fixp to i64, !taffo.info !70
+  %37 = sext i32 %c2.0.s2_30fixp to i64, !taffo.info !70
+  %38 = mul i64 %36, %37, !taffo.info !122
+  %39 = lshr i64 %38, 28
+  %40 = trunc i64 %39 to i32
+  %u0_32fixp = add i32 %40, %mul64.u0_32fixp, !taffo.info !101
+  br label %for.inc65
+
+for.inc65:                                        ; preds = %for.end59
+  %inc66 = add nsw i64 %j.2, 1, !taffo.info !26, !taffo.constinfo !13
+  br label %for.cond32, !llvm.loop !124
+
+for.end67:                                        ; preds = %for.cond32
+  %conv.s3_29fixp = ashr i32 %c1.0.s2_30fixp, 1, !taffo.info !125
+  %41 = lshr i32 -2147483648, 1
+  %42 = shl i32 %conv.s3_29fixp, 1, !taffo.info !125
+  %sub68.u2_30fixp = sub i32 %41, %42, !taffo.info !126, !taffo.constinfo !25
+  %div.u2_30fixp = udiv i32 %sub68.u2_30fixp, 2, !taffo.info !128, !taffo.constinfo !29
+  %conv69.u1_31fixp = shl i32 %div.u2_30fixp, 1, !taffo.info !129, !taffo.constinfo !29
+  %43 = uitofp i32 %conv69.u1_31fixp to float, !taffo.info !129
+  %44 = fdiv float %43, 0x41E0000000000000, !taffo.info !129, !taffo.constinfo !29
+  %call.flt = call float @sqrtf(float noundef %44) #4, !taffo.info !131, !taffo.initweight !33, !taffo.constinfo !13
+  %45 = fmul float 0x41D0000000000000, %call.flt, !taffo.info !131, !taffo.constinfo !13
+  %call.flt.fallback.s2_30fixp = fptosi float %45 to i32, !taffo.info !131
+  %conv70 = sext i16 %dir to i32, !taffo.info !26
+  %cmp71 = icmp eq i32 %conv70, 1, !taffo.info !26
+  br i1 %cmp71, label %if.then73, label %if.end74
+
+if.then73:                                        ; preds = %for.end67
+  %fneg.s2_30fixp = sub i32 0, %call.flt.fallback.s2_30fixp, !taffo.info !117
+  br label %if.end74
+
+if.end74:                                         ; preds = %if.then73, %for.end67
+  %c2.1.s2_30fixp = phi i32 [ %fneg.s2_30fixp, %if.then73 ], [ %call.flt.fallback.s2_30fixp, %for.end67 ], !taffo.info !70
+  %46 = shl i32 -2147483648, 1
+  %47 = shl i32 %c1.0.s2_30fixp, 2, !taffo.info !117
+  %add76.u0_32fixp = add i32 %46, %47, !taffo.info !101, !taffo.constinfo !25
+  %div77.u0_32fixp = udiv i32 %add76.u0_32fixp, 2, !taffo.info !101, !taffo.constinfo !29
+  %48 = uitofp i32 %div77.u0_32fixp to float, !taffo.info !101
+  %49 = fdiv float %48, 0x41F0000000000000, !taffo.info !101, !taffo.constinfo !29
+  %call79.flt = call float @sqrtf(float noundef %49) #4, !taffo.info !101, !taffo.initweight !33, !taffo.constinfo !13
+  %50 = fmul float 0x41F0000000000000, %call79.flt, !taffo.info !101, !taffo.constinfo !13
+  %call79.flt.fallback.u0_32fixp = fptoui float %50 to i32, !taffo.info !101
+  br label %for.inc80
+
+for.inc80:                                        ; preds = %if.end74
+  %inc81 = add nsw i64 %l.0, 1, !taffo.info !26, !taffo.constinfo !13
+  %51 = lshr i32 %call79.flt.fallback.u0_32fixp, 2, !taffo.info !101
+  br label %for.cond29, !llvm.loop !132
+
+for.end82:                                        ; preds = %for.cond29
+  %conv83 = sext i16 %dir to i32, !taffo.info !26
+  %cmp84 = icmp eq i32 %conv83, 1, !taffo.info !26
+  br i1 %cmp84, label %if.then86, label %if.end100
+
+if.then86:                                        ; preds = %for.end82
+  br label %for.cond87
+
+for.cond87:                                       ; preds = %for.inc97, %if.then86
+  %i.3 = phi i64 [ 0, %if.then86 ], [ %inc98, %for.inc97 ], !taffo.info !49
+  %cmp88 = icmp slt i64 %i.3, %n.0, !taffo.info !49
+  br i1 %cmp88, label %for.body90, label %for.end99
+
+for.body90:                                       ; preds = %for.cond87
+  %arrayidx92.s3_29fixp = getelementptr inbounds i32, i32* %x.s3_29fixp, i64 %i.3, !taffo.info !42
+  %s3_29fixp14 = load i32, i32* %arrayidx92.s3_29fixp, align 4, !taffo.info !42
+  %52 = sext i32 %s3_29fixp14 to i64, !taffo.info !42
+  %53 = sdiv i64 %52, %n.0, !taffo.info !133
+  %div93.s3_29fixp = trunc i64 %53 to i32, !taffo.info !42
+  store i32 %div93.s3_29fixp, i32* %arrayidx92.s3_29fixp, align 4, !taffo.info !16
+  %arrayidx95.s3_29fixp = getelementptr inbounds i32, i32* %y.s3_29fixp, i64 %i.3, !taffo.info !42
+  %s3_29fixp21 = load i32, i32* %arrayidx95.s3_29fixp, align 4, !taffo.info !42
+  %54 = sext i32 %s3_29fixp21 to i64, !taffo.info !42
+  %55 = sdiv i64 %54, %n.0, !taffo.info !133
+  %div96.s3_29fixp = trunc i64 %55 to i32, !taffo.info !42
+  store i32 %div96.s3_29fixp, i32* %arrayidx95.s3_29fixp, align 4, !taffo.info !16
+  br label %for.inc97
+
+for.inc97:                                        ; preds = %for.body90
+  %inc98 = add nsw i64 %i.3, 1, !taffo.info !26, !taffo.constinfo !13
+  br label %for.cond87, !llvm.loop !134
+
+for.end99:                                        ; preds = %for.cond87
+  br label %if.end100
+
+if.end100:                                        ; preds = %for.end99, %for.end82
+  ret i16 0
+}
+
+attributes #0 = { noinline nounwind uwtable "frame-pointer"="all" "min-legal-vector-width"="0" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #1 = { nofree nosync nounwind readnone speculatable willreturn }
+attributes #2 = { nounwind "frame-pointer"="all" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #3 = { "frame-pointer"="all" "no-trapping-math"="true" "stack-protector-buffer-size"="8" "target-cpu"="x86-64" "target-features"="+cx8,+fxsr,+mmx,+sse,+sse2,+x87" "tune-cpu"="generic" }
+attributes #4 = { nounwind }
+
+!llvm.module.flags = !{!4, !5, !6, !7, !8}
+!llvm.ident = !{!9}
+
+!0 = !{i1 false, !1, i1 false, i2 0}
+!1 = !{double 0.000000e+00, double 1.010000e+02}
+!2 = !{i1 false, !3, i1 false, i2 0}
+!3 = !{double 0.000000e+00, double 1.000000e+01}
+!4 = !{i32 1, !"wchar_size", i32 4}
+!5 = !{i32 7, !"PIC Level", i32 2}
+!6 = !{i32 7, !"PIE Level", i32 2}
+!7 = !{i32 7, !"uwtable", i32 1}
+!8 = !{i32 7, !"frame-pointer", i32 2}
+!9 = !{!"Ubuntu clang version 14.0.0-1ubuntu1"}
+!10 = !{i32 -1, i32 -1, i32 -1, i32 -1}
+!11 = distinct !{null}
+!12 = !{i32 0, i1 false, i32 0, i1 false, i32 0, i1 false, i32 0, i1 false}
+!13 = !{i1 false, i1 false}
+!14 = distinct !{!14, !15}
+!15 = !{!"llvm.loop.mustprogress"}
+!16 = !{i1 false, i1 false, i1 false, i2 1}
+!17 = !{i32 2}
+!18 = !{i32 3}
+!19 = distinct !{!19, !15}
+!20 = distinct !{!20, !15}
+!21 = !{i32 0}
+!22 = !{i1 false, i1 false, i1 false, i1 false}
+!23 = distinct !{!23, !15}
+!24 = distinct !{!24, !15}
+!25 = !{!26, i1 false}
+!26 = !{i1 false, !27, i1 false, i2 0}
+!27 = !{double 1.000000e+00, double 1.000000e+00}
+!28 = !{i32 4}
+!29 = !{i1 false, !30}
+!30 = !{i1 false, !31, i1 false, i2 0}
+!31 = !{double 2.000000e+00, double 2.000000e+00}
+!32 = !{i32 5}
+!33 = !{i32 6}
+!34 = distinct !{!34, !15}
+!35 = distinct !{!35, !15}
+!36 = !{i32 -1, i32 -1, i32 -1}
+!37 = !{i32 0, i1 false, i32 0, i1 false, i32 0, i1 false}
+!38 = !{i32 -1}
+!39 = !{i32 0, i1 false}
+!40 = !{}
+!41 = !{i1 true}
+!42 = !{!43, !44, i1 false, i2 1}
+!43 = !{!"fixp", i32 -32, i32 29}
+!44 = !{double -3.000000e+00, double 3.000000e+00}
+!45 = !{!"input_signal"}
+!46 = !{!"output_signal"}
+!47 = !{i1 false, !48, i1 false, i2 0}
+!48 = !{double 0.000000e+00, double 1.290000e+02}
+!49 = !{i1 false, !50, i1 false, i2 0}
+!50 = !{double 0.000000e+00, double 1.000000e+00}
+!51 = !{i1 false, !52, i1 false, i2 0}
+!52 = !{double 0.000000e+00, double 1.280000e+02}
+!53 = !{i1 false, !54, i1 false, i2 1}
+!54 = !{double -1.000000e+00, double 1.000000e+00}
+!55 = !{!56, i1 false}
+!56 = !{i1 false, !57, i1 false, i2 0}
+!57 = !{double 0.000000e+00, double 0.000000e+00}
+!58 = !{i1 false, !59, i1 false, i2 0}
+!59 = !{double 1.000000e+00, double 1.290000e+02}
+!60 = distinct !{!60, !15}
+!61 = !{i1 false, !62, i1 false, i2 0}
+!62 = !{double 1.000000e+00, double 1.200000e+01}
+!63 = !{i1 false, !64, i1 false, i2 0}
+!64 = !{double 1.000000e+00, double 1.100000e+01}
+!65 = !{i1 false, !66, i1 false, i2 0}
+!66 = !{double 1.170000e+02, double 1.270000e+02}
+!67 = !{i1 false, !68, i1 false, i2 0}
+!68 = !{double 2.000000e+00, double 1.200000e+01}
+!69 = distinct !{!69, !15}
+!70 = !{!71, !54, i1 false, i2 1}
+!71 = !{!"fixp", i32 -32, i32 30}
+!72 = !{!71, i1 false, i1 false, i2 1}
+!73 = !{i1 false, i1 false, i1 false, i1 false, i1 false}
+!74 = distinct !{!74, !15}
+!75 = !{!43, i1 false, i1 false, i2 1}
+!76 = !{i1 false, !77, i1 false, i2 0}
+!77 = !{double 0x4026A09E667F3BCD, double 0x4026A09E667F3BCD}
+!78 = !{!79, i1 false}
+!79 = !{i1 false, !80, i1 false, i2 0}
+!80 = !{double 1.280000e+02, double 1.280000e+02}
+!81 = !{!82, !83, i1 false, i2 1}
+!82 = !{!"fixp", i32 -64, i32 29}
+!83 = !{double 0xBFD0F876CCDF6CD9, double 0x3FD0F876CCDF6CD9}
+!84 = !{!43, !83, i1 false, i2 1}
+!85 = !{!71, !83, i1 false, i2 1}
+!86 = distinct !{!86, !15}
+!87 = !{i32 -1, i32 -1, i32 2, i32 2}
+!88 = !{i32 1, !26, i32 1, !89, i32 1, !42, i32 1, !42}
+!89 = !{i1 false, !90, i1 false, i2 0}
+!90 = !{double 7.000000e+00, double 7.000000e+00}
+!91 = !{i16 (i16, i64, float*, float*)* @FFT}
+!92 = !{i1 false, !93, i1 false, i2 0}
+!93 = !{double 1.000000e+00, double 2.000000e+00}
+!94 = distinct !{!94, !15}
+!95 = !{i1 false, !54, i1 false, i2 0}
+!96 = !{i1 false, !97, i1 false, i2 0}
+!97 = !{double -1.000000e+00, double 0.000000e+00}
+!98 = distinct !{!98, !15}
+!99 = distinct !{!99, !15}
+!100 = !{!71, !97, i1 false, i2 1}
+!101 = !{!102, !57, i1 false, i2 1}
+!102 = !{!"fixp", i32 32, i32 32}
+!103 = !{i1 false, !104, i1 false, i2 0}
+!104 = !{double 0.000000e+00, double 2.000000e+00}
+!105 = !{!106, !107, i1 false, i2 1}
+!106 = !{!"fixp", i32 64, i32 61}
+!107 = !{double -0.000000e+00, double -0.000000e+00}
+!108 = !{!102, !107, i1 false, i2 1}
+!109 = !{!110, !54, i1 false, i2 1}
+!110 = !{!"fixp", i32 -64, i32 59}
+!111 = !{!43, !54, i1 false, i2 1}
+!112 = !{!43, !113, i1 false, i2 1}
+!113 = !{double -2.000000e+00, double 2.000000e+00}
+!114 = distinct !{!114, !15}
+!115 = !{!116, !57, i1 false, i2 1}
+!116 = !{!"fixp", i32 64, i32 62}
+!117 = !{!71, !118, i1 false, i2 1}
+!118 = !{double -1.000000e+00, double -1.000000e+00}
+!119 = !{!120, !118, i1 false, i2 1}
+!120 = !{!"fixp", i32 -64, i32 60}
+!121 = !{!116, !107, i1 false, i2 1}
+!122 = !{!123, !57, i1 false, i2 1}
+!123 = !{!"fixp", i32 64, i32 60}
+!124 = distinct !{!124, !15}
+!125 = !{!43, !118, i1 false, i2 1}
+!126 = !{!127, !31, i1 false, i2 1}
+!127 = !{!"fixp", i32 32, i32 30}
+!128 = !{!127, !27, i1 false, i2 1}
+!129 = !{!130, !27, i1 false, i2 1}
+!130 = !{!"fixp", i32 32, i32 31}
+!131 = !{!71, !27, i1 false, i2 1}
+!132 = distinct !{!132, !15}
+!133 = !{!82, !44, i1 false, i2 1}
+!134 = distinct !{!134, !15}
