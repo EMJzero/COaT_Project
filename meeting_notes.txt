@@ -1,0 +1,14 @@
+Notes from online meeting:
+
+La "internal" é da far fixare a TAFFO, cambiale manualmente.
+
+PandA non preserva i nomi dei parametri dell'IR, quindi Pd5, Pd6, ... sono in ordine i parametri delle funzioni.
+
+Quando un qualcosa é passato per riferimento (*), anche se é un singolo valore, mettilo tra '{}' nella testbench, perché conta come array di un solo elemento.
+
+Usa "|& tee file.txt" per loggare l'output e allo stesso tempo averlo in console.
+
+Usa --generate-vcd in combinazione con gtkwave! Vedi direttamente i valori dei parametri a fine funzione!
+Per vedere i nomi delle varie cose fai riferimeno ad HLS_CFGraph.dot, generato con --print-dot!
+
+Le operazioni floating point in HLS sono una chiamata a funzioni di libreria che fanno l'operazione, quindi se guardando la lista di funzioni sintetizzate (-v 4, a metá circa) non ci sono altre funzioni eccetto quelle dell'.ll, allora non ci sono FPU!

@@ -1,2 +1,8 @@
 TAFFO:
 Works as expected.
+
+PandA:
+Synthesis works as expected.
+Simulation...not quite as much!
+Command:
+/mnt/c/Users/marco/Desktop/COaT_project/PandA-Bambu/bambu-2023.1.AppImage test.ll --use-raw --top-fname=min_max_1_fixp --compiler=I386_CLANG12 --generate-tb=testbench.xml --simulate --simulator=VERILATOR

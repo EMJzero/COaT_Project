@@ -88,8 +88,8 @@ for.end:                                          ; preds = %for.cond
 define dso_local i32 @main() #0 !taffo.initweight !21 !taffo.funinfo !21 !taffo.start !22 {
 entry:
   %in_v.u9_23fixp = alloca [8 x i32], align 16, !taffo.info !11, !taffo.target !23
-  %out_max.u9_23fixp = alloca i32, align 4, !taffo.info !11, !taffo.target !24
-  %out_min.u9_23fixp = alloca i32, align 4, !taffo.info !11, !taffo.target !25
+  %out_max_u9_23fixp = alloca i32, align 4, !taffo.info !11, !taffo.target !24
+  %out_min_u9_23fixp = alloca i32, align 4, !taffo.info !11, !taffo.target !25
   %call = call i64 @time(i64* null) #3, !taffo.constinfo !18
   %conv = trunc i64 %call to i32
   call void @srand(i32 %conv) #3, !taffo.constinfo !18
@@ -143,11 +143,11 @@ for.inc17:                                        ; preds = %for.body12
 for.end19:                                        ; preds = %for.cond9
   %call20 = call i32 @putchar(i32 10), !taffo.constinfo !18
   %arraydecay.u9_23fixp = getelementptr inbounds [8 x i32], [8 x i32]* %in_v.u9_23fixp, i64 0, i64 0, !taffo.info !11, !taffo.target !23
-  call void @min_max.1_fixp(i32* %arraydecay.u9_23fixp, i32 8, i32* %out_max.u9_23fixp, i32* %out_min.u9_23fixp), !taffo.info !17, !taffo.constinfo !48, !taffo.target !24
-  %u9_23fixp1 = load i32, i32* %out_max.u9_23fixp, align 4, !taffo.info !11, !taffo.target !24
+  call void @min_max_1_fixp(i32* %arraydecay.u9_23fixp, i32 8, i32* %out_max_u9_23fixp, i32* %out_min_u9_23fixp), !taffo.info !17, !taffo.constinfo !48, !taffo.target !24
+  %u9_23fixp1 = load i32, i32* %out_max_u9_23fixp, align 4, !taffo.info !11, !taffo.target !24
   %7 = uitofp i32 %u9_23fixp1 to double, !taffo.info !11, !taffo.target !24
   %8 = fdiv double %7, 0x4160000000000000, !taffo.info !11, !taffo.target !24
-  %u9_23fixp = load i32, i32* %out_min.u9_23fixp, align 4, !taffo.info !11, !taffo.target !25
+  %u9_23fixp = load i32, i32* %out_min_u9_23fixp, align 4, !taffo.info !11, !taffo.target !25
   %9 = uitofp i32 %u9_23fixp to double, !taffo.info !11, !taffo.target !25
   %10 = fdiv double %9, 0x4160000000000000, !taffo.info !11, !taffo.target !25
   %call23.flt = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.7, i64 0, i64 0), double %8, double %10), !taffo.info !16, !taffo.initweight !15, !taffo.constinfo !49, !taffo.target !24
@@ -168,11 +168,11 @@ declare !taffo.initweight !50 !taffo.funinfo !51 dso_local i32 @printf(i8*, ...)
 declare !taffo.initweight !50 !taffo.funinfo !51 dso_local i32 @putchar(i32) #2
 
 ; Function Attrs: noinline nounwind uwtable
-define internal void @min_max.1_fixp(i32* %input.u9_23fixp, i32 %num_elements, i32* %max.u9_23fixp, i32* %min.u9_23fixp) #0 !taffo.initweight !52 !taffo.funinfo !53 !taffo.sourceFunction !56 {
+define dso_local void @min_max_1_fixp(i32* %input_u9_23fixp, i32 %num_elements, i32* %max_u9_23fixp, i32* %min_u9_23fixp) #0 !taffo.initweight !52 !taffo.funinfo !53 !taffo.sourceFunction !56 {
 entry:
-  %arrayidx.u9_23fixp = getelementptr inbounds i32, i32* %input.u9_23fixp, i64 0, !taffo.info !11
+  %arrayidx.u9_23fixp = getelementptr inbounds i32, i32* %input_u9_23fixp, i64 0, !taffo.info !11
   %u9_23fixp = load i32, i32* %arrayidx.u9_23fixp, align 4, !taffo.info !11
-  %arrayidx6.u9_23fixp = getelementptr inbounds i32, i32* %input.u9_23fixp, i64 0, !taffo.info !11
+  %arrayidx6.u9_23fixp = getelementptr inbounds i32, i32* %input_u9_23fixp, i64 0, !taffo.info !11
   %u9_23fixp9 = load i32, i32* %arrayidx6.u9_23fixp, align 4, !taffo.info !11
   br label %for.cond
 
@@ -185,27 +185,27 @@ for.cond:                                         ; preds = %for.inc, %entry
 
 for.body:                                         ; preds = %for.cond
   %idxprom = sext i32 %i.0 to i64, !taffo.info !59
-  %arrayidx7.u9_23fixp = getelementptr inbounds i32, i32* %input.u9_23fixp, i64 %idxprom, !taffo.info !11
+  %arrayidx7.u9_23fixp = getelementptr inbounds i32, i32* %input_u9_23fixp, i64 %idxprom, !taffo.info !11
   %u9_23fixp10 = load i32, i32* %arrayidx7.u9_23fixp, align 4, !taffo.info !11
   %0 = icmp ugt i32 %u9_23fixp10, %local_max.0.u9_23fixp, !taffo.info !16
   br i1 %0, label %if.then, label %if.else, !taffo.info !17, !taffo.initweight !15
 
 if.then:                                          ; preds = %for.body
   %idxprom9 = sext i32 %i.0 to i64, !taffo.info !59
-  %arrayidx10.u9_23fixp = getelementptr inbounds i32, i32* %input.u9_23fixp, i64 %idxprom9, !taffo.info !11
+  %arrayidx10.u9_23fixp = getelementptr inbounds i32, i32* %input_u9_23fixp, i64 %idxprom9, !taffo.info !11
   %u9_23fixp11 = load i32, i32* %arrayidx10.u9_23fixp, align 4, !taffo.info !11
   br label %if.end17
 
 if.else:                                          ; preds = %for.body
   %idxprom11 = sext i32 %i.0 to i64, !taffo.info !59
-  %arrayidx12.u9_23fixp = getelementptr inbounds i32, i32* %input.u9_23fixp, i64 %idxprom11, !taffo.info !11
+  %arrayidx12.u9_23fixp = getelementptr inbounds i32, i32* %input_u9_23fixp, i64 %idxprom11, !taffo.info !11
   %u9_23fixp12 = load i32, i32* %arrayidx12.u9_23fixp, align 4, !taffo.info !11
   %1 = icmp ult i32 %u9_23fixp12, %local_min.0.u9_23fixp, !taffo.info !16
   br i1 %1, label %if.then14, label %if.end, !taffo.info !17, !taffo.initweight !15
 
 if.then14:                                        ; preds = %if.else
   %idxprom15 = sext i32 %i.0 to i64, !taffo.info !59
-  %arrayidx16.u9_23fixp = getelementptr inbounds i32, i32* %input.u9_23fixp, i64 %idxprom15, !taffo.info !11
+  %arrayidx16.u9_23fixp = getelementptr inbounds i32, i32* %input_u9_23fixp, i64 %idxprom15, !taffo.info !11
   %u9_23fixp13 = load i32, i32* %arrayidx16.u9_23fixp, align 4, !taffo.info !11
   br label %if.end
 
@@ -223,8 +223,8 @@ for.inc:                                          ; preds = %if.end17
   br label %for.cond, !llvm.loop !61
 
 for.end:                                          ; preds = %for.cond
-  store i32 %local_min.0.u9_23fixp, i32* %min.u9_23fixp, align 4, !taffo.info !17
-  store i32 %local_max.0.u9_23fixp, i32* %max.u9_23fixp, align 4, !taffo.info !17
+  store i32 %local_min.0.u9_23fixp, i32* %min_u9_23fixp, align 4, !taffo.info !17
+  store i32 %local_max.0.u9_23fixp, i32* %max_u9_23fixp, align 4, !taffo.info !17
   ret void
 }
 

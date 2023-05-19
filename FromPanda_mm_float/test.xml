@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<function>
+   <testbench in_a_u5_27fixp="{2, 4, 6, 7}"
+   in_b_u5_27fixp="{5, 5, 3, 2}"
+   out_c_u19_13fixp="{0, 0, 0, 0}"
+   A_ROWS="2"
+   A_COLS="2"
+   B_COLS="2"
+   Pd6="0"
+   Pd5="0"
+   Pd7="0"
+   Pd8="0"/>
+</function>

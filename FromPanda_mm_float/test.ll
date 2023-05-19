@@ -298,7 +298,7 @@ for.end78:                                        ; preds = %for.cond58
   %31 = load i32, i32* @main.A_ROWS, align 4, !taffo.info !2
   %32 = load i32, i32* @main.A_COLS, align 4, !taffo.info !2
   %33 = load i32, i32* @main.B_COLS, align 4, !taffo.info !2
-  call void @mm.1_fixp(i32* %vla.u5_27fixp, i32* %vla3.u5_27fixp, i32* %vla6.u19_13fixp, i32 %31, i32 %32, i32 %33), !taffo.info !51, !taffo.constinfo !63, !taffo.target !40
+  call void @mm_1_fixp(i32* %vla.u5_27fixp, i32* %vla3.u5_27fixp, i32* %vla6.u19_13fixp, i32 %31, i32 %32, i32 %33), !taffo.info !51, !taffo.constinfo !63, !taffo.target !40
   %call79 = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([9 x i8], [9 x i8]* @.str.9, i64 0, i64 0)), !taffo.constinfo !27
   br label %for.cond80
 
@@ -360,7 +360,7 @@ declare !taffo.initweight !69 !taffo.funinfo !70 i32 @putchar(i32 noundef) #3
 declare !taffo.initweight !69 !taffo.funinfo !70 void @llvm.stackrestore(i8*) #2
 
 ; Function Attrs: noinline nounwind uwtable
-define internal void @mm.1_fixp(i32* noalias noundef %in_a.u5_27fixp, i32* noalias noundef %in_b.u5_27fixp, i32* noalias noundef %out_c.u19_13fixp, i32 noundef %A_ROWS, i32 noundef %A_COLS, i32 noundef %B_COLS) #0 !taffo.initweight !71 !taffo.funinfo !72 !taffo.sourceFunction !73 {
+define dso_local void @mm_1_fixp(i32* noalias noundef %in_a_u5_27fixp, i32* noalias noundef %in_b_u5_27fixp, i32* noalias noundef %out_c_u19_13fixp, i32 noundef %A_ROWS, i32 noundef %A_COLS, i32 noundef %B_COLS) #0 !taffo.initweight !71 !taffo.funinfo !72 !taffo.sourceFunction !73 {
 entry:
   %0 = lshr i32 0, 19
   br label %for.cond
@@ -393,12 +393,12 @@ for.body10:                                       ; preds = %for.cond8
   %mul = mul i32 %i.0, %A_COLS, !taffo.info !49
   %add = add i32 %mul, %k.0, !taffo.info !49
   %idxprom = zext i32 %add to i64, !taffo.info !49
-  %arrayidx.u5_27fixp = getelementptr inbounds i32, i32* %in_a.u5_27fixp, i64 %idxprom, !taffo.info !20
+  %arrayidx.u5_27fixp = getelementptr inbounds i32, i32* %in_a_u5_27fixp, i64 %idxprom, !taffo.info !20
   %u5_27fixp = load i32, i32* %arrayidx.u5_27fixp, align 4, !taffo.info !20
   %mul11 = mul i32 %k.0, %B_COLS, !taffo.info !49
   %add12 = add i32 %mul11, %j.0, !taffo.info !49
   %idxprom13 = zext i32 %add12 to i64, !taffo.info !49
-  %arrayidx14.u5_27fixp = getelementptr inbounds i32, i32* %in_b.u5_27fixp, i64 %idxprom13, !taffo.info !20
+  %arrayidx14.u5_27fixp = getelementptr inbounds i32, i32* %in_b_u5_27fixp, i64 %idxprom13, !taffo.info !20
   %u5_27fixp5 = load i32, i32* %arrayidx14.u5_27fixp, align 4, !taffo.info !20
   %1 = zext i32 %u5_27fixp to i64, !taffo.info !20
   %2 = zext i32 %u5_27fixp5 to i64, !taffo.info !20
@@ -416,7 +416,7 @@ for.end:                                          ; preds = %for.cond8
   %mul16 = mul i32 %i.0, %B_COLS, !taffo.info !49
   %add17 = add i32 %mul16, %j.0, !taffo.info !49
   %idxprom18 = zext i32 %add17 to i64, !taffo.info !49
-  %arrayidx19.u19_13fixp = getelementptr inbounds i32, i32* %out_c.u19_13fixp, i64 %idxprom18, !taffo.info !42
+  %arrayidx19.u19_13fixp = getelementptr inbounds i32, i32* %out_c_u19_13fixp, i64 %idxprom18, !taffo.info !42
   store i32 %sum.2.u19_13fixp, i32* %arrayidx19.u19_13fixp, align 4, !taffo.info !31
   br label %for.inc20
 

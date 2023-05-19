@@ -11,4 +11,17 @@ taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.c
 HLS with:
 /mnt/c/Users/marco/Desktop/COaT_project/PandA-Bambu/bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=min_max --compiler=I386_CLANG12
 
+-> to simulate add: --simulate --simulator=VERILATOR (write the testbench in text.xml)
+-> switch the top function from "internal" to "dso_local" in the IR file
+-> to simulate, replace any "." with "_" in function and parameter names
+-> to simulate, you need to duplicate FunctionName_tb.h:
+    from: /mnt/c/Users/marco/Desktop/COaT_project/Tests/<test_name>/HLS_output//verilator_beh/verilator_obj/
+    to: /mnt/c/Users/marco/Desktop/COaT_project/Tests/<test_name>/HLS_output//simulation/
+   then re-run the simulation via the .sh script
 !!! -> The IR file must have the extension .ll
+
+To run synthesis:
+open Vivado -> tcl console -> cd/dir/pwd in HLS_output/Synthesis -> source vivado.tcl
+
+-> run the HLS with a device like: --device-name=xc7a100t-1csg324-VVD
+-> do a find&replace in vivado.tcl for "/mnt/c/"->"C:/"

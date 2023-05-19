@@ -37,3 +37,14 @@
 *.tcl
 *.v
 *.sh
+*.dot
+*.js
+*.wdf
+*.lpr
+*.wpc
+*.vds
+*.dcp
+*.rst
+*.bat
+*.log
+*/HLS_output/*
