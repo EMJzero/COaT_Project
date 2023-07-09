@@ -20,6 +20,9 @@ HLS with:
    then re-run the simulation via the .sh script
 !!! -> The IR file must have the extension .ll
 
+!!!!!!!! -> For some reason, arrays must either be passed by reference to functions or arrays
+            allocated withing synthesized functions must have their size STATIC at compile time
+
 To run synthesis:
 open Vivado -> tcl console -> cd/dir/pwd in HLS_output/Synthesis -> source vivado.tcl
 

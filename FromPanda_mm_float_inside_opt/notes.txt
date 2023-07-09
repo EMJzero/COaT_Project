@@ -3,6 +3,8 @@ Works as expected.
 
 The specified ranges are for commodity, they can be all removed without any issue.
 
+Fun fact, the size of the arrays to allocate within syntesized functions must be STATIC at compile time...
+
 The "test_direct_conversion.c" variant is useless, as it performs the conversion before and
 after every product, as obviously the values in memory are stored as floats...
 Hence the conversion loops employed in the "test.c" are necessary to bring out some improvements.

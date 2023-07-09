@@ -1,9 +1,12 @@
 #include <stdio.h>
 
+#define A_ROWS 16
+#define A_COLS 16
+#define B_COLS 16
+
 void mm(float * __restrict__ in_a_f,
     float * __restrict__ in_b_f,
-    float * __restrict__ out_c_f,
-    unsigned int A_ROWS, unsigned int A_COLS, unsigned int B_COLS)
+    float * __restrict__ out_c_f)
 {
 
     float in_a[A_ROWS * A_COLS] __attribute((annotate("target('input_a') scalar(range(0, 256))")));
@@ -64,10 +67,6 @@ int main()
         1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16};
     float * source_b = source_a;
 
-    static unsigned int A_ROWS = 16;
-    static unsigned int A_COLS = 16;
-    static unsigned int B_COLS = 16;
-
     float in_a[A_ROWS * A_COLS];
     float in_b[A_COLS * B_COLS];
     float out_c[A_ROWS * B_COLS];
@@ -110,7 +109,7 @@ int main()
         putchar('\n');
     }
 
-    mm(in_a, in_b, out_c, A_ROWS, A_COLS, B_COLS);
+    mm(in_a, in_b, out_c);
 
     printf("Result:\n");
     for (i = 0; i < A_ROWS; i++)
