@@ -48,3 +48,7 @@
 *.bat
 *.log
 */HLS_output/*
+*/*/HLS_output/*
+*/*/*/HLS_output/*
+bambu_results*
+memory_allocation*
