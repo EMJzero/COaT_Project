@@ -1,7 +1,7 @@
 import random as rnd
 import sys
 
-template = "\n\t<testbench\n\tPd36=\"iters\"\n\tPd37=\"result\"/>"
+template = "\n\t<testbench\n\tPd36=\"iters_\"\n\tPd37=\"res_\"\n\titers=\"iters_\"\n\tres=\"res_\"/>"
 
 # upper bound is included
 def gen(max_val):
@@ -15,7 +15,7 @@ def generate_values(max_val):
     while True:
         try:
             iters, result = next(g)
-            yield template.replace("iters", str(iters)).replace("result", str(result))
+            yield template.replace("iters_", str(iters)).replace("res_", str(result))
         except StopIteration:
             return ""
 

@@ -1,7 +1,7 @@
 import random as rnd
 import sys
 
-template = "\n\t<testbench\n\tPd5=\"n_f\"\n\tPd6=\"result\"/>"
+template = "\n\t<testbench\n\tPd5=\"n_f_\"\n\tPd6=\"result_\"\n\tn_f=\"n_f_\"\n\tresult=\"result_\"/>"
 
 # upper bound is included
 def gen(upper_bound):
@@ -12,7 +12,7 @@ def gen(upper_bound):
 
 def generate_values(upper_bound):
     n_f, result = gen(upper_bound)
-    return template.replace("n_f", str(n_f)).replace("result", str(result))
+    return template.replace("n_f_", str(n_f)).replace("result_", str(result))
 
 result = "<?xml version=\"1.0\"?>\n<function>"
 
