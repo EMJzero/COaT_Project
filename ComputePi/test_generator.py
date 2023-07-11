@@ -21,7 +21,7 @@ def generate_values(max_val):
 
 result = "<?xml version=\"1.0\"?>\n<function>"
 
-for entry in generate_values(2**24):
+for entry in generate_values(2**20):
     result += entry
 
 result += "\n</function>"

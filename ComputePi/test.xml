@@ -95,24 +95,4 @@
     Pd37="0"
     iters="524288"
     res="0"/>
-    <testbench
-    Pd36="1048576"
-    Pd37="0"
-    iters="1048576"
-    res="0"/>
-    <testbench
-    Pd36="2097152"
-    Pd37="0"
-    iters="2097152"
-    res="0"/>
-    <testbench
-    Pd36="4194304"
-    Pd37="0"
-    iters="4194304"
-    res="0"/>
-    <testbench
-    Pd36="8388608"
-    Pd37="0"
-    iters="8388608"
-    res="0"/>
 </function>

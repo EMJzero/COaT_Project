@@ -2,7 +2,9 @@ import random as rnd
 import sys
 
 template_old = "\n\t<testbench\n\tPd5=\"{in_a}\"\n\tPd6=\"{in_b}\"\n\tPd7=\"{out_c}\"\n\tPd8=\"len\"\n\tPd9=\"len\"\n\tPd10=\"len\"/>"
-template = "\n\t<testbench\n\tPd5=\"{in_a}\"\n\tPd6=\"{in_b}\"\n\tPd7=\"{out_c}\"/>"
+template_old_too = "\n\t<testbench\n\tPd5=\"{in_a}\"\n\tPd6=\"{in_b}\"\n\tPd7=\"{out_c}\"/>"
+template = "\n\t<testbench\n\tPd5=\"{in_a_f_}\"\n\tPd6=\"{in_b_f_}\"\n\tPd7=\"{out_c_f_}\"\n\tin_a_f=\"{in_a_f_}\"\n\tin_b_f=\"{in_b_f_}\"\n\tout_c_f=\"{out_c_f_}\"/>"
+
 
 # upper bound is included
 def gen(length, upper_bound):
@@ -26,7 +28,7 @@ def to_string(values):
 
 def generate_values(length, upper_bound):
     in_a, in_b, out_c = gen(length, upper_bound)
-    return template.replace("in_a", to_string(in_a)).replace("in_b", to_string(in_b)).replace("out_c", to_string(out_c)).replace("len", str(length))
+    return template.replace("in_a_f_", to_string(in_a)).replace("in_b_f_", to_string(in_b)).replace("out_c_f_", to_string(out_c)).replace("len", str(length))
 
 size = 4
 
