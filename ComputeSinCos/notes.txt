@@ -3,4 +3,7 @@ The result is correct.
 I'm a little thrown off by the many operations in "if.then11", but whatever!
 
 HLS:
-To be tested...
+Works as exptected.
+(And is really really fast...)
+
+Note that simulation results are there just for "cos", as sin is the same thing + a constant!
