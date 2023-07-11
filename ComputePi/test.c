@@ -1,13 +1,9 @@
 #include <stdio.h>
 
-int main()
+void compute_pi(int iters, float * res)
 {
     double __attribute((annotate("target('pi') scalar(range(0, 4) final)"))) pi = 0;
     double __attribute((annotate("scalar(range(0, 1) final)"))) z;
-    int iters;
-
-    printf("Number of iterations to perform: ");
-    scanf("%d", &iters);
 
     for (int i = 0; i < iters; i++)
     {
@@ -17,7 +13,22 @@ int main()
         pi += z;
     }
 
-    printf("The value of pi is: %f\n", pi * 4);
+    // when using this, the new argument names become Pd36 and Pd37
+    //printf("Value: %f\n", pi);
+    *res = pi * 4;
+}
+
+int main()
+{
+    int iters;
+
+    printf("Number of iterations to perform: ");
+    scanf("%d", &iters);
+
+    float pi;
+    compute_pi(iters, &pi);
+
+    printf("The value of pi is: %f\n", pi);
 
     return 0;
 }
