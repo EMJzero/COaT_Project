@@ -5,5 +5,9 @@ Important:
 Do not annotate "in", it causes the wrong read from "scanf".
 Use "-Xvra -max-unroll=0" if using TAFFO "master" branch.
 
+Use TAFFO develp, it does not work with the old build...
+
 HLS:
-To be tested...
+Works as expected.
+
+The lower values in the simulations results are the exact square roots that take less cycles to be computed!
