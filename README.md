@@ -36,6 +36,9 @@ Here is the current list of tests:
 - **FromPanda_fft_float**: Fast Furier Transfom example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/fft_example;
 - **FromPanda_mm_float**: Matrix multiplication example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/mm_float;
 - **FromPanda_mm_float_inside_opt**: Variant of **FromPanda_mm_float** made specifically to synthesize the floating point to fixed point coversions;
+- **FromTaffo_axbench_fft**: Fast Furier Transfom example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/axbench/fft;
+- **FromTaffo_axbench_inversek2j**: Forward and inverse kinematics example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/axbench/inversek2j;
+- **FromTaffo_fpbench_CX**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/CX;
 - **FromTaffo_test3**: Example from here https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c;
 - **NormalizeVector**: Transforms a vector to have a unitary norm (Uses `math.h`'s `sqrtf` function);
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;
@@ -59,9 +62,12 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
 - Run the HLS on TAFFO's produced LLVM-IR:<br>
     `bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=<function_name_wrt_the_IR> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR`<br>
     To specify a target device for later synthesis use `--device-name=<name>`.<br>
-    To see the input and output of each simulation use an higher log verbosity: `-v 4`
+    To see the input and output of each simulation use an higher log verbosity: `-v 4`<br>
+    Add the `-lm -ffast-math --libm-std-rounding` options if `math.h` needs to be linked.<br>
+    ~~Also consider using `-fsingle-precision-constant -Os --experimental-setup=BAMBU`.~~
 - Run the HLS on the original code:<br>
     `bambu-2023.1.AppImage test.c -v 2 --top-fname=<function_name_wrt_the_sourcecode> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR`<br>
+    Add the `-lm -ffast-math --libm-std-rounding` options if `math.h` needs to be linked.
 - Generate new testbench values:<br>
     `python3 test_generator.py <args> > test.xml`<br>
     Different generators might require some command-line arguments.

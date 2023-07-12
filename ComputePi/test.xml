@@ -1,98 +1,98 @@
 <?xml version="1.0"?>
 <function>
     <testbench
-    Pd36="2"
-    Pd37="0"
+    Pd5="2"
+    Pd6="0"
     iters="2"
     res="0"/>
     <testbench
-    Pd36="4"
-    Pd37="0"
+    Pd5="4"
+    Pd6="0"
     iters="4"
     res="0"/>
     <testbench
-    Pd36="8"
-    Pd37="0"
+    Pd5="8"
+    Pd6="0"
     iters="8"
     res="0"/>
     <testbench
-    Pd36="16"
-    Pd37="0"
+    Pd5="16"
+    Pd6="0"
     iters="16"
     res="0"/>
     <testbench
-    Pd36="32"
-    Pd37="0"
+    Pd5="32"
+    Pd6="0"
     iters="32"
     res="0"/>
     <testbench
-    Pd36="64"
-    Pd37="0"
+    Pd5="64"
+    Pd6="0"
     iters="64"
     res="0"/>
     <testbench
-    Pd36="128"
-    Pd37="0"
+    Pd5="128"
+    Pd6="0"
     iters="128"
     res="0"/>
     <testbench
-    Pd36="256"
-    Pd37="0"
+    Pd5="256"
+    Pd6="0"
     iters="256"
     res="0"/>
     <testbench
-    Pd36="512"
-    Pd37="0"
+    Pd5="512"
+    Pd6="0"
     iters="512"
     res="0"/>
     <testbench
-    Pd36="1024"
-    Pd37="0"
+    Pd5="1024"
+    Pd6="0"
     iters="1024"
     res="0"/>
     <testbench
-    Pd36="2048"
-    Pd37="0"
+    Pd5="2048"
+    Pd6="0"
     iters="2048"
     res="0"/>
     <testbench
-    Pd36="4096"
-    Pd37="0"
+    Pd5="4096"
+    Pd6="0"
     iters="4096"
     res="0"/>
     <testbench
-    Pd36="8192"
-    Pd37="0"
+    Pd5="8192"
+    Pd6="0"
     iters="8192"
     res="0"/>
     <testbench
-    Pd36="16384"
-    Pd37="0"
+    Pd5="16384"
+    Pd6="0"
     iters="16384"
     res="0"/>
     <testbench
-    Pd36="32768"
-    Pd37="0"
+    Pd5="32768"
+    Pd6="0"
     iters="32768"
     res="0"/>
     <testbench
-    Pd36="65536"
-    Pd37="0"
+    Pd5="65536"
+    Pd6="0"
     iters="65536"
     res="0"/>
     <testbench
-    Pd36="131072"
-    Pd37="0"
+    Pd5="131072"
+    Pd6="0"
     iters="131072"
     res="0"/>
     <testbench
-    Pd36="262144"
-    Pd37="0"
+    Pd5="262144"
+    Pd6="0"
     iters="262144"
     res="0"/>
     <testbench
-    Pd36="524288"
-    Pd37="0"
+    Pd5="524288"
+    Pd6="0"
     iters="524288"
     res="0"/>
 </function>

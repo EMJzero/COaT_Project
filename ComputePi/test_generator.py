@@ -1,7 +1,7 @@
 import random as rnd
 import sys
 
-template = "\n\t<testbench\n\tPd36=\"iters_\"\n\tPd37=\"res_\"\n\titers=\"iters_\"\n\tres=\"res_\"/>"
+template = "\n\t<testbench\n\tPd5=\"iters_\"\n\tPd6=\"res_\"\n\titers=\"iters_\"\n\tres=\"res_\"/>"
 
 # upper bound is included
 def gen(max_val):

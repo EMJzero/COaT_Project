@@ -2,7 +2,7 @@
 
 void compute_pi(int iters, float * res)
 {
-    double __attribute((annotate("target('pi') scalar(range(0, 4) final)"))) pi = 0;
+    double __attribute((annotate("target('pi') scalar(range(0, 3.14159266) final)"))) pi = 0;
     double __attribute((annotate("scalar(range(0, 1) final)"))) z;
 
     for (int i = 0; i < iters; i++)

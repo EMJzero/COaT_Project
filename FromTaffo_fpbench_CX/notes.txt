@@ -1,0 +1,7 @@
+In this test the printfs are intended to be synthesized, just to try that out!
+
+TAFFO:
+Works as expected.
+
+HLS:
+Works as expected.
