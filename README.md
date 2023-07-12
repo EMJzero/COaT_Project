@@ -47,7 +47,7 @@ Currently not all test are workig all the way through TAFFO, HLS and simulation,
 
 ### Results
 
-A major decision to be made during the process is where to place the floating point to fixed point conversion. Since generating appropriate test values and verifying test results with the conversion **not** synthesized proved challenging (I am still exploring this possibility), note that **all the following results and those in the repository assume that the conversion is synthesied** and the I/O of with the design is performed with floating point values. 
+A major decision to be made during the process is where to place the floating point to fixed point conversion. Since generating appropriate test values and verifying test results with the conversion **not** synthesized proved challenging (I am still exploring this possibility), note that **all the following results and those in the repository assume that the conversion is synthesized** and the I/O with the design is performed with floating point values. 
 
 The latest comprehensive list of measured performance metrics on the various test can be reviewed here:<br>
 [--> link to the excel document <--](https://polimi365-my.sharepoint.com/:x:/g/personal/10669641_polimi_it/EQ8R5ElhK_BKmf_rSk1-DioBY5HdXF9fdG_eAb6Fkf4CdQ?e=v3GLxB)
