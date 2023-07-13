@@ -1,5 +1,6 @@
+#include <stdlib.h>
 #include <stdio.h>
-//#include <math.h>
+#include <math.h>
 
 #define M_PI 3.14159265
 #define M_PI_2 1.57079632
@@ -48,22 +49,28 @@ void manual_cos(float * x_f, float * res)
     return;
 }
 
+void manual_sin(float * x_f, float * res)
+{
+    *x_f = *x_f - M_PI_2;
+    return manual_cos(x_f, res);
+}
+
 #define M 1000
 #define len 200
 #define pi 3.14159265359
 
 // Uncommenting this breaks PandA. The reason is math.h's cos function's presence for some reason...
-/*float __attribute__((annotate("scalar(range(-100, 100))"))) ex0(float radius, float theta)
+/*float ex0(float radius, float theta) __attribute__((annotate("scalar(range(-100, 100))")))
 {
   float __attribute__((annotate("scalar(range(-10, 10) type(64 54))"))) radiant = theta * (pi / 180.0f);
-  float __attribute__((annotate("scalar(range(-100, 100))"))) c = cos(radiant);
+  float __attribute__((annotate("scalar(range(-100, 100))"))) c = sin(radiant);
   float __attribute__((annotate("scalar(range(-100, 100))"))) tmp = radius * c;
   return tmp;
 }*/
 
-void test(float * arr)
+int test(float * arr)
 {
-  float __attribute__((annotate("target('test') scalar(range(1, 10))"))) radius[len];
+  float __attribute__((annotate("target('main') scalar(range(1, 10))"))) radius[len];
   float __attribute__((annotate("scalar(range(0, 360))"))) theta[len];
   float __attribute__((annotate("scalar(range(-100, 100))"))) res[len];
 
@@ -81,8 +88,8 @@ void test(float * arr)
 
       radiant = theta[j] * (pi / 180.0f);
       // Uncomment this and cos breaks PandA...
-      //c = cos(radiant);
-      manual_cos(&radiant, &c);
+      //c = sin(radiant);
+      manual_sin(&radiant, &c);
       res[j] = radius[j] * c;
     }
   }
@@ -92,6 +99,7 @@ void test(float * arr)
     printf("%f\n", res[j]);
   }
   printf("Values End\n");
+  return 0;
 }
 
 int main()

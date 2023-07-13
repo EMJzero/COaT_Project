@@ -2,4 +2,6 @@ TAFFO:
 Works as expected.
 
 HLS:
-Will not work untill I figure out how to let PandA work with math.h :(
+PandA-Bambu works as expected, Verilator's simulation fails with floating point exception...
+
+Remember to link math.h!!! (-lm)

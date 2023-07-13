@@ -58,7 +58,7 @@ int main()
         Doing the direct assignment:
             '''float in_a[] __attribute((annotate("target('input_a') scalar(range(0, 16))"))) = {... numbers ...};'''
             '''float in_b[] __attribute((annotate("target('input_a') scalar(range(0, 16))"))) = {... numbers ...};'''
-        does not work, the silly copying step from "source"s is required, so that "fptoui" is used in the IR.
+        does not work, the silly copying step from "source"s is required, so that "fptoui" is used in the IR. S;G
         Likely something is screwed up with the direct conversion via "llvm.memcpy.p0i8.p0i8.i64"...
     */
 

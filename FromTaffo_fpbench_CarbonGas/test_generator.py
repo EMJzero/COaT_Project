@@ -1,11 +1,12 @@
 import random as rnd
 import sys
 
-template = "\n\t<testbench\n\tPd58=\"{arr_}\"\n\tarr=\"{arr_}\"/>"
+template = "\n\t<testbench\n\tPd5=\"{arr_}\"\n\tPd6=\"{res_}\"\n\tarr=\"{arr_}\"\n\tres=\"{res_}\"/>"
 
 # upper bound is included
 def gen(min_, max_):
-    return [min_ + (rnd.random() * (max_ - min_)) for i in range(400)]
+    length = 2000
+    return [min_ + (rnd.random() * (max_ - min_)) for i in range(length)], [0 for i in range(length)]
 
 def to_string(values):
     res = ""
@@ -15,14 +16,9 @@ def to_string(values):
     return res[:-2]
 
 def generate_values():
-    arr1 = gen(1,10)
-    arr2 = gen(0, 360)
+    arr, res = gen(0, 1)
 
-    arr = []
-    for d_ in zip(arr1, arr2):
-        arr.append(d_[0])
-        arr.append(d_[1])
-    return template.replace("arr_", to_string(arr))
+    return template.replace("arr_", to_string(arr)).replace("res_", to_string(res))
 
 result = "<?xml version=\"1.0\"?>\n<function>"
 

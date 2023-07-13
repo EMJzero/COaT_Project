@@ -1,0 +1,8 @@
+TAFFO:
+Works as expected.
+
+HLS on the original:
+Works as expected.
+
+HLS with TAFFO:
+Does not work...

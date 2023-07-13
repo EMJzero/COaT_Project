@@ -11,7 +11,7 @@ def gen():
 def to_string(values):
     res = ""
     for value in values:
-        res += str(value) + ", "
+        res += str(value)[:6] + ", "
 
     return res[:-2]
 
