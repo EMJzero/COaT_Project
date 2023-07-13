@@ -2,6 +2,8 @@ import random as rnd
 import math
 import sys
 
+how_many_testbenches = 256
+
 template = "\n\t<testbench\n\tPd5=\"x_f_\"\n\tPd6=\"res_\"\n\tx_f=\"x_f_\"\n\tres=\"res_\"/>"
 
 # upper bound is included
@@ -14,7 +16,7 @@ def generate_values():
 
 result = "<?xml version=\"1.0\"?>\n<function>"
 
-for i in range(256):
+for i in range(how_many_testbenches):
     result += generate_values()
 
 result += "\n</function>"

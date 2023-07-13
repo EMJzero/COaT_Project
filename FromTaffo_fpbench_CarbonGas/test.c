@@ -52,7 +52,7 @@ void test(float * arr, float * res)
       annnbvv = a * n * n * n * b / v[j] / v[j];
       float __attribute__((annotate("scalar(range(-995480895487, 35382589.0))")))
       ret = (pv + ann - pbb - annnbvv);
-      res[j] = ret;
+      res[j] = ann;
     }
   }
 }

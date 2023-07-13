@@ -2,6 +2,6 @@ TAFFO:
 Works as expected.
 
 HLS:
-PandA-Bambu works as expected, Verilator's simulation fails with floating point exception...
+Works as expected.
 
 Remember to link math.h!!! (-lm)

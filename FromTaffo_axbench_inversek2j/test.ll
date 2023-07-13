@@ -1,4 +1,4 @@
-; ModuleID = '/tmp/tmp.VQpNpueLRl/test.ll.4.taffotmp.ll'
+; ModuleID = '/tmp/tmp.jb5b7pZ30d/test.ll.4.taffotmp.ll'
 source_filename = "test.c"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
@@ -138,15 +138,15 @@ for.body13:                                       ; preds = %for.cond11
   %add52.u1_31fixp = add i32 %mul40.u1_31fixp, %mul51.u1_31fixp, !taffo.info !1
   %34 = uitofp i32 %add52.u1_31fixp to float, !taffo.info !1
   %35 = fdiv float %34, 0x41E0000000000000, !taffo.info !1
-  %add54 = add nsw i32 %i10.0, 2, !taffo.info !42, !taffo.constinfo !31
-  %idxprom55 = sext i32 %add54 to i64, !taffo.info !42
+  %add54 = add nsw i32 %i10.0, 3, !taffo.info !44, !taffo.constinfo !31
+  %idxprom55 = sext i32 %add54 to i64, !taffo.info !44
   %arrayidx56 = getelementptr inbounds [400 x float], [400 x float]* %t1t2xy, i64 0, i64 %idxprom55, !taffo.initweight !28, !taffo.info !20, !taffo.target !21
   store float %35, float* %arrayidx56, align 4, !taffo.info !20, !taffo.target !21
   br label %for.inc57
 
 for.inc57:                                        ; preds = %for.body13
   %add58 = add nsw i32 %i10.0, 4, !taffo.info !32, !taffo.constinfo !31
-  br label %for.cond11, !llvm.loop !44
+  br label %for.cond11, !llvm.loop !46
 
 for.end59:                                        ; preds = %for.cond11
   br label %for.cond61
@@ -166,12 +166,12 @@ for.body64:                                       ; preds = %for.cond61
   %arrayidx71 = getelementptr inbounds [400 x float], [400 x float]* %t1t2xy, i64 0, i64 %idxprom70, !taffo.initweight !28, !taffo.info !20, !taffo.target !21
   %37 = load float, float* %arrayidx71, align 4, !taffo.initweight !36, !taffo.info !20, !taffo.target !21
   %mul72 = fmul float %36, %37, !taffo.initweight !37, !taffo.info !20, !taffo.target !21
-  %add73 = add nsw i32 %i60.0, 3, !taffo.info !45, !taffo.constinfo !31
-  %idxprom74 = sext i32 %add73 to i64, !taffo.info !45
+  %add73 = add nsw i32 %i60.0, 3, !taffo.info !44, !taffo.constinfo !31
+  %idxprom74 = sext i32 %add73 to i64, !taffo.info !44
   %arrayidx75 = getelementptr inbounds [400 x float], [400 x float]* %t1t2xy, i64 0, i64 %idxprom74, !taffo.initweight !28, !taffo.info !20, !taffo.target !21
   %38 = load float, float* %arrayidx75, align 4, !taffo.initweight !36, !taffo.info !20, !taffo.target !21
-  %add76 = add nsw i32 %i60.0, 3, !taffo.info !45, !taffo.constinfo !31
-  %idxprom77 = sext i32 %add76 to i64, !taffo.info !45
+  %add76 = add nsw i32 %i60.0, 3, !taffo.info !44, !taffo.constinfo !31
+  %idxprom77 = sext i32 %add76 to i64, !taffo.info !44
   %arrayidx78 = getelementptr inbounds [400 x float], [400 x float]* %t1t2xy, i64 0, i64 %idxprom77, !taffo.initweight !28, !taffo.info !20, !taffo.target !21
   %39 = load float, float* %arrayidx78, align 4, !taffo.initweight !36, !taffo.info !20, !taffo.target !21
   %mul79 = fmul float %38, %39, !taffo.initweight !37, !taffo.info !20, !taffo.target !21
@@ -185,12 +185,12 @@ for.body64:                                       ; preds = %for.cond61
   %arrayidx86 = getelementptr inbounds [400 x float], [400 x float]* %t1t2xy, i64 0, i64 %idxprom85, !taffo.initweight !28, !taffo.info !20, !taffo.target !21
   %41 = load float, float* %arrayidx86, align 4, !taffo.initweight !36, !taffo.info !20, !taffo.target !21
   %mul87 = fmul float %40, %41, !taffo.initweight !37, !taffo.info !20, !taffo.target !21
-  %add88 = add nsw i32 %i60.0, 3, !taffo.info !45, !taffo.constinfo !31
-  %idxprom89 = sext i32 %add88 to i64, !taffo.info !45
+  %add88 = add nsw i32 %i60.0, 3, !taffo.info !44, !taffo.constinfo !31
+  %idxprom89 = sext i32 %add88 to i64, !taffo.info !44
   %arrayidx90 = getelementptr inbounds [400 x float], [400 x float]* %t1t2xy, i64 0, i64 %idxprom89, !taffo.initweight !28, !taffo.info !20, !taffo.target !21
   %42 = load float, float* %arrayidx90, align 4, !taffo.initweight !36, !taffo.info !20, !taffo.target !21
-  %add91 = add nsw i32 %i60.0, 3, !taffo.info !45, !taffo.constinfo !31
-  %idxprom92 = sext i32 %add91 to i64, !taffo.info !45
+  %add91 = add nsw i32 %i60.0, 3, !taffo.info !44, !taffo.constinfo !31
+  %idxprom92 = sext i32 %add91 to i64, !taffo.info !44
   %arrayidx93 = getelementptr inbounds [400 x float], [400 x float]* %t1t2xy, i64 0, i64 %idxprom92, !taffo.initweight !28, !taffo.info !20, !taffo.target !21
   %43 = load float, float* %arrayidx93, align 4, !taffo.initweight !36, !taffo.info !20, !taffo.target !21
   %mul94 = fmul float %42, %43, !taffo.initweight !37, !taffo.info !20, !taffo.target !21
@@ -239,8 +239,8 @@ for.body64:                                       ; preds = %for.cond61
   %idxprom105 = sext i32 %add104 to i64, !taffo.info !29
   %arrayidx106 = getelementptr inbounds [400 x float], [400 x float]* %t1t2xy, i64 0, i64 %idxprom105, !taffo.initweight !28, !taffo.info !20, !taffo.target !21
   store float %68, float* %arrayidx106, align 4, !taffo.info !20, !taffo.target !21
-  %add107 = add nsw i32 %i60.0, 3, !taffo.info !45, !taffo.constinfo !31
-  %idxprom108 = sext i32 %add107 to i64, !taffo.info !45
+  %add107 = add nsw i32 %i60.0, 3, !taffo.info !44, !taffo.constinfo !31
+  %idxprom108 = sext i32 %add107 to i64, !taffo.info !44
   %arrayidx109 = getelementptr inbounds [400 x float], [400 x float]* %t1t2xy, i64 0, i64 %idxprom108, !taffo.initweight !28, !taffo.info !20, !taffo.target !21
   %69 = load float, float* %arrayidx109, align 4, !taffo.initweight !36, !taffo.info !20, !taffo.target !21
   %conv110 = fpext float %69 to double, !taffo.initweight !37, !taffo.info !20, !taffo.target !21
@@ -485,9 +485,9 @@ attributes #3 = { nounwind }
 !41 = !{i32 5}
 !42 = !{i1 false, !43, i1 false, i2 0}
 !43 = !{double 2.000000e+00, double 4.020000e+02}
-!44 = distinct !{!44, !35}
-!45 = !{i1 false, !46, i1 false, i2 0}
-!46 = !{double 3.000000e+00, double 4.030000e+02}
+!44 = !{i1 false, !45, i1 false, i2 0}
+!45 = !{double 3.000000e+00, double 4.030000e+02}
+!46 = distinct !{!46, !35}
 !47 = !{!40, !48, !4, i2 1}
 !48 = !{double 2.500000e-01, double 2.500000e-01}
 !49 = !{!2, !48, !4, i2 1}

@@ -3,6 +3,8 @@ import sys
 
 template = "\n\t<testbench\n\tPd5=\"iters_\"\n\tPd6=\"res_\"\n\titers=\"iters_\"\n\tres=\"res_\"/>"
 
+iterations_upper_bound = 2**20
+
 # upper bound is included
 def gen(max_val):
     value = 2
@@ -21,7 +23,7 @@ def generate_values(max_val):
 
 result = "<?xml version=\"1.0\"?>\n<function>"
 
-for entry in generate_values(2**20):
+for entry in generate_values(iterations_upper_bound):
     result += entry
 
 result += "\n</function>"

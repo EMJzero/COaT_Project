@@ -41,6 +41,7 @@ Here is the current list of tests:
 - **FromTaffo_fpbench_CX**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/CX;
 - **FromTaffo_fpbench_CY**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/CY;
 - **FromTaffo_fpbench_CarbonGas**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/carbonGas;
+- **FromTaffo_fpbench_doppler**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/doppler;
 - **FromTaffo_test3**: Example from here https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c;
 - **NormalizeVector**: Transforms a vector to have a unitary norm;
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;

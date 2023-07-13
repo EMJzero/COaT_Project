@@ -33,7 +33,7 @@ void test(float * t1t2xy_f)
 	for(int i = 0 ; i < n * 2 * 2 ; i += 2 * 2)
 	{
 		t1t2xy[i + 2] = l1 * cos(t1t2xy[i + 0]) + l2 * cos(t1t2xy[i + 0] + t1t2xy[i + 1]) ;
-		t1t2xy[i + 2] = l1 * sin(t1t2xy[i + 0]) + l2 * sin(t1t2xy[i + 0] + t1t2xy[i + 1]) ;
+		t1t2xy[i + 3] = l1 * sin(t1t2xy[i + 0]) + l2 * sin(t1t2xy[i + 0] + t1t2xy[i + 1]) ;
 	}
 
 	for(int i = 0 ; i < n * 2 * 2 ; i += 2 * 2)

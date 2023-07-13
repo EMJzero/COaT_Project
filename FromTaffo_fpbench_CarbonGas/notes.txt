@@ -6,3 +6,5 @@ Works as expected.
 
 HLS with TAFFO:
 Does not work...
+
+PandA-Bambu does NOT support int96, so its usage must be prevented...untill then this test will not work!

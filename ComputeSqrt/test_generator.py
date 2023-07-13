@@ -3,6 +3,9 @@ import sys
 
 template = "\n\t<testbench\n\tPd5=\"n_f_\"\n\tPd6=\"result_\"\n\tn_f=\"n_f_\"\n\tresult=\"result_\"/>"
 
+how_many_testbenches = 256
+values_range = 4096
+
 # upper bound is included
 def gen(upper_bound):
     if rnd.randint(0, 4) == 0:
@@ -16,8 +19,8 @@ def generate_values(upper_bound):
 
 result = "<?xml version=\"1.0\"?>\n<function>"
 
-for i in range(256):
-    result += generate_values(4095)
+for i in range(how_many_testbenches):
+    result += generate_values(values_range)
 
 result += "\n</function>"
 

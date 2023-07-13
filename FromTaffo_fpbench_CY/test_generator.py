@@ -3,9 +3,12 @@ import sys
 
 template = "\n\t<testbench\n\tPd58=\"{arr_}\"\n\tarr=\"{arr_}\"/>"
 
+len_code_constant = 200
+how_many_testbenches = 2
+
 # upper bound is included
 def gen(min_, max_):
-    return [min_ + (rnd.random() * (max_ - min_)) for i in range(400)]
+    return [min_ + (rnd.random() * (max_ - min_)) for i in range(len_code_constant)]
 
 def to_string(values):
     res = ""
@@ -26,7 +29,7 @@ def generate_values():
 
 result = "<?xml version=\"1.0\"?>\n<function>"
 
-for i in range(2):
+for i in range(how_many_testbenches):
     result += generate_values()
 
 result += "\n</function>"

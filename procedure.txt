@@ -7,6 +7,7 @@ taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.c
 -> use -fno-discard-value-names in clang to keep variables names in the IR
 -> solve "Floating point exception" by putting a check on the divide-by-zero!
 -> avoid in-place updates, TAFFO cannot handle both the range before and after the change and resorts to using floats. Use separate in_ and out_ data structures instead.
+-> prevent TAFFO from generating i96 values, those are not supported in PandA!
 
 HLS with:
 /mnt/c/Users/marco/Desktop/COaT_project/PandA-Bambu/bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=min_max --compiler=I386_CLANG12
