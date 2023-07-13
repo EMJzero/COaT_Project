@@ -96,9 +96,9 @@ void test(float * arr)
 
 int main()
 {
-  float arr[len];
+  float arr[len*2];
 
-  for(int i = 0; i < len; i++)
+  for(int i = 0; i < len*2; i++)
     arr[i] = i%32 + 0.23f;
 
   test(arr);

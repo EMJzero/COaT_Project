@@ -1,0 +1,10 @@
+TAFFO:
+Works as expected.
+
+HLS without TAFFO:
+Simulation failed...
+
+HLS with TAFFO:
+Simulation failed...
+
+II am still investigating the cause of the failed simulations...

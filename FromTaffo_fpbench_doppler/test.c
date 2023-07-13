@@ -30,10 +30,10 @@ void test(float * arr, float * res)
 
 int main()
 {
-  float arr[len];
-  float res[len];
+  float arr[len*3];
+  float res[len*3];
 
-  for(int i = 0; i < len; i++)
+  for(int i = 0; i < len*3; i++)
     arr[i] = i%32 + 0.23f;
 
   test(arr, res);
