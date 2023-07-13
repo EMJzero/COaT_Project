@@ -39,8 +39,10 @@ Here is the current list of tests:
 - **FromTaffo_axbench_fft**: Fast Furier Transfom example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/axbench/fft;
 - **FromTaffo_axbench_inversek2j**: Forward and inverse kinematics example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/axbench/inversek2j;
 - **FromTaffo_fpbench_CX**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/CX;
+- **FromTaffo_fpbench_CY**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/CY;
+- **FromTaffo_fpbench_CarbonGas**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/carbonGas;
 - **FromTaffo_test3**: Example from here https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c;
-- **NormalizeVector**: Transforms a vector to have a unitary norm (Uses `math.h`'s `sqrtf` function);
+- **NormalizeVector**: Transforms a vector to have a unitary norm;
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;
 
 Currently not all test are workig all the way through TAFFO, HLS and simulation, refer to the **notes.txt** files for the details of each test.
