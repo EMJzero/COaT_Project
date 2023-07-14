@@ -1,0 +1,9 @@
+In this test the printfs are intended to be synthesized, just to try that out!
+
+TAFFO:
+Works as expected.
+
+HLS:
+Works as expected.
+
+Note that you need to specify -O0 in PandA and TAFFO to get the expected results.

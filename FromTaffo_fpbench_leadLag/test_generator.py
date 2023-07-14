@@ -18,8 +18,8 @@ def to_string(values):
     return res[:-2]
 
 def generate_values():
-    arr1 = gen(0, 5)
-    arr2 = gen(-5, 5)
+    arr1 = gen(0, 50)
+    arr2 = gen(0, 50)
     res = [0 for i in range(len_code_constant)]
 
     arr = []

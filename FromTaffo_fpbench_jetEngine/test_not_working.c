@@ -1,8 +1,6 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include <math.h>
 
-#define M 10
+#define M 100
 #define len 100
 
 /*float ex0(float x1, float x2)
@@ -21,11 +19,10 @@
                (3.0f * s_42_));
 }*/
 
-int test(float * arr)
+int test(float * arr, float * res)
 {
-  float res[len];
-
-  float __attribute__((annotate("target('test') scalar(range(0, 5) final)"))) x1[len];
+  float __attribute__((annotate("target('test') scalar(range(0, 5) final)")))
+  x1[len];
   float __attribute__((annotate("scalar(range(-5, 5) final)"))) x2[len];
 
   for (int i = 0; i < len; ++i) {
@@ -52,20 +49,15 @@ int test(float * arr)
                (3.0f * s_42_));
     }
   }
-
-  printf("Values Begin\n");
-  for (int j = 0; j < len; ++j) {
-    printf("%f\n", res[j]);
-  }
-  printf("Values End\n");
 }
 
 int main()
 {
   float arr[len*2];
+  float res[len];
 
   for(int i = 0; i < len*2; i++)
     arr[i] = i%16 + 0.23f;
 
-  test(arr);
+  test(arr, res);
 }

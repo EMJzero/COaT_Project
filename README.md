@@ -44,6 +44,9 @@ Here is the current list of tests:
 - **FromTaffo_fpbench_doppler**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/doppler;
 - **FromTaffo_fpbench_instantCurrent**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/instantCurrent;
 - **FromTaffo_fpbench_jetEngine**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/jetEngine;
+- **FromTaffo_fpbench_leadLag**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/leadLag;
+- **FromTaffo_fpbench_triangle**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/triangle;
+- **FromTaffo_fpbench_turbine1**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/turbine1;
 - **FromTaffo_test3**: Example from here https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c;
 - **NormalizeVector**: Transforms a vector to have a unitary norm;
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;

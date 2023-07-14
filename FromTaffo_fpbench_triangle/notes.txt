@@ -1,0 +1,11 @@
+In this test the printfs are intended to be synthesized, just to try that out!
+
+TAFFO:
+Works as expected.
+
+HLS:
+Works as expected.
+
+Note that you need to specify -O0 in PandA and TAFFO to get the expected results.
+If -O0 does not fix the simulation, try first compiling to LLVM-IR with clang-12 and then use panda on the IR. 
+Link math.h with -lm both on TAFFO and PandA!

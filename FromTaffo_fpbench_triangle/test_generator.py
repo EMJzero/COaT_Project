@@ -1,7 +1,7 @@
 import random as rnd
 import sys
 
-template = "\n\t<testbench\n\tPd58=\"{arr_}\"\n\tPd59=\"{res_}\"\n\tarr=\"{arr_}\"\n\tres=\"{res_}\"/>"
+template = "\n\t<testbench\n\tPd65=\"{arr_}\"\n\tPd66=\"{res_}\"\n\tarr=\"{arr_}\"\n\tres=\"{res_}\"/>"
 
 len_code_constant = 100
 how_many_testbenches = 2
@@ -18,8 +18,9 @@ def to_string(values):
     return res[:-2]
 
 def generate_values():
-    arr1 = gen(0, 5)
-    arr2 = gen(-5, 5)
+    arr1 = gen(-9, 9)
+    arr2 = gen(-9, 9)
+    arr2 = gen(-9, 9)
     res = [0 for i in range(len_code_constant)]
 
     arr = []

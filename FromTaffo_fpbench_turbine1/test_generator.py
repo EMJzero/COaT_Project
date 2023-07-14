@@ -18,14 +18,16 @@ def to_string(values):
     return res[:-2]
 
 def generate_values():
-    arr1 = gen(0, 5)
-    arr2 = gen(-5, 5)
+    arr1 = gen(-5, 0)
+    arr2 = gen(0, 1)
+    arr3 = gen(3.8, 7.8)
     res = [0 for i in range(len_code_constant)]
 
     arr = []
-    for d_ in zip(arr1, arr2):
+    for d_ in zip(arr1, arr2, arr3):
         arr.append(d_[0])
         arr.append(d_[1])
+        arr.append(d_[2])
     return template.replace("arr_", to_string(arr)).replace("res_", to_string(res))
 
 result = "<?xml version=\"1.0\"?>\n<function>"
