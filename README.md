@@ -30,6 +30,7 @@ In some cases there are subfolders within a test's folder, those recursively mir
 
 Here is the current list of tests:
 
+- **ComputeConvexHull**: Computes the convex hull around the given set of points (https://en.wikipedia.org/wiki/Convex_hull);
 - **ComputePi**: Computes Pi with the Madhava-Leibniz formula (https://en.wikipedia.org/wiki/Leibniz_formula_for_pi);
 - **ComputeSinCos**: Computes $sin(\pi/12)$ and $cos(\pi/6)$ via the Taylor expansion of Cosine (https://en.wikipedia.org/wiki/Taylor_series);
 - **ComputeSqrt**: Compute the Square root of a provided number with the Newton-Raphson method (https://en.wikipedia.org/wiki/Newton%27s_method);
