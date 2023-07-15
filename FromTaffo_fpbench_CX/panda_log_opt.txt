@@ -1,0 +1,395 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-9y7wYw/usr/bin/bambu --use-raw --top-fname=test --compiler=I386_CLANG12 -lm test.ll 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2023 Politecnico di Milano
+ Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
+
+Target technology = FPGA
+Function call to __int32_to_float64e11m52b_1023nih inlined in test
+Function call to __float_mule11m52b_1023nih inlined in test
+
+  Functions to be synthesized:
+    __internal_puts
+    test
+    manual_cos_1_fixp
+    compare_float_4_fixp
+    __float_mule8m23b_127nih
+    __float32_to_uint32_round_to_zeroe8m23b_127nih
+
+
+  Memory allocation information:
+Warning: This function uses unknown addresses: test
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    Spec accesses data having an address unknown at compile time
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 32
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 16384
+    Internally allocated memory: 28384
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function __float_mule8m23b_127nih:
+    Number of complex operations: 1
+    Number of complex operations: 1
+  Time to perform module allocation: 0.02 seconds
+
+
+  Module allocation information for function __internal_puts:
+    Number of complex operations: 4
+    Number of complex operations: 4
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of control steps: 7
+    Minimum slack: 5.2049999990000027
+    Estimated max frequency (MHz): 208.55057347058394
+  Time to perform scheduling: 0.01 seconds
+
+
+  State Transition Graph Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of states: 6
+    Minimum number of cycles: 3
+    Maximum number of cycles 4
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_mule8m23b_127nih:
+    Number of control steps: 3
+    Minimum slack: 0.80239998200000184
+    Estimated max frequency (MHz): 108.72401474764808
+  Time to perform scheduling: 0.01 seconds
+
+
+  State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of states: 2
+    Minimum number of cycles: 2
+    Maximum number of cycles 2
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function __internal_puts:
+    Number of control steps: 9
+    Minimum slack: 4.8879999980000024
+    Estimated max frequency (MHz): 195.61815328809939
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function __internal_puts:
+    Number of states: 9
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Bound operations:27/27
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_mule8m23b_127nih:
+    Bound operations:65/76
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __internal_puts:
+    Bound operations:32/36
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of storage values inserted: 5
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_mule8m23b_127nih:
+    Number of storage values inserted: 0
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __internal_puts:
+    Number of storage values inserted: 4
+  Time to compute storage value information: 0.00 seconds
+
+
+  Module binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of modules instantiated: 27
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 251
+    Estimated area of MUX21: 0
+    Total estimated area: 251
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Register allocation algorithm obtains a sub-optimal result: 5 registers(LB:4)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 2
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float32_to_uint32_round_to_zeroe8m23b_127nih: 71
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 0 registers
+  Time to perform register binding: 0.00 seconds
+
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_mule8m23b_127nih:
+    Number of modules instantiated: 76
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 724
+    Estimated area of MUX21: 0
+    Total estimated area: 724
+    Estimated number of DSPs: 2
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 0 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_mule8m23b_127nih: 0
+
+  Module allocation information for function compare_float_4_fixp:
+    Number of complex operations: 2
+    Number of complex operations: 2
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function compare_float_4_fixp:
+    Number of control steps: 9
+    Minimum slack: 0.80239998100000887
+    Estimated max frequency (MHz): 108.72401473582725
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function compare_float_4_fixp:
+    Number of states: 9
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function compare_float_4_fixp:
+    Bound operations:20/20
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function compare_float_4_fixp:
+    Number of storage values inserted: 6
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function __internal_puts:
+    Register allocation algorithm obtains a sub-optimal result: 3 registers(LB:2)
+  Time to perform register binding: 0.00 seconds
+
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __internal_puts:
+    Number of modules instantiated: 34
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 299
+    Estimated area of MUX21: 69
+    Total estimated area: 368
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __internal_puts:
+    Register allocation algorithm obtains a sub-optimal result: 3 registers(LB:2)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __internal_puts:
+    Number of allocated multiplexers (2-to-1 equivalent): 4
+  Time to perform interconnection binding: 0.01 seconds
+
+  Total number of flip-flops in function __internal_puts: 48
+
+  Module binding information for function compare_float_4_fixp:
+    Number of modules instantiated: 20
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 4079
+    Estimated area of MUX21: 0
+    Total estimated area: 4079
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function compare_float_4_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 6 registers(LB:4)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function compare_float_4_fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 1
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function compare_float_4_fixp: 189
+
+  Module allocation information for function manual_cos_1_fixp:
+    Number of complex operations: 56
+    Number of complex operations: 56
+  Time to perform module allocation: 0.32 seconds
+
+
+  Scheduling Information of function manual_cos_1_fixp:
+    Number of control steps: 37
+    Minimum slack: 1.1102230246251565e-15
+    Estimated max frequency (MHz): 100.00000000000001
+  Time to perform scheduling: 0.11 seconds
+
+
+  State Transition Graph Information of function manual_cos_1_fixp:
+    Number of states: 39
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Easy binding information for function manual_cos_1_fixp:
+    Bound operations:172/768
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function manual_cos_1_fixp:
+    Number of storage values inserted: 169
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.01 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function manual_cos_1_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 164 registers(LB:36)
+  Time to perform register binding: 0.02 seconds
+
+
+  Register binding information for function manual_cos_1_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 164 registers(LB:36)
+  Time to perform register binding: 0.02 seconds
+
+  Clique covering computation completed in 0.04 seconds
+
+  Module binding information for function manual_cos_1_fixp:
+    Number of modules instantiated: 765
+    Number of performance conflicts: 1370
+    Estimated resources area (no Muxes and address logic): 7609
+    Estimated area of MUX21: 68
+    Total estimated area: 7677
+    Estimated number of DSPs: 152
+  Time to perform module binding: 0.08 seconds
+
+
+  Register binding information for function manual_cos_1_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 164 registers(LB:36)
+  Time to perform register binding: 0.01 seconds
+
+
+  Connection Binding Information for function manual_cos_1_fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 6
+  Time to perform interconnection binding: 0.02 seconds
+
+  Total number of flip-flops in function manual_cos_1_fixp: 4611
+
+  Module allocation information for function test:
+    Number of complex operations: 29
+    Number of complex operations: 29
+  Time to perform module allocation: 0.09 seconds
+
+
+  Scheduling Information of function test:
+    Number of control steps: 38
+    Minimum slack: 8.2156503822261584e-15
+    Estimated max frequency (MHz): 100.00000000000009
+  Time to perform scheduling: 0.03 seconds
+
+
+  State Transition Graph Information of function test:
+    Number of states: 44
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Easy binding information for function test:
+    Bound operations:227/341
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function test:
+    Number of storage values inserted: 87
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function test:
+    Register allocation algorithm obtains a sub-optimal result: 77 registers(LB:29)
+  Time to perform register binding: 0.01 seconds
+
+
+  Register binding information for function test:
+    Register allocation algorithm obtains a sub-optimal result: 77 registers(LB:29)
+  Time to perform register binding: 0.00 seconds
+
+  Clique covering computation completed in 0.01 seconds
+
+  Module binding information for function test:
+    Number of modules instantiated: 327
+    Number of performance conflicts: 27
+    Estimated resources area (no Muxes and address logic): 10603
+    Estimated area of MUX21: 345
+    Total estimated area: 10948
+    Estimated number of DSPs: 18
+  Time to perform module binding: 0.02 seconds
+
+
+  Register binding information for function test:
+    Register allocation algorithm obtains a sub-optimal result: 77 registers(LB:29)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function test:
+    Number of allocated multiplexers (2-to-1 equivalent): 27
+  Time to perform interconnection binding: 0.01 seconds
+
+  Total number of flip-flops in function test: 1626
+[0m

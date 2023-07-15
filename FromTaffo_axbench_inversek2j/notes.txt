@@ -1,7 +1,0 @@
-TAFFO:
-Works as expected.
-
-HLS:
-Works as expected.
-
-Remember to link math.h!!! (-lm)

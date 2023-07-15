@@ -1,0 +1,160 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-oQvmEQ/usr/bin/bambu --use-raw --top-fname=NRsqrt --compiler=I386_CLANG12 -lm test.ll 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2023 Politecnico di Milano
+ Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
+
+Target technology = FPGA
+Function call to __float32_to_uint32_round_to_zeroe8m23b_127nih inlined in NRsqrt
+Function call to __uint32_to_float32e8m23b_127nih inlined in NRsqrt
+
+  Functions to be synthesized:
+    NRsqrt
+    __float_mule8m23b_127nih
+
+
+  Memory allocation information:
+Warning: This function uses unknown addresses: NRsqrt
+    BRAM bitsize: 16
+    Spec may not exploit DATA bus width
+    Spec accesses data having an address unknown at compile time
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 32
+    SIZE bus bitsize: 6
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 0
+  Time to perform memory allocation: 0.01 seconds
+
+
+  Module allocation information for function __float_mule8m23b_127nih:
+    Number of complex operations: 1
+    Number of complex operations: 1
+  Time to perform module allocation: 0.02 seconds
+
+
+  Scheduling Information of function __float_mule8m23b_127nih:
+    Number of control steps: 4
+    Minimum slack: 0.48473332433333849
+    Estimated max frequency (MHz): 105.09426946039196
+  Time to perform scheduling: 0.02 seconds
+
+
+  State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __float_mule8m23b_127nih:
+    Bound operations:105/124
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __float_mule8m23b_127nih:
+    Number of storage values inserted: 8
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 8 registers
+  Time to perform register binding: 0.00 seconds
+
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_mule8m23b_127nih:
+    Number of modules instantiated: 124
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 1402
+    Estimated area of MUX21: 0
+    Total estimated area: 1402
+    Estimated number of DSPs: 3
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 8 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_mule8m23b_127nih: 126
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_mule8m23b_127nih: function pipelining may come for free
+
+  Module allocation information for function NRsqrt:
+    Number of complex operations: 12
+    Number of complex operations: 12
+  Time to perform module allocation: 0.11 seconds
+
+
+  Scheduling Information of function NRsqrt:
+    Number of control steps: 38
+    Minimum slack: 0.23100000000000276
+    Estimated max frequency (MHz): 102.36462278636508
+  Time to perform scheduling: 0.05 seconds
+
+
+  State Transition Graph Information of function NRsqrt:
+    Number of states: 36
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function NRsqrt:
+    Bound operations:273/432
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function NRsqrt:
+    Number of storage values inserted: 73
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function NRsqrt:
+    Register allocation algorithm obtains a sub-optimal result: 67 registers(LB:16)
+  Time to perform register binding: 0.00 seconds
+
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function NRsqrt:
+    Number of modules instantiated: 429
+    Number of performance conflicts: 46
+    Estimated resources area (no Muxes and address logic): 5559
+    Estimated area of MUX21: 170
+    Total estimated area: 5729
+    Estimated number of DSPs: 31
+  Time to perform module binding: 0.02 seconds
+
+
+  Register binding information for function NRsqrt:
+    Register allocation algorithm obtains a sub-optimal result: 67 registers(LB:16)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function NRsqrt:
+    Number of allocated multiplexers (2-to-1 equivalent): 19
+  Time to perform interconnection binding: 0.01 seconds
+
+  Total number of flip-flops in function NRsqrt: 1584
+[0m

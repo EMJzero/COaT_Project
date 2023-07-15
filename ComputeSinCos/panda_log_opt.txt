@@ -1,0 +1,215 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-HA0ihR/usr/bin/bambu --use-raw --top-fname=manual_cos --compiler=I386_CLANG12 -lm test.ll 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2023 Politecnico di Milano
+ Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
+
+Target technology = FPGA
+Function call to __float64_to_uint32_round_to_zeroe11m52b_1023nih inlined in compare_double_1_fixp
+Function call to __float64_to_int32_round_to_zeroe11m52b_1023nih inlined in manual_cos
+Function call to compare_double_3_fixp inlined in manual_cos
+Function call to compare_double_3_fixp inlined in manual_cos
+Function call to __int32_to_float64e11m52b_1023nih inlined in manual_cos
+
+  Functions to be synthesized:
+    manual_cos
+    compare_double_1_fixp
+    __float_mule11m52b_1023nih
+
+
+  Memory allocation information:
+Warning: This function uses unknown addresses: manual_cos
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    Spec accesses data having an address unknown at compile time
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 32
+    SIZE bus bitsize: 7
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 0
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __float_mule11m52b_1023nih:
+    Number of complex operations: 4
+    Number of complex operations: 4
+  Time to perform module allocation: 0.03 seconds
+
+
+  Scheduling Information of function __float_mule11m52b_1023nih:
+    Number of control steps: 6
+    Minimum slack: 0.39039999400001446
+    Estimated max frequency (MHz): 104.06260399763008
+  Time to perform scheduling: 0.02 seconds
+
+
+  State Transition Graph Information of function __float_mule11m52b_1023nih:
+    Number of states: 5
+    Minimum number of cycles: 5
+    Maximum number of cycles 5
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __float_mule11m52b_1023nih:
+    Bound operations:60/110
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __float_mule11m52b_1023nih:
+    Number of storage values inserted: 22
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function __float_mule11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:15)
+  Time to perform register binding: 0.00 seconds
+
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_mule11m52b_1023nih:
+    Number of modules instantiated: 110
+    Number of performance conflicts: 11
+    Estimated resources area (no Muxes and address logic): 1555
+    Estimated area of MUX21: 0
+    Total estimated area: 1555
+    Estimated number of DSPs: 12
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_mule11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:15)
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_mule11m52b_1023nih: 535
+
+  Module allocation information for function compare_double_1_fixp:
+    Number of complex operations: 1
+    Number of complex operations: 1
+  Time to perform module allocation: 0.02 seconds
+
+
+  Scheduling Information of function compare_double_1_fixp:
+    Number of control steps: 13
+    Minimum slack: 0.29873332633334937
+    Estimated max frequency (MHz): 103.07932290062945
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function compare_double_1_fixp:
+    Number of states: 12
+    Minimum number of cycles: 9
+    Maximum number of cycles 11
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function compare_double_1_fixp:
+    Bound operations:41/41
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function compare_double_1_fixp:
+    Number of storage values inserted: 12
+  Time to compute storage value information: 0.00 seconds
+
+
+  Module binding information for function compare_double_1_fixp:
+    Number of modules instantiated: 41
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 2394
+    Estimated area of MUX21: 0
+    Total estimated area: 2394
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function compare_double_1_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 12 registers(LB:7)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function compare_double_1_fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 3
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function compare_double_1_fixp: 254
+
+  Module allocation information for function manual_cos:
+    Number of complex operations: 60
+    Number of complex operations: 60
+  Time to perform module allocation: 0.33 seconds
+
+
+  Scheduling Information of function manual_cos:
+    Number of control steps: 58
+    Minimum slack: 8.2156503822261584e-15
+    Estimated max frequency (MHz): 100.00000000000009
+  Time to perform scheduling: 0.12 seconds
+
+
+  State Transition Graph Information of function manual_cos:
+    Number of states: 58
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function manual_cos:
+    Bound operations:376/978
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function manual_cos:
+    Number of storage values inserted: 202
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.01 seconds
+  False-loop computation completed in 0.00 seconds
+
+  Register binding information for function manual_cos:
+    Register allocation algorithm obtains a sub-optimal result: 197 registers(LB:38)
+  Time to perform register binding: 0.02 seconds
+
+  Clique covering computation completed in 0.02 seconds
+
+  Module binding information for function manual_cos:
+    Number of modules instantiated: 975
+    Number of performance conflicts: 1027
+    Estimated resources area (no Muxes and address logic): 11505
+    Estimated area of MUX21: 136
+    Total estimated area: 11641
+    Estimated number of DSPs: 214
+  Time to perform module binding: 0.07 seconds
+
+
+  Register binding information for function manual_cos:
+    Register allocation algorithm obtains a sub-optimal result: 197 registers(LB:38)
+  Time to perform register binding: 0.02 seconds
+
+
+  Connection Binding Information for function manual_cos:
+    Number of allocated multiplexers (2-to-1 equivalent): 14
+  Time to perform interconnection binding: 0.02 seconds
+
+  Total number of flip-flops in function manual_cos: 6366
+[0m
