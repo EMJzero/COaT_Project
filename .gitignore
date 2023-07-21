@@ -38,6 +38,7 @@
 *.tcl
 *.v
 *.sh
+!run_tests.sh
 *.dot
 *.js
 *.wdf
@@ -55,8 +56,11 @@ tight_setup_hold_pins.txt
 */HLS_output/*
 */*/HLS_output/*
 */*/*/HLS_output/*
-*/no_opt_synthesis/*
-*/*/no_opt_synthesis/*
-*/*/*/no_opt_synthesis/*
+*/synthesis_no_opt/*
+*/*/synthesis_no_opt/*
+*/*/*/synthesis_no_opt/*
+*/synthesis_with_opt/*
+*/*/synthesis_with_opt/*
+*/*/*/synthesis_with_opt/*
 bambu_results*
 memory_allocation*

@@ -91,3 +91,40 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
     Different generators might require some command-line arguments.
 - Gather and print flip-flop counts:<br>
     `python3 get_flipflops_count.py`
+
+## Run all the tests
+
+Before running the tests:
+
+```
+sudo chmod +x run_tests.sh
+export BAMBU=/path/to/Bambu.AppImage
+export TAFFO=/path/to/TAFFO {only if it was not installed system-wise}
+```
+
+Run the tests:
+```
+./run_tests.sh
+```
+
+This procedure will produce two sub-folders in each test’s folder:
+- synthesis_with_opt
+- synthesis_no_opt
+
+They respectively contain the output of PandA-Bambu [and, in enabled, Vivado] for the test with TAFFO’s optimization and without it.
+
+### Options for `run_tests.sh`:
+- `—vivado` : enables the evaluation of the design through Vivado, after PandA-Bambu.
+- `—device-name=<name>` : the [same as in PandA-Bambu](https://panda.deib.polimi.it/?page_id=916).<br>
+If not specified, the default device is **xc7vx690t-3ffg1930-VVD**, and it is the only tested one.
+Regardless of the device you specify, ensure your install of Vivado has support for it if you plan to also use `—vivado`.<br>
+Copying from PandA-Bambu:<br>
+<i>Specify the name of the device. Three different cases are foreseen:
+    * Xilinx:  a comma separated string specifying device, speed grade and package (e.g. "xc7z020,-1,clg484,VVD")
+    * Altera:  a string defining the device string (e.g. EP2C70F896C6)
+    * Lattice: a string defining the device string (e.g. LFE5U85F8BG756C)
+    * NanoXplore: a string defining the device string (e.g. nx2h540tsc)
+    </i><br>
+- `—gen` : generates new random testbench inputs instead of using the already existing ones (see test.xml files).
+- `—no-opt` : does NOT run through PandA, and Vivado, if enabled, the TAFFO-optimized versions of the tests. 
+- `—no-unopt` : does NOT run through PandA, and Vivado, if enabled, the versions of the tests NOT optimized by TAFFO.
