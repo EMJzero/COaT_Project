@@ -48,8 +48,15 @@
 *.rst
 *.bat
 *.log
+*.jou
+*.xpr
+*.xdc
+tight_setup_hold_pins.txt
 */HLS_output/*
 */*/HLS_output/*
 */*/*/HLS_output/*
+*/no_opt_synthesis/*
+*/*/no_opt_synthesis/*
+*/*/*/no_opt_synthesis/*
 bambu_results*
 memory_allocation*

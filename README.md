@@ -54,7 +54,7 @@ Here is the current list of tests:
 - **NormalizeVector**: Transforms a vector to have a unitary norm;
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;
 
-Currently not all test are workig all the way through TAFFO, HLS and simulation, refer to the **notes.txt** files for the details of each test.
+Currently not all test are working all the way through TAFFO, HLS and simulation, refer to the **notes.txt** files for the details of each test.
 
 ### Results
 
@@ -80,10 +80,12 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
     To specify a target device for later synthesis use `--device-name=<name>`.<br>
     To see the input and output of each simulation use an higher log verbosity: `-v 4`<br>
     Add the `-lm -ffast-math --libm-std-rounding` options if `math.h` needs to be linked.<br>
-    ~~Also consider using `-fsingle-precision-constant -Os --experimental-setup=BAMBU`.~~
+    ~~Also consider using `-fsingle-precision-constant -Os --experimental-setup=BAMBU`.~~<br>
+    Consider as target device: `--device-name=xc7vx690t-3ffg1930-VVD`.
 - Run the HLS on the original code:<br>
     `bambu-2023.1.AppImage test.c -v 2 --top-fname=<function_name_wrt_the_sourcecode> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR |& tee panda_log.txt`<br>
-    Add the `-lm -ffast-math --libm-std-rounding` options if `math.h` needs to be linked.
+    Add the `-lm -ffast-math --libm-std-rounding` options if `math.h` needs to be linked.<br>
+    Consider as target device: `--device-name=xc7vx690t-3ffg1930-VVD`.
 - Generate new testbench values:<br>
     `python3 test_generator.py <args> > test.xml`<br>
     Different generators might require some command-line arguments.
