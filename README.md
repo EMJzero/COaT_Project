@@ -138,7 +138,7 @@ Copying from PandA-Bambu:<br>
     * NanoXplore: a string defining the device string (e.g. nx2h540tsc)
     </i><br>
 - `--gen` : generates new random testbench inputs instead of using the already existing ones (see test.xml files).
-- `--no-regen-taffo` : utilized the already existent `.ll` files, without recompiling the source through TAFFO.
+- `--no-regen-taffo` : utilize the already existing, TAFFO-optimized, `.ll` files, without recompiling the source through TAFFO.
 - `--no-opt` : does NOT run through PandA, and Vivado, if enabled, the TAFFO-optimized versions of the tests. 
 - `--no-unopt` : does NOT run through PandA, and Vivado, if enabled, the versions of the tests NOT optimized by TAFFO.
 
