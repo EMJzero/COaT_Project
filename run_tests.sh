@@ -119,7 +119,7 @@ Use --help for available options."
 fi
 
 # Get the tuples to use based on the --use option
-tuples_to_use=$(get_tuples_to_use "$use_option")
+tuples_to_use=($(get_tuples_to_use "$use_option"))
 
 # Iterate through the list of tuples (path, name)
 for tuple in "${tuples_to_use[@]}"; do

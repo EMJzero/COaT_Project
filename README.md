@@ -114,7 +114,7 @@ export TAFFO=/path/to/TAFFO {only if it was not installed system-wise}
 
 Run the tests:
 ```
-./run_tests.sh —use=all
+./run_tests.sh --use=all
 ```
 
 This procedure will produce two sub-folders in each test’s folder:
