@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-Hoxn9v/usr/bin/bambu --top-fname=computeConvexHull --compiler=I386_CLANG12 -lm test.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-uFUffm/usr/bin/bambu -v 2 --top-fname=computeConvexHull --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
 
 
 ********************************************************************************
@@ -17,7 +17,205 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
+Parameters parsed in 0.14 seconds
+
 Target technology = FPGA
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3911
+  - combinational: 0
+  - others: 3911
+
+!! Unknown ext. calls:
+llvm.var.annotation
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 22
+  Bit Value Opt: ne_expr optimized, nbits = 22
+  Bit Value Opt: bit_and_expr optimized, nbits = 47
+  Bit Value Opt: ne_expr optimized, nbits = 47
+  Bit Value Opt: bit_and_expr optimized, nbits = 9
+  Bit Value Opt: ne_expr optimized, nbits = 9
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: ne_expr optimized, nbits = 24
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: bit_xor_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: ne_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 11
+  Bit Value Opt: eq_expr optimized, nbits = 11
+  Bit Value Opt: bit_and_expr optimized, nbits = 19
+  Bit Value Opt: eq_expr optimized, nbits = 19
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: eq_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 25
+  Bit Value Opt: eq_expr optimized, nbits = 25
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: eq_expr optimized, nbits = 26
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: ne_expr optimized, nbits = 26
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 31
 Function call to __modsi3 inlined in computeConvexHull
 Function call to __float32_to_int32_round_to_zeroe8m23b_127nih inlined in computeConvexHull
 
@@ -29,6 +227,25 @@ Function call to __float32_to_int32_round_to_zeroe8m23b_127nih inlined in comput
 
 
   Memory allocation information:
+  Sparse memory alignemnt set to 4096 bytes
+    Internal variable: internal_424828 - 424828 - internal_424828 in function computeConvexHull
+      Id: 424828
+      Base Address: 4096
+      Size: 4000
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 16
+      Maximum number of loads per function: 13
+    Internal variable: internal_424859 - 424859 - internal_424859 in function computeConvexHull
+      Id: 424859
+      Base Address: 4096
+      Size: 4000
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 6
+      Maximum number of loads per function: 3
 Warning: This function uses unknown addresses: computeConvexHull
     BRAM bitsize: 16
     Spec may not exploit DATA bus width
@@ -39,35 +256,38 @@ Warning: This function uses unknown addresses: computeConvexHull
     SIZE bus bitsize: 6
     Internally allocated memory (no private memories): 0
     Internally allocated memory: 8000
-  Time to perform memory allocation: 0.01 seconds
+  Time to perform memory allocation: 0.00 seconds
 
 
   Module allocation information for function __float_lte8m23b_127nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.03 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Module allocation information for function __float_mule8m23b_127nih:
     Number of complex operations: 1
     Number of complex operations: 1
-  Time to perform module allocation: 0.04 seconds
+  Time to perform module allocation: 0.02 seconds
 
 
   Module allocation information for function __float_sube8m23b_127nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.07 seconds
+  Time to perform module allocation: 0.04 seconds
 
 
   Scheduling Information of function __float_lte8m23b_127nih:
     Number of control steps: 5
-    Minimum slack: 6.5006666656666647
-    Estimated max frequency (MHz): 285.76871776935531
-  Time to perform scheduling: 0.01 seconds
+    Minimum slack: 7.9596666656666661
+    Estimated max frequency (MHz): 490.11599387839425
+  Time to perform scheduling: 0.00 seconds
 
+  Number of function call sites = 5
 
   State Transition Graph Information of function __float_lte8m23b_127nih:
+    Number of operations: 49
+    Number of basic blocks: 5
     Number of states: 3
     Minimum number of cycles: 2
     Maximum number of cycles 2
@@ -77,34 +297,40 @@ Warning: This function uses unknown addresses: computeConvexHull
 
   Scheduling Information of function __float_mule8m23b_127nih:
     Number of control steps: 4
-    Minimum slack: 0.48473332433333849
-    Estimated max frequency (MHz): 105.09426946039196
+    Minimum slack: 0.14046665266666675
+    Estimated max frequency (MHz): 101.4246785087923
   Time to perform scheduling: 0.01 seconds
 
+  Number of function call sites = 2
 
   State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of operations: 124
+    Number of basic blocks: 3
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function __float_sube8m23b_127nih:
+    Number of control steps: 4
+    Minimum slack: 0.14211997399999216
+    Estimated max frequency (MHz): 101.44168902061249
+  Time to perform scheduling: 0.04 seconds
+
+  Number of function call sites = 5
+
+  State Transition Graph Information of function __float_sube8m23b_127nih:
+    Number of operations: 400
+    Number of basic blocks: 3
     Number of states: 3
     Minimum number of cycles: 3
     Maximum number of cycles 3
     Parameters are registered
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __float_sube8m23b_127nih:
-    Number of control steps: 5
-    Minimum slack: 0.12945132633333256
-    Estimated max frequency (MHz): 101.31149068418752
-  Time to perform scheduling: 0.08 seconds
-
-
-  State Transition Graph Information of function __float_sube8m23b_127nih:
-    Number of states: 4
-    Minimum number of cycles: 4
-    Maximum number of cycles 4
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.01 seconds
 
 
   Easy binding information for function __float_lte8m23b_127nih:
@@ -128,22 +354,24 @@ Warning: This function uses unknown addresses: computeConvexHull
 
 
   Storage Value Information of function __float_mule8m23b_127nih:
-    Number of storage values inserted: 8
+    Number of storage values inserted: 6
   Time to compute storage value information: 0.00 seconds
 
 
   Storage Value Information of function __float_sube8m23b_127nih:
-    Number of storage values inserted: 38
+    Number of storage values inserted: 47
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_lte8m23b_127nih:
     Register allocation algorithm obtains an optimal result: 7 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __float_lte8m23b_127nih:
@@ -168,74 +396,83 @@ Warning: This function uses unknown addresses: computeConvexHull
   Total number of flip-flops in function __float_lte8m23b_127nih: 69
   All registers are without enable: function pipelining may come for free
   Resources are not shared in function __float_lte8m23b_127nih: function pipelining may come for free
-  Slack computed in 0.01 seconds
+  Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_mule8m23b_127nih:
-    Register allocation algorithm obtains an optimal result: 8 registers
+    Register allocation algorithm obtains an optimal result: 6 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __float_mule8m23b_127nih:
     Number of modules instantiated: 124
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 1402
+    Estimated resources area (no Muxes and address logic): 1401
     Estimated area of MUX21: 0
-    Total estimated area: 1402
+    Total estimated area: 1401
     Estimated number of DSPs: 3
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __float_mule8m23b_127nih:
-    Register allocation algorithm obtains an optimal result: 8 registers
+    Register allocation algorithm obtains an optimal result: 6 registers
   Time to perform register binding: 0.00 seconds
 
-  Total number of flip-flops in function __float_mule8m23b_127nih: 126
+  Total number of flip-flops in function __float_mule8m23b_127nih: 99
   All registers are without enable: function pipelining may come for free
   Resources are not shared in function __float_mule8m23b_127nih: function pipelining may come for free
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_sube8m23b_127nih:
-    Register allocation algorithm obtains a sub-optimal result: 38 registers(LB:29)
+    Register allocation algorithm obtains an optimal result: 47 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __float_sube8m23b_127nih:
     Number of modules instantiated: 400
-    Number of performance conflicts: 21
-    Estimated resources area (no Muxes and address logic): 4798
+    Number of performance conflicts: 28
+    Estimated resources area (no Muxes and address logic): 4806
     Estimated area of MUX21: 0
-    Total estimated area: 4798
+    Total estimated area: 4806
     Estimated number of DSPs: 0
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __float_sube8m23b_127nih:
-    Register allocation algorithm obtains a sub-optimal result: 38 registers(LB:29)
-  Time to perform register binding: 0.00 seconds
+    Register allocation algorithm obtains an optimal result: 47 registers
+  Time to perform register binding: 0.01 seconds
 
-  Total number of flip-flops in function __float_sube8m23b_127nih: 152
+  Total number of flip-flops in function __float_sube8m23b_127nih: 189
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_sube8m23b_127nih: function pipelining may come for free
 
   Module allocation information for function computeConvexHull:
     Number of complex operations: 42
     Number of complex operations: 42
-  Time to perform module allocation: 0.07 seconds
+  Time to perform module allocation: 0.05 seconds
 
 
   Scheduling Information of function computeConvexHull:
-    Number of control steps: 56
-    Minimum slack: 0.037784658666688786
-    Estimated max frequency (MHz): 100.37927968199925
-  Time to perform scheduling: 0.05 seconds
+    Number of control steps: 51
+    Minimum slack: 0.078953306333338802
+    Estimated max frequency (MHz): 100.79581629611461
+  Time to perform scheduling: 0.04 seconds
 
+  Number of function call sites = 0
 
   State Transition Graph Information of function computeConvexHull:
-    Number of states: 54
+    Number of operations: 383
+    Number of basic blocks: 22
+    Number of states: 49
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
@@ -246,42 +483,153 @@ Warning: This function uses unknown addresses: computeConvexHull
 
 
   Storage Value Information of function computeConvexHull:
-    Number of storage values inserted: 144
+    Number of storage values inserted: 141
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
   Weight computation completed in 0.01 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function computeConvexHull:
-    Register allocation algorithm obtains a sub-optimal result: 128 registers(LB:41)
+    Register allocation algorithm obtains a sub-optimal result: 125 registers(LB:41)
   Time to perform register binding: 0.01 seconds
 
+  Iteration 1 completed in 0.00 seconds
 
   Register binding information for function computeConvexHull:
-    Register allocation algorithm obtains a sub-optimal result: 128 registers(LB:41)
+    Register allocation algorithm obtains a sub-optimal result: 125 registers(LB:41)
   Time to perform register binding: 0.01 seconds
 
-  Clique covering computation completed in 0.03 seconds
+  Iteration 2 completed in 0.00 seconds
+  Clique covering computation completed in 0.02 seconds
 
   Module binding information for function computeConvexHull:
     Number of modules instantiated: 354
-    Number of performance conflicts: 84
-    Estimated resources area (no Muxes and address logic): 17498
-    Estimated area of MUX21: 587
-    Total estimated area: 18085
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 17514
+    Estimated area of MUX21: 590
+    Total estimated area: 18104
     Estimated number of DSPs: 0
-  Time to perform module binding: 0.05 seconds
+  Time to perform module binding: 0.03 seconds
 
 
   Register binding information for function computeConvexHull:
-    Register allocation algorithm obtains a sub-optimal result: 128 registers(LB:41)
-  Time to perform register binding: 0.02 seconds
+    Register allocation algorithm obtains a sub-optimal result: 125 registers(LB:41)
+  Time to perform register binding: 0.01 seconds
 
 
   Connection Binding Information for function computeConvexHull:
     Number of allocated multiplexers (2-to-1 equivalent): 68
   Time to perform interconnection binding: 0.01 seconds
 
-  Total number of flip-flops in function computeConvexHull: 2958
-[0m
+  Total number of flip-flops in function computeConvexHull: 2862
+[0m  Parameter x_f (424770) (testvector 0) allocated at 1073741824 : reserved_mem_size = 4000
+Padding of 96 for parameter x_f
+  Parameter y_f (424771) (testvector 0) allocated at 1073745920 : reserved_mem_size = 4000
+Padding of 96 for parameter y_f
+  Parameter res_x (424773) (testvector 0) allocated at 1073750016 : reserved_mem_size = 4000
+Padding of 96 for parameter res_x
+  Parameter res_y (424774) (testvector 0) allocated at 1073754112 : reserved_mem_size = 4000
+Padding of 96 for parameter res_y
+  Parameter x_f (424770) (testvector 1) allocated at 1073758208 : reserved_mem_size = 4000
+Padding of 96 for parameter x_f
+  Parameter y_f (424771) (testvector 1) allocated at 1073762304 : reserved_mem_size = 4000
+Padding of 96 for parameter y_f
+  Parameter res_x (424773) (testvector 1) allocated at 1073766400 : reserved_mem_size = 4000
+Padding of 96 for parameter res_x
+  Parameter res_y (424774) (testvector 1) allocated at 1073770496 : reserved_mem_size = 4000
+Padding of 96 for parameter res_y
+  C-based testbench generation for function computeConvexHull: /home/zero/Desktop/COaT_project/ComputeConvexHull/max1000pts/synthesis_no_opt/HLS_output//simulation/values.c
+  Prepared testbench
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-fexcess-precision=standard' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-fexcess-precision=standard' is not supported [-Wignored-optimization-argument]
+
+  Summary of resources:
+     - ARRAY_1D_STD_BRAM_NN_SDS: 2
+     - ARRAY_1D_STD_BRAM_NN_SDS_BASE: 2
+     - ASSIGN_UNSIGNED_FU: 5
+     - BMEMORY_CTRLN: 1
+     - IIdata_converter_FU: 9
+     - IUdata_converter_FU: 13
+     - MUX_GATE: 69
+     - OR_GATE: 2
+     - UIdata_converter_FU: 15
+     - UUdata_converter_FU: 243
+     - addr_expr_FU: 2
+     - constant_value: 398
+     - flipflop_AR: 7
+     - gt_expr_FU: 3
+     - lshift_expr_FU: 8
+     - lut_expr_FU: 352
+     - multi_read_cond_FU: 1
+     - read_cond_FU: 13
+     - register_SE: 86
+     - register_STD: 258
+     - rshift_expr_FU: 8
+     - ui_bit_and_expr_FU: 111
+     - ui_bit_ior_concat_expr_FU: 9
+     - ui_bit_ior_expr_FU: 59
+     - ui_bit_xor_expr_FU: 9
+     - ui_cond_expr_FU: 52
+     - ui_eq_expr_FU: 19
+     - ui_extract_bit_expr_FU: 963
+     - ui_gt_expr_FU: 1
+     - ui_lshift_expr_FU: 161
+     - ui_lt_expr_FU: 7
+     - ui_minus_expr_FU: 4
+     - ui_mult_expr_FU: 2
+     - ui_ne_expr_FU: 21
+     - ui_negate_expr_FU: 2
+     - ui_plus_expr_FU: 32
+     - ui_pointer_plus_expr_FU: 30
+     - ui_rshift_expr_FU: 95
+     - ui_ternary_plus_expr_FU: 4
+     - ui_ternary_pm_expr_FU: 4
+Start reading vector           1's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ return_port =         18   expected =         18 
+
+Simulation ended after               274921 cycles.
+
+Simulation completed with success
+
+Start reading vector           2's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ return_port =         17   expected =         17 
+
+Simulation ended after               259884 cycles.
+
+Simulation completed with success
+
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/ComputeConvexHull/max1000pts/synthesis_no_opt/HLS_output//simulation/testbench_computeConvexHull_tb.v:263: Verilog $finish
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/ComputeConvexHull/max1000pts/synthesis_no_opt/HLS_output//simulation/testbench_computeConvexHull_tb.v:304: Verilog $finish
+- /home/zero/Desktop/COaT_project/ComputeConvexHull/max1000pts/synthesis_no_opt/HLS_output//simulation/testbench_computeConvexHull_tb.v:304: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 274921 cycles;
+2. Simulation completed with SUCCESS; Execution time 259884 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 534805 cycles
+  Number of executions     : 2
+  Average execution        : 267402 cycles
+  Slices                   : 1441
+  Luts                     : 3709
+  Lut FF Pairs             : 3709
+  Power                    : 0.375
+  Registers                : 2827
+  DSPs                     : 4
+  BRAMs                    : 4
+  Clock period             : 10
+  Design minimum period    : 12.76
+  Design slack             : -2.7599999999999998
+  Frequency                : 78.369905956112859
+  AreaxTime                : 12655291.669679999
+  Time                     : 3412.0495199999996
+  Tot. Time                : 6824.1117999999997

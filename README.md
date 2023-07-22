@@ -32,25 +32,25 @@ In some cases there are subfolders within a test's folder, those recursively mir
 
 Here is the current list of tests:
 
-- **ComputeConvexHull**: Computes the convex hull around the given set of points (https://en.wikipedia.org/wiki/Convex_hull);
-- **ComputePi**: Computes Pi with the Madhava-Leibniz formula (https://en.wikipedia.org/wiki/Leibniz_formula_for_pi);
-- **ComputeSinCos**: Computes $sin(\pi/12)$ and $cos(\pi/6)$ via the Taylor expansion of Cosine (https://en.wikipedia.org/wiki/Taylor_series);
-- **ComputeSqrt**: Compute the Square root of a provided number with the Newton-Raphson method (https://en.wikipedia.org/wiki/Newton%27s_method);
-- **FromPanda_fft_float**: Fast Furier Transfom example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/fft_example;
-- **FromPanda_mm_float**: Matrix multiplication example from here https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/mm_float;
+- **ComputeConvexHull**: Computes the convex hull around the given set of points [-> wikipedia <-](https://en.wikipedia.org/wiki/Convex_hull);
+- **ComputePi**: Computes Pi with the Madhava-Leibniz formula [-> wikipedia <-](https://en.wikipedia.org/wiki/Leibniz_formula_for_pi);
+- **ComputeSinCos**: Computes $sin(\pi/12)$ and $cos(\pi/6)$ via the Taylor expansion of Cosine [-> wikipedia <-](https://en.wikipedia.org/wiki/Taylor_series);
+- **ComputeSqrt**: Compute the Square root of a provided number with the Newton-Raphson method [-> wikipedia <-](https://en.wikipedia.org/wiki/Newton%27s_method);
+- **FromPanda_fft_float**: Fast Furier Transfom example from here [-> panda-github <-](https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/fft_example);
+- **FromPanda_mm_float**: Matrix multiplication example from here [-> panda-github <-](https://github.com/ferrandi/PandA-bambu/tree/dev/panda/examples/mm_float);
 - **FromPanda_mm_float_inside_opt**: Variant of **FromPanda_mm_float** made specifically to synthesize the floating point to fixed point coversions;
-- **FromTaffo_axbench_fft**: Fast Furier Transfom example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/axbench/fft;
-- **FromTaffo_axbench_inversek2j**: Forward and inverse kinematics example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/axbench/inversek2j;
-- **FromTaffo_fpbench_CX**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/CX;
-- **FromTaffo_fpbench_CY**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/CY;
-- **FromTaffo_fpbench_CarbonGas**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/carbonGas;
-- **FromTaffo_fpbench_doppler**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/doppler;
-- **FromTaffo_fpbench_instantCurrent**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/instantCurrent;
-- **FromTaffo_fpbench_jetEngine**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/jetEngine;
-- **FromTaffo_fpbench_leadLag**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/leadLag;
-- **FromTaffo_fpbench_triangle**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/triangle;
-- **FromTaffo_fpbench_turbine1**: Example from here https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/turbine1;
-- **FromTaffo_test3**: Example from here https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c;
+- **FromTaffo_axbench_fft**: Fast Furier Transfom example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/axbench/fft);
+- **FromTaffo_axbench_inversek2j**: Forward and inverse kinematics example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/axbench/inversek2j);
+- **FromTaffo_fpbench_CX**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/CX);
+- **FromTaffo_fpbench_CY**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/CY);
+- **FromTaffo_fpbench_CarbonGas**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/carbonGas);
+- **FromTaffo_fpbench_doppler**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/doppler);
+- **FromTaffo_fpbench_instantCurrent**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/instantCurrent);
+- **FromTaffo_fpbench_jetEngine**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/jetEngine);
+- **FromTaffo_fpbench_leadLag**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/leadLag);
+- **FromTaffo_fpbench_triangle**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/triangle);
+- **FromTaffo_fpbench_turbine1**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/turbine1);
+- **FromTaffo_test3**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c);
 - **NormalizeVector**: Transforms a vector to have a unitary norm;
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;
 
@@ -73,24 +73,34 @@ The specific versions of the tools used in this project were chosed to let both 
 Here are the main commands used to generate the LLVM-IR, run the HLS and the simulations.
 
 - Produce the LLVM-IR optimized with TAFFO:<br>
-    `taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.c`<br>
+    ```
+    taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.c
+    ```
     Add the `-lm` option if `math.h` needs to be linked.
 - Run the HLS on TAFFO's produced LLVM-IR:<br>
-    `bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=<function_name_wrt_the_IR> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR |& tee panda_log_opt.txt`<br>
+    ```
+    bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=<function_name_wrt_the_IR> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR |& tee panda_log_opt.txt
+    ```
     To specify a target device for later synthesis use `--device-name=<name>`.<br>
     To see the input and output of each simulation use an higher log verbosity: `-v 4`<br>
     Add the `-lm -ffast-math --libm-std-rounding` options if `math.h` needs to be linked.<br>
     ~~Also consider using `-fsingle-precision-constant -Os --experimental-setup=BAMBU`.~~<br>
     Consider as target device: `--device-name=xc7vx690t-3ffg1930-VVD`.
 - Run the HLS on the original code:<br>
-    `bambu-2023.1.AppImage test.c -v 2 --top-fname=<function_name_wrt_the_sourcecode> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR |& tee panda_log.txt`<br>
+    ```
+    bambu-2023.1.AppImage test.c -v 2 --top-fname=<function_name_wrt_the_sourcecode> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR |& tee panda_log.txt
+    ```
     Add the `-lm -ffast-math --libm-std-rounding` options if `math.h` needs to be linked.<br>
     Consider as target device: `--device-name=xc7vx690t-3ffg1930-VVD`.
 - Generate new testbench values:<br>
-    `python3 test_generator.py <args> > test.xml`<br>
+    ```
+    python3 test_generator.py <args> > test.xml
+    ```
     Different generators might require some command-line arguments.
 - Gather and print flip-flop counts:<br>
-    `python3 get_flipflops_count.py`
+    ```
+    python3 get_flipflops_count.py
+    ```
 
 ## Run all the tests
 
@@ -104,7 +114,7 @@ export TAFFO=/path/to/TAFFO {only if it was not installed system-wise}
 
 Run the tests:
 ```
-./run_tests.sh
+./run_tests.sh —use=all
 ```
 
 This procedure will produce two sub-folders in each test’s folder:
@@ -114,10 +124,12 @@ This procedure will produce two sub-folders in each test’s folder:
 They respectively contain the output of PandA-Bambu [and, in enabled, Vivado] for the test with TAFFO’s optimization and without it.
 
 ### Options for `run_tests.sh`:
-- `—vivado` : enables the evaluation of the design through Vivado, after PandA-Bambu.
-- `—device-name=<name>` : the [same as in PandA-Bambu](https://panda.deib.polimi.it/?page_id=916).<br>
+- `--use=all` : runs all the tests.
+- `--use=<num>(,<num>)*` : specifies which tests to run, simply run `./run_tests.sh` to get a list of the tests and their relative number.
+- `--vivado` : enables the evaluation of the design through Vivado, after PandA-Bambu.
+- `--device-name=<name>` : the [same as in PandA-Bambu](https://panda.deib.polimi.it/?page_id=916).<br>
 If not specified, the default device is **xc7vx690t-3ffg1930-VVD**, and it is the only tested one.
-Regardless of the device you specify, ensure your install of Vivado has support for it if you plan to also use `—vivado`.<br>
+Regardless of the device you specify, ensure your install of Vivado has support for it if you plan to also use `--vivado`.<br>
 Copying from PandA-Bambu:<br>
 <i>Specify the name of the device. Three different cases are foreseen:
     * Xilinx:  a comma separated string specifying device, speed grade and package (e.g. "xc7z020,-1,clg484,VVD")
@@ -125,6 +137,9 @@ Copying from PandA-Bambu:<br>
     * Lattice: a string defining the device string (e.g. LFE5U85F8BG756C)
     * NanoXplore: a string defining the device string (e.g. nx2h540tsc)
     </i><br>
-- `—gen` : generates new random testbench inputs instead of using the already existing ones (see test.xml files).
-- `—no-opt` : does NOT run through PandA, and Vivado, if enabled, the TAFFO-optimized versions of the tests. 
-- `—no-unopt` : does NOT run through PandA, and Vivado, if enabled, the versions of the tests NOT optimized by TAFFO.
+- `--gen` : generates new random testbench inputs instead of using the already existing ones (see test.xml files).
+- `--no-regen-taffo` : utilized the already existent `.ll` files, without recompiling the source through TAFFO.
+- `--no-opt` : does NOT run through PandA, and Vivado, if enabled, the TAFFO-optimized versions of the tests. 
+- `--no-unopt` : does NOT run through PandA, and Vivado, if enabled, the versions of the tests NOT optimized by TAFFO.
+
+The usage of `--no-regen-taffo` is suggested, as currently some of the `.ll` files were produced with TAFFO's develop branch, and other with the last version of TAFFO that used LLVM-12.

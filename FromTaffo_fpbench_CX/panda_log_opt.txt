@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-9y7wYw/usr/bin/bambu --use-raw --top-fname=test --compiler=I386_CLANG12 -lm test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-2wciXc/usr/bin/bambu --use-raw -v 2 --top-fname=test --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
 
 
 ********************************************************************************
@@ -17,7 +17,349 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
+Parameters parsed in 0.16 seconds
+
 Target technology = FPGA
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3911
+  - combinational: 0
+  - others: 3911
+
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 52
+  Bit Value Opt: ne_expr optimized, nbits = 52
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 20
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 20
+  Bit Value Opt: plus_expr optimized, nbits = 20
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 12
+  Bit Value Opt: ne_expr optimized, nbits = 12
+  Bit Value Opt: bit_and_expr optimized, nbits = 53
+  Bit Value Opt: ne_expr optimized, nbits = 53
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 23
+  Bit Value Opt: ne_expr optimized, nbits = 23
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 9
+  Bit Value Opt: ne_expr optimized, nbits = 9
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: ne_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 16
+  Bit Value Opt: eq_expr optimized, nbits = 16
+  Bit Value Opt: bit_and_expr optimized, nbits = 28
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 63
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 63
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 11
+  Bit Value Opt: lt_expr optimized, nbits = 25
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 7
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 7
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 30
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 12
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 5
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 5
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 5
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 7
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 7
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 29
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 10
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 6
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 5
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 4
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 14
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 6
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 25
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 3
 Function call to __int32_to_float64e11m52b_1023nih inlined in test
 Function call to __float_mule11m52b_1023nih inlined in test
 
@@ -25,12 +367,70 @@ Function call to __float_mule11m52b_1023nih inlined in test
     __internal_puts
     test
     manual_cos_1_fixp
-    compare_float_4_fixp
+    compare_float_6_fixp
     __float_mule8m23b_127nih
     __float32_to_uint32_round_to_zeroe8m23b_127nih
 
+  Adding proxy wrapper in function test
+  Adding proxy function in function compare_float_6_fixp
+  Adding proxy wrapper in function test
+  Adding proxy function in function compare_float_6_fixp
 
   Memory allocation information:
+  Sparse memory alignemnt set to 1024 bytes
+    Internal variable: internal_424855 - 424855 - internal_424855 in function test
+      Id: 424855
+      Base Address: 1024
+      Size: 800
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 3
+      Maximum number of loads per function: 1
+    Internal variable: internal_424884 - 424884 - internal_424884 in function test
+      Id: 424884
+      Base Address: 1024
+      Size: 800
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 3
+      Maximum number of loads per function: 1
+    Internal variable: internal_424935 - 424935 - internal_424935 in function test
+      Id: 424935
+      Base Address: 1024
+      Size: 800
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+      Maximum number of loads per function: 1
+    Internal variable: internal_424939 - 424939 - internal_424939 in function test
+      Id: 424939
+      Base Address: 1024
+      Size: 4
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 2
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+    Internal variable: str - 425049 - str in function test
+      Id: 425049
+      Base Address: 2048
+      Size: 13
+      Used &(object)
+    Internal variable: _str_9 - 425096 - _str_9 in function test
+      Id: 425096
+      Base Address: 3072
+      Size: 4
+      Is a Read Only Memory
+      Used &(object)
+    Internal variable: str_1 - 425117 - str_1 in function test
+      Id: 425117
+      Base Address: 4096
+      Size: 11
+      Used &(object)
+  This function performs unaligned accesses: test
 Warning: This function uses unknown addresses: test
     BRAM bitsize: 32
     Spec may not exploit DATA bus width
@@ -40,15 +440,15 @@ Warning: This function uses unknown addresses: test
     ADDRESS bus bitsize: 32
     SIZE bus bitsize: 6
     Code has LOADs or STOREs with unaligned accesses
-    Internally allocated memory (no private memories): 16384
-    Internally allocated memory: 28384
+    Internally allocated memory (no private memories): 4096
+    Internally allocated memory: 6496
   Time to perform memory allocation: 0.00 seconds
 
 
   Module allocation information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Module allocation information for function __float_mule8m23b_127nih:
@@ -60,17 +460,19 @@ Warning: This function uses unknown addresses: test
   Module allocation information for function __internal_puts:
     Number of complex operations: 4
     Number of complex operations: 4
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Scheduling Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
     Number of control steps: 7
-    Minimum slack: 5.2049999990000027
-    Estimated max frequency (MHz): 208.55057347058394
-  Time to perform scheduling: 0.01 seconds
+    Minimum slack: 7.4129999990000064
+    Estimated max frequency (MHz): 386.54812509217408
+  Time to perform scheduling: 0.00 seconds
 
 
   State Transition Graph Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of operations: 27
+    Number of basic blocks: 7
     Number of states: 6
     Minimum number of cycles: 3
     Maximum number of cycles 4
@@ -81,31 +483,36 @@ Warning: This function uses unknown addresses: test
 
   Scheduling Information of function __float_mule8m23b_127nih:
     Number of control steps: 3
-    Minimum slack: 0.80239998200000184
-    Estimated max frequency (MHz): 108.72401474764808
+    Minimum slack: 4.4063999819999973
+    Estimated max frequency (MHz): 178.77574313179994
   Time to perform scheduling: 0.01 seconds
 
 
   State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of operations: 76
+    Number of basic blocks: 3
     Number of states: 2
     Minimum number of cycles: 2
     Maximum number of cycles 2
     Parameters are registered
     Done port is registered
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function __internal_puts:
     Number of control steps: 9
-    Minimum slack: 4.8879999980000024
-    Estimated max frequency (MHz): 195.61815328809939
+    Minimum slack: 6.8694999980000011
+    Estimated max frequency (MHz): 319.43778928641586
   Time to perform scheduling: 0.00 seconds
 
+  Number of function call sites = 2
 
   State Transition Graph Information of function __internal_puts:
+    Number of operations: 36
+    Number of basic blocks: 5
     Number of states: 9
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
+  Time to perform creation of STG: 0.01 seconds
 
 
   Easy binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
@@ -141,9 +548,9 @@ Warning: This function uses unknown addresses: test
   Module binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
     Number of modules instantiated: 27
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 251
+    Estimated resources area (no Muxes and address logic): 252
     Estimated area of MUX21: 0
-    Total estimated area: 251
+    Total estimated area: 252
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
@@ -161,11 +568,13 @@ Warning: This function uses unknown addresses: test
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_mule8m23b_127nih:
     Register allocation algorithm obtains an optimal result: 0 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __float_mule8m23b_127nih:
@@ -184,51 +593,55 @@ Warning: This function uses unknown addresses: test
 
   Total number of flip-flops in function __float_mule8m23b_127nih: 0
 
-  Module allocation information for function compare_float_4_fixp:
+  Module allocation information for function compare_float_6_fixp:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
-  Scheduling Information of function compare_float_4_fixp:
-    Number of control steps: 9
-    Minimum slack: 0.80239998100000887
-    Estimated max frequency (MHz): 108.72401473582725
+  Scheduling Information of function compare_float_6_fixp:
+    Number of control steps: 7
+    Minimum slack: 1.5233999790000035
+    Estimated max frequency (MHz): 117.97182803513108
   Time to perform scheduling: 0.00 seconds
 
+  Number of function call sites = 4
 
-  State Transition Graph Information of function compare_float_4_fixp:
-    Number of states: 9
-    Parameters are registered
+  State Transition Graph Information of function compare_float_6_fixp:
+    Number of operations: 20
+    Number of basic blocks: 5
+    Number of states: 6
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
-  Easy binding information for function compare_float_4_fixp:
+  Easy binding information for function compare_float_6_fixp:
     Bound operations:20/20
   Time to perform easy binding: 0.00 seconds
 
 
-  Storage Value Information of function compare_float_4_fixp:
+  Storage Value Information of function compare_float_6_fixp:
     Number of storage values inserted: 6
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __internal_puts:
     Register allocation algorithm obtains a sub-optimal result: 3 registers(LB:2)
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __internal_puts:
     Number of modules instantiated: 34
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 299
+    Estimated resources area (no Muxes and address logic): 300
     Estimated area of MUX21: 69
-    Total estimated area: 368
+    Total estimated area: 369
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
@@ -240,156 +653,674 @@ Warning: This function uses unknown addresses: test
 
   Connection Binding Information for function __internal_puts:
     Number of allocated multiplexers (2-to-1 equivalent): 4
-  Time to perform interconnection binding: 0.01 seconds
+  Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function __internal_puts: 48
 
-  Module binding information for function compare_float_4_fixp:
+  Module binding information for function compare_float_6_fixp:
     Number of modules instantiated: 20
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 4079
+    Estimated resources area (no Muxes and address logic): 4081
     Estimated area of MUX21: 0
-    Total estimated area: 4079
+    Total estimated area: 4081
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
 
-  Register binding information for function compare_float_4_fixp:
+  Register binding information for function compare_float_6_fixp:
     Register allocation algorithm obtains a sub-optimal result: 6 registers(LB:4)
   Time to perform register binding: 0.00 seconds
 
 
-  Connection Binding Information for function compare_float_4_fixp:
-    Number of allocated multiplexers (2-to-1 equivalent): 1
+  Connection Binding Information for function compare_float_6_fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 3
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function compare_float_4_fixp: 189
+  Total number of flip-flops in function compare_float_6_fixp: 189
 
   Module allocation information for function manual_cos_1_fixp:
-    Number of complex operations: 56
-    Number of complex operations: 56
-  Time to perform module allocation: 0.32 seconds
+    Number of complex operations: 22
+    Number of complex operations: 22
+  Time to perform module allocation: 0.36 seconds
 
 
   Scheduling Information of function manual_cos_1_fixp:
-    Number of control steps: 37
-    Minimum slack: 1.1102230246251565e-15
-    Estimated max frequency (MHz): 100.00000000000001
-  Time to perform scheduling: 0.11 seconds
+    Number of control steps: 29
+    Minimum slack: 0.44499998699995241
+    Estimated max frequency (MHz): 104.65724737199905
+  Time to perform scheduling: 0.17 seconds
 
+  Number of function call sites = 1
 
   State Transition Graph Information of function manual_cos_1_fixp:
-    Number of states: 39
+    Number of operations: 1204
+    Number of basic blocks: 9
+    Number of states: 31
     Done port is registered
   Time to perform creation of STG: 0.01 seconds
 
 
   Easy binding information for function manual_cos_1_fixp:
-    Bound operations:172/768
+    Bound operations:123/1204
   Time to perform easy binding: 0.00 seconds
 
 
   Storage Value Information of function manual_cos_1_fixp:
-    Number of storage values inserted: 169
+    Number of storage values inserted: 94
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.01 seconds
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.03 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function manual_cos_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 164 registers(LB:36)
-  Time to perform register binding: 0.02 seconds
+    Register allocation algorithm obtains a sub-optimal result: 89 registers(LB:31)
+  Time to perform register binding: 0.00 seconds
 
-
-  Register binding information for function manual_cos_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 164 registers(LB:36)
-  Time to perform register binding: 0.02 seconds
-
-  Clique covering computation completed in 0.04 seconds
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
 
   Module binding information for function manual_cos_1_fixp:
-    Number of modules instantiated: 765
-    Number of performance conflicts: 1370
-    Estimated resources area (no Muxes and address logic): 7609
-    Estimated area of MUX21: 68
-    Total estimated area: 7677
-    Estimated number of DSPs: 152
-  Time to perform module binding: 0.08 seconds
+    Number of modules instantiated: 1200
+    Number of performance conflicts: 3365
+    Estimated resources area (no Muxes and address logic): 9923
+    Estimated area of MUX21: 201
+    Total estimated area: 10124
+    Estimated number of DSPs: 106
+  Time to perform module binding: 0.07 seconds
 
 
   Register binding information for function manual_cos_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 164 registers(LB:36)
-  Time to perform register binding: 0.01 seconds
+    Register allocation algorithm obtains a sub-optimal result: 89 registers(LB:31)
+  Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function manual_cos_1_fixp:
-    Number of allocated multiplexers (2-to-1 equivalent): 6
+    Number of allocated multiplexers (2-to-1 equivalent): 9
   Time to perform interconnection binding: 0.02 seconds
 
-  Total number of flip-flops in function manual_cos_1_fixp: 4611
+  Total number of flip-flops in function manual_cos_1_fixp: 2574
 
   Module allocation information for function test:
     Number of complex operations: 29
     Number of complex operations: 29
-  Time to perform module allocation: 0.09 seconds
+  Time to perform module allocation: 0.06 seconds
 
 
   Scheduling Information of function test:
-    Number of control steps: 38
-    Minimum slack: 8.2156503822261584e-15
-    Estimated max frequency (MHz): 100.00000000000009
-  Time to perform scheduling: 0.03 seconds
+    Number of control steps: 29
+    Minimum slack: 5.0000000000000003e-10
+    Estimated max frequency (MHz): 100.000000005
+  Time to perform scheduling: 0.04 seconds
 
+  Number of function call sites = 0
 
   State Transition Graph Information of function test:
-    Number of states: 44
+    Number of operations: 341
+    Number of basic blocks: 11
+    Number of states: 35
     Done port is registered
   Time to perform creation of STG: 0.01 seconds
 
 
   Easy binding information for function test:
-    Bound operations:227/341
+    Bound operations:228/341
   Time to perform easy binding: 0.00 seconds
 
 
   Storage Value Information of function test:
-    Number of storage values inserted: 87
+    Number of storage values inserted: 50
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.01 seconds
+  Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 77 registers(LB:29)
-  Time to perform register binding: 0.01 seconds
-
-
-  Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 77 registers(LB:29)
+    Register allocation algorithm obtains a sub-optimal result: 43 registers(LB:19)
   Time to perform register binding: 0.00 seconds
 
-  Clique covering computation completed in 0.01 seconds
+  Iteration 1 completed in 0.00 seconds
+
+  Register binding information for function test:
+    Register allocation algorithm obtains a sub-optimal result: 43 registers(LB:19)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 2 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
 
   Module binding information for function test:
-    Number of modules instantiated: 327
-    Number of performance conflicts: 27
-    Estimated resources area (no Muxes and address logic): 10603
-    Estimated area of MUX21: 345
-    Total estimated area: 10948
-    Estimated number of DSPs: 18
-  Time to perform module binding: 0.02 seconds
+    Number of modules instantiated: 326
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 10604
+    Estimated area of MUX21: 447
+    Total estimated area: 11051
+    Estimated number of DSPs: 15
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 77 registers(LB:29)
+    Register allocation algorithm obtains a sub-optimal result: 43 registers(LB:19)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function test:
-    Number of allocated multiplexers (2-to-1 equivalent): 27
+    Number of allocated multiplexers (2-to-1 equivalent): 29
   Time to perform interconnection binding: 0.01 seconds
 
-  Total number of flip-flops in function test: 1626
-[0m
+  Total number of flip-flops in function test: 1175
+[0m  Parameter Pd58 (424772) (testvector 0) allocated at 1073741824 : reserved_mem_size = 3200
+Padding of 896 for parameter Pd58
+  Parameter Pd58 (424772) (testvector 1) allocated at 1073745920 : reserved_mem_size = 3200
+Padding of 896 for parameter Pd58
+  C-based testbench generation for function test: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_CX/synthesis_with_opt/HLS_output//simulation/values.c
+  Prepared testbench
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+
+  Summary of resources:
+     - ADDRESS_DECODING_LOGIC_NN: 4
+     - ARRAY_1D_STD_BRAM_NN: 4
+     - ARRAY_1D_STD_BRAM_NN_SDS: 3
+     - ARRAY_1D_STD_BRAM_NN_SDS_BASE: 3
+     - ARRAY_1D_STD_BRAM_NN_SP: 4
+     - ASSIGN_UNSIGNED_FU: 11
+     - BMEMORY_CTRLN: 2
+     - BRAM_MEMORY_CORE_SMALL: 4
+     - BRAM_MEMORY_NN_CORE: 4
+     - IIdata_converter_FU: 20
+     - IUdata_converter_FU: 23
+     - MUX_GATE: 52
+     - OR_GATE: 7
+     - PRINTFN_VECTOR_BOOL32_REAL64: 1
+     - PROXY_CTRLN: 1
+     - TRUE_DUAL_PORT_BYTE_ENABLING_RAM: 4
+     - UIdata_converter_FU: 30
+     - UUdata_converter_FU: 107
+     - __builtin_abs: 1
+     - __builtin_putchar: 1
+     - addr_expr_FU: 7
+     - bus_merger: 7
+     - constant_value: 180
+     - extract_bit_expr_FU: 48
+     - flipflop_AR: 5
+     - gt_expr_FU: 6
+     - join_signal: 23
+     - lshift_expr_FU: 1
+     - lt_expr_FU: 1
+     - lut_expr_FU: 46
+     - minus_expr_FU: 3
+     - mult_expr_FU: 3
+     - multi_read_cond_FU: 2
+     - read_cond_FU: 11
+     - register_SE: 62
+     - register_STD: 87
+     - rshift_expr_FU: 5
+     - split_signal: 7
+     - ui_bit_and_expr_FU: 161
+     - ui_bit_ior_concat_expr_FU: 113
+     - ui_bit_ior_expr_FU: 18
+     - ui_bit_xor_expr_FU: 1
+     - ui_cond_expr_FU: 15
+     - ui_eq_expr_FU: 13
+     - ui_extract_bit_expr_FU: 48
+     - ui_lshift_expr_FU: 359
+     - ui_minus_expr_FU: 42
+     - ui_mult_expr_FU: 18
+     - ui_ne_expr_FU: 2
+     - ui_negate_expr_FU: 4
+     - ui_plus_expr_FU: 150
+     - ui_pointer_plus_expr_FU: 13
+     - ui_rshift_expr_FU: 377
+     - ui_ternary_plus_expr_FU: 5
+     - ui_ternary_pm_expr_FU: 11
+     - ui_view_convert_expr_FU: 1
+Start reading vector           1's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Values Begin
+1.62011718750000000000
+4.39648437500000000000
+1.99121093750000000000
+1.05175781250000000000
+1.84863281250000000000
+0.49316406250000000000
+1.79882812500000000000
+0.41601562500000000000
+1.68261718750000000000
+3.89941406250000000000
+5.89257812500000000000
+0.80664062500000000000
+1.62792968750000000000
+0.50488281250000000000
+0.59960937500000000000
+6.54101562500000000000
+0.92871093750000000000
+1.15722656250000000000
+3.90332031250000000000
+3.38183593750000000000
+3.53613281250000000000
+1.93457031250000000000
+5.92187500000000000000
+1.00390625000000000000
+3.33984375000000000000
+0.71289062500000000000
+0.85253906250000000000
+0.28515625000000000000
+2.14746093750000000000
+0.19531250000000000000
+5.24609375000000000000
+2.07812500000000000000
+1.99804687500000000000
+3.13867187500000000000
+2.60156250000000000000
+5.80371093750000000000
+1.10644531250000000000
+3.37792968750000000000
+6.10546875000000000000
+0.92968750000000000000
+3.28222656250000000000
+1.60742187500000000000
+4.20117187500000000000
+2.31250000000000000000
+1.76757812500000000000
+1.10351562500000000000
+1.28027343750000000000
+3.41992187500000000000
+1.93457031250000000000
+2.43750000000000000000
+1.93457031250000000000
+6.19824218750000000000
+0.71484375000000000000
+1.93457031250000000000
+4.36621093750000000000
+1.33398437500000000000
+7.97265625000000000000
+3.46777343750000000000
+1.02929687500000000000
+3.64550781250000000000
+1.93457031250000000000
+3.87011718750000000000
+1.56250000000000000000
+1.47265625000000000000
+0.64648437500000000000
+2.20800781250000000000
+7.97656250000000000000
+1.93457031250000000000
+5.31738281250000000000
+1.73828125000000000000
+1.93457031250000000000
+0.12011718750000000000
+1.45410156250000000000
+5.82714843750000000000
+2.19726562500000000000
+4.18164062500000000000
+1.51074218750000000000
+0.64550781250000000000
+3.60156250000000000000
+0.43066406250000000000
+0.93066406250000000000
+0.55078125000000000000
+3.73339843750000000000
+1.01562500000000000000
+2.36035156250000000000
+0.41503906250000000000
+1.53808593750000000000
+4.62695312500000000000
+1.90917968750000000000
+1.04394531250000000000
+2.74121093750000000000
+0.93457031250000000000
+1.93457031250000000000
+5.06738281250000000000
+2.97265625000000000000
+0.96093750000000000000
+0.51660156250000000000
+2.88378906250000000000
+0.81347656250000000000
+0.64160156250000000000
+0.04003906250000000000
+3.39453125000000000000
+1.66503906250000000000
+1.11621093750000000000
+0.91210937500000000000
+6.87597656250000000000
+1.65722656250000000000
+1.13476562500000000000
+1.16894531250000000000
+1.69140625000000000000
+1.93457031250000000000
+7.70605468750000000000
+1.93457031250000000000
+4.95312500000000000000
+5.32812500000000000000
+0.17285156250000000000
+4.33105468750000000000
+1.28515625000000000000
+0.57910156250000000000
+7.24609375000000000000
+1.57714843750000000000
+5.94140625000000000000
+3.14355468750000000000
+2.74511718750000000000
+7.59277343750000000000
+1.93457031250000000000
+4.02636718750000000000
+1.30468750000000000000
+0.35253906250000000000
+0.16894531250000000000
+1.67480468750000000000
+3.29882812500000000000
+3.56542968750000000000
+4.57519531250000000000
+1.62988281250000000000
+1.79785156250000000000
+7.20703125000000000000
+1.82812500000000000000
+7.41406250000000000000
+1.93457031250000000000
+4.01953125000000000000
+6.50683593750000000000
+1.84765625000000000000
+5.11816406250000000000
+0.31933593750000000000
+0.88867187500000000000
+2.59472656250000000000
+1.12304687500000000000
+0.45605468750000000000
+1.15136718750000000000
+0.26171875000000000000
+3.75488281250000000000
+0.83691406250000000000
+1.93457031250000000000
+1.90820312500000000000
+0.55273437500000000000
+3.09667968750000000000
+0.88476562500000000000
+7.99902343750000000000
+0.53710937500000000000
+6.74707031250000000000
+0.66113281250000000000
+0.61621093750000000000
+1.90234375000000000000
+1.13476562500000000000
+4.43750000000000000000
+3.55078125000000000000
+0.58984375000000000000
+6.84667968750000000000
+5.89257812500000000000
+0.79589843750000000000
+6.22070312500000000000
+4.62695312500000000000
+0.87011718750000000000
+1.40039062500000000000
+1.29980468750000000000
+3.46289062500000000000
+4.46972656250000000000
+0.94921875000000000000
+5.29882812500000000000
+0.77636718750000000000
+3.62109375000000000000
+1.51660156250000000000
+1.42382812500000000000
+1.93457031250000000000
+1.75390625000000000000
+1.77929687500000000000
+0.88769531250000000000
+5.27929687500000000000
+0.08789062500000000000
+5.32617187500000000000
+0.71972656250000000000
+3.76757812500000000000
+1.65917968750000000000
+1.05664062500000000000
+4.92089843750000000000
+0.67285156250000000000
+4.82519531250000000000
+1.30664062500000000000
+1.93457031250000000000
+Values End
+Simulation ended after              7976104 cycles.
+
+Simulation completed with success
+
+Start reading vector           2's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Values Begin
+1.07714843750000000000
+0.92382812500000000000
+5.13769531250000000000
+0.16210937500000000000
+1.25000000000000000000
+2.94531250000000000000
+1.26269531250000000000
+1.64160156250000000000
+0.39062500000000000000
+2.98242187500000000000
+1.10839843750000000000
+0.24218750000000000000
+4.79785156250000000000
+5.66894531250000000000
+1.93457031250000000000
+3.37109375000000000000
+2.97265625000000000000
+1.79101562500000000000
+2.46972656250000000000
+0.41308593750000000000
+4.25488281250000000000
+7.25000000000000000000
+0.57421875000000000000
+1.42773437500000000000
+2.71386718750000000000
+1.75781250000000000000
+7.34375000000000000000
+2.02050781250000000000
+6.66699218750000000000
+0.93652343750000000000
+2.09960937500000000000
+3.76660156250000000000
+2.49707031250000000000
+1.17578125000000000000
+6.55859375000000000000
+1.82617187500000000000
+4.72656250000000000000
+6.83203125000000000000
+4.57226562500000000000
+2.57812500000000000000
+1.59570312500000000000
+5.29492187500000000000
+3.36425781250000000000
+1.93457031250000000000
+2.94335937500000000000
+1.13378906250000000000
+1.27636718750000000000
+2.67675781250000000000
+0.87500000000000000000
+2.09375000000000000000
+4.94726562500000000000
+4.66210937500000000000
+0.80468750000000000000
+1.30273437500000000000
+1.93457031250000000000
+1.93457031250000000000
+1.93457031250000000000
+2.81445312500000000000
+0.42675781250000000000
+1.71679687500000000000
+1.39062500000000000000
+4.98535156250000000000
+0.73339843750000000000
+1.44238281250000000000
+1.71679687500000000000
+3.10156250000000000000
+1.00585937500000000000
+1.93457031250000000000
+1.93457031250000000000
+4.97558593750000000000
+1.95117187500000000000
+1.63281250000000000000
+1.93457031250000000000
+4.83203125000000000000
+1.93457031250000000000
+7.47167968750000000000
+7.61425781250000000000
+5.13476562500000000000
+7.12500000000000000000
+2.78417968750000000000
+1.24316406250000000000
+5.22753906250000000000
+1.63476562500000000000
+7.62597656250000000000
+0.49023437500000000000
+1.93457031250000000000
+0.71679687500000000000
+1.89550781250000000000
+0.33496093750000000000
+1.20214843750000000000
+6.19921875000000000000
+5.51855468750000000000
+1.83691406250000000000
+0.46777343750000000000
+1.78808593750000000000
+0.77343750000000000000
+4.19824218750000000000
+1.86132812500000000000
+7.76074218750000000000
+3.63281250000000000000
+6.95703125000000000000
+1.93457031250000000000
+1.93457031250000000000
+1.08984375000000000000
+1.95703125000000000000
+1.93457031250000000000
+1.58789062500000000000
+0.21093750000000000000
+2.42773437500000000000
+3.56054687500000000000
+2.47265625000000000000
+5.39550781250000000000
+1.93457031250000000000
+4.74511718750000000000
+3.96289062500000000000
+6.50878906250000000000
+2.38378906250000000000
+3.40527343750000000000
+6.99511718750000000000
+1.92871093750000000000
+5.75878906250000000000
+0.33984375000000000000
+4.81933593750000000000
+1.12304687500000000000
+3.41503906250000000000
+5.84765625000000000000
+0.63085937500000000000
+1.82421875000000000000
+7.52246093750000000000
+1.66015625000000000000
+2.98730468750000000000
+1.93457031250000000000
+0.57714843750000000000
+1.53125000000000000000
+6.32617187500000000000
+5.27929687500000000000
+5.73144531250000000000
+5.78125000000000000000
+0.30859375000000000000
+3.46093750000000000000
+0.87011718750000000000
+1.93457031250000000000
+3.38671875000000000000
+2.63671875000000000000
+1.93457031250000000000
+3.48730468750000000000
+2.56542968750000000000
+3.97753906250000000000
+1.56250000000000000000
+1.09179687500000000000
+3.92382812500000000000
+2.81054687500000000000
+1.82226562500000000000
+2.00195312500000000000
+1.74804687500000000000
+0.59179687500000000000
+0.45507812500000000000
+1.74804687500000000000
+1.70703125000000000000
+1.35449218750000000000
+2.99316406250000000000
+1.24609375000000000000
+3.37597656250000000000
+7.03710937500000000000
+6.31835937500000000000
+4.23437500000000000000
+1.28613281250000000000
+0.77539062500000000000
+0.34375000000000000000
+4.60253906250000000000
+0.34277343750000000000
+1.45410156250000000000
+5.61914062500000000000
+1.92382812500000000000
+4.59277343750000000000
+1.23046875000000000000
+4.72656250000000000000
+1.93457031250000000000
+0.83007812500000000000
+7.11132812500000000000
+6.04199218750000000000
+1.53222656250000000000
+4.41308593750000000000
+1.21289062500000000000
+2.49707031250000000000
+1.81640625000000000000
+1.82031250000000000000
+3.98828125000000000000
+0.95507812500000000000
+0.44628906250000000000
+3.33105468750000000000
+3.02246093750000000000
+0.63476562500000000000
+1.21386718750000000000
+6.63769531250000000000
+1.83984375000000000000
+2.61718750000000000000
+1.87890625000000000000
+1.53320312500000000000
+0.72753906250000000000
+Values End
+Simulation ended after              8093094 cycles.
+
+Simulation completed with success
+
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_CX/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:243: Verilog $finish
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_CX/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:284: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_CX/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:284: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 7976104 cycles;
+2. Simulation completed with SUCCESS; Execution time 8093094 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 16069198 cycles
+  Number of executions     : 2
+  Average execution        : 8034599 cycles
+  Slices                   : 2247
+  Luts                     : 6337
+  Lut FF Pairs             : 6337
+  Power                    : 0.42099999999999999
+  Registers                : 2561
+  DSPs                     : 90
+  BRAMs                    : 14
+  Clock period             : 10
+  Design minimum period    : 16.801000000000002
+  Design slack             : -6.8010000000000019
+  Frequency                : 59.520266650794589
+  AreaxTime                : 855427180.15226305
+  Time                     : 134989.29779900002
+  Tot. Time                : 269978.59559800004

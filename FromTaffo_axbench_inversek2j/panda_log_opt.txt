@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-OumZE9/usr/bin/bambu --use-raw --top-fname=test --compiler=I386_CLANG12 -lm test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-Qk4woL/usr/bin/bambu --use-raw -v 2 --top-fname=test --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
 
 
 ********************************************************************************
@@ -17,41 +17,289 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
+Parameters parsed in 0.14 seconds
+
 Target technology = FPGA
-Function call to __copysigne11m52b_1023nih inlined in __internal_scalbn
-Function call to __copysigne11m52b_1023nih inlined in __internal_scalbn
-Function call to __copysigne11m52b_1023nih inlined in __internal_scalbn
-Function call to __fabse11m52b_1023nih inlined in __internal_cos
-Function call to __float_eqe11m52b_1023nih inlined in __internal_cos
-Function call to __float_eqe11m52b_1023nih inlined in __internal_cos
-Function call to __fabse11m52b_1023nih inlined in __internal_sin
-Function call to __float_eqe11m52b_1023nih inlined in __internal_sin
-Function call to __float_eqe11m52b_1023nih inlined in __internal_sin
-Function call to __fabse11m52b_1023nih inlined in __hide_ieee754_asin
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3911
+  - combinational: 0
+  - others: 3911
+
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+  Bit Value Opt: cond_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 7
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 31
+  Bit Value Opt: bit_and_expr optimized, nbits = 31
+  Bit Value Opt: bit_and_expr optimized, nbits = 16
+  Bit Value Opt: eq_expr optimized, nbits = 16
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 27
+  Bit Value Opt: bit_and_expr optimized, nbits = 29
+  Bit Value Opt: bit_xor_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: bit_xor_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: ne_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 11
+  Bit Value Opt: eq_expr optimized, nbits = 11
+  Bit Value Opt: bit_and_expr optimized, nbits = 19
+  Bit Value Opt: eq_expr optimized, nbits = 19
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: eq_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 25
+  Bit Value Opt: eq_expr optimized, nbits = 25
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: eq_expr optimized, nbits = 26
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: ne_expr optimized, nbits = 26
+  Bit Value Opt: bit_and_expr optimized, nbits = 53
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 53
+  Bit Value Opt: ne_expr optimized, nbits = 53
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 20
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 20
+  Bit Value Opt: plus_expr optimized, nbits = 20
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 12
+  Bit Value Opt: ne_expr optimized, nbits = 12
+  Bit Value Opt: bit_and_expr optimized, nbits = 53
+  Bit Value Opt: ne_expr optimized, nbits = 53
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 22
+  Bit Value Opt: ne_expr optimized, nbits = 22
+  Bit Value Opt: bit_and_expr optimized, nbits = 47
+  Bit Value Opt: ne_expr optimized, nbits = 47
+  Bit Value Opt: bit_and_expr optimized, nbits = 9
+  Bit Value Opt: ne_expr optimized, nbits = 9
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: ne_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 8
+  Bit Value Opt: eq_expr optimized, nbits = 8
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: eq_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 12
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: bit_and_expr optimized, nbits = 28
+  Bit Value Opt: eq_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 23
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 23
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: bit_and_expr optimized, nbits = 16
+  Bit Value Opt: eq_expr optimized, nbits = 16
+  Bit Value Opt: bit_and_expr optimized, nbits = 28
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: lt_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: lt_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 30
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: lt_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 11
+  Bit Value Opt: cond_expr optimized, nbits = 29
+  Bit Value Opt: cond_expr optimized, nbits = 29
+  Bit Value Opt: cond_expr optimized, nbits = 29
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 6
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 3
 
   Functions to be synthesized:
     __udivdi3
-    __hide_ieee754_acos
-    __internal_sqrt
-    __internal_acos
-    __hide_ieee754_asin
-    __internal_asin
-    __hide_kernel_sin
-    __internal_floor
-    __hide_kernel_cos
-    __internal_sin
-    __internal_cos
-    __internal_scalbn
     __float32_to_float64_ieee
     test
-    __float64_to_int32_round_to_zeroe11m52b_1023nih
     __float_mule11m52b_1023nih
-    __float_sube11m52b_1023nih
-    __float_adde11m52b_1023nih
-    __float_gte11m52b_1023nih
-    __int32_to_float64e11m52b_1023nih
-    __float_gee11m52b_1023nih
-    __float_divSRT4e11m52b_1023nih
     __float64_to_uint32_round_to_zeroe11m52b_1023nih
     __float_adde8m23b_127nih
     __uint32_to_float32e8m23b_127nih
@@ -61,17 +309,27 @@ Function call to __fabse11m52b_1023nih inlined in __hide_ieee754_asin
 
 
   Memory allocation information:
+  Sparse memory alignemnt set to 2048 bytes
+    Internal variable: internal_424941 - 424941 - internal_424941 in function test
+      Id: 424941
+      Base Address: 2048
+      Size: 1600
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 4
 Warning: This function uses unknown addresses: test
-    BRAM bitsize: 32
+    BRAM bitsize: 16
     Spec may not exploit DATA bus width
     Spec accesses data having an address unknown at compile time
     Internal data is not externally accessible
-    DATA bus bitsize: 64
+    DATA bus bitsize: 32
     ADDRESS bus bitsize: 32
-    SIZE bus bitsize: 7
+    SIZE bus bitsize: 6
     Internally allocated memory (no private memories): 0
-    Internally allocated memory: 36320
-  Time to perform memory allocation: 0.01 seconds
+    Internally allocated memory: 1600
+  Time to perform memory allocation: 0.00 seconds
 
 
   Module allocation information for function __float32_to_float64_ieee:
@@ -86,52 +344,22 @@ Warning: This function uses unknown addresses: test
   Time to perform module allocation: 0.01 seconds
 
 
-  Module allocation information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
-  Time to perform module allocation: 0.00 seconds
-
-
   Module allocation information for function __float64_to_uint32_round_to_zeroe11m52b_1023nih:
     Number of complex operations: 0
     Number of complex operations: 0
   Time to perform module allocation: 0.01 seconds
 
 
-  Module allocation information for function __float_adde11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
-  Time to perform module allocation: 0.04 seconds
-
-
   Module allocation information for function __float_adde8m23b_127nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.05 seconds
-
-
-  Module allocation information for function __float_divSRT4e11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
   Time to perform module allocation: 0.04 seconds
 
 
-  Module allocation information for function __float_gee11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
-  Time to perform module allocation: 0.00 seconds
-
-
-  Module allocation information for function __float_gte11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
-  Time to perform module allocation: 0.01 seconds
-
-
   Module allocation information for function __float_mule11m52b_1023nih:
-    Number of complex operations: 4
-    Number of complex operations: 4
-  Time to perform module allocation: 0.03 seconds
+    Number of complex operations: 2
+    Number of complex operations: 2
+  Time to perform module allocation: 0.02 seconds
 
 
   Module allocation information for function __float_mule8m23b_127nih:
@@ -140,28 +368,10 @@ Warning: This function uses unknown addresses: test
   Time to perform module allocation: 0.02 seconds
 
 
-  Module allocation information for function __float_sube11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
-  Time to perform module allocation: 0.04 seconds
-
-
-  Module allocation information for function __int32_to_float64e11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
-  Time to perform module allocation: 0.05 seconds
-
-
-  Module allocation information for function __internal_sqrt:
-    Number of complex operations: 18
-    Number of complex operations: 18
-  Time to perform module allocation: 0.06 seconds
-
-
   Module allocation information for function __udivdi3:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.02 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Module allocation information for function __uint32_to_float32e8m23b_127nih:
@@ -173,62 +383,55 @@ Warning: This function uses unknown addresses: test
   Module allocation information for function __uint32_to_float64e11m52b_1023nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.03 seconds
+  Time to perform module allocation: 0.02 seconds
 
 
   Scheduling Information of function __float32_to_float64_ieee:
     Number of control steps: 3
-    Minimum slack: 7.0276666596666688
-    Estimated max frequency (MHz): 336.43602029099986
-  Time to perform scheduling: 0.00 seconds
+    Minimum slack: 7.8356666596666633
+    Estimated max frequency (MHz): 462.03603731668545
+  Time to perform scheduling: 0.01 seconds
 
+  Number of function call sites = 4
 
   State Transition Graph Information of function __float32_to_float64_ieee:
+    Number of operations: 79
+    Number of basic blocks: 3
     Number of states: 1
     Minimum number of cycles: 1
     Maximum number of cycles 1
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
     Number of control steps: 7
-    Minimum slack: 5.2049999990000027
-    Estimated max frequency (MHz): 208.55057347058394
-  Time to perform scheduling: 0.00 seconds
+    Minimum slack: 7.4129999990000064
+    Estimated max frequency (MHz): 386.54812509217408
+  Time to perform scheduling: 0.01 seconds
 
+  Number of function call sites = 3
 
   State Transition Graph Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of operations: 27
+    Number of basic blocks: 7
     Number of states: 5
     Minimum number of cycles: 2
     Maximum number of cycles 3
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __float64_to_int32_round_to_zeroe11m52b_1023nih:
-    Number of control steps: 8
-    Minimum slack: 6.3359999989999993
-    Estimated max frequency (MHz): 272.92576411765123
-  Time to perform scheduling: 0.01 seconds
-
-
-  State Transition Graph Information of function __float64_to_int32_round_to_zeroe11m52b_1023nih:
-    Number of states: 7
-    Minimum number of cycles: 3
-    Maximum number of cycles 5
-    Parameters are registered
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function __float64_to_uint32_round_to_zeroe11m52b_1023nih:
     Number of control steps: 7
-    Minimum slack: 6.3359999990000029
-    Estimated max frequency (MHz): 272.92576411765145
+    Minimum slack: 8.2289999989999991
+    Estimated max frequency (MHz): 564.65273824694907
   Time to perform scheduling: 0.00 seconds
 
+  Number of function call sites = 9
 
   State Transition Graph Information of function __float64_to_uint32_round_to_zeroe11m52b_1023nih:
+    Number of operations: 24
+    Number of basic blocks: 7
     Number of states: 5
     Minimum number of cycles: 2
     Maximum number of cycles 3
@@ -236,159 +439,56 @@ Warning: This function uses unknown addresses: test
   Time to perform creation of STG: 0.00 seconds
 
 
-  Scheduling Information of function __float_adde11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.054699991000000781
-    Estimated max frequency (MHz): 100.550008455758
-  Time to perform scheduling: 0.06 seconds
-
-
-  State Transition Graph Information of function __float_adde11m52b_1023nih:
-    Number of states: 5
-    Minimum number of cycles: 5
-    Maximum number of cycles 5
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.01 seconds
-
-
   Scheduling Information of function __float_adde8m23b_127nih:
-    Number of control steps: 5
-    Minimum slack: 0.12945132633333256
-    Estimated max frequency (MHz): 101.31149068418752
+    Number of control steps: 4
+    Minimum slack: 0.14211997399999216
+    Estimated max frequency (MHz): 101.44168902061249
   Time to perform scheduling: 0.04 seconds
 
+  Number of function call sites = 2
 
   State Transition Graph Information of function __float_adde8m23b_127nih:
-    Number of states: 4
-    Minimum number of cycles: 4
-    Maximum number of cycles 4
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.01 seconds
-
-
-  Scheduling Information of function __float_divSRT4e11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.31460231533337546
-    Estimated max frequency (MHz): 103.24821267619642
-  Time to perform scheduling: 0.02 seconds
-
-
-  State Transition Graph Information of function __float_divSRT4e11m52b_1023nih:
-    Number of states: 5
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.01 seconds
-
-
-  Scheduling Information of function __float_gee11m52b_1023nih:
-    Number of control steps: 5
-    Minimum slack: 6.8479999980000068
-    Estimated max frequency (MHz): 317.25888304742523
-  Time to perform scheduling: 0.00 seconds
-
-
-  State Transition Graph Information of function __float_gee11m52b_1023nih:
-    Number of states: 4
-    Minimum number of cycles: 3
-    Maximum number of cycles 3
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __float_gte11m52b_1023nih:
-    Number of control steps: 5
-    Minimum slack: 6.8479999980000068
-    Estimated max frequency (MHz): 317.25888304742523
-  Time to perform scheduling: 0.00 seconds
-
-
-  State Transition Graph Information of function __float_gte11m52b_1023nih:
-    Number of states: 4
-    Minimum number of cycles: 3
-    Maximum number of cycles 3
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __float_mule11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.39039999400001446
-    Estimated max frequency (MHz): 104.06260399763008
-  Time to perform scheduling: 0.01 seconds
-
-
-  State Transition Graph Information of function __float_mule11m52b_1023nih:
-    Number of states: 5
-    Minimum number of cycles: 5
-    Maximum number of cycles 5
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __float_mule8m23b_127nih:
-    Number of control steps: 4
-    Minimum slack: 0.48473332433333849
-    Estimated max frequency (MHz): 105.09426946039196
-  Time to perform scheduling: 0.01 seconds
-
-
-  State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of operations: 400
+    Number of basic blocks: 3
     Number of states: 3
     Minimum number of cycles: 3
     Maximum number of cycles 3
     Parameters are registered
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __float_sube11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.054699991000000781
-    Estimated max frequency (MHz): 100.550008455758
-  Time to perform scheduling: 0.05 seconds
-
-
-  State Transition Graph Information of function __float_sube11m52b_1023nih:
-    Number of states: 5
-    Minimum number of cycles: 5
-    Maximum number of cycles 5
-    Parameters are registered
-    Done port is registered
   Time to perform creation of STG: 0.01 seconds
 
 
-  Scheduling Information of function __int32_to_float64e11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.38866665966666258
-    Estimated max frequency (MHz): 104.04383706093772
-  Time to perform scheduling: 0.02 seconds
+  Scheduling Information of function __float_mule11m52b_1023nih:
+    Number of control steps: 3
+    Minimum slack: 2.9413999819999996
+    Estimated max frequency (MHz): 141.67115255856959
+  Time to perform scheduling: 0.01 seconds
 
+  Number of function call sites = 11
 
-  State Transition Graph Information of function __int32_to_float64e11m52b_1023nih:
-    Number of states: 5
-    Minimum number of cycles: 4
-    Maximum number of cycles 4
-    Parameters are registered
-    Done port is registered
+  State Transition Graph Information of function __float_mule11m52b_1023nih:
+    Number of operations: 75
+    Number of basic blocks: 3
+    Number of states: 1
+    Minimum number of cycles: 1
+    Maximum number of cycles 1
   Time to perform creation of STG: 0.00 seconds
 
 
-  Scheduling Information of function __internal_sqrt:
-    Number of control steps: 22
-    Minimum slack: 0.23100000000000276
-    Estimated max frequency (MHz): 102.36462278636508
-  Time to perform scheduling: 0.02 seconds
+  Scheduling Information of function __float_mule8m23b_127nih:
+    Number of control steps: 4
+    Minimum slack: 0.14046665266666675
+    Estimated max frequency (MHz): 101.4246785087923
+  Time to perform scheduling: 0.01 seconds
 
+  Number of function call sites = 9
 
-  State Transition Graph Information of function __internal_sqrt:
-    Number of states: 21
+  State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of operations: 124
+    Number of basic blocks: 3
+    Number of states: 3
     Minimum number of cycles: 3
-    Maximum number of cycles 19
+    Maximum number of cycles 3
     Parameters are registered
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
@@ -396,61 +496,63 @@ Warning: This function uses unknown addresses: test
 
   Scheduling Information of function __udivdi3:
     Number of control steps: 5
-    Minimum slack: 4.322298654666672
-    Estimated max frequency (MHz): 176.12761559251965
-  Time to perform scheduling: 0.01 seconds
+    Minimum slack: 7.0609586546666661
+    Estimated max frequency (MHz): 340.24699978713096
+  Time to perform scheduling: 0.00 seconds
 
+  Number of function call sites = 1
 
   State Transition Graph Information of function __udivdi3:
+    Number of operations: 45
+    Number of basic blocks: 5
     Number of states: 3
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
+  Time to perform creation of STG: 0.01 seconds
 
 
   Scheduling Information of function __uint32_to_float32e8m23b_127nih:
-    Number of control steps: 8
-    Minimum slack: 0.33029264866665753
-    Estimated max frequency (MHz): 103.41574606827284
-  Time to perform scheduling: 0.05 seconds
+    Number of control steps: 7
+    Minimum slack: 2.3406559880000013
+    Estimated max frequency (MHz): 130.55948374081206
+  Time to perform scheduling: 0.02 seconds
 
+  Number of function call sites = 4
 
   State Transition Graph Information of function __uint32_to_float32e8m23b_127nih:
-    Number of states: 7
-    Minimum number of cycles: 4
-    Maximum number of cycles 5
-    Parameters are registered
+    Number of operations: 250
+    Number of basic blocks: 7
+    Number of states: 5
+    Minimum number of cycles: 2
+    Maximum number of cycles 3
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function __uint32_to_float64e11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.16006665366666195
-    Estimated max frequency (MHz): 101.62670465370894
+    Number of control steps: 5
+    Minimum slack: 2.2765666506666657
+    Estimated max frequency (MHz): 129.47609628641612
   Time to perform scheduling: 0.02 seconds
 
+  Number of function call sites = 2
 
   State Transition Graph Information of function __uint32_to_float64e11m52b_1023nih:
-    Number of states: 5
-    Minimum number of cycles: 4
-    Maximum number of cycles 4
-    Parameters are registered
+    Number of operations: 150
+    Number of basic blocks: 5
+    Number of states: 3
+    Minimum number of cycles: 2
+    Maximum number of cycles 2
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
   Easy binding information for function __float32_to_float64_ieee:
     Bound operations:55/79
-  Time to perform easy binding: 0.01 seconds
+  Time to perform easy binding: 0.00 seconds
 
 
   Easy binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
     Bound operations:27/27
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
-    Bound operations:37/39
   Time to perform easy binding: 0.00 seconds
 
 
@@ -459,33 +561,13 @@ Warning: This function uses unknown addresses: test
   Time to perform easy binding: 0.00 seconds
 
 
-  Easy binding information for function __float_adde11m52b_1023nih:
-    Bound operations:375/438
-  Time to perform easy binding: 0.00 seconds
-
-
   Easy binding information for function __float_adde8m23b_127nih:
     Bound operations:345/400
   Time to perform easy binding: 0.00 seconds
 
 
-  Easy binding information for function __float_divSRT4e11m52b_1023nih:
-    Bound operations:139/229
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __float_gee11m52b_1023nih:
-    Bound operations:22/26
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __float_gte11m52b_1023nih:
-    Bound operations:21/23
-  Time to perform easy binding: 0.00 seconds
-
-
   Easy binding information for function __float_mule11m52b_1023nih:
-    Bound operations:60/110
+    Bound operations:50/75
   Time to perform easy binding: 0.00 seconds
 
 
@@ -494,24 +576,9 @@ Warning: This function uses unknown addresses: test
   Time to perform easy binding: 0.00 seconds
 
 
-  Easy binding information for function __float_sube11m52b_1023nih:
-    Bound operations:375/438
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __int32_to_float64e11m52b_1023nih:
-    Bound operations:133/162
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __internal_sqrt:
-    Bound operations:115/186
-  Time to perform easy binding: 0.00 seconds
-
-
   Easy binding information for function __udivdi3:
     Bound operations:40/45
-  Time to perform easy binding: 0.00 seconds
+  Time to perform easy binding: 0.01 seconds
 
 
   Easy binding information for function __uint32_to_float32e8m23b_127nih:
@@ -534,63 +601,23 @@ Warning: This function uses unknown addresses: test
   Time to compute storage value information: 0.00 seconds
 
 
-  Storage Value Information of function __float64_to_int32_round_to_zeroe11m52b_1023nih:
-    Number of storage values inserted: 10
-  Time to compute storage value information: 0.00 seconds
-
-
   Storage Value Information of function __float64_to_uint32_round_to_zeroe11m52b_1023nih:
     Number of storage values inserted: 5
   Time to compute storage value information: 0.00 seconds
 
 
-  Storage Value Information of function __float_adde11m52b_1023nih:
-    Number of storage values inserted: 213
-  Time to compute storage value information: 0.00 seconds
-
-
   Storage Value Information of function __float_adde8m23b_127nih:
-    Number of storage values inserted: 38
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __float_divSRT4e11m52b_1023nih:
-    Number of storage values inserted: 27
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __float_gee11m52b_1023nih:
-    Number of storage values inserted: 4
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __float_gte11m52b_1023nih:
-    Number of storage values inserted: 4
+    Number of storage values inserted: 47
   Time to compute storage value information: 0.00 seconds
 
 
   Storage Value Information of function __float_mule11m52b_1023nih:
-    Number of storage values inserted: 22
+    Number of storage values inserted: 0
   Time to compute storage value information: 0.00 seconds
 
 
   Storage Value Information of function __float_mule8m23b_127nih:
-    Number of storage values inserted: 8
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __float_sube11m52b_1023nih:
-    Number of storage values inserted: 213
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __int32_to_float64e11m52b_1023nih:
-    Number of storage values inserted: 8
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __internal_sqrt:
-    Number of storage values inserted: 70
+    Number of storage values inserted: 6
   Time to compute storage value information: 0.00 seconds
 
 
@@ -600,32 +627,34 @@ Warning: This function uses unknown addresses: test
 
 
   Storage Value Information of function __uint32_to_float32e8m23b_127nih:
-    Number of storage values inserted: 19
+    Number of storage values inserted: 18
   Time to compute storage value information: 0.00 seconds
 
 
   Storage Value Information of function __uint32_to_float64e11m52b_1023nih:
-    Number of storage values inserted: 5
+    Number of storage values inserted: 3
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float32_to_float64_ieee:
     Register allocation algorithm obtains an optimal result: 0 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __float32_to_float64_ieee:
     Number of modules instantiated: 79
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 795
+    Estimated resources area (no Muxes and address logic): 801
     Estimated area of MUX21: 0
-    Total estimated area: 795
+    Total estimated area: 801
     Estimated number of DSPs: 0
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __float32_to_float64_ieee:
@@ -637,9 +666,9 @@ Warning: This function uses unknown addresses: test
   Module binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
     Number of modules instantiated: 27
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 251
+    Estimated resources area (no Muxes and address logic): 252
     Estimated area of MUX21: 0
-    Total estimated area: 251
+    Total estimated area: 252
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
@@ -654,36 +683,6 @@ Warning: This function uses unknown addresses: test
   Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function __float32_to_uint32_round_to_zeroe8m23b_127nih: 71
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:6)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
-    Number of modules instantiated: 39
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 472
-    Estimated area of MUX21: 0
-    Total estimated area: 472
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:6)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
-    Number of allocated multiplexers (2-to-1 equivalent): 3
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __float64_to_int32_round_to_zeroe11m52b_1023nih: 128
 
   Module binding information for function __float64_to_uint32_round_to_zeroe11m52b_1023nih:
     Number of modules instantiated: 24
@@ -705,895 +704,109 @@ Warning: This function uses unknown addresses: test
   Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function __float64_to_uint32_round_to_zeroe11m52b_1023nih: 93
-  Slack computed in 0.01 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __float_adde11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __float_adde11m52b_1023nih:
-    Number of modules instantiated: 438
-    Number of performance conflicts: 26
-    Estimated resources area (no Muxes and address logic): 5644
-    Estimated area of MUX21: 0
-    Total estimated area: 5644
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.01 seconds
-
-
-  Register binding information for function __float_adde11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
-  Time to perform register binding: 0.00 seconds
-
-  Total number of flip-flops in function __float_adde11m52b_1023nih: 740
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_adde8m23b_127nih:
-    Register allocation algorithm obtains a sub-optimal result: 38 registers(LB:29)
+    Register allocation algorithm obtains an optimal result: 47 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __float_adde8m23b_127nih:
     Number of modules instantiated: 400
-    Number of performance conflicts: 21
-    Estimated resources area (no Muxes and address logic): 4798
+    Number of performance conflicts: 28
+    Estimated resources area (no Muxes and address logic): 4806
     Estimated area of MUX21: 0
-    Total estimated area: 4798
+    Total estimated area: 4806
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __float_adde8m23b_127nih:
-    Register allocation algorithm obtains a sub-optimal result: 38 registers(LB:29)
+    Register allocation algorithm obtains an optimal result: 47 registers
   Time to perform register binding: 0.00 seconds
 
-  Total number of flip-flops in function __float_adde8m23b_127nih: 152
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __float_divSRT4e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:18)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __float_divSRT4e11m52b_1023nih:
-    Number of modules instantiated: 229
-    Number of performance conflicts: 18
-    Estimated resources area (no Muxes and address logic): 2939
-    Estimated area of MUX21: 0
-    Total estimated area: 2939
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __float_divSRT4e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:18)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __float_divSRT4e11m52b_1023nih:
-    Number of allocated multiplexers (2-to-1 equivalent): 4
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __float_divSRT4e11m52b_1023nih: 915
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __float_gee11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 4 registers
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __float_gee11m52b_1023nih:
-    Number of modules instantiated: 26
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 235
-    Estimated area of MUX21: 0
-    Total estimated area: 235
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __float_gee11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 4 registers
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __float_gee11m52b_1023nih:
-    Number of allocated multiplexers (2-to-1 equivalent): 1
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __float_gee11m52b_1023nih: 129
+  Total number of flip-flops in function __float_adde8m23b_127nih: 189
   All registers are without enable: function pipelining may come for free
-  Resources are not shared in function __float_gee11m52b_1023nih: function pipelining may come for free
+  Resources are not shared in function __float_adde8m23b_127nih: function pipelining may come for free
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __float_gte11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 4 registers
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __float_gte11m52b_1023nih:
-    Number of modules instantiated: 23
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 145
-    Estimated area of MUX21: 0
-    Total estimated area: 145
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __float_gte11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 4 registers
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __float_gte11m52b_1023nih:
-    Number of allocated multiplexers (2-to-1 equivalent): 1
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __float_gte11m52b_1023nih: 128
-  All registers are without enable: function pipelining may come for free
-  Resources are not shared in function __float_gte11m52b_1023nih: function pipelining may come for free
-
-  Module allocation information for function __internal_floor:
-    Number of complex operations: 6
-    Number of complex operations: 6
-  Time to perform module allocation: 0.02 seconds
-
-
-  Scheduling Information of function __internal_floor:
-    Number of control steps: 34
-    Minimum slack: 0.054699991000000781
-    Estimated max frequency (MHz): 100.550008455758
-  Time to perform scheduling: 0.00 seconds
-
-
-  State Transition Graph Information of function __internal_floor:
-    Number of states: 33
-    Minimum number of cycles: 4
-    Maximum number of cycles 13
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.01 seconds
-
-
-  Easy binding information for function __internal_floor:
-    Bound operations:58/90
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function __internal_floor:
-    Number of storage values inserted: 28
-  Time to compute storage value information: 0.00 seconds
-
-  Slack computed in 0.01 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_mule11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:15)
+    Register allocation algorithm obtains an optimal result: 0 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __float_mule11m52b_1023nih:
-    Number of modules instantiated: 110
-    Number of performance conflicts: 11
-    Estimated resources area (no Muxes and address logic): 1555
+    Number of modules instantiated: 75
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 543
     Estimated area of MUX21: 0
-    Total estimated area: 1555
-    Estimated number of DSPs: 12
-  Time to perform module binding: 0.01 seconds
+    Total estimated area: 543
+    Estimated number of DSPs: 5
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __float_mule11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:15)
+    Register allocation algorithm obtains an optimal result: 0 registers
   Time to perform register binding: 0.00 seconds
 
-  Total number of flip-flops in function __float_mule11m52b_1023nih: 535
-
-  Module allocation information for function __internal_scalbn:
-    Number of complex operations: 6
-    Number of complex operations: 6
-  Time to perform module allocation: 0.02 seconds
-
-
-  Scheduling Information of function __internal_scalbn:
-    Number of control steps: 38
-    Minimum slack: 5.0000000000000003e-10
-    Estimated max frequency (MHz): 100.000000005
-  Time to perform scheduling: 0.03 seconds
-
-
-  State Transition Graph Information of function __internal_scalbn:
-    Number of states: 37
-    Minimum number of cycles: 3
-    Maximum number of cycles 15
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Easy binding information for function __internal_scalbn:
-    Bound operations:108/136
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function __internal_scalbn:
-    Number of storage values inserted: 14
-  Time to compute storage value information: 0.00 seconds
-
-  Slack computed in 0.01 seconds
+  Total number of flip-flops in function __float_mule11m52b_1023nih: 0
+  Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_mule8m23b_127nih:
-    Register allocation algorithm obtains an optimal result: 8 registers
+    Register allocation algorithm obtains an optimal result: 6 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __float_mule8m23b_127nih:
     Number of modules instantiated: 124
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 1402
+    Estimated resources area (no Muxes and address logic): 1401
     Estimated area of MUX21: 0
-    Total estimated area: 1402
+    Total estimated area: 1401
     Estimated number of DSPs: 3
   Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function __float_mule8m23b_127nih:
-    Register allocation algorithm obtains an optimal result: 8 registers
+    Register allocation algorithm obtains an optimal result: 6 registers
   Time to perform register binding: 0.00 seconds
 
-  Total number of flip-flops in function __float_mule8m23b_127nih: 126
+  Total number of flip-flops in function __float_mule8m23b_127nih: 99
   All registers are without enable: function pipelining may come for free
   Resources are not shared in function __float_mule8m23b_127nih: function pipelining may come for free
-  Slack computed in 0.01 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __float_sube11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
-  Time to perform register binding: 0.01 seconds
-
-  Clique covering computation completed in 0.01 seconds
-
-  Module binding information for function __float_sube11m52b_1023nih:
-    Number of modules instantiated: 438
-    Number of performance conflicts: 26
-    Estimated resources area (no Muxes and address logic): 5644
-    Estimated area of MUX21: 0
-    Total estimated area: 5644
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.02 seconds
-
-
-  Register binding information for function __float_sube11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
-  Time to perform register binding: 0.00 seconds
-
-  Total number of flip-flops in function __float_sube11m52b_1023nih: 740
-
-  Module allocation information for function __hide_kernel_cos:
-    Number of complex operations: 27
-    Number of complex operations: 27
-  Time to perform module allocation: 0.01 seconds
-
-
-  Module allocation information for function __hide_kernel_sin:
-    Number of complex operations: 23
-    Number of complex operations: 23
-  Time to perform module allocation: 0.00 seconds
-
-
-  Scheduling Information of function __hide_kernel_cos:
-    Number of control steps: 122
-    Minimum slack: 0.054699990999901305
-    Estimated max frequency (MHz): 100.55000845575699
-  Time to perform scheduling: 0.01 seconds
-
-
-  State Transition Graph Information of function __hide_kernel_cos:
-    Number of states: 122
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __hide_kernel_sin:
-    Number of control steps: 106
-    Minimum slack: 5.0000000000000003e-10
-    Estimated max frequency (MHz): 100.000000005
-  Time to perform scheduling: 0.00 seconds
-
-
-  State Transition Graph Information of function __hide_kernel_sin:
-    Number of states: 106
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Easy binding information for function __hide_kernel_cos:
-    Bound operations:30/56
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __hide_kernel_sin:
-    Bound operations:18/42
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function __hide_kernel_cos:
-    Number of storage values inserted: 32
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __hide_kernel_sin:
-    Number of storage values inserted: 24
-  Time to compute storage value information: 0.00 seconds
-
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __hide_kernel_cos:
-    Register allocation algorithm obtains a sub-optimal result: 13 registers(LB:5)
-  Time to perform register binding: 0.00 seconds
-
-
-  Register binding information for function __hide_kernel_cos:
-    Register allocation algorithm obtains a sub-optimal result: 13 registers(LB:5)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __hide_kernel_cos:
-    Number of modules instantiated: 33
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 8105
-    Estimated area of MUX21: 344
-    Total estimated area: 8449
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.01 seconds
-
-
-  Register binding information for function __hide_kernel_cos:
-    Register allocation algorithm obtains a sub-optimal result: 13 registers(LB:5)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __hide_kernel_cos:
-    Number of allocated multiplexers (2-to-1 equivalent): 23
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __hide_kernel_cos: 609
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __hide_kernel_sin:
-    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:4)
-  Time to perform register binding: 0.00 seconds
-
-
-  Register binding information for function __hide_kernel_sin:
-    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:4)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __hide_kernel_sin:
-    Number of modules instantiated: 23
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 8045
-    Estimated area of MUX21: 280
-    Total estimated area: 8325
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.01 seconds
-
-
-  Register binding information for function __hide_kernel_sin:
-    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:4)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __hide_kernel_sin:
-    Number of allocated multiplexers (2-to-1 equivalent): 21
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __hide_kernel_sin: 418
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __int32_to_float64e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 8 registers(LB:6)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __int32_to_float64e11m52b_1023nih:
-    Number of modules instantiated: 162
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 730
-    Estimated area of MUX21: 0
-    Total estimated area: 730
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __int32_to_float64e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 8 registers(LB:6)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __int32_to_float64e11m52b_1023nih:
-    Number of allocated multiplexers (2-to-1 equivalent): 1
-  Time to perform interconnection binding: 0.01 seconds
-
-  Total number of flip-flops in function __int32_to_float64e11m52b_1023nih: 66
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __internal_floor:
-    Register allocation algorithm obtains a sub-optimal result: 26 registers(LB:10)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __internal_floor:
-    Number of modules instantiated: 86
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 5282
-    Estimated area of MUX21: 0
-    Total estimated area: 5282
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __internal_floor:
-    Register allocation algorithm obtains a sub-optimal result: 26 registers(LB:10)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __internal_floor:
-    Number of allocated multiplexers (2-to-1 equivalent): 5
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __internal_floor: 553
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __internal_scalbn:
-    Register allocation algorithm obtains a sub-optimal result: 13 registers(LB:8)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __internal_scalbn:
-    Number of modules instantiated: 131
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 2940
-    Estimated area of MUX21: 105
-    Total estimated area: 3045
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __internal_scalbn:
-    Register allocation algorithm obtains a sub-optimal result: 13 registers(LB:8)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __internal_scalbn:
-    Number of allocated multiplexers (2-to-1 equivalent): 13
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __internal_scalbn: 484
-
-  Module allocation information for function __internal_cos:
-    Number of complex operations: 226
-    Number of complex operations: 226
-  Time to perform module allocation: 0.18 seconds
-
-
-  Module allocation information for function __internal_sin:
-    Number of complex operations: 226
-    Number of complex operations: 226
-  Time to perform module allocation: 0.22 seconds
-
-
-  Scheduling Information of function __internal_cos:
-    Number of control steps: 752
-    Minimum slack: 3.4927616354707425e-13
-    Estimated max frequency (MHz): 100.0000000000035
-  Time to perform scheduling: 0.18 seconds
-
-
-  State Transition Graph Information of function __internal_cos:
-    Number of states: 822
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.03 seconds
-
-
-  Scheduling Information of function __internal_sin:
-    Number of control steps: 752
-    Minimum slack: 3.4927616354707425e-13
-    Estimated max frequency (MHz): 100.0000000000035
-  Time to perform scheduling: 0.16 seconds
-
-
-  State Transition Graph Information of function __internal_sin:
-    Number of states: 822
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.02 seconds
-
-
-  Easy binding information for function __internal_cos:
-    Bound operations:755/1519
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __internal_sin:
-    Bound operations:755/1519
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function __internal_cos:
-    Number of storage values inserted: 567
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __internal_sin:
-    Number of storage values inserted: 567
-  Time to compute storage value information: 0.00 seconds
-
-  Slack computed in 0.02 seconds
-  Weight computation completed in 0.03 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __internal_cos:
-    Register allocation algorithm obtains a sub-optimal result: 360 registers(LB:62)
-  Time to perform register binding: 0.25 seconds
-
-  Clique covering computation completed in 0.32 seconds
-
-  Module binding information for function __internal_cos:
-    Number of modules instantiated: 1277
-    Number of performance conflicts: 500
-    Estimated resources area (no Muxes and address logic): 32228
-    Estimated area of MUX21: 2745.5
-    Total estimated area: 34973.5
-    Estimated number of DSPs: 4
-  Time to perform module binding: 0.39 seconds
-
-
-  Register binding information for function __internal_cos:
-    Register allocation algorithm obtains a sub-optimal result: 360 registers(LB:62)
-  Time to perform register binding: 0.30 seconds
-
-
-  Connection Binding Information for function __internal_cos:
-    Number of allocated multiplexers (2-to-1 equivalent): 319
-  Time to perform interconnection binding: 0.05 seconds
-
-  Total number of flip-flops in function __internal_cos: 10534
-  Slack computed in 0.01 seconds
-  Weight computation completed in 0.12 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __internal_sin:
-    Register allocation algorithm obtains a sub-optimal result: 360 registers(LB:62)
-  Time to perform register binding: 0.29 seconds
-
-  Clique covering computation completed in 0.36 seconds
-
-  Module binding information for function __internal_sin:
-    Number of modules instantiated: 1277
-    Number of performance conflicts: 500
-    Estimated resources area (no Muxes and address logic): 32228
-    Estimated area of MUX21: 2779.5
-    Total estimated area: 35007.5
-    Estimated number of DSPs: 4
-  Time to perform module binding: 0.53 seconds
-
-
-  Register binding information for function __internal_sin:
-    Register allocation algorithm obtains a sub-optimal result: 360 registers(LB:62)
-  Time to perform register binding: 0.26 seconds
-
-
-  Connection Binding Information for function __internal_sin:
-    Number of allocated multiplexers (2-to-1 equivalent): 320
-  Time to perform interconnection binding: 0.07 seconds
-
-  Total number of flip-flops in function __internal_sin: 10534
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __internal_sqrt:
-    Register allocation algorithm obtains a sub-optimal result: 70 registers(LB:25)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.01 seconds
-
-  Module binding information for function __internal_sqrt:
-    Number of modules instantiated: 186
-    Number of performance conflicts: 13
-    Estimated resources area (no Muxes and address logic): 6631
-    Estimated area of MUX21: 0
-    Total estimated area: 6631
-    Estimated number of DSPs: 88
-  Time to perform module binding: 0.01 seconds
-
-
-  Register binding information for function __internal_sqrt:
-    Register allocation algorithm obtains a sub-optimal result: 70 registers(LB:25)
-  Time to perform register binding: 0.01 seconds
-
-
-  Connection Binding Information for function __internal_sqrt:
-    Number of allocated multiplexers (2-to-1 equivalent): 2
-  Time to perform interconnection binding: 0.01 seconds
-
-  Total number of flip-flops in function __internal_sqrt: 2329
-
-  Module allocation information for function __hide_ieee754_acos:
-    Number of complex operations: 84
-    Number of complex operations: 84
-  Time to perform module allocation: 0.00 seconds
-
-
-  Module allocation information for function __hide_ieee754_asin:
-    Number of complex operations: 70
-    Number of complex operations: 70
-  Time to perform module allocation: 0.02 seconds
-
-
-  Scheduling Information of function __hide_ieee754_acos:
-    Number of control steps: 275
-    Minimum slack: 8.2156503822261584e-15
-    Estimated max frequency (MHz): 100.00000000000009
-  Time to perform scheduling: 0.01 seconds
-
-
-  State Transition Graph Information of function __hide_ieee754_acos:
-    Number of states: 279
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __hide_ieee754_asin:
-    Number of control steps: 230
-    Minimum slack: 8.2156503822261584e-15
-    Estimated max frequency (MHz): 100.00000000000009
-  Time to perform scheduling: 0.02 seconds
-
-
-  State Transition Graph Information of function __hide_ieee754_asin:
-    Number of states: 245
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Easy binding information for function __hide_ieee754_acos:
-    Bound operations:74/162
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __hide_ieee754_asin:
-    Bound operations:84/152
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function __hide_ieee754_acos:
-    Number of storage values inserted: 88
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __hide_ieee754_asin:
-    Number of storage values inserted: 73
-  Time to compute storage value information: 0.00 seconds
-
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.01 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __hide_ieee754_acos:
-    Register allocation algorithm obtains a sub-optimal result: 14 registers(LB:8)
-  Time to perform register binding: 0.04 seconds
-
-
-  Register binding information for function __hide_ieee754_acos:
-    Register allocation algorithm obtains a sub-optimal result: 14 registers(LB:8)
-  Time to perform register binding: 0.02 seconds
-
-  Clique covering computation completed in 0.09 seconds
-
-  Module binding information for function __hide_ieee754_acos:
-    Number of modules instantiated: 83
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 10847
-    Estimated area of MUX21: 516
-    Total estimated area: 11363
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.10 seconds
-
-
-  Register binding information for function __hide_ieee754_acos:
-    Register allocation algorithm obtains a sub-optimal result: 14 registers(LB:8)
-  Time to perform register binding: 0.03 seconds
-
-
-  Connection Binding Information for function __hide_ieee754_acos:
-    Number of allocated multiplexers (2-to-1 equivalent): 43
-  Time to perform interconnection binding: 0.02 seconds
-
-  Total number of flip-flops in function __hide_ieee754_acos: 799
-
-  Module allocation information for function __internal_acos:
-    Number of complex operations: 1
-    Number of complex operations: 1
-  Time to perform module allocation: 0.00 seconds
-
-
-  Scheduling Information of function __internal_acos:
-    Number of control steps: 4
-    Minimum slack: 1.1102230246251565e-15
-    Estimated max frequency (MHz): 100.00000000000001
-  Time to perform scheduling: 0.00 seconds
-
-
-  State Transition Graph Information of function __internal_acos:
-    Number of states: 3
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Easy binding information for function __internal_acos:
-    Bound operations:4/4
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function __internal_acos:
-    Number of storage values inserted: 1
-  Time to compute storage value information: 0.00 seconds
-
-  Slack computed in 0.01 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function __hide_ieee754_asin:
-    Register allocation algorithm obtains a sub-optimal result: 16 registers(LB:7)
-  Time to perform register binding: 0.01 seconds
-
-
-  Register binding information for function __hide_ieee754_asin:
-    Register allocation algorithm obtains a sub-optimal result: 16 registers(LB:7)
-  Time to perform register binding: 0.02 seconds
-
-  Clique covering computation completed in 0.03 seconds
-
-  Module binding information for function __hide_ieee754_asin:
-    Number of modules instantiated: 88
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 12803
-    Estimated area of MUX21: 584
-    Total estimated area: 13387
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.04 seconds
-
-
-  Register binding information for function __hide_ieee754_asin:
-    Register allocation algorithm obtains a sub-optimal result: 16 registers(LB:7)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __hide_ieee754_asin:
-    Number of allocated multiplexers (2-to-1 equivalent): 53
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __hide_ieee754_asin: 864
-
-  Module allocation information for function __internal_asin:
-    Number of complex operations: 1
-    Number of complex operations: 1
-  Time to perform module allocation: 0.01 seconds
-
-
-  Scheduling Information of function __internal_asin:
-    Number of control steps: 4
-    Minimum slack: 1.1102230246251565e-15
-    Estimated max frequency (MHz): 100.00000000000001
-  Time to perform scheduling: 0.00 seconds
-
-
-  State Transition Graph Information of function __internal_asin:
-    Number of states: 3
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Easy binding information for function __internal_asin:
-    Bound operations:4/4
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function __internal_asin:
-    Number of storage values inserted: 1
-  Time to compute storage value information: 0.00 seconds
-
-
-  Module binding information for function __internal_acos:
-    Number of modules instantiated: 4
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 2000
-    Estimated area of MUX21: 0
-    Total estimated area: 2000
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __internal_acos:
-    Register allocation algorithm obtains an optimal result: 1 registers
-  Time to perform register binding: 0.00 seconds
-
-  Total number of flip-flops in function __internal_acos: 64
-
-  Module binding information for function __internal_asin:
-    Number of modules instantiated: 4
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 2000
-    Estimated area of MUX21: 0
-    Total estimated area: 2000
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __internal_asin:
-    Register allocation algorithm obtains an optimal result: 1 registers
-  Time to perform register binding: 0.00 seconds
-
-  Total number of flip-flops in function __internal_asin: 64
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __udivdi3:
     Register allocation algorithm obtains an optimal result: 5 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __udivdi3:
     Number of modules instantiated: 45
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 385
+    Estimated resources area (no Muxes and address logic): 414
     Estimated area of MUX21: 0
-    Total estimated area: 385
+    Total estimated area: 414
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
@@ -1611,125 +824,80 @@ Warning: This function uses unknown addresses: test
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __uint32_to_float32e8m23b_127nih:
-    Register allocation algorithm obtains a sub-optimal result: 19 registers(LB:14)
+    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:14)
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __uint32_to_float32e8m23b_127nih:
     Number of modules instantiated: 250
-    Number of performance conflicts: 12
-    Estimated resources area (no Muxes and address logic): 2529
+    Number of performance conflicts: 1
+    Estimated resources area (no Muxes and address logic): 2530
     Estimated area of MUX21: 0
-    Total estimated area: 2529
+    Total estimated area: 2530
     Estimated number of DSPs: 0
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __uint32_to_float32e8m23b_127nih:
-    Register allocation algorithm obtains a sub-optimal result: 19 registers(LB:14)
+    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:14)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function __uint32_to_float32e8m23b_127nih:
     Number of allocated multiplexers (2-to-1 equivalent): 2
-  Time to perform interconnection binding: 0.00 seconds
+  Time to perform interconnection binding: 0.01 seconds
 
-  Total number of flip-flops in function __uint32_to_float32e8m23b_127nih: 191
+  Total number of flip-flops in function __uint32_to_float32e8m23b_127nih: 190
   Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __uint32_to_float64e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 5 registers(LB:4)
+    Register allocation algorithm obtains an optimal result: 3 registers
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __uint32_to_float64e11m52b_1023nih:
     Number of modules instantiated: 150
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 1373
+    Estimated resources area (no Muxes and address logic): 1372
     Estimated area of MUX21: 0
-    Total estimated area: 1373
+    Total estimated area: 1372
     Estimated number of DSPs: 0
   Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function __uint32_to_float64e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 5 registers(LB:4)
+    Register allocation algorithm obtains an optimal result: 3 registers
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function __uint32_to_float64e11m52b_1023nih:
     Number of allocated multiplexers (2-to-1 equivalent): 1
-  Time to perform interconnection binding: 0.01 seconds
-
-  Total number of flip-flops in function __uint32_to_float64e11m52b_1023nih: 56
-
-  Module allocation information for function test:
-    Number of complex operations: 67
-    Number of complex operations: 67
-  Time to perform module allocation: 0.05 seconds
-
-
-  Scheduling Information of function test:
-    Number of control steps: 126
-    Minimum slack: 8.2156503822261584e-15
-    Estimated max frequency (MHz): 100.00000000000009
-  Time to perform scheduling: 0.05 seconds
-
-
-  State Transition Graph Information of function test:
-    Number of states: 146
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Easy binding information for function test:
-    Bound operations:77/207
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function test:
-    Number of storage values inserted: 102
-  Time to compute storage value information: 0.00 seconds
-
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-
-  Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 69 registers(LB:11)
-  Time to perform register binding: 0.01 seconds
-
-
-  Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 69 registers(LB:11)
-  Time to perform register binding: 0.00 seconds
-
-  Clique covering computation completed in 0.02 seconds
-
-  Module binding information for function test:
-    Number of modules instantiated: 158
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 33073
-    Estimated area of MUX21: 796
-    Total estimated area: 33869
-    Estimated number of DSPs: 6
-  Time to perform module binding: 0.02 seconds
-
-
-  Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 69 registers(LB:11)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function test:
-    Number of allocated multiplexers (2-to-1 equivalent): 51
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function test: 2425
-[0m
+  Total number of flip-flops in function __uint32_to_float64e11m52b_1023nih: 49
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __uint32_to_float64e11m52b_1023nih: function pipelining may come for free
+
+  Module allocation information for function test:
+    Operation for which does not exist a functional unit in the resource library: cos in vertex: test_424770_425002 with vertex type: REAL and vertex prec: 64 64
+    Operation for which does not exist a functional unit in the resource library: cos in vertex: test_424770_425011 with vertex type: REAL and vertex prec: 64 64
+    Operation for which does not exist a functional unit in the resource library: cos in vertex: test_424770_425164 with vertex type: REAL and vertex prec: 64 64
+    Operation for which does not exist a functional unit in the resource library: sin in vertex: test_424770_425021 with vertex type: REAL and vertex prec: 64 64
+    Operation for which does not exist a functional unit in the resource library: sin in vertex: test_424770_425025 with vertex type: REAL and vertex prec: 64 64
+    Operation for which does not exist a functional unit in the resource library: sin in vertex: test_424770_425178 with vertex type: REAL and vertex prec: 64 64
+    Operation for which does not exist a functional unit in the resource library: acos in vertex: test_424770_425154 with vertex type: REAL and vertex prec: 64 64
+    Operation for which does not exist a functional unit in the resource library: asin in vertex: test_424770_425198 with vertex type: REAL and vertex prec: 64 64
+error -> Vertices not completely allocated
+
+Please report bugs to <panda-info@polimi.it>
+

@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-X8MGi4/usr/bin/bambu --top-fname=test --compiler=I386_CLANG12 -lm test.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-PNI4ks/usr/bin/bambu -v 2 --top-fname=test --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
 
 
 ********************************************************************************
@@ -17,13 +17,185 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
+Parameters parsed in 0.13 seconds
+
 Target technology = FPGA
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3911
+  - combinational: 0
+  - others: 3911
+
+!! Unknown ext. calls:
+llvm.var.annotation
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
 
   Functions to be synthesized:
     test
 
 
   Memory allocation information:
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: internal_424849 - 424849 - internal_424849 in function test
+      Id: 424849
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+    Internal variable: internal_424873 - 424873 - internal_424873 in function test
+      Id: 424873
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+    Internal variable: internal_424891 - 424891 - internal_424891 in function test
+      Id: 424891
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
 Warning: This function uses unknown addresses: test
     BRAM bitsize: 16
     Spec may not exploit DATA bus width
@@ -45,12 +217,15 @@ Warning: This function uses unknown addresses: test
 
   Scheduling Information of function test:
     Number of control steps: 10
-    Minimum slack: 2.8907999899999988
-    Estimated max frequency (MHz): 140.66280293048047
+    Minimum slack: 6.5887999900000045
+    Estimated max frequency (MHz): 293.15196912185786
   Time to perform scheduling: 0.01 seconds
 
+  Number of function call sites = 0
 
   State Transition Graph Information of function test:
+    Number of operations: 83
+    Number of basic blocks: 5
     Number of states: 8
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
@@ -68,25 +243,27 @@ Warning: This function uses unknown addresses: test
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 21 registers(LB:16)
+    Register allocation algorithm obtains a sub-optimal result: 20 registers(LB:16)
   Time to perform register binding: 0.00 seconds
 
+  Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function test:
     Number of modules instantiated: 76
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 922
+    Estimated resources area (no Muxes and address logic): 926
     Estimated area of MUX21: 274
-    Total estimated area: 1196
+    Total estimated area: 1200
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 21 registers(LB:16)
+    Register allocation algorithm obtains a sub-optimal result: 20 registers(LB:16)
   Time to perform register binding: 0.00 seconds
 
 
@@ -94,5 +271,76 @@ Warning: This function uses unknown addresses: test
     Number of allocated multiplexers (2-to-1 equivalent): 11
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function test: 641
-[0m
+  Total number of flip-flops in function test: 609
+[0m  Parameter arr (424770) (testvector 0) allocated at 1073741824 : reserved_mem_size = 1200
+Padding of 336 for parameter arr
+  Parameter arr (424770) (testvector 1) allocated at 1073743360 : reserved_mem_size = 1200
+Padding of 336 for parameter arr
+  C-based testbench generation for function test: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1/synthesis_no_opt/HLS_output//simulation/values.c
+  Prepared testbench
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-fexcess-precision=standard' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-fexcess-precision=standard' is not supported [-Wignored-optimization-argument]
+
+  Summary of resources:
+     - ARRAY_1D_STD_BRAM_NN_SDS: 3
+     - ARRAY_1D_STD_BRAM_NN_SDS_BASE: 3
+     - ASSIGN_UNSIGNED_FU: 2
+     - BMEMORY_CTRLN: 1
+     - MUX_GATE: 11
+     - UUdata_converter_FU: 14
+     - addr_expr_FU: 3
+     - constant_value: 8
+     - read_cond_FU: 1
+     - register_SE: 17
+     - register_STD: 3
+     - ui_bit_ior_concat_expr_FU: 3
+     - ui_bit_ior_expr_FU: 2
+     - ui_eq_expr_FU: 1
+     - ui_extract_bit_expr_FU: 1
+     - ui_lshift_expr_FU: 20
+     - ui_plus_expr_FU: 6
+     - ui_pointer_plus_expr_FU: 12
+     - ui_rshift_expr_FU: 8
+Start reading vector           1's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  302 cycles.
+
+Simulation completed with success
+
+Start reading vector           2's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  302 cycles.
+
+Simulation completed with success
+
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:243: Verilog $finish
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:284: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:284: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 302 cycles;
+2. Simulation completed with SUCCESS; Execution time 302 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 604 cycles
+  Number of executions     : 2
+  Average execution        : 302 cycles
+  Slices                   : 151
+  Luts                     : 321
+  Lut FF Pairs             : 321
+  Power                    : 0.34599999999999997
+  Registers                : 199
+  DSPs                     : 0
+  BRAMs                    : 0
+  Clock period             : 10
+  Design minimum period    : 12.059000000000001
+  Design slack             : -2.0590000000000011
+  Frequency                : 82.925615722696733
+  AreaxTime                : 1169.023578
+  Time                     : 3.6418180000000002
+  Tot. Time                : 7.2836360000000004
