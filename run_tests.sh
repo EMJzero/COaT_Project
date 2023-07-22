@@ -139,10 +139,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the environment variable TAFFO exists
     if [ -n "$TAFFO" ]; then
       # If TAFFO exists, run the executable specified in TAFFO
-      "$TAFFO" -fno-discard-value-names -S -emit-llvm -o test.ll test.c
+      "$TAFFO" -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
     else
       # If TAFFO does not exist, run the command "taffo"
-      taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.c
+      taffo -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
     fi
   fi
 
@@ -171,10 +171,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the option "--vivado" is specified
     if option_present "--vivado" "$@"; then
       # If "--vivado" is present, add the "--evaluation" option to the invocation of BAMBU
-      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation "$device_name" |& tee ../panda_log_opt.txt 
+      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation "$device_name" |& tee ../panda_log_opt.txt 
     else
       # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
-      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --verilator-parallel "$device_name" |& tee ../panda_log_opt.txt 
+      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel "$device_name" |& tee ../panda_log_opt.txt 
     fi
   fi
 
@@ -186,10 +186,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the option "--vivado" is specified
     if option_present "--vivado" "$@"; then
       # If "--vivado" is present, add the "--evaluation" option to the invocation of BAMBU
-      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation "$device_name" |& tee ../panda_log.txt 
+      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation "$device_name" |& tee ../panda_log.txt 
     else
       # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
-      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --verilator-parallel "$device_name" |& tee ../panda_log.txt 
+      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel "$device_name" |& tee ../panda_log.txt 
     fi
   fi
 
