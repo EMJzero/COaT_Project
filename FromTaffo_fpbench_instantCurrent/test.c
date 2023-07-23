@@ -33,7 +33,7 @@ float ex0(float t, float resistance, float frequency, float inductance,
   return tmp;
 }
 
-int test(float * arr, float * res)
+void test(float * arr, float * res)
 {
   float __attribute__((annotate("target('test') scalar(range(-2, 300) final)")))
   t[len];
@@ -59,7 +59,7 @@ int test(float * arr, float * res)
   }
 }
 
-int main()
+void main()
 {
   float arr[len*5];
   float res[len];

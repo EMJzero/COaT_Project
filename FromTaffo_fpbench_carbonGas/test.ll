@@ -1,4 +1,4 @@
-; ModuleID = '/tmp/tmp.KvMPG3S82S/test.ll.4.taffotmp.ll'
+; ModuleID = '/tmp/tmp.Hk3I74RpZl/test.ll.4.taffotmp.ll'
 source_filename = "test.c"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
@@ -6,105 +6,104 @@ target triple = "x86_64-pc-linux-gnu"
 ; Function Attrs: noinline nounwind uwtable
 define dso_local void @test(float* noundef %arr, float* noundef %res) #0 !taffo.start !6 !taffo.initweight !7 !taffo.funinfo !8 {
 entry:
-  %v.u1_31fixp = alloca [2000 x i32], align 16, !taffo.info !9, !taffo.target !12
+  %v.u1_31fixp = alloca [200 x i32], align 16, !taffo.info !9, !taffo.target !12
   br label %for.cond
 
 for.cond:                                         ; preds = %for.inc, %entry
   %i.0 = phi i32 [ 0, %entry ], [ %inc, %for.inc ], !taffo.info !13
-  %cmp = icmp slt i32 %i.0, 2000, !taffo.info !15
+  %cmp = icmp slt i32 %i.0, 200, !taffo.info !15
   br i1 %cmp, label %for.body, label %for.end
 
 for.body:                                         ; preds = %for.cond
-  %idxprom = sext i32 %i.0 to i64, !taffo.info !17
+  %idxprom = sext i32 %i.0 to i64, !taffo.info !16
   %arrayidx = getelementptr inbounds float, float* %arr, i64 %idxprom
-  %.flt = load float, float* %arrayidx, align 4, !taffo.initweight !19, !taffo.info !9, !taffo.target !12
+  %.flt = load float, float* %arrayidx, align 4, !taffo.initweight !18, !taffo.info !9, !taffo.target !12
   %0 = fmul float 0x41E0000000000000, %.flt, !taffo.info !9, !taffo.target !12
   %.flt.fallback.u1_31fixp = fptoui float %0 to i32, !taffo.info !9, !taffo.target !12
-  %idxprom2 = sext i32 %i.0 to i64, !taffo.info !17
-  %arrayidx3.u1_31fixp = getelementptr inbounds [2000 x i32], [2000 x i32]* %v.u1_31fixp, i64 0, i64 %idxprom2, !taffo.info !9, !taffo.target !12
-  store i32 %.flt.fallback.u1_31fixp, i32* %arrayidx3.u1_31fixp, align 4, !taffo.info !20, !taffo.target !12
+  %idxprom2 = sext i32 %i.0 to i64, !taffo.info !16
+  %arrayidx3.u1_31fixp = getelementptr inbounds [200 x i32], [200 x i32]* %v.u1_31fixp, i64 0, i64 %idxprom2, !taffo.info !9, !taffo.target !12
+  store i32 %.flt.fallback.u1_31fixp, i32* %arrayidx3.u1_31fixp, align 4, !taffo.info !19, !taffo.target !12
   br label %for.inc
 
 for.inc:                                          ; preds = %for.body
-  %inc = add nsw i32 %i.0, 1, !taffo.info !21, !taffo.constinfo !23
-  br label %for.cond, !llvm.loop !24
+  %inc = add nsw i32 %i.0, 1, !taffo.info !20, !taffo.constinfo !22
+  br label %for.cond, !llvm.loop !23
 
 for.end:                                          ; preds = %for.cond
   br label %for.cond5
 
 for.cond5:                                        ; preds = %for.inc30, %for.end
-  %i4.0 = phi i32 [ 0, %for.end ], [ %inc31, %for.inc30 ], !taffo.info !13
-  %cmp6 = icmp slt i32 %i4.0, 1000, !taffo.info !15
+  %i4.0 = phi i32 [ 0, %for.end ], [ %inc31, %for.inc30 ], !taffo.info !25
+  %cmp6 = icmp slt i32 %i4.0, 10, !taffo.info !15
   br i1 %cmp6, label %for.body7, label %for.end32
 
 for.body7:                                        ; preds = %for.cond5
   br label %for.cond8
 
 for.cond8:                                        ; preds = %for.inc27, %for.body7
-  %j.0 = phi i32 [ 0, %for.body7 ], [ %inc28, %for.inc27 ], !taffo.info !26
-  %cmp9 = icmp slt i32 %j.0, 2000, !taffo.info !28
+  %j.0 = phi i32 [ 0, %for.body7 ], [ %inc28, %for.inc27 ], !taffo.info !27
+  %cmp9 = icmp slt i32 %j.0, 200, !taffo.info !15
   br i1 %cmp9, label %for.body10, label %for.end29
 
 for.body10:                                       ; preds = %for.cond8
   %idxprom14 = sext i32 %j.0 to i64, !taffo.info !29
-  %arrayidx15.u1_31fixp = getelementptr inbounds [2000 x i32], [2000 x i32]* %v.u1_31fixp, i64 0, i64 %idxprom14, !taffo.info !9, !taffo.target !12
+  %arrayidx15.u1_31fixp = getelementptr inbounds [200 x i32], [200 x i32]* %v.u1_31fixp, i64 0, i64 %idxprom14, !taffo.info !9, !taffo.target !12
   %u1_31fixp2 = load i32, i32* %arrayidx15.u1_31fixp, align 4, !taffo.info !9, !taffo.target !12
-  %1 = zext i64 -4337810866087919616 to i96
-  %2 = shl i96 %1, 4
-  %3 = zext i32 %u1_31fixp2 to i96, !taffo.info !9, !taffo.target !12
-  %4 = udiv i96 %2, %3, !taffo.info !31, !taffo.target !12, !taffo.constinfo !34
-  %div.u46_18fixp = trunc i96 %4 to i64, !taffo.info !37, !taffo.target !12
-  %5 = uitofp i64 %div.u46_18fixp to float, !taffo.info !37, !taffo.target !12
-  %6 = fdiv float %5, 2.621440e+05, !taffo.info !37, !taffo.target !12
+  %1 = zext i32 %u1_31fixp2 to i64, !taffo.info !9, !taffo.target !12
+  %2 = lshr i64 %1, 26, !taffo.info !9, !taffo.target !12
+  %3 = udiv i64 -4337810866087919616, %2, !taffo.info !31, !taffo.target !12, !taffo.constinfo !34
+  %div.u46_18fixp = lshr i64 %3, 22, !taffo.info !38, !taffo.target !12, !taffo.constinfo !40
+  %4 = uitofp i64 %div.u46_18fixp to float, !taffo.info !38, !taffo.target !12
+  %5 = fdiv float %4, 2.621440e+05, !taffo.info !38, !taffo.target !12, !taffo.constinfo !40
   %idxprom25 = sext i32 %j.0 to i64, !taffo.info !29
   %arrayidx26 = getelementptr inbounds float, float* %res, i64 %idxprom25
-  store float %6, float* %arrayidx26, align 4, !taffo.info !39
+  store float %5, float* %arrayidx26, align 4, !taffo.info !42
   br label %for.inc27
 
 for.inc27:                                        ; preds = %for.body10
-  %inc28 = add nsw i32 %j.0, 1, !taffo.info !40, !taffo.constinfo !23
-  br label %for.cond8, !llvm.loop !42
+  %inc28 = add nsw i32 %j.0, 1, !taffo.info !44, !taffo.constinfo !22
+  br label %for.cond8, !llvm.loop !46
 
 for.end29:                                        ; preds = %for.cond8
   br label %for.inc30
 
 for.inc30:                                        ; preds = %for.end29
-  %inc31 = add nsw i32 %i4.0, 1, !taffo.info !21, !taffo.constinfo !23
-  br label %for.cond5, !llvm.loop !43
+  %inc31 = add nsw i32 %i4.0, 1, !taffo.info !47, !taffo.constinfo !22
+  br label %for.cond5, !llvm.loop !49
 
 for.end32:                                        ; preds = %for.cond5
   ret void
 }
 
 ; Function Attrs: noinline nounwind uwtable
-define dso_local i32 @main() #0 !taffo.initweight !44 !taffo.funinfo !44 {
+define dso_local i32 @main() #0 !taffo.initweight !50 !taffo.funinfo !50 {
 entry:
-  %arr = alloca [2000 x float], align 16
-  %res = alloca [2000 x float], align 16
+  %arr = alloca [200 x float], align 16
+  %res = alloca [200 x float], align 16
   br label %for.cond
 
 for.cond:                                         ; preds = %for.inc, %entry
   %i.0 = phi i32 [ 0, %entry ], [ %inc, %for.inc ]
-  %cmp = icmp slt i32 %i.0, 2000
+  %cmp = icmp slt i32 %i.0, 200
   br i1 %cmp, label %for.body, label %for.end
 
 for.body:                                         ; preds = %for.cond
-  %rem = srem i32 %i.0, 32, !taffo.constinfo !23
+  %rem = srem i32 %i.0, 32, !taffo.constinfo !22
   %conv = sitofp i32 %rem to float
-  %add = fadd float %conv, 0x3FCD70A3E0000000, !taffo.constinfo !45
+  %add = fadd float %conv, 0x3FCD70A3E0000000, !taffo.constinfo !51
   %idxprom = sext i32 %i.0 to i64
-  %arrayidx = getelementptr inbounds [2000 x float], [2000 x float]* %arr, i64 0, i64 %idxprom
+  %arrayidx = getelementptr inbounds [200 x float], [200 x float]* %arr, i64 0, i64 %idxprom
   store float %add, float* %arrayidx, align 4
   br label %for.inc
 
 for.inc:                                          ; preds = %for.body
-  %inc = add nsw i32 %i.0, 1, !taffo.constinfo !23
-  br label %for.cond, !llvm.loop !48
+  %inc = add nsw i32 %i.0, 1, !taffo.constinfo !22
+  br label %for.cond, !llvm.loop !54
 
 for.end:                                          ; preds = %for.cond
-  %arraydecay = getelementptr inbounds [2000 x float], [2000 x float]* %arr, i64 0, i64 0
-  %arraydecay1 = getelementptr inbounds [2000 x float], [2000 x float]* %res, i64 0, i64 0
-  call void @test(float* noundef %arraydecay, float* noundef %arraydecay1), !taffo.constinfo !49
+  %arraydecay = getelementptr inbounds [200 x float], [200 x float]* %arr, i64 0, i64 0
+  %arraydecay1 = getelementptr inbounds [200 x float], [200 x float]* %res, i64 0, i64 0
+  call void @test(float* noundef %arraydecay, float* noundef %arraydecay1), !taffo.constinfo !55
   ret i32 0
 }
 
@@ -127,39 +126,45 @@ attributes #0 = { noinline nounwind uwtable "frame-pointer"="all" "min-legal-vec
 !11 = !{double 0.000000e+00, double 1.000000e+00}
 !12 = !{!"v"}
 !13 = !{i1 false, !14, i1 false, i2 0}
-!14 = !{double 0.000000e+00, double 2.560000e+02}
-!15 = !{i1 false, !16, i1 false, i2 0}
-!16 = !{double 1.000000e+00, double 1.000000e+00}
-!17 = !{i1 false, !18, i1 false, i2 0}
-!18 = !{double 0.000000e+00, double 2.550000e+02}
-!19 = !{i32 3}
-!20 = !{i1 false, !11, i1 false, i2 1}
-!21 = !{i1 false, !22, i1 false, i2 0}
-!22 = !{double 1.000000e+00, double 2.560000e+02}
-!23 = !{i1 false, i1 false}
-!24 = distinct !{!24, !25}
-!25 = !{!"llvm.loop.mustprogress"}
-!26 = !{i1 false, !27, i1 false, i2 0}
-!27 = !{double 0.000000e+00, double 6.553600e+04}
-!28 = !{i1 false, !11, i1 false, i2 0}
+!14 = !{double 0.000000e+00, double 2.010000e+02}
+!15 = !{i1 false, !11, i1 false, i2 0}
+!16 = !{i1 false, !17, i1 false, i2 0}
+!17 = !{double 0.000000e+00, double 2.000000e+02}
+!18 = !{i32 3}
+!19 = !{i1 false, !11, i1 false, i2 1}
+!20 = !{i1 false, !21, i1 false, i2 0}
+!21 = !{double 1.000000e+00, double 2.010000e+02}
+!22 = !{i1 false, i1 false}
+!23 = distinct !{!23, !24}
+!24 = !{!"llvm.loop.mustprogress"}
+!25 = !{i1 false, !26, i1 false, i2 0}
+!26 = !{double 0.000000e+00, double 1.100000e+01}
+!27 = !{i1 false, !28, i1 false, i2 0}
+!28 = !{double 0.000000e+00, double 2.211000e+03}
 !29 = !{i1 false, !30, i1 false, i2 0}
-!30 = !{double 0.000000e+00, double 6.553500e+04}
+!30 = !{double 0.000000e+00, double 2.210000e+03}
 !31 = !{!32, !33, i1 false, i2 1}
-!32 = !{!"fixp", i32 96, i32 18}
+!32 = !{!"fixp", i32 64, i32 40}
 !33 = !{double 4.010000e+05, double 4.010000e+13}
 !34 = !{!35, i1 false}
-!35 = !{i1 false, !36, i1 false, i2 0}
-!36 = !{double 4.010000e+05, double 4.010000e+05}
-!37 = !{!38, !33, i1 false, i2 1}
-!38 = !{!"fixp", i32 64, i32 18}
-!39 = !{i1 false, i1 false, i1 false, i2 1}
-!40 = !{i1 false, !41, i1 false, i2 0}
-!41 = !{double 1.000000e+00, double 6.553600e+04}
-!42 = distinct !{!42, !25}
-!43 = distinct !{!43, !25}
-!44 = !{}
-!45 = !{i1 false, !46}
-!46 = !{i1 false, !47, i1 false, i2 0}
-!47 = !{double 0x3FCD70A3E0000000, double 0x3FCD70A3E0000000}
-!48 = distinct !{!48, !25}
-!49 = !{i1 false, i1 false, i1 false}
+!35 = !{!36, !37, i1 false, i2 0}
+!36 = !{!"fixp", i32 64, i32 45}
+!37 = !{double 4.010000e+05, double 4.010000e+05}
+!38 = !{!39, !33, i1 false, i2 1}
+!39 = !{!"fixp", i32 64, i32 18}
+!40 = !{!41, i1 false}
+!41 = !{i1 false, !37, i1 false, i2 0}
+!42 = !{i1 false, !43, i1 false, i2 1}
+!43 = !{double 4.010140e+05, double 0x41E6D0CAC0200000}
+!44 = !{i1 false, !45, i1 false, i2 0}
+!45 = !{double 1.000000e+00, double 2.211000e+03}
+!46 = distinct !{!46, !24}
+!47 = !{i1 false, !48, i1 false, i2 0}
+!48 = !{double 1.000000e+00, double 1.100000e+01}
+!49 = distinct !{!49, !24}
+!50 = !{}
+!51 = !{i1 false, !52}
+!52 = !{i1 false, !53, i1 false, i2 0}
+!53 = !{double 0x3FCD70A3E0000000, double 0x3FCD70A3E0000000}
+!54 = distinct !{!54, !24}
+!55 = !{i1 false, i1 false, i1 false}

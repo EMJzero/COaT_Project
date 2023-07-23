@@ -178,6 +178,8 @@ for tuple in "${tuples_to_use[@]}"; do
     fi
   fi
 
+  # Move verilator results in parent folder
+  cp results.txt ../results_opt.txt
   cd -
   cd "$path"/synthesis_no_opt
 
@@ -192,6 +194,9 @@ for tuple in "${tuples_to_use[@]}"; do
       "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel "$device_name" |& tee ../panda_log.txt 
     fi
   fi
+
+  # Move verilator results in parent folder
+  cp results.txt ../results.txt
 
   # Change back to the original directory before the next iteration
   cd -

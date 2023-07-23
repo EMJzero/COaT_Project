@@ -3,7 +3,7 @@ import sys
 
 template = "\n\t<testbench\n\tPd5=\"{arr_}\"\n\tPd6=\"{res_}\"\n\tarr=\"{arr_}\"\n\tres=\"{res_}\"/>"
 
-len_code_constant = 2000
+len_code_constant = 200
 how_many_testbenches = 2
 
 # upper bound is included

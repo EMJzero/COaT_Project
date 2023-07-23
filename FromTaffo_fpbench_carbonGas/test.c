@@ -1,7 +1,7 @@
 //#include <stdio.h>
 
-#define M 1000
-#define len 2000
+#define M 10
+#define len 200
 
 /*float ex0(float __attribute__((annotate("target('v') scalar(range(0, 1))"))) v)
 {

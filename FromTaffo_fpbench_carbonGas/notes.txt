@@ -6,5 +6,7 @@ Works as expected.
 
 HLS with TAFFO:
 Does not work...
+PandA-Bambu fails to generate the reference testbench values (likely locally building PandA-Bambu locally could fix this...).
 
 PandA-Bambu does NOT support int96, so its usage must be prevented...untill then this test will not work!
+FIXED: requires the usage of "-Xconversion -maxtotalbitsconv -Xconversion 64" and "-Xdta -maxtotalbits -Xdta 64" options!

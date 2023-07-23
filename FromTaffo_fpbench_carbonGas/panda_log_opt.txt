@@ -1,0 +1,211 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-aNkp7z/usr/bin/bambu --use-raw -v 2 --top-fname=test --compiler=I386_CLANG12 --simulate --simulator=VERILATOR test.ll 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2023 Politecnico di Milano
+ Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
+
+Parameters parsed in 0.13 seconds
+
+Target technology = FPGA
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3931
+  - combinational: 0
+  - others: 3931
+
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+Error in compilation
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+clang-12: ../../../etc/clang_plugin/dumpGimple.cpp:2935: int64_t llvm::DumpGimpleRaw::TREE_INT_CST_LOW(const void *): Assertion `val.getNumWords() == 1' failed.
+PLEASE submit a bug report to https://bugs.llvm.org/ and include the crash backtrace, preprocessed source, and associated run script.
+Stack dump:
+0.	Program arguments: /tmp/.mount_bambu-aNkp7z/usr/bin/clang-12 -D__NO_INLINE__ -D_FORTIFY_SOURCE=0 -m32 -fplugin=/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_topfname.so -mllvm -internalize-outputdir=/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/panda-temp/ -mllvm -panda-TFN=test -mllvm -panda-Internalize -c -fplugin=/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_expandMemOps.so -c -fplugin=/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so -mllvm -panda-outputdir=/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/panda-temp/ -mllvm -panda-infile=/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/test.ll -mllvm -panda-cost-table=store_expr|32=10,load_expr|32=10,nop_expr|32=10,mult_expr|1=0.88300000000000001,mult_expr|8=4.5490000000000004,mult_expr|16=5.5519999999999996,mult_expr|32=8.488999999999999,mult_expr|64=12.434999999999999,plus_expr|1=0.91100000000000003,plus_expr|8=1.883,plus_expr|16=2.181,plus_expr|32=2.5939999999999999,plus_expr|64=3.556,trunc_div_expr|1=0.91100000000000003,trunc_div_expr|8=17.141999999999999,trunc_div_expr|16=46.957999999999998,trunc_div_expr|32=112.78700000000001,trunc_div_expr|64=304.17700000000002,trunc_mod_expr|1=0.91100000000000003,trunc_mod_expr|8=18.117999999999999,trunc_mod_expr|16=41.697000000000003,trunc_mod_expr|32=113.28400000000001,trunc_mod_expr|64=303.31999999999999,lshift_expr|1=0.91100000000000003,lshift_expr|8=2.0990000000000002,lshift_expr|16=2.3540000000000001,lshift_expr|32=3.032,lshift_expr|64=3.609,rshift_expr|1=0.91100000000000003,rshift_expr|8=1.9970000000000001,rshift_expr|16=2.452,rshift_expr|32=3.004,rshift_expr|64=3.6640000000000001,bit_and_expr|1=0.91100000000000003,bit_and_expr|8=0.97499999999999998,bit_and_expr|16=1.0329999999999999,bit_and_expr|32=1.0960000000000001,bit_and_expr|64=1.1830000000000001,bit_ior_expr|1=0.91100000000000003,bit_ior_expr|8=0.97499999999999998,bit_ior_expr|16=1.0329999999999999,bit_ior_expr|32=1.0960000000000001,bit_ior_expr|64=1.1830000000000001,bit_xor_expr|1=0.88300000000000001,bit_xor_expr|8=1.056,bit_xor_expr|16=1.137,bit_xor_expr|32=1.0900000000000001,bit_xor_expr|64=1.206,cond_expr|1=1.032,cond_expr|8=1.849,cond_expr|16=2.2919999999999998,cond_expr|32=2.7879999999999998,cond_expr|64=3.468,Fmult_expr|32=14.948,Fmult_expr|64=20,Fplus_expr|32=20,Fplus_expr|64=30,Frdiv_expr|32=60,Frdiv_expr|64=110 -mllvm -panda-topfname=test -emit-llvm -o /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/panda-temp//run-c817-e9c4-f038-fee8.o -O2 -fno-builtin-bcmp -fno-builtin-memcpy -fno-builtin-memmove -fno-builtin-memset -finline-functions -fno-slp-vectorize -fno-stack-protector -fno-vectorize -fwrapv "-Dprintf(fmt, ...)=" -D__BAMBU__ -Wuninitialized /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/test.ll
+1.	Per-module optimization passes
+2.	Running pass 'clang12_plugin_dumpGimpleSSA' on module '/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/test.ll'.
+Stack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x23)[0x24c18a3]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm3sys17RunSignalHandlersEv+0xee)[0x24bf7ee]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm3sys15CleanupOnSignalEm+0xdd)[0x24c0d5d]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12[0x244d170]
+/lib/x86_64-linux-gnu/libc.so.6(+0x42520)[0x7fe649c42520]
+/lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x12c)[0x7fe649c96a7c]
+/lib/x86_64-linux-gnu/libc.so.6(raise+0x16)[0x7fe649c42476]
+/lib/x86_64-linux-gnu/libc.so.6(abort+0xd3)[0x7fe649c287f3]
+/lib/x86_64-linux-gnu/libc.so.6(+0x2871b)[0x7fe649c2871b]
+/lib/x86_64-linux-gnu/libc.so.6(+0x39e96)[0x7fe649c39e96]
+/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(+0x6f46f)[0x7fe64906f46f]
+/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm13DumpGimpleRaw21dequeue_and_serializeEv+0xef5)[0x7fe64907acb5]
+/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm13DumpGimpleRaw29SerializeGimpleGlobalTreeNodeEPKv+0xc8)[0x7fe64907c7d8]
+/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm13DumpGimpleRaw4execERNS_6ModuleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_12function_refIFRNS_17TargetLibraryInfoERNS_8FunctionEEEENSB_IFRNS_19TargetTransformInfoESF_EEENSB_IFRNS_13DominatorTreeESF_EEENSB_IFRNS_8LoopInfoESF_EEENSB_IFRNS_20MemorySSAWrapperPassESF_EEENSB_IFRNS_13LazyValueInfoESF_EEENSB_IFRNS_15AssumptionCacheESF_EEENSB_IFRNS_25OptimizationRemarkEmitterESF_EEESA_+0x3cd)[0x7fe64907fa8d]
+/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm28clang12_plugin_dumpGimpleSSA4execERNS_6ModuleENS_12function_refIFRNS_17TargetLibraryInfoERNS_8FunctionEEEENS3_IFRNS_19TargetTransformInfoES7_EEENS3_IFRNS_13DominatorTreeES7_EEENS3_IFRNS_8LoopInfoES7_EEENS3_IFRNS_20MemorySSAWrapperPassES7_EEENS3_IFRNS_13LazyValueInfoES7_EEENS3_IFRNS_15AssumptionCacheES7_EEENS3_IFRNS_25OptimizationRemarkEmitterES7_EEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE+0x1106)[0x7fe6490624a6]
+/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm28clang12_plugin_dumpGimpleSSA11runOnModuleERNS_6ModuleE+0x16f)[0x7fe64906128f]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm6legacy15PassManagerImpl3runERNS_6ModuleE+0x3cf)[0x1e6d08f]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang17EmitBackendOutputERNS_17DiagnosticsEngineERKNS_19HeaderSearchOptionsERKNS_14CodeGenOptionsERKNS_13TargetOptionsERKNS_11LangOptionsERKN4llvm10DataLayoutEPNSE_6ModuleENS_13BackendActionESt10unique_ptrINSE_17raw_pwrite_streamESt14default_deleteISM_EE+0x2c85)[0x269d3b5]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang13CodeGenAction13ExecuteActionEv+0x78b)[0x3192f8b]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang14FrontendAction7ExecuteEv+0x57)[0x2bea627]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang16CompilerInstance13ExecuteActionERNS_14FrontendActionE+0x711)[0x2b75151]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang25ExecuteCompilerInvocationEPNS_16CompilerInstanceE+0x59c)[0x2c7f38c]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_Z8cc1_mainN4llvm8ArrayRefIPKcEES2_Pv+0x5f2)[0xa06e72]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12[0xa056b7]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12[0x2a39b12]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm20CrashRecoveryContext9RunSafelyENS_12function_refIFvvEEE+0xdd)[0x244cf5d]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZNK5clang6driver10CC1Command7ExecuteEN4llvm8ArrayRefINS2_8OptionalINS2_9StringRefEEEEEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPb+0x139)[0x2a394b9]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZNK5clang6driver11Compilation14ExecuteCommandERKNS0_7CommandERPS3_+0x3dd)[0x2a0941d]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZNK5clang6driver11Compilation11ExecuteJobsERKNS0_7JobListERN4llvm15SmallVectorImplISt4pairIiPKNS0_7CommandEEEE+0x77)[0x2a09667]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang6driver6Driver18ExecuteCompilationERNS0_11CompilationERN4llvm15SmallVectorImplISt4pairIiPKNS0_7CommandEEEE+0x188)[0x2a21208]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(main+0x29ad)[0xa0506d]
+/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7fe649c29d90]
+/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7fe649c29e40]
+/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_start+0x29)[0xa023d9]
+clang-12: error: clang frontend command failed with exit code 134 (use -v to see invocation)
+clang version 12.0.1
+Target: i386-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /tmp/.mount_bambu-aNkp7z/usr/bin
+clang-12: note: diagnostic msg: Error generating preprocessed source(s) - no preprocessable inputs.
+error -> Front-end compiler returns an error during compilation 2
+
