@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-NmCr00/usr/bin/bambu -v 2 --top-fname=compute_pi --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-DPjWg0/usr/bin/bambu -v 2 --top-fname=compute_pi --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
 
 
 ********************************************************************************
@@ -17,7 +17,7 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
-Parameters parsed in 0.14 seconds
+Parameters parsed in 0.12 seconds
 
 Target technology = FPGA
 Library Name     : STD_FU
@@ -344,25 +344,25 @@ Warning: This function uses unknown addresses: compute_pi
     SIZE bus bitsize: 6
     Internally allocated memory (no private memories): 0
     Internally allocated memory: 0
-  Time to perform memory allocation: 0.00 seconds
+  Time to perform memory allocation: 0.01 seconds
 
 
   Module allocation information for function __float_adde11m52b_1023nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.05 seconds
+  Time to perform module allocation: 0.04 seconds
 
 
   Module allocation information for function __float_divSRT4e11m52b_1023nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.04 seconds
+  Time to perform module allocation: 0.05 seconds
 
 
   Module allocation information for function __int32_to_float64e11m52b_1023nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.03 seconds
+  Time to perform module allocation: 0.02 seconds
 
 
   Scheduling Information of function __float_adde11m52b_1023nih:
@@ -381,14 +381,14 @@ Warning: This function uses unknown addresses: compute_pi
     Maximum number of cycles 3
     Parameters are registered
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
+  Time to perform creation of STG: 0.01 seconds
 
 
   Scheduling Information of function __float_divSRT4e11m52b_1023nih:
     Number of control steps: 5
     Minimum slack: 2.7191333143333831
     Estimated max frequency (MHz): 137.34628625581581
-  Time to perform scheduling: 0.03 seconds
+  Time to perform scheduling: 0.02 seconds
 
   Number of function call sites = 3
 
@@ -448,17 +448,17 @@ Warning: This function uses unknown addresses: compute_pi
     Number of storage values inserted: 4
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.00 seconds
+  Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_adde11m52b_1023nih:
     Register allocation algorithm obtains an optimal result: 206 registers
-  Time to perform register binding: 0.01 seconds
+  Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
-  Clique covering computation completed in 0.01 seconds
+  Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __float_adde11m52b_1023nih:
     Number of modules instantiated: 438
@@ -547,7 +547,7 @@ Warning: This function uses unknown addresses: compute_pi
   Module allocation information for function compute_pi:
     Number of complex operations: 12
     Number of complex operations: 12
-  Time to perform module allocation: 0.05 seconds
+  Time to perform module allocation: 0.06 seconds
 
 
   Scheduling Information of function compute_pi:
@@ -575,7 +575,7 @@ Warning: This function uses unknown addresses: compute_pi
     Number of storage values inserted: 37
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.00 seconds
+  Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
@@ -600,7 +600,7 @@ Warning: This function uses unknown addresses: compute_pi
     Estimated area of MUX21: 138
     Total estimated area: 12119
     Estimated number of DSPs: 5
-  Time to perform module binding: 0.00 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function compute_pi:
@@ -613,43 +613,7 @@ Warning: This function uses unknown addresses: compute_pi
   Time to perform interconnection binding: 0.01 seconds
 
   Total number of flip-flops in function compute_pi: 1048
-[0m  Parameter res (424771) (testvector 0) allocated at 1073741824 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 1) allocated at 1073741856 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 2) allocated at 1073741888 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 3) allocated at 1073741920 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 4) allocated at 1073741952 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 5) allocated at 1073741984 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 6) allocated at 1073742016 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 7) allocated at 1073742048 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 8) allocated at 1073742080 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 9) allocated at 1073742112 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 10) allocated at 1073742144 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 11) allocated at 1073742176 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 12) allocated at 1073742208 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 13) allocated at 1073742240 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 14) allocated at 1073742272 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 15) allocated at 1073742304 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 16) allocated at 1073742336 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 17) allocated at 1073742368 : reserved_mem_size = 4
-Padding of 28 for parameter res
-  Parameter res (424771) (testvector 18) allocated at 1073742400 : reserved_mem_size = 4
+[0m  Parameter res (495333) (testvector 0) allocated at 1073741824 : reserved_mem_size = 4
 Padding of 28 for parameter res
   C-based testbench generation for function compute_pi: /home/zero/Desktop/COaT_project/ComputePi/synthesis_no_opt/HLS_output//simulation/values.c
   Prepared testbench
@@ -702,166 +666,16 @@ clang-12: warning: optimization flag '-fexcess-precision=standard' is not suppor
 Start reading vector           1's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
-Simulation ended after                   46 cycles.
-
-Simulation completed with success
-
-Start reading vector           2's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                   85 cycles.
-
-Simulation completed with success
-
-Start reading vector           3's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                  163 cycles.
-
-Simulation completed with success
-
-Start reading vector           4's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                  319 cycles.
-
-Simulation completed with success
-
-Start reading vector           5's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                  631 cycles.
-
-Simulation completed with success
-
-Start reading vector           6's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                 1255 cycles.
-
-Simulation completed with success
-
-Start reading vector           7's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                 2503 cycles.
-
-Simulation completed with success
-
-Start reading vector           8's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                 4999 cycles.
-
-Simulation completed with success
-
-Start reading vector           9's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                 9991 cycles.
-
-Simulation completed with success
-
-Start reading vector          10's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                19975 cycles.
-
-Simulation completed with success
-
-Start reading vector          11's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                39943 cycles.
-
-Simulation completed with success
-
-Start reading vector          12's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                79879 cycles.
-
-Simulation completed with success
-
-Start reading vector          13's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after               159751 cycles.
-
-Simulation completed with success
-
-Start reading vector          14's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after               319495 cycles.
-
-Simulation completed with success
-
-Start reading vector          15's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after               638983 cycles.
-
-Simulation completed with success
-
-Start reading vector          16's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
 Simulation ended after              1277959 cycles.
 
 Simulation completed with success
 
-Start reading vector          17's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after              2555911 cycles.
-
-Simulation completed with success
-
-Start reading vector          18's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after              5111815 cycles.
-
-Simulation completed with success
-
-Start reading vector          19's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after             10223623 cycles.
-
-Simulation completed with success
-
-No more values found. Simulation(s) executed:          19.
-
-- /home/zero/Desktop/COaT_project/ComputePi/synthesis_no_opt/HLS_output//simulation/testbench_compute_pi_tb.v:245: Verilog $finish
-No more values found. Simulation(s) executed:          19.
-
-- /home/zero/Desktop/COaT_project/ComputePi/synthesis_no_opt/HLS_output//simulation/testbench_compute_pi_tb.v:286: Verilog $finish
-- /home/zero/Desktop/COaT_project/ComputePi/synthesis_no_opt/HLS_output//simulation/testbench_compute_pi_tb.v:286: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 46 cycles;
-2. Simulation completed with SUCCESS; Execution time 85 cycles;
-3. Simulation completed with SUCCESS; Execution time 163 cycles;
-4. Simulation completed with SUCCESS; Execution time 319 cycles;
-5. Simulation completed with SUCCESS; Execution time 631 cycles;
-6. Simulation completed with SUCCESS; Execution time 1255 cycles;
-7. Simulation completed with SUCCESS; Execution time 2503 cycles;
-8. Simulation completed with SUCCESS; Execution time 4999 cycles;
-9. Simulation completed with SUCCESS; Execution time 9991 cycles;
-10. Simulation completed with SUCCESS; Execution time 19975 cycles;
-11. Simulation completed with SUCCESS; Execution time 39943 cycles;
-12. Simulation completed with SUCCESS; Execution time 79879 cycles;
-13. Simulation completed with SUCCESS; Execution time 159751 cycles;
-14. Simulation completed with SUCCESS; Execution time 319495 cycles;
-15. Simulation completed with SUCCESS; Execution time 638983 cycles;
-16. Simulation completed with SUCCESS; Execution time 1277959 cycles;
-17. Simulation completed with SUCCESS; Execution time 2555911 cycles;
-18. Simulation completed with SUCCESS; Execution time 5111815 cycles;
-19. Simulation completed with SUCCESS; Execution time 10223623 cycles;
+- /home/zero/Desktop/COaT_project/ComputePi/synthesis_no_opt/HLS_output//simulation/testbench_compute_pi_tb.v:695: Verilog $finish
+1. Simulation completed with SUCCESS; Execution time 1277959 cycles;
 Analyzing Xilinx synthesis results
-  Total cycles             : 20447326 cycles
-  Number of executions     : 19
-  Average execution        : 1076175 cycles
+  Total cycles             : 1277959 cycles
+  Number of executions     : 1
+  Average execution        : 1277959 cycles
   Slices                   : 1063
   Luts                     : 3310
   Lut FF Pairs             : 3310
@@ -873,6 +687,6 @@ Analyzing Xilinx synthesis results
   Design minimum period    : 10.640000000000001
   Design slack             : -0.64000000000000057
   Frequency                : 93.984962406015029
-  AreaxTime                : 37901161.620000005
-  Time                     : 11450.502
-  Tot. Time                : 217559.54864000002
+  AreaxTime                : 45007671.245600007
+  Time                     : 13597.483760000001
+  Tot. Time                : 13597.483760000001

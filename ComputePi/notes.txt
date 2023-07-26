@@ -4,3 +4,5 @@ Works as expected.
 
 HLS:
 Works as expected.
+
+Requires TAFFO develop branch!

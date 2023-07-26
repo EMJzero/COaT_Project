@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-0qNfbb/usr/bin/bambu --use-raw -v 2 --top-fname=compute_pi --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-z99teb/usr/bin/bambu --use-raw -v 2 --top-fname=compute_pi --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
 
 
 ********************************************************************************
@@ -160,11 +160,11 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 1 warning generated.
 warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
 1 warning generated.
-  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
   Bit Value Opt: cond_expr optimized, nbits = 1
   Bit Value Opt: cond_expr optimized, nbits = 1
-  Bit Value Opt: eq_expr optimized, nbits = 24
-  Bit Value Opt: ne_expr optimized, nbits = 24
+  Bit Value Opt: eq_expr optimized, nbits = 23
+  Bit Value Opt: ne_expr optimized, nbits = 23
   Bit Value Opt: cond_expr optimized, nbits = 1
   Bit Value Opt: cond_expr optimized, nbits = 1
   Bit Value Opt: cond_expr optimized, nbits = 1
@@ -172,7 +172,6 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: bit_and_expr optimized, nbits = 1
   Bit Value Opt: ne_expr optimized, nbits = 1
   Bit Value Opt: cond_expr optimized, nbits = 1
-  Bit Value Opt: plus_expr optimized, nbits = 1
   Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 23
   Bit Value Opt: bit_and_expr optimized, nbits = 23
   Bit Value Opt: bit_and_expr optimized, nbits = 23
@@ -182,15 +181,22 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: bit_and_expr optimized, nbits = 24
   Bit Value Opt: ne_expr optimized, nbits = 24
   Bit Value Opt: bit_and_expr optimized, nbits = 24
-  Bit Value Opt: eq_expr optimized, nbits = 31
-  Bit Value Opt: eq_expr optimized, nbits = 15
-  Bit Value Opt: bit_and_expr optimized, nbits = 31
-  Bit Value Opt: eq_expr optimized, nbits = 31
-  Bit Value Opt: bit_and_expr optimized, nbits = 31
-  Bit Value Opt: eq_expr optimized, nbits = 31
-  Bit Value Opt: cond_expr optimized, nbits = 3
-  Bit Value Opt: bit_and_expr optimized, nbits = 3
-  Bit Value Opt: eq_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 8
+  Bit Value Opt: eq_expr optimized, nbits = 8
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: eq_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 12
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: bit_and_expr optimized, nbits = 28
+  Bit Value Opt: eq_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
   Bit Value Opt: cond_expr optimized, nbits = 1
   Bit Value Opt: cond_expr optimized, nbits = 2
   Bit Value Opt: plus_expr optimized, nbits = 3
@@ -198,17 +204,19 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: plus_expr optimized, nbits = 6
   Bit Value Opt: plus_expr optimized, nbits = 23
   Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
   Bit Value Opt: cond_expr optimized, nbits = 4
   Bit Value Opt: cond_expr optimized, nbits = 3
-  Bit Value Opt: cond_expr optimized, nbits = 31
-  Bit Value Opt: cond_expr optimized, nbits = 7
-  Bit Value Opt: cond_expr optimized, nbits = 7
-  Bit Value Opt: cond_expr optimized, nbits = 31
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 4
   Bit Value Opt: cond_expr optimized, nbits = 3
   Bit Value Opt: cond_expr optimized, nbits = 4
   Bit Value Opt: cond_expr optimized, nbits = 6
-Function call to __uint32_to_float32e8m23b_127nih inlined in compute_pi
 Function call to __float_mule8m23b_127nih inlined in compute_pi
+Function call to __uint32_to_float32e8m23b_127nih inlined in compute_pi
+Function call to __udivsi3 inlined in compute_pi
 
   Functions to be synthesized:
     compute_pi
@@ -232,105 +240,67 @@ Warning: This function uses unknown addresses: compute_pi
   Module allocation information for function compute_pi:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.04 seconds
+  Time to perform module allocation: 0.07 seconds
 
 
   Scheduling Information of function compute_pi:
-    Number of control steps: 7
-    Minimum slack: 1.8463999810000822
-    Estimated max frequency (MHz): 122.64521164513235
-  Time to perform scheduling: 0.03 seconds
+    Number of control steps: 12
+    Minimum slack: 2.3406559860000793
+    Estimated max frequency (MHz): 130.55948370672184
+  Time to perform scheduling: 0.04 seconds
 
   Number of function call sites = 0
 
   State Transition Graph Information of function compute_pi:
-    Number of operations: 276
-    Number of basic blocks: 6
-    Number of states: 5
-    Minimum number of cycles: 3
-    Maximum number of cycles 5
+    Number of operations: 447
+    Number of basic blocks: 11
+    Number of states: 10
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
+  Time to perform creation of STG: 0.01 seconds
 
 
   Easy binding information for function compute_pi:
-    Bound operations:230/276
+    Bound operations:360/447
   Time to perform easy binding: 0.00 seconds
 
 
   Storage Value Information of function compute_pi:
-    Number of storage values inserted: 20
+    Number of storage values inserted: 39
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.00 seconds
+  Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function compute_pi:
-    Register allocation algorithm obtains a sub-optimal result: 20 registers(LB:16)
+    Register allocation algorithm obtains a sub-optimal result: 36 registers(LB:15)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function compute_pi:
-    Number of modules instantiated: 276
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 2933
+    Number of modules instantiated: 447
+    Number of performance conflicts: 7
+    Estimated resources area (no Muxes and address logic): 4457
     Estimated area of MUX21: 0
-    Total estimated area: 2933
+    Total estimated area: 4457
     Estimated number of DSPs: 2
-  Time to perform module binding: 0.00 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function compute_pi:
-    Register allocation algorithm obtains a sub-optimal result: 20 registers(LB:16)
+    Register allocation algorithm obtains a sub-optimal result: 36 registers(LB:15)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function compute_pi:
-    Number of allocated multiplexers (2-to-1 equivalent): 2
+    Number of allocated multiplexers (2-to-1 equivalent): 11
   Time to perform interconnection binding: 0.01 seconds
 
-  Total number of flip-flops in function compute_pi: 223
-[0m  Parameter Pd6 (424771) (testvector 0) allocated at 1073741824 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 1) allocated at 1073741856 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 2) allocated at 1073741888 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 3) allocated at 1073741920 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 4) allocated at 1073741952 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 5) allocated at 1073741984 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 6) allocated at 1073742016 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 7) allocated at 1073742048 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 8) allocated at 1073742080 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 9) allocated at 1073742112 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 10) allocated at 1073742144 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 11) allocated at 1073742176 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 12) allocated at 1073742208 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 13) allocated at 1073742240 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 14) allocated at 1073742272 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 15) allocated at 1073742304 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 16) allocated at 1073742336 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 17) allocated at 1073742368 : reserved_mem_size = 4
-Padding of 28 for parameter Pd6
-  Parameter Pd6 (424771) (testvector 18) allocated at 1073742400 : reserved_mem_size = 4
+  Total number of flip-flops in function compute_pi: 607
+[0m  Parameter Pd6 (495333) (testvector 0) allocated at 1073741824 : reserved_mem_size = 4
 Padding of 28 for parameter Pd6
   C-based testbench generation for function compute_pi: /home/zero/Desktop/COaT_project/ComputePi/synthesis_with_opt/HLS_output//simulation/values.c
   Prepared testbench
@@ -343,205 +313,58 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
      - BMEMORY_CTRLN: 1
      - IIdata_converter_FU: 2
      - IUdata_converter_FU: 6
-     - MUX_GATE: 2
+     - MUX_GATE: 11
      - UIdata_converter_FU: 3
-     - UUdata_converter_FU: 26
-     - constant_value: 72
+     - UUdata_converter_FU: 48
+     - constant_value: 83
      - lt_expr_FU: 1
-     - lut_expr_FU: 38
+     - lut_expr_FU: 61
      - multi_read_cond_FU: 1
      - negate_expr_FU: 1
-     - read_cond_FU: 1
-     - register_SE: 8
-     - register_STD: 12
-     - ui_bit_and_expr_FU: 13
+     - read_cond_FU: 4
+     - register_SE: 23
+     - register_STD: 13
+     - ui_bit_and_expr_FU: 25
      - ui_bit_ior_concat_expr_FU: 4
-     - ui_bit_ior_expr_FU: 8
-     - ui_bit_xor_expr_FU: 2
-     - ui_cond_expr_FU: 11
-     - ui_eq_expr_FU: 3
-     - ui_extract_bit_expr_FU: 94
+     - ui_bit_ior_expr_FU: 11
+     - ui_bit_xor_expr_FU: 3
+     - ui_cond_expr_FU: 19
+     - ui_eq_expr_FU: 7
+     - ui_extract_bit_expr_FU: 149
      - ui_gt_expr_FU: 1
-     - ui_lshift_expr_FU: 27
+     - ui_lshift_expr_FU: 42
+     - ui_lt_expr_FU: 1
      - ui_minus_expr_FU: 2
      - ui_mult_expr_FU: 1
      - ui_ne_expr_FU: 2
-     - ui_plus_expr_FU: 8
-     - ui_rshift_expr_FU: 20
+     - ui_negate_expr_FU: 1
+     - ui_plus_expr_FU: 12
+     - ui_rshift_expr_FU: 44
+     - ui_ternary_plus_expr_FU: 1
 Start reading vector           1's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
+Simulation ended after              2228231 cycles.
 
 Simulation completed with success
 
-Start reading vector           2's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector           3's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector           4's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector           5's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector           6's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector           7's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector           8's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector           9's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          10's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          11's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          12's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          13's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          14's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          15's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          16's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          17's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          18's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-Start reading vector          19's values from input file.
-
-Reading of vector values from input file completed. Simulation started.
-Simulation ended after                    3 cycles.
-
-Simulation completed with success
-
-No more values found. Simulation(s) executed:          19.
-
-- /home/zero/Desktop/COaT_project/ComputePi/synthesis_with_opt/HLS_output//simulation/testbench_compute_pi_tb.v:245: Verilog $finish
-No more values found. Simulation(s) executed:          19.
-
-- /home/zero/Desktop/COaT_project/ComputePi/synthesis_with_opt/HLS_output//simulation/testbench_compute_pi_tb.v:286: Verilog $finish
-- /home/zero/Desktop/COaT_project/ComputePi/synthesis_with_opt/HLS_output//simulation/testbench_compute_pi_tb.v:286: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 3 cycles;
-2. Simulation completed with SUCCESS; Execution time 3 cycles;
-3. Simulation completed with SUCCESS; Execution time 3 cycles;
-4. Simulation completed with SUCCESS; Execution time 3 cycles;
-5. Simulation completed with SUCCESS; Execution time 3 cycles;
-6. Simulation completed with SUCCESS; Execution time 3 cycles;
-7. Simulation completed with SUCCESS; Execution time 3 cycles;
-8. Simulation completed with SUCCESS; Execution time 3 cycles;
-9. Simulation completed with SUCCESS; Execution time 3 cycles;
-10. Simulation completed with SUCCESS; Execution time 3 cycles;
-11. Simulation completed with SUCCESS; Execution time 3 cycles;
-12. Simulation completed with SUCCESS; Execution time 3 cycles;
-13. Simulation completed with SUCCESS; Execution time 3 cycles;
-14. Simulation completed with SUCCESS; Execution time 3 cycles;
-15. Simulation completed with SUCCESS; Execution time 3 cycles;
-16. Simulation completed with SUCCESS; Execution time 3 cycles;
-17. Simulation completed with SUCCESS; Execution time 3 cycles;
-18. Simulation completed with SUCCESS; Execution time 3 cycles;
-19. Simulation completed with SUCCESS; Execution time 3 cycles;
+- /home/zero/Desktop/COaT_project/ComputePi/synthesis_with_opt/HLS_output//simulation/testbench_compute_pi_tb.v:695: Verilog $finish
+1. Simulation completed with SUCCESS; Execution time 2228231 cycles;
 Analyzing Xilinx synthesis results
-  Total cycles             : 57 cycles
-  Number of executions     : 19
-  Average execution        : 3 cycles
-  Slices                   : 104
-  Luts                     : 103
-  Lut FF Pairs             : 103
-  Power                    : 0.33300000000000002
-  Registers                : 89
+  Total cycles             : 2228231 cycles
+  Number of executions     : 1
+  Average execution        : 2228231 cycles
+  Slices                   : 393
+  Luts                     : 918
+  Lut FF Pairs             : 918
+  Power                    : 0.33700000000000002
+  Registers                : 514
   DSPs                     : 0
   BRAMs                    : 0
   Clock period             : 10
-  Design minimum period    : 9.9770000000000003
-  Design slack             : 0.022999999999999687
-  Frequency                : 100.23053021950486
-  AreaxTime                : 3.0828930000000003
-  Time                     : 0.029931000000000003
-  Tot. Time                : 0.568689
+  Design minimum period    : 11.186999999999999
+  Design slack             : -1.1869999999999994
+  Frequency                : 89.389469920443375
+  AreaxTime                : 22883188.140845999
+  Time                     : 24927.220196999999
+  Tot. Time                : 24927.220196999999
