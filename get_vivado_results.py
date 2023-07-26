@@ -34,9 +34,9 @@ def process_files(filename, data):
             current_dict["Test"] = file_path[-54:]
             for line in lines:
                 for datum in data:
-                    if datum in line:
+                    if (line.strip()).startswith(datum):
                         current_dict[datum] = extract_number(line.strip())
-            if current_dict:
+            if current_dict and len(current_dict.keys()) > 1:
                 result.append(current_dict)
 
     # Walk through all directories and subdirectories

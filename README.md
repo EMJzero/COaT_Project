@@ -109,7 +109,7 @@ Before running the tests:
 
 ```
 sudo chmod +x run_tests.sh
-export BAMBU=/path/to/Bambu.AppImage
+export BAMBU=/path/to/Bambu.AppImage {or binary}
 export TAFFO=/path/to/TAFFO {only if it was not installed system-wise}
 ```
 
