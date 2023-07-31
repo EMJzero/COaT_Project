@@ -91,35 +91,40 @@ for arg in "$@"; do
   fi
 done
 
-# If the --use option is not specified, print an error message and exit
+# If the --use option is not specified, print the help menu and exit
 if [ "$use_option" == "none" ]; then
   echo "The --use option must be specified as one of:
   --use=all
   --use=<num>(,<num>)*
-Where <num> is chosen from:
-  0) ComputeConvexHull/max100pts,computeConvexHull
-  1) ComputeConvexHull/max1000pts,computeConvexHull
-  2) ComputePi,compute_pi
-  3) ComputeSinCos,manual_cos
-  4) ComputeSqrt,NRsqrt
-  5) FromPanda_mm_float_inside_opt/16x16,mm
-  6) FromPanda_mm_float_inside_opt/32x32,mm
-  7) FromPanda_mm_float_inside_opt/64x64,mm
-  8) FromPanda_mm_float_inside_opt/128x128,mm
-  9) FromPanda_mm_float_inside_opt/256x256,mm
-  10) FromTaffo_axbench_inversek2j,test
-  11) FromTaffo_fpbench_CX,test
-  12) FromTaffo_fpbench_CY,test
-  13) FromTaffo_fpbench_doppler,test
-  14) FromTaffo_fpbench_leadLag,test
-  15) FromTaffo_fpbench_triangle,test
-  16) FromTaffo_fpbench_turbine1,test
-Use --help for available options."
+Where <num> is chosen from:"
+
+  # Loop through the path_names array to construct the help menu dynamically
+  for index in "${!path_names[@]}"; do
+    echo "  $index) ${path_names[index]%%,*}"
+  done
+
+  echo "Use --help for available options."
   exit 1
 fi
 
 # Get the tuples to use based on the --use option
 tuples_to_use=($(get_tuples_to_use "$use_option"))
+
+if [ "${#tuples_to_use[@]}" -eq 0 ]; then
+  echo "Error: no valid test <num> was provided to --use."
+  exit 1
+fi
+
+# Check if the option "--device-name=<name>" is specified and extract the device name
+  device_name="--device-name=xc7vx690t-3ffg1930-VVD"
+  if option_present "--device-name=" "$@"; then
+    for arg in "$@"; do
+      if [[ "$arg" == --device-name=* ]]; then
+        device_name="${arg#*=}"
+        break
+      fi
+    done
+  fi
 
 # Iterate through the list of tuples (path, name)
 for tuple in "${tuples_to_use[@]}"; do
@@ -144,17 +149,6 @@ for tuple in "${tuples_to_use[@]}"; do
       # If TAFFO does not exist, run the command "taffo"
       taffo -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
     fi
-  fi
-
-  # Check if the option "--device-name=<name>" is specified and extract the device name
-  device_name="--device-name=xc7vx690t-3ffg1930-VVD"
-  if option_present "--device-name=" "$@"; then
-    for arg in "$@"; do
-      if [[ "$arg" == --device-name=* ]]; then
-        device_name="${arg#*=}"
-        break
-      fi
-    done
   fi
 
   # Prepare output directories

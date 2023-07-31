@@ -1,7 +1,7 @@
 import random as rnd
 import sys
 
-template = "\n\t<testbench\n\tPd58=\"{arr_}\"\n\tPd59=\"{res_}\"\n\tarr=\"{arr_}\"\n\tres=\"{res_}\"/>"
+template = "\n\t<testbench\n\tPd5=\"{arr_}\"\n\tPd6=\"{res_}\"\n\tarr=\"{arr_}\"\n\tres=\"{res_}\"/>"
 
 len_code_constant = 100
 how_many_testbenches = 2

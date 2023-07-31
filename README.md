@@ -80,7 +80,7 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
     If types like `i96` or `i128` are generated in the LLVM-IRR, add the options `-Xconversion -maxtotalbitsconv -Xconversion 64` and `-Xdta -maxtotalbits -Xdta 64`. This is because currently PandA-Bambu cannot deal with such types, thus the first options prevents them from being used in intermediate types of multiplications and divisions, while the second one prevents them from being used as the integer version of originally-float values.
 - Run the HLS on TAFFO's produced LLVM-IR:<br>
     ```
-    bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=<function_name_wrt_the_IR> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR |& tee panda_log_opt.txt
+    bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=<function_name_wrt_the_IR> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --verilator-parallel |& tee panda_log_opt.txt
     ```
     To specify a target device for later synthesis use `--device-name=<name>`.<br>
     To see the input and output of each simulation use an higher log verbosity: `-v 4`<br>

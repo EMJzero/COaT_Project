@@ -6,7 +6,7 @@ flipflops_regex = r'Total number of flip-flops in function \w+: \d+'
 results = {}
 
 def check_file_with_regex(file_path, regex_pattern):
-    if file_path[-4:] != ".txt":
+    if not file_path.endswith("panda_log.txt") and not file_path.endswith("panda_log_opt.txt"):
         return
         
     #print("Processing file:", file_path)

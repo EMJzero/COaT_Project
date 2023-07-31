@@ -44,12 +44,12 @@ float ex0(float y, float yd)
   return xc1;
 }
 
-void test(float * arr)
+void test(float * arr, float * res)
 {
-  float res[len];
-
   float __attribute__((annotate("target('test') scalar(range(0, 50))"))) y[len];
   float __attribute__((annotate("scalar(range(0, 50))"))) yd[len];
+
+  //float __attribute__((annotate("scalar()"))) res[len];
 
   for (int i = 0; i < len; ++i) {
     y[i] = arr[i * 2];
@@ -62,19 +62,24 @@ void test(float * arr)
     }
   }
 
-  printf("Values Begin\n");
-  for (int j = 0; j < len; ++j) {
-    printf("%f\n", res[j]);
-  }
-  printf("Values End\n");
+  //for (int j = 0; j < len; ++j) {
+  //  res[j] = res[j];
+  //}
 }
 
 int main()
 {
   float arr[len*2];
+  float res[len];
 
   for(int i = 0; i < len*2; i++)
     arr[i] = i%16 + 0.23f;
 
-  test(arr);
+  test(arr, res);
+
+  printf("Values Begin\n");
+  for (int j = 0; j < len; ++j) {
+    printf("%f\n", res[j]);
+  }
+  printf("Values End\n");
 }

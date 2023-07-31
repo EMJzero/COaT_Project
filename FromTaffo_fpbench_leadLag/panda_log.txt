@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-pEkb3I/usr/bin/bambu -v 2 --top-fname=test --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-Xww9oJ/usr/bin/bambu -v 2 --top-fname=test --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
 
 
 ********************************************************************************
@@ -158,81 +158,164 @@ Library Name     : STD_FU
 
 !! Unknown ext. calls:
 llvm.var.annotation
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: bit_xor_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: ne_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 11
+  Bit Value Opt: eq_expr optimized, nbits = 11
+  Bit Value Opt: bit_and_expr optimized, nbits = 19
+  Bit Value Opt: eq_expr optimized, nbits = 19
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: eq_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 25
+  Bit Value Opt: eq_expr optimized, nbits = 25
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: eq_expr optimized, nbits = 26
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: ne_expr optimized, nbits = 26
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: eq_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 22
+  Bit Value Opt: ne_expr optimized, nbits = 22
+  Bit Value Opt: bit_and_expr optimized, nbits = 47
+  Bit Value Opt: ne_expr optimized, nbits = 47
+  Bit Value Opt: bit_and_expr optimized, nbits = 9
+  Bit Value Opt: ne_expr optimized, nbits = 9
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: ne_expr optimized, nbits = 24
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: bit_xor_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: ne_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 11
+  Bit Value Opt: eq_expr optimized, nbits = 11
+  Bit Value Opt: bit_and_expr optimized, nbits = 19
+  Bit Value Opt: eq_expr optimized, nbits = 19
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: eq_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 25
+  Bit Value Opt: eq_expr optimized, nbits = 25
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: eq_expr optimized, nbits = 26
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: ne_expr optimized, nbits = 26
   Bit Value Opt: plus_expr optimized, nbits = 1
   Bit Value Opt: eq_expr optimized, nbits = 1
-  Bit Value Opt: plus_expr optimized, nbits = 1
-  Bit Value Opt: eq_expr optimized, nbits = 1
+Function call to __float_gte8m23b_127nih inlined in test
+Function call to __float_gte8m23b_127nih inlined in test
 
   Functions to be synthesized:
     test
+    __float_sube8m23b_127nih
+    __float_lte8m23b_127nih
+    __float_mule8m23b_127nih
+    __float_adde8m23b_127nih
 
 
   Memory allocation information:
   Sparse memory alignemnt set to 512 bytes
-    Internal variable: internal_424839 - 424839 - internal_424839 in function test
-      Id: 424839
+    Internal variable: internal_495404 - 495404 - internal_495404 in function test
+      Id: 495404
       Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
-      Maximum number of references per function: 2
-    Internal variable: internal_424862 - 424862 - internal_424862 in function test
-      Id: 424862
+      Maximum number of references per function: 3
+      Maximum number of loads per function: 1
+    Internal variable: internal_495427 - 495427 - internal_495427 in function test
+      Id: 495427
       Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
-      Maximum number of references per function: 2
-    Internal variable: internal_424911 - 424911 - internal_424911 in function test
-      Id: 424911
+      Maximum number of references per function: 3
+      Maximum number of loads per function: 1
+    Internal variable: internal_495476 - 495476 - internal_495476 in function test
+      Id: 495476
+      Base Address: 512
+      Size: 4
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+    Internal variable: internal_495479 - 495479 - internal_495479 in function test
+      Id: 495479
+      Base Address: 512
+      Size: 4
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+    Internal variable: internal_495482 - 495482 - internal_495482 in function test
+      Id: 495482
       Base Address: 512
       Size: 4
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 2
-    Internal variable: internal_424914 - 424914 - internal_424914 in function test
-      Id: 424914
+      Maximum number of loads per function: 1
+    Internal variable: internal_495485 - 495485 - internal_495485 in function test
+      Id: 495485
       Base Address: 512
       Size: 4
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 2
-    Internal variable: internal_424917 - 424917 - internal_424917 in function test
-      Id: 424917
+      Maximum number of loads per function: 1
+    Internal variable: internal_495488 - 495488 - internal_495488 in function test
+      Id: 495488
       Base Address: 512
       Size: 4
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
-      Maximum number of references per function: 2
-    Internal variable: internal_424920 - 424920 - internal_424920 in function test
-      Id: 424920
+      Maximum number of references per function: 1
+    Internal variable: internal_495491 - 495491 - internal_495491 in function test
+      Id: 495491
       Base Address: 512
       Size: 4
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
-      Maximum number of references per function: 2
-    Internal variable: internal_424923 - 424923 - internal_424923 in function test
-      Id: 424923
-      Base Address: 512
-      Size: 4
-      Is a private memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 2
-    Internal variable: internal_424926 - 424926 - internal_424926 in function test
-      Id: 424926
-      Base Address: 512
-      Size: 4
-      Is a private memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 2
+      Maximum number of references per function: 1
 Warning: This function uses unknown addresses: test
     BRAM bitsize: 16
     Spec may not exploit DATA bus width
@@ -246,35 +329,284 @@ Warning: This function uses unknown addresses: test
   Time to perform memory allocation: 0.00 seconds
 
 
+  Module allocation information for function __float_adde8m23b_127nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.04 seconds
+
+
+  Module allocation information for function __float_lte8m23b_127nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function __float_mule8m23b_127nih:
+    Number of complex operations: 1
+    Number of complex operations: 1
+  Time to perform module allocation: 0.02 seconds
+
+
+  Module allocation information for function __float_sube8m23b_127nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.03 seconds
+
+
+  Scheduling Information of function __float_adde8m23b_127nih:
+    Number of control steps: 4
+    Minimum slack: 0.14211997399999216
+    Estimated max frequency (MHz): 101.44168902061249
+  Time to perform scheduling: 0.05 seconds
+
+  Number of function call sites = 2
+
+  State Transition Graph Information of function __float_adde8m23b_127nih:
+    Number of operations: 400
+    Number of basic blocks: 3
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_lte8m23b_127nih:
+    Number of control steps: 5
+    Minimum slack: 8.2123333313333333
+    Estimated max frequency (MHz): 559.38840138796752
+  Time to perform scheduling: 0.00 seconds
+
+  Number of function call sites = 2
+
+  State Transition Graph Information of function __float_lte8m23b_127nih:
+    Number of operations: 38
+    Number of basic blocks: 5
+    Number of states: 3
+    Minimum number of cycles: 2
+    Maximum number of cycles 2
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_mule8m23b_127nih:
+    Number of control steps: 4
+    Minimum slack: 0.14046665266666675
+    Estimated max frequency (MHz): 101.4246785087923
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 3
+
+  State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of operations: 97
+    Number of basic blocks: 3
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_sube8m23b_127nih:
+    Number of control steps: 4
+    Minimum slack: 0.14211997399999216
+    Estimated max frequency (MHz): 101.44168902061249
+  Time to perform scheduling: 0.05 seconds
+
+  Number of function call sites = 3
+
+  State Transition Graph Information of function __float_sube8m23b_127nih:
+    Number of operations: 400
+    Number of basic blocks: 3
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __float_adde8m23b_127nih:
+    Bound operations:345/400
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_lte8m23b_127nih:
+    Bound operations:38/38
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_mule8m23b_127nih:
+    Bound operations:82/97
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_sube8m23b_127nih:
+    Bound operations:345/400
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __float_adde8m23b_127nih:
+    Number of storage values inserted: 47
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_lte8m23b_127nih:
+    Number of storage values inserted: 6
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_mule8m23b_127nih:
+    Number of storage values inserted: 6
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_sube8m23b_127nih:
+    Number of storage values inserted: 47
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_adde8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 47 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_adde8m23b_127nih:
+    Number of modules instantiated: 400
+    Number of performance conflicts: 28
+    Estimated resources area (no Muxes and address logic): 4806
+    Estimated area of MUX21: 0
+    Total estimated area: 4806
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_adde8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 47 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_adde8m23b_127nih: 189
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_adde8m23b_127nih: function pipelining may come for free
+
+  Module binding information for function __float_lte8m23b_127nih:
+    Number of modules instantiated: 38
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 358
+    Estimated area of MUX21: 0
+    Total estimated area: 358
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_lte8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 6 registers
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float_lte8m23b_127nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 1
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_lte8m23b_127nih: 68
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_lte8m23b_127nih: function pipelining may come for free
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 6 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_mule8m23b_127nih:
+    Number of modules instantiated: 97
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 1073
+    Estimated area of MUX21: 0
+    Total estimated area: 1073
+    Estimated number of DSPs: 3
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 6 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_mule8m23b_127nih: 99
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_mule8m23b_127nih: function pipelining may come for free
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_sube8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 47 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_sube8m23b_127nih:
+    Number of modules instantiated: 400
+    Number of performance conflicts: 28
+    Estimated resources area (no Muxes and address logic): 4806
+    Estimated area of MUX21: 0
+    Total estimated area: 4806
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_sube8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 47 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_sube8m23b_127nih: 189
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_sube8m23b_127nih: function pipelining may come for free
+
   Module allocation information for function test:
-    Number of complex operations: 20
-    Number of complex operations: 20
+    Number of complex operations: 29
+    Number of complex operations: 29
   Time to perform module allocation: 0.02 seconds
 
 
   Scheduling Information of function test:
-    Number of control steps: 10
-    Minimum slack: 7.4380000000000015
-    Estimated max frequency (MHz): 390.32006245121022
-  Time to perform scheduling: 0.01 seconds
+    Number of control steps: 43
+    Minimum slack: 0.1404666506666879
+    Estimated max frequency (MHz): 101.42467848821858
+  Time to perform scheduling: 0.02 seconds
 
   Number of function call sites = 0
 
   State Transition Graph Information of function test:
-    Number of operations: 83
-    Number of basic blocks: 6
-    Number of states: 8
+    Number of operations: 180
+    Number of basic blocks: 12
+    Number of states: 41
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
   Easy binding information for function test:
-    Bound operations:32/83
+    Bound operations:118/180
   Time to perform easy binding: 0.00 seconds
 
 
   Storage Value Information of function test:
-    Number of storage values inserted: 25
+    Number of storage values inserted: 91
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
@@ -283,42 +615,46 @@ Warning: This function uses unknown addresses: test
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 21 registers(LB:17)
+    Register allocation algorithm obtains a sub-optimal result: 84 registers(LB:39)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 21 registers(LB:17)
+    Register allocation algorithm obtains a sub-optimal result: 84 registers(LB:39)
   Time to perform register binding: 0.00 seconds
 
   Iteration 2 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function test:
-    Number of modules instantiated: 73
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 6154
-    Estimated area of MUX21: 136
-    Total estimated area: 6290
+    Number of modules instantiated: 166
+    Number of performance conflicts: 2
+    Estimated resources area (no Muxes and address logic): 17027
+    Estimated area of MUX21: 413
+    Total estimated area: 17440
     Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 21 registers(LB:17)
-  Time to perform register binding: 0.00 seconds
+    Register allocation algorithm obtains a sub-optimal result: 84 registers(LB:39)
+  Time to perform register binding: 0.01 seconds
 
 
   Connection Binding Information for function test:
-    Number of allocated multiplexers (2-to-1 equivalent): 8
+    Number of allocated multiplexers (2-to-1 equivalent): 25
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function test: 610
-[0m  Parameter arr (424770) (testvector 0) allocated at 1073741824 : reserved_mem_size = 800
+  Total number of flip-flops in function test: 1501
+[0m  Parameter arr (495332) (testvector 0) allocated at 1073741824 : reserved_mem_size = 800
 Padding of 224 for parameter arr
-  Parameter arr (424770) (testvector 1) allocated at 1073742848 : reserved_mem_size = 800
+  Parameter res (495333) (testvector 0) allocated at 1073742848 : reserved_mem_size = 400
+Padding of 112 for parameter res
+  Parameter arr (495332) (testvector 1) allocated at 1073743360 : reserved_mem_size = 800
 Padding of 224 for parameter arr
+  Parameter res (495333) (testvector 1) allocated at 1073744384 : reserved_mem_size = 400
+Padding of 112 for parameter res
   C-based testbench generation for function test: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_leadLag/synthesis_no_opt/HLS_output//simulation/values.c
   Prepared testbench
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
@@ -330,58 +666,78 @@ clang-12: warning: optimization flag '-fexcess-precision=standard' is not suppor
      - ARRAY_1D_STD_BRAM_NN_SDS: 2
      - ARRAY_1D_STD_BRAM_NN_SDS_BASE: 2
      - ARRAY_1D_STD_DISTRAM_NN_SDS: 6
+     - ASSIGN_UNSIGNED_FU: 2
      - BMEMORY_CTRLN: 1
-     - MUX_GATE: 8
-     - UUdata_converter_FU: 18
+     - IIdata_converter_FU: 4
+     - IUdata_converter_FU: 4
+     - MUX_GATE: 26
+     - OR_GATE: 4
+     - UIdata_converter_FU: 4
+     - UUdata_converter_FU: 154
      - addr_expr_FU: 8
-     - constant_value: 15
-     - read_cond_FU: 2
-     - register_SE: 16
-     - register_STD: 5
-     - ui_bit_ior_expr_FU: 3
-     - ui_eq_expr_FU: 2
-     - ui_lshift_expr_FU: 12
-     - ui_plus_expr_FU: 2
-     - ui_pointer_plus_expr_FU: 8
-     - ui_rshift_expr_FU: 4
+     - constant_value: 264
+     - flipflop_AR: 5
+     - lshift_expr_FU: 4
+     - lut_expr_FU: 187
+     - read_cond_FU: 6
+     - register_SE: 64
+     - register_STD: 140
+     - rshift_expr_FU: 4
+     - ui_bit_and_expr_FU: 66
+     - ui_bit_ior_concat_expr_FU: 2
+     - ui_bit_ior_expr_FU: 36
+     - ui_bit_xor_expr_FU: 5
+     - ui_cond_expr_FU: 26
+     - ui_eq_expr_FU: 12
+     - ui_extract_bit_expr_FU: 514
+     - ui_lshift_expr_FU: 77
+     - ui_lt_expr_FU: 5
+     - ui_minus_expr_FU: 2
+     - ui_mult_expr_FU: 2
+     - ui_ne_expr_FU: 11
+     - ui_plus_expr_FU: 12
+     - ui_pointer_plus_expr_FU: 11
+     - ui_rshift_expr_FU: 47
+     - ui_ternary_plus_expr_FU: 2
+     - ui_ternary_pm_expr_FU: 2
 Start reading vector           1's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
-Simulation ended after                  302 cycles.
+Simulation ended after               130178 cycles.
 
 Simulation completed with success
 
 Start reading vector           2's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
-Simulation ended after                  302 cycles.
+Simulation ended after               131050 cycles.
 
 Simulation completed with success
 
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_leadLag/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:243: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_leadLag/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:247: Verilog $finish
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_leadLag/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:284: Verilog $finish
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_leadLag/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:284: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 302 cycles;
-2. Simulation completed with SUCCESS; Execution time 302 cycles;
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_leadLag/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:288: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_leadLag/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:288: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 130178 cycles;
+2. Simulation completed with SUCCESS; Execution time 131050 cycles;
 Analyzing Xilinx synthesis results
-  Total cycles             : 604 cycles
+  Total cycles             : 261228 cycles
   Number of executions     : 2
-  Average execution        : 302 cycles
-  Slices                   : 149
-  Luts                     : 227
-  Lut FF Pairs             : 227
-  Power                    : 0.33500000000000002
-  Registers                : 169
-  DSPs                     : 0
-  BRAMs                    : 0
+  Average execution        : 130614 cycles
+  Slices                   : 725
+  Luts                     : 1547
+  Lut FF Pairs             : 1547
+  Power                    : 0.40799999999999997
+  Registers                : 1354
+  DSPs                     : 4
+  BRAMs                    : 4
   Clock period             : 10
-  Design minimum period    : 10.589
-  Design slack             : -0.58900000000000041
-  Frequency                : 94.437623949381432
-  AreaxTime                : 725.91830600000003
-  Time                     : 3.1978780000000002
-  Tot. Time                : 6.3957560000000004
+  Design minimum period    : 9.9870000000000001
+  Design slack             : 0.012999999999999901
+  Frequency                : 100.13016921998599
+  AreaxTime                : 2017971.8018459999
+  Time                     : 1304.442018
+  Tot. Time                : 2608.8840359999999

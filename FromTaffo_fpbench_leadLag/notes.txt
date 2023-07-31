@@ -1,9 +1,8 @@
-In this test the printfs are intended to be synthesized, just to try that out!
-
 TAFFO:
 Works as expected.
 
 HLS:
 Works as expected.
 
-Note that you need to specify -O0 in PandA and TAFFO to get the expected results.
+Note that you need to specify -O0 in PandA and TAFFO to get the expected results, otherwise use the latest TAFFO version (develop branch).
+Upper bound for testbench values needs to be sligthly below the upper bound set in the annotations...
