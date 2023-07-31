@@ -1,0 +1,28 @@
+We require a few different commands here, since we are using C++:
+- compile to .exe with: taffo -o test.exe test.cpp fourier_modified.cpp complex.cpp -lstdc++ -lm
+- run with: ./text.exe <N> output.txt
+
+- compile to LLVM-IR with: taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.cpp fourier_modified.cpp complex.cpp -lstdc++ -lm
+
+Top function name in the IR: _Z23radix2DitCooleyTykeyFftPiP7ComplexS1_
+Note: substitute fft.cpp -> test.cpp and fourier.cpp -> fourier_modified.cpp in order to have TAFFO's optimization NOT synthesized.
+
+TAFFO:
+Works as expected.
+-> Use TAFFO's "develop" branch!
+
+HLS:
+Does not complete with an error that usually happens when there are arrays of size not fixed at compile time, however that is not the case...
+
+
+
+
+VVVVVVVVVVVVVVVVVVVVVVV
+
+Latest commands to use:
+
+~/Desktop/bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=_Z30radix2DitCooleyTykeyFftWrapperPiPfS0_S0_S0_ --compiler=I386_CLANG12 --simulate --simulator=VERILATOR -lm
+-> using -lstdc++ here causes an error likely because the AppImage does not include c++ libraries...
+
+~/Desktop/TAFFO-develop/install/bin/taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.cpp fourier_modified.cpp complex.cpp -lstdc++ -lm
+-> use TAFFO's develop branch!!

@@ -1,10 +1,10 @@
 #include "complex.hpp"
 
-// #include <cmath>
+#include <cmath>
 
 // Those Sin and Cos come from the test "ComputeSinCos"!
 
-#define M_PI 3.14159265
+/*#define M_PI 3.14159265
 #define M_PI_2 1.57079632
 
 int compare_float(float f1 __attribute((annotate("scalar(range(-1, 1))"))), float f2 __attribute((annotate("scalar(range(-1, 1))"))))
@@ -55,13 +55,13 @@ void manual_sin(float * x_f, float * res)
 {
     *x_f = *x_f - M_PI_2;
     return manual_cos(x_f, res);
-}
+}*/
 
 void fftSinCos(float __attribute((annotate("scalar()"))) x,
 	       float* __attribute((annotate("scalar()"))) s,
 	       float* __attribute((annotate("scalar()"))) c) {
-    manual_sin(&x, s);
-    manual_cos(&x, c);
+    *s = sin(-2 * PI * x);
+    *c = cos(-2 * PI * x);
 }
 
 #if 0

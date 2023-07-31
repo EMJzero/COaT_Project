@@ -2,7 +2,6 @@
 #include <iostream>
 #include "fourier.hpp"
 #include <fstream>
-#include <time.h>
 
 static int* indices;
 static Complex* x;

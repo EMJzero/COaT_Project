@@ -1,4 +1,3 @@
-
 #include "fourier.hpp"
 #include <cmath>
 #include <fstream>
@@ -53,6 +52,7 @@ void calcFftIndices(int* indices)
 	}
 }
 
+// TARGET THIS AS THE TOP FUNCTION FOR PandA-Bambu!
 void radix2DitCooleyTykeyFftWrapper(int* indices, float * x_real, float * x_imag, float * f_real, float * f_imag)
 {
 	Complex x[K] __attribute((annotate("target('x') " ANNOTATION_COMPLEX(,))));
