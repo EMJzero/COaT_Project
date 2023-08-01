@@ -33,6 +33,7 @@ In some cases there are subfolders within a test's folder, those recursively mir
 Here is the current list of tests:
 
 - **ComputeConvexHull**: Computes the convex hull around the given set of points [-> wikipedia <-](https://en.wikipedia.org/wiki/Convex_hull);
+- **ComputeFFT**: Computes the Fast Furier Transform implemented via the Cooley-Tukey radix-2 Decimation in Time (DIT) FFT algorithm [-> wikipedia <-](https://en.wikipedia.org/wiki/Cooley%E2%80%93Tukey_FFT_algorithm);
 - **ComputePi**: Computes Pi with the Madhava-Leibniz formula [-> wikipedia <-](https://en.wikipedia.org/wiki/Leibniz_formula_for_pi);
 - **ComputeSinCos**: Computes $sin(\pi/12)$ and $cos(\pi/6)$ via the Taylor expansion of Cosine [-> wikipedia <-](https://en.wikipedia.org/wiki/Taylor_series);
 - **ComputeSqrt**: Compute the Square root of a provided number with the Newton-Raphson method [-> wikipedia <-](https://en.wikipedia.org/wiki/Newton%27s_method);
@@ -69,6 +70,22 @@ The specific versions of the tools used in this project were chosed to let both 
 - **TAFFO**: master branch pre-merge of spring 2023 https://github.com/TAFFO-org/TAFFO/tree/0a8cb2d7d699977f9ae3894493b95f3098e7a067<br>
     The lastest "master" branch was used as well whenever possible, but it uses LLVM-15, thus it is often incompatible with PandA-Bambu's LLVM-12. The version at the link instead uses LLVM-12 as well.
 - **PandA-Bambu**: AppImage released in early 2023 https://github.com/ferrandi/PandA-bambu/releases/tag/v2023.1
+
+### Coding conventions
+
+- Write the program as a function, its call-tree will be entirely synthesized. Lets call it "root function".
+- Within the code to be synthesized, avoid using arrays whose size is not known at compile-time.
+- Within the code to be synthesized, avoid using I/O related instructions, only rely on the pointers given as parameters or return.
+- Within the code to be synthesized, avoid avoid using recursion, convert it into iteration.
+- From the root function, to return a scalar values you can utilize "return", otherwise pass as argument a pointer to an array where the results will be written, avoid using "malloc".
+- Utilize TAFFO's annotations only within the root function and the one it calls, do not annotate the root function's definition itself.
+- Optionally, write a test-main that utilizes such function, giving it realistic inputs and printing the results.
+
+If Verilator's simulation fails, utilize verbosity level 4 "-v 4" and check which outputs differ from expected ones.
+Likely the cause is too-large floating point values, try reducing the upper and lower bounds for values used in the testbenches below those specified in TAFFO's "scalar(range())".<br>
+Since you are forced to use array lengths known at compile time, even when not making use of an entire array, make sure to initialize it to valid values (usually 0), this is especially true for testbench values.
+
+### CLI commands overview
 
 Here are the main commands used to generate the LLVM-IR, run the HLS and the simulations.
 
