@@ -122,7 +122,7 @@ This procedure will produce two sub-folders in each test’s folder:
 - synthesis_with_opt
 - synthesis_no_opt
 
-They respectively contain the output of PandA-Bambu [and, in enabled, Vivado] for the test with TAFFO’s optimization and without it.
+They respectively contain the output of PandA-Bambu (and, if enabled, Vivado) for the test with TAFFO’s optimization and without it.
 
 ### Options for `run_tests.sh`:
 - `--use=all` : runs all the tests.
@@ -143,4 +143,4 @@ Copying from PandA-Bambu:<br>
 - `--no-opt` : does NOT run through PandA, and Vivado, if enabled, the TAFFO-optimized versions of the tests. 
 - `--no-unopt` : does NOT run through PandA, and Vivado, if enabled, the versions of the tests NOT optimized by TAFFO.
 
-The usage of `--no-regen-taffo` is suggested, as currently some of the `.ll` files were produced with TAFFO's develop branch, and other with the last version of TAFFO that used LLVM-12.
+The usage of `--no-regen-taffo` is highly suggested, as currently some of the `.ll` files were produced with TAFFO's develop branch, and other with the last version of TAFFO that used LLVM-12.

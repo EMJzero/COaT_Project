@@ -27,7 +27,7 @@ fi
 
 # Check if the environment variable BAMBU exists
 if [ -z "$BAMBU" ]; then
-  echo "Error: Environment variable BAMBU is not set."
+  echo "Error: Environment variable BAMBU is not set. Set it to the path of PandA-Bambu's executable or AppImage."
   exit 1
 fi
 
@@ -36,6 +36,7 @@ fi
 path_names=(
   "ComputeConvexHull/max100pts,computeConvexHull"
   "ComputeConvexHull/max1000pts,computeConvexHull"
+  "ComputeFFT,fftWrapper"
   "ComputePi,compute_pi"
   "ComputeSinCos,manual_cos"
   "ComputeSqrt,NRsqrt"

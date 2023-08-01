@@ -1,4 +1,4 @@
-; ModuleID = '/tmp/tmp.oFbrrxIq5c/test.ll.4.taffotmp.ll'
+; ModuleID = '/tmp/tmp.C7buuI8Mpe/test.ll.4.taffotmp.ll'
 source_filename = "test.c"
 target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
 target triple = "x86_64-pc-linux-gnu"
@@ -16,23 +16,24 @@ target triple = "x86_64-pc-linux-gnu"
 @.str.11 = private unnamed_addr constant [29 x i8] c"Double check %d: %.4f, %.4f\0A\00", align 1, !taffo.info !2
 @.str.12 = private unnamed_addr constant [33 x i8] c"Transformation: %d: %.4f+i*%.4f\0A\00", align 1, !taffo.info !6
 @.str.15 = private unnamed_addr constant [26 x i8] c"Wrapper: %d: %.4f+i*%.4f\0A\00", align 1, !taffo.info !8
-@.str.16 = private unnamed_addr constant [3 x i8] c"w+\00", align 1, !taffo.info !10
+@.str.16 = private unnamed_addr constant [29 x i8] c"Error: missing output file.\0A\00", align 1, !taffo.info !2
+@.str.17 = private unnamed_addr constant [3 x i8] c"w+\00", align 1, !taffo.info !10
 @x_real = internal global float* null, align 8
 @x_imag = internal global float* null, align 8
 @f_real = internal global float* null, align 8
 @f_imag = internal global float* null, align 8
 @indices = internal global i32* null, align 8
-@.str.17 = private unnamed_addr constant [53 x i8] c"cannot allocate memory for the triangle coordinates\0A\00", align 1, !taffo.info !12
-@.str.18 = private unnamed_addr constant [25 x i8] c"Element %d: %.4f+i*%.4f\0A\00", align 1, !taffo.info !6
-@.str.19 = private unnamed_addr constant [15 x i8] c"%.4f %.4f, %d\0A\00", align 1, !taffo.info !14
+@.str.18 = private unnamed_addr constant [53 x i8] c"cannot allocate memory for the triangle coordinates\0A\00", align 1, !taffo.info !12
+@.str.19 = private unnamed_addr constant [25 x i8] c"Element %d: %.4f+i*%.4f\0A\00", align 1, !taffo.info !6
+@.str.20 = private unnamed_addr constant [15 x i8] c"%.4f %.4f, %d\0A\00", align 1, !taffo.info !14
 
 ; Function Attrs: noinline nounwind uwtable
 define dso_local void @fftSinCos(float noundef %x, float* noundef %s, float* noundef %c) #0 !taffo.initweight !22 !taffo.equivalentChild !23 !taffo.funinfo !24 {
 entry:
   %0 = fmul float 0x41E0000000000000, %x, !taffo.info !25
-  %conv.u1_31fixp = fptoui float %0 to i32, !taffo.info !25
+  %conv5.u1_31fixp = fptoui float %0 to i32, !taffo.info !25
   %1 = fmul float 0x41E0000000000000, %x, !taffo.info !25
-  %conv5.u1_31fixp = fptoui float %1 to i32, !taffo.info !25
+  %conv.u1_31fixp = fptoui float %1 to i32, !taffo.info !25
   %2 = sext i32 -1686629714 to i64
   %3 = zext i32 %conv.u1_31fixp to i64, !taffo.info !25
   %4 = mul i64 %2, %3, !taffo.info !28, !taffo.constinfo !30
@@ -761,86 +762,94 @@ for.end34:                                        ; preds = %for.cond18
 ; Function Attrs: noinline nounwind uwtable
 define dso_local i32 @main(i32 noundef %argc, i8** noundef %argv) #0 !taffo.initweight !135 !taffo.funinfo !136 {
 entry:
-  %arrayidx = getelementptr inbounds i8*, i8** %argv, i64 1
-  %0 = load i8*, i8** %arrayidx, align 8
-  %call = call noalias %struct._IO_FILE* @fopen(i8* noundef %0, i8* noundef getelementptr inbounds ([3 x i8], [3 x i8]* @.str.16, i64 0, i64 0)), !taffo.constinfo !146
-  store %struct._IO_FILE* %call, %struct._IO_FILE** @output, align 8, !taffo.constinfo !34
-  %call1 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
-  %1 = bitcast i8* %call1 to float*
-  store float* %1, float** @x_real, align 8, !taffo.constinfo !34
-  %call2 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
-  %2 = bitcast i8* %call2 to float*
-  store float* %2, float** @x_imag, align 8, !taffo.constinfo !34
-  %call3 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
-  %3 = bitcast i8* %call3 to float*
-  store float* %3, float** @f_real, align 8, !taffo.constinfo !34
-  %call4 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
-  %4 = bitcast i8* %call4 to float*
-  store float* %4, float** @f_imag, align 8, !taffo.constinfo !34
-  %call5 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
-  %5 = bitcast i8* %call5 to i32*
-  store i32* %5, i32** @indices, align 8, !taffo.constinfo !34
-  %6 = load float*, float** @x_real, align 8
-  %cmp = icmp eq float* %6, null
-  br i1 %cmp, label %if.then, label %lor.lhs.false
+  %cmp = icmp slt i32 %argc, 2
+  br i1 %cmp, label %if.then, label %if.end
 
-lor.lhs.false:                                    ; preds = %entry
-  %7 = load float*, float** @x_real, align 8
-  %cmp6 = icmp eq float* %7, null
-  br i1 %cmp6, label %if.then, label %lor.lhs.false7
-
-lor.lhs.false7:                                   ; preds = %lor.lhs.false
-  %8 = load float*, float** @f_real, align 8
-  %cmp8 = icmp eq float* %8, null
-  br i1 %cmp8, label %if.then, label %lor.lhs.false9
-
-lor.lhs.false9:                                   ; preds = %lor.lhs.false7
-  %9 = load float*, float** @f_real, align 8
-  %cmp10 = icmp eq float* %9, null
-  br i1 %cmp10, label %if.then, label %lor.lhs.false11
-
-lor.lhs.false11:                                  ; preds = %lor.lhs.false9
-  %10 = load i32*, i32** @indices, align 8
-  %cmp12 = icmp eq i32* %10, null
-  br i1 %cmp12, label %if.then, label %if.end
-
-if.then:                                          ; preds = %lor.lhs.false11, %lor.lhs.false9, %lor.lhs.false7, %lor.lhs.false, %entry
-  %11 = load %struct._IO_FILE*, %struct._IO_FILE** @output, align 8
-  %call13 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* noundef %11, i8* noundef getelementptr inbounds ([53 x i8], [53 x i8]* @.str.17, i64 0, i64 0)), !taffo.constinfo !146
+if.then:                                          ; preds = %entry
+  %call = call i32 (i8*, ...) @printf(i8* noundef getelementptr inbounds ([29 x i8], [29 x i8]* @.str.16, i64 0, i64 0)), !taffo.constinfo !34
   br label %return
 
-if.end:                                           ; preds = %lor.lhs.false11
+if.end:                                           ; preds = %entry
+  %arrayidx = getelementptr inbounds i8*, i8** %argv, i64 1
+  %0 = load i8*, i8** %arrayidx, align 8
+  %call1 = call noalias %struct._IO_FILE* @fopen(i8* noundef %0, i8* noundef getelementptr inbounds ([3 x i8], [3 x i8]* @.str.17, i64 0, i64 0)), !taffo.constinfo !146
+  store %struct._IO_FILE* %call1, %struct._IO_FILE** @output, align 8, !taffo.constinfo !34
+  %call2 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
+  %1 = bitcast i8* %call2 to float*
+  store float* %1, float** @x_real, align 8, !taffo.constinfo !34
+  %call3 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
+  %2 = bitcast i8* %call3 to float*
+  store float* %2, float** @x_imag, align 8, !taffo.constinfo !34
+  %call4 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
+  %3 = bitcast i8* %call4 to float*
+  store float* %3, float** @f_real, align 8, !taffo.constinfo !34
+  %call5 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
+  %4 = bitcast i8* %call5 to float*
+  store float* %4, float** @f_imag, align 8, !taffo.constinfo !34
+  %call6 = call noalias i8* @malloc(i64 noundef 64) #6, !taffo.constinfo !34
+  %5 = bitcast i8* %call6 to i32*
+  store i32* %5, i32** @indices, align 8, !taffo.constinfo !34
+  %6 = load float*, float** @x_real, align 8
+  %cmp7 = icmp eq float* %6, null
+  br i1 %cmp7, label %if.then15, label %lor.lhs.false
+
+lor.lhs.false:                                    ; preds = %if.end
+  %7 = load float*, float** @x_real, align 8
+  %cmp8 = icmp eq float* %7, null
+  br i1 %cmp8, label %if.then15, label %lor.lhs.false9
+
+lor.lhs.false9:                                   ; preds = %lor.lhs.false
+  %8 = load float*, float** @f_real, align 8
+  %cmp10 = icmp eq float* %8, null
+  br i1 %cmp10, label %if.then15, label %lor.lhs.false11
+
+lor.lhs.false11:                                  ; preds = %lor.lhs.false9
+  %9 = load float*, float** @f_real, align 8
+  %cmp12 = icmp eq float* %9, null
+  br i1 %cmp12, label %if.then15, label %lor.lhs.false13
+
+lor.lhs.false13:                                  ; preds = %lor.lhs.false11
+  %10 = load i32*, i32** @indices, align 8
+  %cmp14 = icmp eq i32* %10, null
+  br i1 %cmp14, label %if.then15, label %if.end17
+
+if.then15:                                        ; preds = %lor.lhs.false13, %lor.lhs.false11, %lor.lhs.false9, %lor.lhs.false, %if.end
+  %11 = load %struct._IO_FILE*, %struct._IO_FILE** @output, align 8
+  %call16 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* noundef %11, i8* noundef getelementptr inbounds ([53 x i8], [53 x i8]* @.str.18, i64 0, i64 0)), !taffo.constinfo !146
+  br label %return
+
+if.end17:                                         ; preds = %lor.lhs.false13
   br label %for.cond
 
-for.cond:                                         ; preds = %for.inc, %if.end
-  %i.0 = phi i32 [ 0, %if.end ], [ %inc, %for.inc ]
-  %cmp14 = icmp slt i32 %i.0, 16
-  br i1 %cmp14, label %for.body, label %for.end
+for.cond:                                         ; preds = %for.inc, %if.end17
+  %i.0 = phi i32 [ 0, %if.end17 ], [ %inc, %for.inc ]
+  %cmp18 = icmp slt i32 %i.0, 16
+  br i1 %cmp18, label %for.body, label %for.end
 
 for.body:                                         ; preds = %for.cond
-  %cmp15 = icmp slt i32 %i.0, 8
-  %cond = select i1 %cmp15, double 1.000000e+00, double 0.000000e+00
+  %cmp19 = icmp slt i32 %i.0, 8
+  %cond = select i1 %cmp19, double 1.000000e+00, double 0.000000e+00
   %conv = fptrunc double %cond to float
   %12 = load float*, float** @x_real, align 8
   %idxprom = sext i32 %i.0 to i64
-  %arrayidx16 = getelementptr inbounds float, float* %12, i64 %idxprom
-  store float %conv, float* %arrayidx16, align 4
+  %arrayidx20 = getelementptr inbounds float, float* %12, i64 %idxprom
+  store float %conv, float* %arrayidx20, align 4
   %13 = load float*, float** @x_imag, align 8
-  %idxprom17 = sext i32 %i.0 to i64
-  %arrayidx18 = getelementptr inbounds float, float* %13, i64 %idxprom17
-  store float 0.000000e+00, float* %arrayidx18, align 4, !taffo.constinfo !147
+  %idxprom21 = sext i32 %i.0 to i64
+  %arrayidx22 = getelementptr inbounds float, float* %13, i64 %idxprom21
+  store float 0.000000e+00, float* %arrayidx22, align 4, !taffo.constinfo !147
   %14 = load %struct._IO_FILE*, %struct._IO_FILE** @output, align 8
   %15 = load float*, float** @x_real, align 8
-  %idxprom19 = sext i32 %i.0 to i64
-  %arrayidx20 = getelementptr inbounds float, float* %15, i64 %idxprom19
-  %16 = load float, float* %arrayidx20, align 4
-  %conv21 = fpext float %16 to double
+  %idxprom23 = sext i32 %i.0 to i64
+  %arrayidx24 = getelementptr inbounds float, float* %15, i64 %idxprom23
+  %16 = load float, float* %arrayidx24, align 4
+  %conv25 = fpext float %16 to double
   %17 = load float*, float** @x_imag, align 8
-  %idxprom22 = sext i32 %i.0 to i64
-  %arrayidx23 = getelementptr inbounds float, float* %17, i64 %idxprom22
-  %18 = load float, float* %arrayidx23, align 4
-  %conv24 = fpext float %18 to double
-  %call25 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* noundef %14, i8* noundef getelementptr inbounds ([25 x i8], [25 x i8]* @.str.18, i64 0, i64 0), i32 noundef %i.0, double noundef %conv21, double noundef %conv24), !taffo.constinfo !99
+  %idxprom26 = sext i32 %i.0 to i64
+  %arrayidx27 = getelementptr inbounds float, float* %17, i64 %idxprom26
+  %18 = load float, float* %arrayidx27, align 4
+  %conv28 = fpext float %18 to double
+  %call29 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* noundef %14, i8* noundef getelementptr inbounds ([25 x i8], [25 x i8]* @.str.19, i64 0, i64 0), i32 noundef %i.0, double noundef %conv25, double noundef %conv28), !taffo.constinfo !99
   br label %for.inc
 
 for.inc:                                          ; preds = %for.body
@@ -854,68 +863,70 @@ for.end:                                          ; preds = %for.cond
   %22 = load float*, float** @f_real, align 8
   %23 = load float*, float** @f_imag, align 8
   call void @radix2DitCooleyTykeyFftWrapper(i32* noundef %19, float* noundef %20, float* noundef %21, float* noundef %22, float* noundef %23), !taffo.constinfo !99
-  br label %for.cond26
+  br label %for.cond30
 
-for.cond26:                                       ; preds = %for.inc39, %for.end
-  %i.1 = phi i32 [ 0, %for.end ], [ %inc40, %for.inc39 ]
-  %cmp27 = icmp slt i32 %i.1, 16
-  br i1 %cmp27, label %for.body29, label %for.end41
+for.cond30:                                       ; preds = %for.inc43, %for.end
+  %i.1 = phi i32 [ 0, %for.end ], [ %inc44, %for.inc43 ]
+  %cmp31 = icmp slt i32 %i.1, 16
+  br i1 %cmp31, label %for.body33, label %for.end45
 
-for.body29:                                       ; preds = %for.cond26
+for.body33:                                       ; preds = %for.cond30
   %24 = load %struct._IO_FILE*, %struct._IO_FILE** @output, align 8
   %25 = load float*, float** @f_real, align 8
-  %idxprom30 = sext i32 %i.1 to i64
-  %arrayidx31 = getelementptr inbounds float, float* %25, i64 %idxprom30
-  %26 = load float, float* %arrayidx31, align 4
-  %conv32 = fpext float %26 to double
+  %idxprom34 = sext i32 %i.1 to i64
+  %arrayidx35 = getelementptr inbounds float, float* %25, i64 %idxprom34
+  %26 = load float, float* %arrayidx35, align 4
+  %conv36 = fpext float %26 to double
   %27 = load float*, float** @f_imag, align 8
-  %idxprom33 = sext i32 %i.1 to i64
-  %arrayidx34 = getelementptr inbounds float, float* %27, i64 %idxprom33
-  %28 = load float, float* %arrayidx34, align 4
-  %conv35 = fpext float %28 to double
+  %idxprom37 = sext i32 %i.1 to i64
+  %arrayidx38 = getelementptr inbounds float, float* %27, i64 %idxprom37
+  %28 = load float, float* %arrayidx38, align 4
+  %conv39 = fpext float %28 to double
   %29 = load i32*, i32** @indices, align 8
-  %idxprom36 = sext i32 %i.1 to i64
-  %arrayidx37 = getelementptr inbounds i32, i32* %29, i64 %idxprom36
-  %30 = load i32, i32* %arrayidx37, align 4
-  %call38 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* noundef %24, i8* noundef getelementptr inbounds ([15 x i8], [15 x i8]* @.str.19, i64 0, i64 0), double noundef %conv32, double noundef %conv35, i32 noundef %30), !taffo.constinfo !99
-  br label %for.inc39
+  %idxprom40 = sext i32 %i.1 to i64
+  %arrayidx41 = getelementptr inbounds i32, i32* %29, i64 %idxprom40
+  %30 = load i32, i32* %arrayidx41, align 4
+  %call42 = call i32 (%struct._IO_FILE*, i8*, ...) @fprintf(%struct._IO_FILE* noundef %24, i8* noundef getelementptr inbounds ([15 x i8], [15 x i8]* @.str.20, i64 0, i64 0), double noundef %conv36, double noundef %conv39, i32 noundef %30), !taffo.constinfo !99
+  br label %for.inc43
 
-for.inc39:                                        ; preds = %for.body29
-  %inc40 = add nsw i32 %i.1, 1, !taffo.constinfo !34
-  br label %for.cond26, !llvm.loop !149
+for.inc43:                                        ; preds = %for.body33
+  %inc44 = add nsw i32 %i.1, 1, !taffo.constinfo !34
+  br label %for.cond30, !llvm.loop !149
 
-for.end41:                                        ; preds = %for.cond26
+for.end45:                                        ; preds = %for.cond30
   %31 = load %struct._IO_FILE*, %struct._IO_FILE** @output, align 8
-  %call42 = call i32 (%struct._IO_FILE*, ...) bitcast (i32 (...)* @close to i32 (%struct._IO_FILE*, ...)*)(%struct._IO_FILE* noundef %31), !taffo.constinfo !34
+  %call46 = call i32 @fclose(%struct._IO_FILE* noundef %31), !taffo.constinfo !34
   br label %return
 
-return:                                           ; preds = %for.end41, %if.then
-  %retval.0 = phi i32 [ -1, %if.then ], [ 0, %for.end41 ]
+return:                                           ; preds = %for.end45, %if.then15, %if.then
+  %retval.0 = phi i32 [ 0, %if.then ], [ -1, %if.then15 ], [ 0, %for.end45 ]
   ret i32 %retval.0
 }
+
+declare !taffo.initweight !37 !taffo.funinfo !38 i32 @printf(i8* noundef, ...) #2
 
 declare !taffo.initweight !135 !taffo.funinfo !136 noalias %struct._IO_FILE* @fopen(i8* noundef, i8* noundef) #2
 
 ; Function Attrs: nounwind allocsize(0)
 declare !taffo.initweight !37 !taffo.funinfo !38 noalias i8* @malloc(i64 noundef) #4
 
-declare !taffo.initweight !150 !taffo.funinfo !150 i32 @close(...) #2
+declare !taffo.initweight !37 !taffo.funinfo !38 i32 @fclose(%struct._IO_FILE* noundef) #2
 
 ; Function Attrs: noinline nounwind uwtable
-define internal void @calcFftIndices.1(i32* noundef %indices) #0 !taffo.initweight !89 !taffo.equivalentChild !151 !taffo.funinfo !152 !taffo.sourceFunction !90 {
+define internal void @calcFftIndices.1(i32* noundef %indices) #0 !taffo.initweight !89 !taffo.equivalentChild !150 !taffo.funinfo !151 !taffo.sourceFunction !90 {
 entry:
   %call = call float @manual_log2(float noundef 1.600000e+01), !taffo.info !75, !taffo.constinfo !78
   %conv = fptosi float %call to i32, !taffo.info !75
   %arrayidx = getelementptr inbounds i32, i32* %indices, i64 0, !taffo.info !87, !taffo.initweight !97
   store i32 0, i32* %arrayidx, align 4, !taffo.info !87, !taffo.initweight !98, !taffo.constinfo !34
-  %sub = sub nsw i32 %conv, 1, !taffo.info !153, !taffo.constinfo !34
-  %shl = shl i32 1, %sub, !taffo.info !155, !taffo.constinfo !34
+  %sub = sub nsw i32 %conv, 1, !taffo.info !152, !taffo.constinfo !34
+  %shl = shl i32 1, %sub, !taffo.info !154, !taffo.constinfo !34
   %arrayidx1 = getelementptr inbounds i32, i32* %indices, i64 1, !taffo.info !87, !taffo.initweight !97
   store i32 %shl, i32* %arrayidx1, align 4, !taffo.info !87, !taffo.initweight !98
   br label %for.cond
 
 for.cond:                                         ; preds = %for.inc18, %entry
-  %i.0 = phi i32 [ 1, %entry ], [ %inc19, %for.inc18 ], !taffo.info !157
+  %i.0 = phi i32 [ 1, %entry ], [ %inc19, %for.inc18 ], !taffo.info !156
   %cmp = icmp slt i32 %i.0, %conv, !taffo.info !44
   br i1 %cmp, label %for.body, label %for.end20
 
@@ -924,7 +935,7 @@ for.body:                                         ; preds = %for.cond
   br label %for.cond4
 
 for.cond4:                                        ; preds = %for.inc, %for.body
-  %j.0 = phi i32 [ %shl3, %for.body ], [ %inc, %for.inc ], !taffo.info !159
+  %j.0 = phi i32 [ %shl3, %for.body ], [ %inc, %for.inc ], !taffo.info !158
   %add = add nsw i32 %i.0, 1, !taffo.info !52, !taffo.constinfo !34
   %shl5 = shl i32 1, %add, !taffo.info !129, !taffo.constinfo !34
   %cmp6 = icmp slt i32 %j.0, %shl5, !taffo.info !47
@@ -937,31 +948,31 @@ for.body8:                                        ; preds = %for.cond4
   %arrayidx11 = getelementptr inbounds i32, i32* %indices, i64 %idxprom, !taffo.info !87, !taffo.initweight !97
   %0 = load i32, i32* %arrayidx11, align 4, !taffo.info !87, !taffo.initweight !98
   %add12 = add nsw i32 %i.0, 1, !taffo.info !52, !taffo.constinfo !34
-  %sub13 = sub nsw i32 %conv, %add12, !taffo.info !161
-  %shl14 = shl i32 1, %sub13, !taffo.info !163, !taffo.constinfo !34
-  %add15 = add nsw i32 %0, %shl14, !taffo.info !87, !taffo.initweight !165
+  %sub13 = sub nsw i32 %conv, %add12, !taffo.info !160
+  %shl14 = shl i32 1, %sub13, !taffo.info !162, !taffo.constinfo !34
+  %add15 = add nsw i32 %0, %shl14, !taffo.info !87, !taffo.initweight !164
   %idxprom16 = sext i32 %j.0 to i64, !taffo.info !52
   %arrayidx17 = getelementptr inbounds i32, i32* %indices, i64 %idxprom16, !taffo.info !87, !taffo.initweight !97
   store i32 %add15, i32* %arrayidx17, align 4, !taffo.info !87, !taffo.initweight !98
   br label %for.inc
 
 for.inc:                                          ; preds = %for.body8
-  %inc = add nsw i32 %j.0, 1, !taffo.info !166, !taffo.constinfo !34
-  br label %for.cond4, !llvm.loop !168
+  %inc = add nsw i32 %j.0, 1, !taffo.info !165, !taffo.constinfo !34
+  br label %for.cond4, !llvm.loop !167
 
 for.end:                                          ; preds = %for.cond4
   br label %for.inc18
 
 for.inc18:                                        ; preds = %for.end
   %inc19 = add nsw i32 %i.0, 1, !taffo.info !52, !taffo.constinfo !34
-  br label %for.cond, !llvm.loop !169
+  br label %for.cond, !llvm.loop !168
 
 for.end20:                                        ; preds = %for.cond
   ret void
 }
 
 ; Function Attrs: noinline nounwind uwtable
-define internal void @calcFftIndices.1.4(i32* noundef %indices) #0 !taffo.initweight !89 !taffo.funinfo !152 !taffo.sourceFunction !77 {
+define internal void @calcFftIndices.1.4(i32* noundef %indices) #0 !taffo.initweight !89 !taffo.funinfo !151 !taffo.sourceFunction !77 {
 entry:
   %call = call float @manual_log2(float noundef 1.600000e+01), !taffo.constinfo !78
   %conv = fptosi float %call to i32
@@ -974,7 +985,7 @@ entry:
   br label %for.cond
 
 for.cond:                                         ; preds = %for.inc18, %entry
-  %i.0 = phi i32 [ 1, %entry ], [ %inc19, %for.inc18 ], !taffo.info !157
+  %i.0 = phi i32 [ 1, %entry ], [ %inc19, %for.inc18 ], !taffo.info !156
   %cmp = icmp slt i32 %i.0, %conv, !taffo.info !44
   br i1 %cmp, label %for.body, label %for.end20
 
@@ -983,7 +994,7 @@ for.body:                                         ; preds = %for.cond
   br label %for.cond4
 
 for.cond4:                                        ; preds = %for.inc, %for.body
-  %j.0 = phi i32 [ %shl3, %for.body ], [ %inc, %for.inc ], !taffo.info !159
+  %j.0 = phi i32 [ %shl3, %for.body ], [ %inc, %for.inc ], !taffo.info !158
   %add = add nsw i32 %i.0, 1, !taffo.info !52, !taffo.constinfo !34
   %shl5 = shl i32 1, %add, !taffo.info !129, !taffo.constinfo !34
   %cmp6 = icmp slt i32 %j.0, %shl5, !taffo.info !47
@@ -998,61 +1009,61 @@ for.body8:                                        ; preds = %for.cond4
   %add12 = add nsw i32 %i.0, 1, !taffo.info !52, !taffo.constinfo !34
   %sub13 = sub nsw i32 %conv, %add12
   %shl14 = shl i32 1, %sub13, !taffo.constinfo !34
-  %add15 = add nsw i32 %0, %shl14, !taffo.info !87, !taffo.initweight !165
+  %add15 = add nsw i32 %0, %shl14, !taffo.info !87, !taffo.initweight !164
   %idxprom16 = sext i32 %j.0 to i64, !taffo.info !52
   %arrayidx17 = getelementptr inbounds i32, i32* %indices, i64 %idxprom16, !taffo.info !87, !taffo.initweight !97
   store i32 %add15, i32* %arrayidx17, align 4, !taffo.info !87, !taffo.initweight !98
   br label %for.inc
 
 for.inc:                                          ; preds = %for.body8
-  %inc = add nsw i32 %j.0, 1, !taffo.info !166, !taffo.constinfo !34
-  br label %for.cond4, !llvm.loop !170
+  %inc = add nsw i32 %j.0, 1, !taffo.info !165, !taffo.constinfo !34
+  br label %for.cond4, !llvm.loop !169
 
 for.end:                                          ; preds = %for.cond4
   br label %for.inc18
 
 for.inc18:                                        ; preds = %for.end
   %inc19 = add nsw i32 %i.0, 1, !taffo.info !52, !taffo.constinfo !34
-  br label %for.cond, !llvm.loop !171
+  br label %for.cond, !llvm.loop !170
 
 for.end20:                                        ; preds = %for.cond
   ret void
 }
 
 ; Function Attrs: noinline nounwind uwtable
-define internal void @fftSinCos.2_fixp(i32 noundef %x.u22_10fixp, i32* noundef %s.s2_30fixp, i32* noundef %c.s2_30fixp) #0 !taffo.initweight !172 !taffo.equivalentChild !173 !taffo.funinfo !174 !taffo.sourceFunction !177 {
+define internal void @fftSinCos.2_fixp(i32 noundef %x.u22_10fixp, i32* noundef %s.s2_30fixp, i32* noundef %c.s2_30fixp) #0 !taffo.initweight !171 !taffo.equivalentChild !172 !taffo.funinfo !173 !taffo.sourceFunction !176 {
 entry:
   %conv.u1_31fixp = shl i32 %x.u22_10fixp, 21, !taffo.info !25
   %0 = sext i32 -1686629714 to i64
   %1 = zext i32 %conv.u1_31fixp to i64, !taffo.info !25
-  %2 = mul i64 %0, %1, !taffo.info !178, !taffo.constinfo !30
-  %3 = ashr i64 %2, 31, !taffo.info !178, !taffo.constinfo !30
-  %mul.s4_28fixp = trunc i64 %3 to i32, !taffo.info !181
-  %4 = sitofp i32 %mul.s4_28fixp to double, !taffo.info !181
-  %5 = fdiv double %4, 0x41B0000000000000, !taffo.info !181
-  %call.flt = call double @sin(double noundef %5) #5, !taffo.info !183, !taffo.initweight !33, !taffo.constinfo !34
-  %6 = fmul double 0x41B0000000000000, %call.flt, !taffo.info !183, !taffo.constinfo !34
-  %call.flt.fallback.s4_28fixp = fptosi double %6 to i32, !taffo.info !183
-  %conv4.s2_30fixp = shl i32 %call.flt.fallback.s4_28fixp, 2, !taffo.info !184
+  %2 = mul i64 %0, %1, !taffo.info !177, !taffo.constinfo !30
+  %3 = ashr i64 %2, 31, !taffo.info !177, !taffo.constinfo !30
+  %mul.s4_28fixp = trunc i64 %3 to i32, !taffo.info !180
+  %4 = sitofp i32 %mul.s4_28fixp to double, !taffo.info !180
+  %5 = fdiv double %4, 0x41B0000000000000, !taffo.info !180
+  %call.flt = call double @sin(double noundef %5) #5, !taffo.info !182, !taffo.initweight !33, !taffo.constinfo !34
+  %6 = fmul double 0x41B0000000000000, %call.flt, !taffo.info !182, !taffo.constinfo !34
+  %call.flt.fallback.s4_28fixp = fptosi double %6 to i32, !taffo.info !182
+  %conv4.s2_30fixp = shl i32 %call.flt.fallback.s4_28fixp, 2, !taffo.info !183
   store i32 %conv4.s2_30fixp, i32* %s.s2_30fixp, align 4, !taffo.info !35
   %conv5.u1_31fixp = shl i32 %x.u22_10fixp, 21, !taffo.info !25
   %7 = sext i32 -1686629714 to i64
   %8 = zext i32 %conv5.u1_31fixp to i64, !taffo.info !25
-  %9 = mul i64 %7, %8, !taffo.info !178, !taffo.constinfo !30
-  %10 = ashr i64 %9, 31, !taffo.info !178, !taffo.constinfo !30
-  %mul6.s4_28fixp = trunc i64 %10 to i32, !taffo.info !181
-  %11 = sitofp i32 %mul6.s4_28fixp to double, !taffo.info !181
-  %12 = fdiv double %11, 0x41B0000000000000, !taffo.info !181
-  %call7.flt = call double @cos(double noundef %12) #5, !taffo.info !183, !taffo.initweight !33, !taffo.constinfo !34
-  %13 = fmul double 0x41B0000000000000, %call7.flt, !taffo.info !183, !taffo.constinfo !34
-  %call7.flt.fallback.s4_28fixp = fptosi double %13 to i32, !taffo.info !183
-  %conv8.s2_30fixp = shl i32 %call7.flt.fallback.s4_28fixp, 2, !taffo.info !184
+  %9 = mul i64 %7, %8, !taffo.info !177, !taffo.constinfo !30
+  %10 = ashr i64 %9, 31, !taffo.info !177, !taffo.constinfo !30
+  %mul6.s4_28fixp = trunc i64 %10 to i32, !taffo.info !180
+  %11 = sitofp i32 %mul6.s4_28fixp to double, !taffo.info !180
+  %12 = fdiv double %11, 0x41B0000000000000, !taffo.info !180
+  %call7.flt = call double @cos(double noundef %12) #5, !taffo.info !182, !taffo.initweight !33, !taffo.constinfo !34
+  %13 = fmul double 0x41B0000000000000, %call7.flt, !taffo.info !182, !taffo.constinfo !34
+  %call7.flt.fallback.s4_28fixp = fptosi double %13 to i32, !taffo.info !182
+  %conv8.s2_30fixp = shl i32 %call7.flt.fallback.s4_28fixp, 2, !taffo.info !183
   store i32 %conv8.s2_30fixp, i32* %c.s2_30fixp, align 4, !taffo.info !35
   ret void
 }
 
 ; Function Attrs: noinline nounwind uwtable
-define internal void @radix2DitCooleyTykeyFft.3_fixp(i32* noundef %indices, %struct.Complex* noundef %x, %struct.Complex* noundef %f) #0 !taffo.initweight !185 !taffo.funinfo !186 !taffo.start !84 !taffo.sourceFunction !187 {
+define internal void @radix2DitCooleyTykeyFft.3_fixp(i32* noundef %indices, %struct.Complex* noundef %x, %struct.Complex* noundef %f) #0 !taffo.initweight !184 !taffo.funinfo !185 !taffo.start !84 !taffo.sourceFunction !186 {
 entry:
   %fftSin.s2_30fixp = alloca i32, align 4, !taffo.info !85
   %fftCos.s2_30fixp = alloca i32, align 4, !taffo.info !85
@@ -1131,7 +1142,7 @@ for.body29:                                       ; preds = %for.cond26
 
 for.inc:                                          ; preds = %for.body29
   %inc = add nsw i32 %i25.0, 1, !taffo.info !113, !taffo.constinfo !34
-  br label %for.cond26, !llvm.loop !188
+  br label %for.cond26, !llvm.loop !187
 
 for.end:                                          ; preds = %for.cond26
   %idxprom39 = sext i32 %add22 to i64, !taffo.info !116
@@ -1488,14 +1499,14 @@ for.end:                                          ; preds = %for.cond26
 
 for.inc217:                                       ; preds = %for.end
   %inc218 = add nsw i32 %k.0, 1, !taffo.info !106, !taffo.initweight !89, !taffo.constinfo !34
-  br label %for.cond16, !llvm.loop !189
+  br label %for.cond16, !llvm.loop !188
 
 for.end219:                                       ; preds = %for.cond16
   br label %for.inc220
 
 for.inc220:                                       ; preds = %for.end219
   %add221 = add nsw i32 %j.0, %N.0, !taffo.info !52
-  br label %for.cond12, !llvm.loop !190
+  br label %for.cond12, !llvm.loop !189
 
 for.end222:                                       ; preds = %for.cond12
   br label %for.inc223
@@ -1504,7 +1515,7 @@ for.inc223:                                       ; preds = %for.end222
   %inc224 = add nsw i32 %i.0, 1, !taffo.info !47, !taffo.constinfo !34
   %add225 = add nsw i32 %inc224, 1, !taffo.info !52, !taffo.constinfo !34
   %shl226 = shl i32 1, %add225, !taffo.info !129, !taffo.constinfo !34
-  br label %for.cond, !llvm.loop !191
+  br label %for.cond, !llvm.loop !190
 
 for.end227:                                       ; preds = %for.cond
   br label %for.cond229
@@ -1529,40 +1540,40 @@ for.body232:                                      ; preds = %for.cond229
 
 for.inc239:                                       ; preds = %for.body232
   %inc240 = add nsw i32 %i228.0, 1, !taffo.info !113, !taffo.constinfo !34
-  br label %for.cond229, !llvm.loop !192
+  br label %for.cond229, !llvm.loop !191
 
 for.end241:                                       ; preds = %for.cond229
   ret void
 }
 
 ; Function Attrs: noinline nounwind uwtable
-define internal void @fftSinCos.2.5_fixp(i32 noundef %x.u22_10fixp, i32* noundef %s.s2_30fixp, i32* noundef %c.s2_30fixp) #0 !taffo.initweight !172 !taffo.funinfo !174 !taffo.sourceFunction !23 {
+define internal void @fftSinCos.2.5_fixp(i32 noundef %x.u22_10fixp, i32* noundef %s.s2_30fixp, i32* noundef %c.s2_30fixp) #0 !taffo.initweight !171 !taffo.funinfo !173 !taffo.sourceFunction !23 {
 entry:
   %conv.u1_31fixp = shl i32 %x.u22_10fixp, 21, !taffo.info !25
   %0 = sext i32 -1686629714 to i64
   %1 = zext i32 %conv.u1_31fixp to i64, !taffo.info !25
-  %2 = mul i64 %0, %1, !taffo.info !178, !taffo.constinfo !30
-  %3 = ashr i64 %2, 31, !taffo.info !178, !taffo.constinfo !30
-  %mul.s4_28fixp = trunc i64 %3 to i32, !taffo.info !181
-  %4 = sitofp i32 %mul.s4_28fixp to double, !taffo.info !181
-  %5 = fdiv double %4, 0x41B0000000000000, !taffo.info !181
-  %call.flt = call double @sin(double noundef %5) #5, !taffo.info !183, !taffo.initweight !33, !taffo.constinfo !34
-  %6 = fmul double 0x41B0000000000000, %call.flt, !taffo.info !183, !taffo.constinfo !34
-  %call.flt.fallback.s4_28fixp = fptosi double %6 to i32, !taffo.info !183
-  %conv4.s2_30fixp = shl i32 %call.flt.fallback.s4_28fixp, 2, !taffo.info !184
+  %2 = mul i64 %0, %1, !taffo.info !177, !taffo.constinfo !30
+  %3 = ashr i64 %2, 31, !taffo.info !177, !taffo.constinfo !30
+  %mul.s4_28fixp = trunc i64 %3 to i32, !taffo.info !180
+  %4 = sitofp i32 %mul.s4_28fixp to double, !taffo.info !180
+  %5 = fdiv double %4, 0x41B0000000000000, !taffo.info !180
+  %call.flt = call double @sin(double noundef %5) #5, !taffo.info !182, !taffo.initweight !33, !taffo.constinfo !34
+  %6 = fmul double 0x41B0000000000000, %call.flt, !taffo.info !182, !taffo.constinfo !34
+  %call.flt.fallback.s4_28fixp = fptosi double %6 to i32, !taffo.info !182
+  %conv4.s2_30fixp = shl i32 %call.flt.fallback.s4_28fixp, 2, !taffo.info !183
   store i32 %conv4.s2_30fixp, i32* %s.s2_30fixp, align 4, !taffo.info !35
   %conv5.u1_31fixp = shl i32 %x.u22_10fixp, 21, !taffo.info !25
   %7 = sext i32 -1686629714 to i64
   %8 = zext i32 %conv5.u1_31fixp to i64, !taffo.info !25
-  %9 = mul i64 %7, %8, !taffo.info !178, !taffo.constinfo !30
-  %10 = ashr i64 %9, 31, !taffo.info !178, !taffo.constinfo !30
-  %mul6.s4_28fixp = trunc i64 %10 to i32, !taffo.info !181
-  %11 = sitofp i32 %mul6.s4_28fixp to double, !taffo.info !181
-  %12 = fdiv double %11, 0x41B0000000000000, !taffo.info !181
-  %call7.flt = call double @cos(double noundef %12) #5, !taffo.info !183, !taffo.initweight !33, !taffo.constinfo !34
-  %13 = fmul double 0x41B0000000000000, %call7.flt, !taffo.info !183, !taffo.constinfo !34
-  %call7.flt.fallback.s4_28fixp = fptosi double %13 to i32, !taffo.info !183
-  %conv8.s2_30fixp = shl i32 %call7.flt.fallback.s4_28fixp, 2, !taffo.info !184
+  %9 = mul i64 %7, %8, !taffo.info !177, !taffo.constinfo !30
+  %10 = ashr i64 %9, 31, !taffo.info !177, !taffo.constinfo !30
+  %mul6.s4_28fixp = trunc i64 %10 to i32, !taffo.info !180
+  %11 = sitofp i32 %mul6.s4_28fixp to double, !taffo.info !180
+  %12 = fdiv double %11, 0x41B0000000000000, !taffo.info !180
+  %call7.flt = call double @cos(double noundef %12) #5, !taffo.info !182, !taffo.initweight !33, !taffo.constinfo !34
+  %13 = fmul double 0x41B0000000000000, %call7.flt, !taffo.info !182, !taffo.constinfo !34
+  %call7.flt.fallback.s4_28fixp = fptosi double %13 to i32, !taffo.info !182
+  %conv8.s2_30fixp = shl i32 %call7.flt.fallback.s4_28fixp, 2, !taffo.info !183
   store i32 %conv8.s2_30fixp, i32* %c.s2_30fixp, align 4, !taffo.info !35
   ret void
 }
@@ -1728,46 +1739,45 @@ attributes #6 = { nounwind allocsize(0) }
 !147 = !{!42, i1 false}
 !148 = distinct !{!148, !55}
 !149 = distinct !{!149, !55}
-!150 = !{}
-!151 = !{void (i32*)* @calcFftIndices.1.4}
-!152 = !{i32 1, !87}
-!153 = !{i1 false, !154, i1 false, i2 0}
-!154 = !{double -1.000000e+00, double 1.200000e+01}
-!155 = !{i1 false, !156, i1 false, i2 0}
-!156 = !{double 0xC3E0000000000000, double 4.096000e+03}
-!157 = !{i1 false, !158, i1 false, i2 0}
-!158 = !{double 1.000000e+00, double 2.000000e+00}
-!159 = !{i1 false, !160, i1 false, i2 0}
-!160 = !{double 2.000000e+00, double 3.000000e+00}
-!161 = !{i1 false, !162, i1 false, i2 0}
-!162 = !{double -2.000000e+00, double 1.100000e+01}
-!163 = !{i1 false, !164, i1 false, i2 0}
-!164 = !{double 0x43D0000000000000, double 2.048000e+03}
-!165 = !{i32 7}
-!166 = !{i1 false, !167, i1 false, i2 0}
-!167 = !{double 3.000000e+00, double 3.000000e+00}
+!150 = !{void (i32*)* @calcFftIndices.1.4}
+!151 = !{i32 1, !87}
+!152 = !{i1 false, !153, i1 false, i2 0}
+!153 = !{double -1.000000e+00, double 1.200000e+01}
+!154 = !{i1 false, !155, i1 false, i2 0}
+!155 = !{double 0xC3E0000000000000, double 4.096000e+03}
+!156 = !{i1 false, !157, i1 false, i2 0}
+!157 = !{double 1.000000e+00, double 2.000000e+00}
+!158 = !{i1 false, !159, i1 false, i2 0}
+!159 = !{double 2.000000e+00, double 3.000000e+00}
+!160 = !{i1 false, !161, i1 false, i2 0}
+!161 = !{double -2.000000e+00, double 1.100000e+01}
+!162 = !{i1 false, !163, i1 false, i2 0}
+!163 = !{double 0x43D0000000000000, double 2.048000e+03}
+!164 = !{i32 7}
+!165 = !{i1 false, !166, i1 false, i2 0}
+!166 = !{double 3.000000e+00, double 3.000000e+00}
+!167 = distinct !{!167, !55}
 !168 = distinct !{!168, !55}
 !169 = distinct !{!169, !55}
 !170 = distinct !{!170, !55}
-!171 = distinct !{!171, !55}
-!172 = !{i32 2, i32 1, i32 1}
-!173 = distinct !{null}
-!174 = !{i32 1, !175, i32 1, !85, i32 1, !85}
-!175 = !{!176, !105, i1 false, i2 1}
-!176 = !{!"fixp", i32 32, i32 10}
-!177 = !{void (float, float*, float*)* @fftSinCos}
-!178 = !{!179, !180, i1 false, i2 -1}
-!179 = !{!"fixp", i32 -64, i32 59}
-!180 = !{double 0xC01921FB54442D18, double -0.000000e+00}
-!181 = !{!182, !180, i1 false, i2 -1}
-!182 = !{!"fixp", i32 -32, i32 28}
-!183 = !{!182, !36, i1 false, i2 -1}
-!184 = !{!86, !36, i1 false, i2 -1}
-!185 = !{i32 -1, i32 2, i32 2}
-!186 = !{i32 0, i1 false, i32 2, !93, i32 2, !93}
-!187 = !{void (i32*, %struct.Complex*, %struct.Complex*)* @radix2DitCooleyTykeyFft}
+!171 = !{i32 2, i32 1, i32 1}
+!172 = distinct !{null}
+!173 = !{i32 1, !174, i32 1, !85, i32 1, !85}
+!174 = !{!175, !105, i1 false, i2 1}
+!175 = !{!"fixp", i32 32, i32 10}
+!176 = !{void (float, float*, float*)* @fftSinCos}
+!177 = !{!178, !179, i1 false, i2 -1}
+!178 = !{!"fixp", i32 -64, i32 59}
+!179 = !{double 0xC01921FB54442D18, double -0.000000e+00}
+!180 = !{!181, !179, i1 false, i2 -1}
+!181 = !{!"fixp", i32 -32, i32 28}
+!182 = !{!181, !36, i1 false, i2 -1}
+!183 = !{!86, !36, i1 false, i2 -1}
+!184 = !{i32 -1, i32 2, i32 2}
+!185 = !{i32 0, i1 false, i32 2, !93, i32 2, !93}
+!186 = !{void (i32*, %struct.Complex*, %struct.Complex*)* @radix2DitCooleyTykeyFft}
+!187 = distinct !{!187, !55}
 !188 = distinct !{!188, !55}
 !189 = distinct !{!189, !55}
 !190 = distinct !{!190, !55}
 !191 = distinct !{!191, !55}
-!192 = distinct !{!192, !55}

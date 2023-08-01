@@ -99,10 +99,6 @@ void radix2DitCooleyTykeyFft(int* indices __attribute((annotate(ANNOTATION_RANGE
 	int j ;
 	int __attribute((annotate(ANNOTATION_RANGE_N))) k ;
 
-/*
-	double dataIn[1];
-	double dataOut[2];
-*/
 	for(i = 0, N = 1 << (i + 1); N <= K ; i++, N = 1 << (i + 1))
 	{
 		fprintf(output, "FFT: %d: %.4f+i*%.4f\n", i, x[i].real, x[i].imag);
@@ -114,21 +110,9 @@ void radix2DitCooleyTykeyFft(int* indices __attribute((annotate(ANNOTATION_RANGE
 				arg = (float)k / N ;
 				eI = j + k ;
 				oI = j + step + k ;
-/*
-				dataIn[0] = arg;
 
-#pragma parrot(input, "fft", [1]dataIn)
-*/
 				fftSinCos(arg, &fftSin, &fftCos);
-/*
-				dataOut[0] = fftSin;
-				dataOut[1] = fftCos;
 
-#pragma parrot(output, "fft", [2]<0.0; 2.0>dataOut)
-
-				fftSin = dataOut[0];
-				fftCos = dataOut[1];
-*/
 				// Non-approximate
 				for(int i = 0; i < K; i++)
 				{
@@ -201,7 +185,13 @@ int main(int argc, char* argv[])
 {
 	int i ;
 
-	char* outputFilename 	= argv[1];
+	if(argc < 2)
+	{
+		printf("Error: missing output file.\n");
+		return 0;
+	}
+
+	char* outputFilename = argv[1];
 
 	// prepare the output file for writting the theta values
 	output = fopen(outputFilename, "w+");
@@ -236,7 +226,7 @@ int main(int argc, char* argv[])
 	}
 
 
-	close(output);
+	fclose(output);
 
 	return 0 ;
 }

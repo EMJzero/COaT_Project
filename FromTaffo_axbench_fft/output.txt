@@ -435,11 +435,6 @@ Fuck it: 14: 2.0000+i*2.0000
 Fuck it: 15: 2.0000+i*2.0000
 Operands 0: 2.0000, 2.0000, 1.0000, 0.0000, 0.0000
 Double check 0: -2.0000, 0.0000
-
-
-WHY ON EARTH DO YOU GO NEGATIVE, ITS A DAMN 1*2 PRODUCT!!!!
-
-
 Double check 0: 0.0000, 0.0000
 Transformation: 0: 0.0000+i*0.0000
 Operands 2: 2.0000, 2.0000, 1.0000, 0.0000, 0.0000

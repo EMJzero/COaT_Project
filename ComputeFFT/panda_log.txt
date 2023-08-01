@@ -1,0 +1,1892 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-X41TGE/usr/bin/bambu -v 2 --top-fname=fftWrapper --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2023 Politecnico di Milano
+ Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
+
+Parameters parsed in 0.19 seconds
+
+Target technology = FPGA
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3911
+  - combinational: 0
+  - others: 3911
+
+/home/zero/Desktop/COaT_project/ComputeFFT/synthesis_no_opt/../test.c:166:14: warning: implicit conversion from 'long long' to 'long' changes value from 2147483648 to -2147483648 [-Wconstant-conversion]
+    long m = 2147483648;
+         ~   ^~~~~~~~~~
+1 warning generated.
+/home/zero/Desktop/COaT_project/ComputeFFT/synthesis_no_opt/../test.c:166:14: warning: implicit conversion from 'long long' to 'long' changes value from 2147483648 to -2147483648 [-Wconstant-conversion]
+    long m = 2147483648;
+         ~   ^~~~~~~~~~
+!! Unknown ext. calls:
+llvm.var.annotation
+1 warning generated.
+  Bit Value Opt: bit_and_expr optimized, nbits = 63
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: bit_xor_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: ne_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: eq_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 40
+  Bit Value Opt: eq_expr optimized, nbits = 40
+  Bit Value Opt: bit_and_expr optimized, nbits = 48
+  Bit Value Opt: eq_expr optimized, nbits = 48
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: eq_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 54
+  Bit Value Opt: eq_expr optimized, nbits = 54
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: eq_expr optimized, nbits = 55
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: ne_expr optimized, nbits = 55
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: eq_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 51
+  Bit Value Opt: ne_expr optimized, nbits = 51
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 15
+  Bit Value Opt: bit_and_expr optimized, nbits = 7
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 15
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 15
+  Bit Value Opt: bit_and_expr optimized, nbits = 7
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: ne_expr optimized, nbits = 55
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: eq_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 51
+  Bit Value Opt: ne_expr optimized, nbits = 51
+  Bit Value Opt: bit_and_expr optimized, nbits = 41
+  Bit Value Opt: ne_expr optimized, nbits = 41
+  Bit Value Opt: bit_and_expr optimized, nbits = 12
+  Bit Value Opt: ne_expr optimized, nbits = 12
+  Bit Value Opt: bit_and_expr optimized, nbits = 53
+  Bit Value Opt: ne_expr optimized, nbits = 53
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: bit_xor_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: ne_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: eq_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 40
+  Bit Value Opt: eq_expr optimized, nbits = 40
+  Bit Value Opt: bit_and_expr optimized, nbits = 48
+  Bit Value Opt: eq_expr optimized, nbits = 48
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: eq_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 54
+  Bit Value Opt: eq_expr optimized, nbits = 54
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: eq_expr optimized, nbits = 55
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: ne_expr optimized, nbits = 55
+  Bit Value Opt: plus_expr optimized, nbits = 21
+  Bit Value Opt: cond_expr optimized, nbits = 32
+  Bit Value Opt: bit_and_expr optimized, nbits = 54
+  Bit Value Opt: lt_expr optimized, nbits = 54
+  Bit Value Opt: bit_and_expr optimized, nbits = 16
+  Bit Value Opt: eq_expr optimized, nbits = 16
+  Bit Value Opt: bit_and_expr optimized, nbits = 28
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 63
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 63
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 11
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 21
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 20
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: eq_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 63
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 20
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: eq_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 63
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: gt_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: gt_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 3
+Function call to __copysigne11m52b_1023nih inlined in __internal_scalbn
+Function call to __copysigne11m52b_1023nih inlined in __internal_scalbn
+Function call to __copysigne11m52b_1023nih inlined in __internal_scalbn
+Function call to __fabse11m52b_1023nih inlined in __internal_cos
+Function call to __float_eqe11m52b_1023nih inlined in __internal_cos
+Function call to __float_eqe11m52b_1023nih inlined in __internal_cos
+Function call to __fabse11m52b_1023nih inlined in __internal_sin
+Function call to __float_eqe11m52b_1023nih inlined in __internal_sin
+Function call to __float_eqe11m52b_1023nih inlined in __internal_sin
+
+  Functions to be synthesized:
+    __hide_kernel_sin
+    __internal_floor
+    __hide_kernel_cos
+    __internal_sin
+    __internal_cos
+    __internal_scalbn
+    fftWrapper
+    __float64_to_int32_round_to_zeroe11m52b_1023nih
+    __float_mule11m52b_1023nih
+    __float_sube11m52b_1023nih
+    __float_adde11m52b_1023nih
+    __float_gte11m52b_1023nih
+    __int32_to_float64e11m52b_1023nih
+    __float_gee11m52b_1023nih
+    __float_divSRT4e11m52b_1023nih
+
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __hide_kernel_sin
+  Adding proxy function in function __hide_kernel_cos
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __hide_kernel_sin
+  Adding proxy function in function __internal_floor
+  Adding proxy function in function __hide_kernel_cos
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __hide_kernel_sin
+  Adding proxy function in function __hide_kernel_cos
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+  Adding proxy function in function __internal_scalbn
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __hide_kernel_sin
+  Adding proxy function in function __hide_kernel_cos
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+  Adding proxy wrapper in function fftWrapper
+  Adding proxy function in function __internal_sin
+  Adding proxy function in function __internal_cos
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: __hide_ieee754_rem_pio2_two_over_pi - 429099 - __hide_ieee754_rem_pio2_two_over_pi in function __internal_sin
+    Internal variable: __hide_ieee754_rem_pio2_two_over_pi - 429099 - __hide_ieee754_rem_pio2_two_over_pi in function __internal_cos
+      Id: 429099
+      Base Address: 512
+      Size: 264
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 2
+      Maximum number of references per function: 2
+      Maximum number of loads per function: 2
+    Internal variable: __hide_ieee754_rem_pio2_npio2_hw - 431122 - __hide_ieee754_rem_pio2_npio2_hw in function __internal_sin
+    Internal variable: __hide_ieee754_rem_pio2_npio2_hw - 431122 - __hide_ieee754_rem_pio2_npio2_hw in function __internal_cos
+      Id: 431122
+      Base Address: 512
+      Size: 128
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 2
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+    Internal variable: internal_495388 - 495388 - internal_495388 in function fftWrapper
+      Id: 495388
+      Base Address: 512
+      Size: 512
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 3
+      Maximum number of loads per function: 1
+    Internal variable: internal_495440 - 495440 - internal_495440 in function fftWrapper
+      Id: 495440
+      Base Address: 512
+      Size: 512
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 3
+      Maximum number of loads per function: 1
+    Internal variable: internal_495474 - 495474 - internal_495474 in function fftWrapper
+      Id: 495474
+      Base Address: 512
+      Size: 512
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 7
+      Maximum number of loads per function: 4
+    Internal variable: internal_495589 - 495589 - internal_495589 in function fftWrapper
+      Id: 495589
+      Base Address: 512
+      Size: 512
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 7
+      Maximum number of loads per function: 4
+    Internal variable: internal_495767 - 495767 - internal_495767 in function fftWrapper
+      Id: 495767
+      Base Address: 512
+      Size: 8
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+    Internal variable: internal_495810 - 495810 - internal_495810 in function fftWrapper
+      Id: 495810
+      Base Address: 512
+      Size: 8
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+    Internal variable: internal_495823 - 495823 - internal_495823 in function fftWrapper
+      Id: 495823
+      Base Address: 512
+      Size: 8
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+    Internal variable: internal_495828 - 495828 - internal_495828 in function fftWrapper
+      Id: 495828
+      Base Address: 512
+      Size: 8
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+    Internal variable: internal_495835 - 495835 - internal_495835 in function fftWrapper
+      Id: 495835
+      Base Address: 512
+      Size: 8
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+    Internal variable: internal_495841 - 495841 - internal_495841 in function fftWrapper
+      Id: 495841
+      Base Address: 512
+      Size: 8
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+    Internal variable: internal_495870 - 495870 - internal_495870 in function fftWrapper
+      Id: 495870
+      Base Address: 512
+      Size: 8
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+      Maximum number of loads per function: 1
+    Internal variable: internal_495878 - 495878 - internal_495878 in function fftWrapper
+      Id: 495878
+      Base Address: 512
+      Size: 8
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+    Internal variable: internal_428964 - 428964 - internal_428964 in function __internal_sin
+      Id: 428964
+      Base Address: 512
+      Size: 24
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 10
+      Maximum number of loads per function: 7
+    Internal variable: internal_429075 - 429075 - internal_429075 in function __internal_sin
+      Id: 429075
+      Base Address: 512
+      Size: 160
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 19
+      Maximum number of loads per function: 17
+    Internal variable: internal_429330 - 429330 - internal_429330 in function __internal_sin
+      Id: 429330
+      Base Address: 512
+      Size: 160
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 23
+      Maximum number of loads per function: 9
+    Internal variable: internal_429756 - 429756 - internal_429756 in function __internal_sin
+      Id: 429756
+      Base Address: 512
+      Size: 80
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 32
+      Maximum number of loads per function: 21
+    Internal variable: internal_430532 - 430532 - internal_430532 in function __internal_sin
+      Id: 430532
+      Base Address: 512
+      Size: 160
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 11
+    Internal variable: internal_431756 - 431756 - internal_431756 in function __internal_cos
+      Id: 431756
+      Base Address: 512
+      Size: 24
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 10
+      Maximum number of loads per function: 7
+    Internal variable: internal_431845 - 431845 - internal_431845 in function __internal_cos
+      Id: 431845
+      Base Address: 512
+      Size: 160
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 19
+      Maximum number of loads per function: 17
+    Internal variable: internal_431962 - 431962 - internal_431962 in function __internal_cos
+      Id: 431962
+      Base Address: 512
+      Size: 160
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 23
+      Maximum number of loads per function: 9
+    Internal variable: internal_432381 - 432381 - internal_432381 in function __internal_cos
+      Id: 432381
+      Base Address: 512
+      Size: 80
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 32
+      Maximum number of loads per function: 21
+    Internal variable: internal_433128 - 433128 - internal_433128 in function __internal_cos
+      Id: 433128
+      Base Address: 512
+      Size: 160
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 11
+  This function performs unaligned accesses: fftWrapper
+Warning: This function uses unknown addresses: fftWrapper
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    Spec accesses data having an address unknown at compile time
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 32
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 4064
+  Time to perform memory allocation: 0.01 seconds
+
+
+  Module allocation information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function __float_adde11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.04 seconds
+
+
+  Module allocation information for function __float_divSRT4e11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.05 seconds
+
+
+  Module allocation information for function __float_gee11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function __float_gte11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.00 seconds
+
+
+  Module allocation information for function __float_mule11m52b_1023nih:
+    Number of complex operations: 4
+    Number of complex operations: 4
+  Time to perform module allocation: 0.04 seconds
+
+
+  Module allocation information for function __float_sube11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.04 seconds
+
+
+  Module allocation information for function __int32_to_float64e11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.03 seconds
+
+
+  Scheduling Information of function __float64_to_int32_round_to_zeroe11m52b_1023nih:
+    Number of control steps: 8
+    Minimum slack: 8.2289999989999991
+    Estimated max frequency (MHz): 564.65273824694907
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function __float64_to_int32_round_to_zeroe11m52b_1023nih:
+    Number of operations: 39
+    Number of basic blocks: 8
+    Number of states: 7
+    Minimum number of cycles: 3
+    Maximum number of cycles 5
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_adde11m52b_1023nih:
+    Number of control steps: 4
+    Minimum slack: 0.11253464066666591
+    Estimated max frequency (MHz): 101.13815458842987
+  Time to perform scheduling: 0.05 seconds
+
+
+  State Transition Graph Information of function __float_adde11m52b_1023nih:
+    Number of operations: 438
+    Number of basic blocks: 3
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_divSRT4e11m52b_1023nih:
+    Number of control steps: 5
+    Minimum slack: 2.7822999810000506
+    Estimated max frequency (MHz): 138.54829064211447
+  Time to perform scheduling: 0.02 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __float_divSRT4e11m52b_1023nih:
+    Number of operations: 212
+    Number of basic blocks: 5
+    Number of states: 3
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function __float_gee11m52b_1023nih:
+    Number of control steps: 5
+    Minimum slack: 8.4514999989999993
+    Estimated max frequency (MHz): 645.78624433594655
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function __float_gee11m52b_1023nih:
+    Number of operations: 26
+    Number of basic blocks: 5
+    Number of states: 4
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_gte11m52b_1023nih:
+    Number of control steps: 5
+    Minimum slack: 8.6344999980000026
+    Estimated max frequency (MHz): 732.33247787282085
+  Time to perform scheduling: 0.00 seconds
+
+  Number of function call sites = 3
+
+  State Transition Graph Information of function __float_gte11m52b_1023nih:
+    Number of operations: 20
+    Number of basic blocks: 5
+    Number of states: 3
+    Minimum number of cycles: 2
+    Maximum number of cycles 2
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_mule11m52b_1023nih:
+    Number of control steps: 4
+    Minimum slack: 0.048433324333333971
+    Estimated max frequency (MHz): 100.4866904469601
+  Time to perform scheduling: 0.01 seconds
+
+
+  State Transition Graph Information of function __float_mule11m52b_1023nih:
+    Number of operations: 110
+    Number of basic blocks: 3
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_sube11m52b_1023nih:
+    Number of control steps: 4
+    Minimum slack: 0.11253464066666591
+    Estimated max frequency (MHz): 101.13815458842987
+  Time to perform scheduling: 0.05 seconds
+
+
+  State Transition Graph Information of function __float_sube11m52b_1023nih:
+    Number of operations: 438
+    Number of basic blocks: 3
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function __int32_to_float64e11m52b_1023nih:
+    Number of control steps: 5
+    Minimum slack: 1.0565666486666594
+    Estimated max frequency (MHz): 111.81388184112917
+  Time to perform scheduling: 0.01 seconds
+
+
+  State Transition Graph Information of function __int32_to_float64e11m52b_1023nih:
+    Number of operations: 162
+    Number of basic blocks: 5
+    Number of states: 4
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
+    Bound operations:37/39
+  Time to perform easy binding: 0.01 seconds
+
+
+  Easy binding information for function __float_adde11m52b_1023nih:
+    Bound operations:375/438
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_divSRT4e11m52b_1023nih:
+    Bound operations:133/212
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_gee11m52b_1023nih:
+    Bound operations:22/26
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_gte11m52b_1023nih:
+    Bound operations:20/20
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_mule11m52b_1023nih:
+    Bound operations:60/110
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_sube11m52b_1023nih:
+    Bound operations:375/438
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __int32_to_float64e11m52b_1023nih:
+    Bound operations:133/162
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __float64_to_int32_round_to_zeroe11m52b_1023nih:
+    Number of storage values inserted: 10
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_adde11m52b_1023nih:
+    Number of storage values inserted: 206
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_divSRT4e11m52b_1023nih:
+    Number of storage values inserted: 21
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_gee11m52b_1023nih:
+    Number of storage values inserted: 4
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_gte11m52b_1023nih:
+    Number of storage values inserted: 3
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_mule11m52b_1023nih:
+    Number of storage values inserted: 15
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_sube11m52b_1023nih:
+    Number of storage values inserted: 206
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __int32_to_float64e11m52b_1023nih:
+    Number of storage values inserted: 4
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:6)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
+    Number of modules instantiated: 39
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 472
+    Estimated area of MUX21: 0
+    Total estimated area: 472
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:6)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float64_to_int32_round_to_zeroe11m52b_1023nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 3
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float64_to_int32_round_to_zeroe11m52b_1023nih: 128
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_adde11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 206 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_adde11m52b_1023nih:
+    Number of modules instantiated: 438
+    Number of performance conflicts: 31
+    Estimated resources area (no Muxes and address logic): 5660
+    Estimated area of MUX21: 0
+    Total estimated area: 5660
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_adde11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 206 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_adde11m52b_1023nih: 400
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_adde11m52b_1023nih: function pipelining may come for free
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_divSRT4e11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:17)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_divSRT4e11m52b_1023nih:
+    Number of modules instantiated: 212
+    Number of performance conflicts: 6
+    Estimated resources area (no Muxes and address logic): 2779
+    Estimated area of MUX21: 0
+    Total estimated area: 2779
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_divSRT4e11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:17)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float_divSRT4e11m52b_1023nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 4
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_divSRT4e11m52b_1023nih: 835
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_gee11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 4 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_gee11m52b_1023nih:
+    Number of modules instantiated: 26
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 235
+    Estimated area of MUX21: 0
+    Total estimated area: 235
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_gee11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 4 registers
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float_gee11m52b_1023nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 1
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_gee11m52b_1023nih: 129
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_gee11m52b_1023nih: function pipelining may come for free
+
+  Module binding information for function __float_gte11m52b_1023nih:
+    Number of modules instantiated: 20
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 140
+    Estimated area of MUX21: 0
+    Total estimated area: 140
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_gte11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 3 registers
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float_gte11m52b_1023nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 1
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_gte11m52b_1023nih: 66
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_gte11m52b_1023nih: function pipelining may come for free
+
+  Module allocation information for function __internal_floor:
+    Number of complex operations: 6
+    Number of complex operations: 6
+  Time to perform module allocation: 0.02 seconds
+
+
+  Scheduling Information of function __internal_floor:
+    Number of control steps: 25
+    Minimum slack: 0.1125346406666588
+    Estimated max frequency (MHz): 101.1381545884298
+  Time to perform scheduling: 0.01 seconds
+
+
+  State Transition Graph Information of function __internal_floor:
+    Number of operations: 90
+    Number of basic blocks: 13
+    Number of states: 24
+    Minimum number of cycles: 4
+    Maximum number of cycles 10
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __internal_floor:
+    Bound operations:58/90
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __internal_floor:
+    Number of storage values inserted: 28
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_mule11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 15 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_mule11m52b_1023nih:
+    Number of modules instantiated: 110
+    Number of performance conflicts: 5
+    Estimated resources area (no Muxes and address logic): 1587
+    Estimated area of MUX21: 0
+    Total estimated area: 1587
+    Estimated number of DSPs: 12
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_mule11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 15 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_mule11m52b_1023nih: 259
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_mule11m52b_1023nih: function pipelining may come for free
+
+  Module allocation information for function __internal_scalbn:
+    Number of complex operations: 6
+    Number of complex operations: 6
+  Time to perform module allocation: 0.02 seconds
+
+
+  Scheduling Information of function __internal_scalbn:
+    Number of control steps: 31
+    Minimum slack: 0.048433324333323313
+    Estimated max frequency (MHz): 100.48669044696
+  Time to perform scheduling: 0.02 seconds
+
+
+  State Transition Graph Information of function __internal_scalbn:
+    Number of operations: 136
+    Number of basic blocks: 13
+    Number of states: 30
+    Minimum number of cycles: 3
+    Maximum number of cycles 12
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __internal_scalbn:
+    Bound operations:108/136
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __internal_scalbn:
+    Number of storage values inserted: 19
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_sube11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 206 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_sube11m52b_1023nih:
+    Number of modules instantiated: 438
+    Number of performance conflicts: 31
+    Estimated resources area (no Muxes and address logic): 5660
+    Estimated area of MUX21: 0
+    Total estimated area: 5660
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_sube11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 206 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_sube11m52b_1023nih: 400
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_sube11m52b_1023nih: function pipelining may come for free
+
+  Module allocation information for function __hide_kernel_cos:
+    Number of complex operations: 27
+    Number of complex operations: 27
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function __hide_kernel_sin:
+    Number of complex operations: 23
+    Number of complex operations: 23
+  Time to perform module allocation: 0.00 seconds
+
+
+  Scheduling Information of function __hide_kernel_cos:
+    Number of control steps: 76
+    Minimum slack: 0.048433324333294892
+    Estimated max frequency (MHz): 100.48669044695971
+  Time to perform scheduling: 0.01 seconds
+
+
+  State Transition Graph Information of function __hide_kernel_cos:
+    Number of operations: 56
+    Number of basic blocks: 7
+    Number of states: 76
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __hide_kernel_sin:
+    Number of control steps: 67
+    Minimum slack: 0.048433324333294892
+    Estimated max frequency (MHz): 100.48669044695971
+  Time to perform scheduling: 0.00 seconds
+
+
+  State Transition Graph Information of function __hide_kernel_sin:
+    Number of operations: 42
+    Number of basic blocks: 7
+    Number of states: 67
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __hide_kernel_cos:
+    Bound operations:30/56
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __hide_kernel_sin:
+    Bound operations:18/42
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __hide_kernel_cos:
+    Number of storage values inserted: 32
+  Time to compute storage value information: 0.01 seconds
+
+
+  Storage Value Information of function __hide_kernel_sin:
+    Number of storage values inserted: 25
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __hide_kernel_cos:
+    Register allocation algorithm obtains a sub-optimal result: 13 registers(LB:5)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+
+  Register binding information for function __hide_kernel_cos:
+    Register allocation algorithm obtains a sub-optimal result: 13 registers(LB:5)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 2 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __hide_kernel_cos:
+    Number of modules instantiated: 33
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 8104
+    Estimated area of MUX21: 343
+    Total estimated area: 8447
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __hide_kernel_cos:
+    Register allocation algorithm obtains a sub-optimal result: 13 registers(LB:5)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __hide_kernel_cos:
+    Number of allocated multiplexers (2-to-1 equivalent): 23
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __hide_kernel_cos: 609
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __hide_kernel_sin:
+    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:4)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+
+  Register binding information for function __hide_kernel_sin:
+    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:4)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 2 completed in 0.01 seconds
+  Clique covering computation completed in 0.01 seconds
+
+  Module binding information for function __hide_kernel_sin:
+    Number of modules instantiated: 23
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 8045
+    Estimated area of MUX21: 278
+    Total estimated area: 8323
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __hide_kernel_sin:
+    Register allocation algorithm obtains a sub-optimal result: 9 registers(LB:4)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __hide_kernel_sin:
+    Number of allocated multiplexers (2-to-1 equivalent): 21
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __hide_kernel_sin: 418
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __int32_to_float64e11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 4 registers
+  Time to perform register binding: 0.01 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.01 seconds
+
+  Module binding information for function __int32_to_float64e11m52b_1023nih:
+    Number of modules instantiated: 162
+    Number of performance conflicts: 1
+    Estimated resources area (no Muxes and address logic): 729
+    Estimated area of MUX21: 0
+    Total estimated area: 729
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __int32_to_float64e11m52b_1023nih:
+    Register allocation algorithm obtains an optimal result: 4 registers
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __int32_to_float64e11m52b_1023nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 1
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __int32_to_float64e11m52b_1023nih: 50
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __int32_to_float64e11m52b_1023nih: function pipelining may come for free
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __internal_floor:
+    Register allocation algorithm obtains a sub-optimal result: 26 registers(LB:10)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+
+  Register binding information for function __internal_floor:
+    Register allocation algorithm obtains a sub-optimal result: 26 registers(LB:10)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 2 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __internal_floor:
+    Number of modules instantiated: 86
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 5284
+    Estimated area of MUX21: 0
+    Total estimated area: 5284
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __internal_floor:
+    Register allocation algorithm obtains a sub-optimal result: 26 registers(LB:10)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __internal_floor:
+    Number of allocated multiplexers (2-to-1 equivalent): 5
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __internal_floor: 553
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __internal_scalbn:
+    Register allocation algorithm obtains a sub-optimal result: 14 registers(LB:8)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __internal_scalbn:
+    Number of modules instantiated: 131
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 2940
+    Estimated area of MUX21: 103
+    Total estimated area: 3043
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __internal_scalbn:
+    Register allocation algorithm obtains a sub-optimal result: 14 registers(LB:8)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __internal_scalbn:
+    Number of allocated multiplexers (2-to-1 equivalent): 13
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __internal_scalbn: 548
+
+  Module allocation information for function __internal_cos:
+    Number of complex operations: 260
+    Number of complex operations: 260
+  Time to perform module allocation: 0.21 seconds
+
+
+  Module allocation information for function __internal_sin:
+    Number of complex operations: 260
+    Number of complex operations: 260
+  Time to perform module allocation: 0.20 seconds
+
+
+  Scheduling Information of function __internal_cos:
+    Number of control steps: 531
+    Minimum slack: 2.7650104428289524e-13
+    Estimated max frequency (MHz): 100.00000000000277
+  Time to perform scheduling: 0.16 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __internal_cos:
+    Number of operations: 1623
+    Number of basic blocks: 111
+    Number of states: 577
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function __internal_sin:
+    Number of control steps: 531
+    Minimum slack: 2.7650104428289524e-13
+    Estimated max frequency (MHz): 100.00000000000277
+  Time to perform scheduling: 0.15 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __internal_sin:
+    Number of operations: 1623
+    Number of basic blocks: 111
+    Number of states: 577
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Easy binding information for function __internal_cos:
+    Bound operations:749/1623
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __internal_sin:
+    Bound operations:749/1623
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __internal_cos:
+    Number of storage values inserted: 604
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __internal_sin:
+    Number of storage values inserted: 604
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.02 seconds
+  Weight computation completed in 0.04 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.02 seconds
+
+  Register binding information for function __internal_cos:
+    Register allocation algorithm obtains a sub-optimal result: 397 registers(LB:62)
+  Time to perform register binding: 0.30 seconds
+
+  Iteration 1 completed in 0.03 seconds
+  Clique covering computation completed in 0.35 seconds
+
+  Module binding information for function __internal_cos:
+    Number of modules instantiated: 1381
+    Number of performance conflicts: 105
+    Estimated resources area (no Muxes and address logic): 34438
+    Estimated area of MUX21: 2730.333333333333
+    Total estimated area: 37168.333333333336
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.42 seconds
+
+
+  Register binding information for function __internal_cos:
+    Register allocation algorithm obtains a sub-optimal result: 397 registers(LB:62)
+  Time to perform register binding: 0.30 seconds
+
+
+  Connection Binding Information for function __internal_cos:
+    Number of allocated multiplexers (2-to-1 equivalent): 318
+  Time to perform interconnection binding: 0.03 seconds
+
+  Total number of flip-flops in function __internal_cos: 11074
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.03 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.02 seconds
+
+  Register binding information for function __internal_sin:
+    Register allocation algorithm obtains a sub-optimal result: 397 registers(LB:62)
+  Time to perform register binding: 0.30 seconds
+
+  Iteration 1 completed in 0.02 seconds
+  Clique covering computation completed in 0.34 seconds
+
+  Module binding information for function __internal_sin:
+    Number of modules instantiated: 1381
+    Number of performance conflicts: 105
+    Estimated resources area (no Muxes and address logic): 34438
+    Estimated area of MUX21: 2764.333333333333
+    Total estimated area: 37202.333333333336
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.41 seconds
+
+
+  Register binding information for function __internal_sin:
+    Register allocation algorithm obtains a sub-optimal result: 397 registers(LB:62)
+  Time to perform register binding: 0.30 seconds
+
+
+  Connection Binding Information for function __internal_sin:
+    Number of allocated multiplexers (2-to-1 equivalent): 319
+  Time to perform interconnection binding: 0.03 seconds
+
+  Total number of flip-flops in function __internal_sin: 11074
+
+  Module allocation information for function fftWrapper:
+    Number of complex operations: 58
+    Number of complex operations: 58
+  Time to perform module allocation: 0.05 seconds
+
+
+  Scheduling Information of function fftWrapper:
+    Number of control steps: 65
+    Minimum slack: 5.0000000000000003e-10
+    Estimated max frequency (MHz): 100.000000005
+  Time to perform scheduling: 0.03 seconds
+
+  Number of function call sites = 0
+
+  State Transition Graph Information of function fftWrapper:
+    Number of operations: 485
+    Number of basic blocks: 20
+    Number of states: 66
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Easy binding information for function fftWrapper:
+    Bound operations:323/485
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function fftWrapper:
+    Number of storage values inserted: 120
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.01 seconds
+
+  Register binding information for function fftWrapper:
+    Register allocation algorithm obtains a sub-optimal result: 97 registers(LB:40)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.01 seconds
+
+  Module binding information for function fftWrapper:
+    Number of modules instantiated: 450
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 25901
+    Estimated area of MUX21: 727
+    Total estimated area: 26628
+    Estimated number of DSPs: 3
+  Time to perform module binding: 0.02 seconds
+
+
+  Register binding information for function fftWrapper:
+    Register allocation algorithm obtains a sub-optimal result: 97 registers(LB:40)
+  Time to perform register binding: 0.01 seconds
+
+
+  Connection Binding Information for function fftWrapper:
+    Number of allocated multiplexers (2-to-1 equivalent): 69
+  Time to perform interconnection binding: 0.01 seconds
+
+  Total number of flip-flops in function fftWrapper: 3331
+[0m  Parameter in_real (495333) (testvector 0) allocated at 1073741824 : reserved_mem_size = 512
+Padding of 0 for parameter in_real
+  Parameter in_imag (495334) (testvector 0) allocated at 1073742336 : reserved_mem_size = 512
+Padding of 0 for parameter in_imag
+  Parameter out_real (495335) (testvector 0) allocated at 1073742848 : reserved_mem_size = 512
+Padding of 0 for parameter out_real
+  Parameter out_imag (495336) (testvector 0) allocated at 1073743360 : reserved_mem_size = 512
+Padding of 0 for parameter out_imag
+  Parameter in_real (495333) (testvector 1) allocated at 1073743872 : reserved_mem_size = 512
+Padding of 0 for parameter in_real
+  Parameter in_imag (495334) (testvector 1) allocated at 1073744384 : reserved_mem_size = 512
+Padding of 0 for parameter in_imag
+  Parameter out_real (495335) (testvector 1) allocated at 1073744896 : reserved_mem_size = 512
+Padding of 0 for parameter out_real
+  Parameter out_imag (495336) (testvector 1) allocated at 1073745408 : reserved_mem_size = 512
+Padding of 0 for parameter out_imag
+  C-based testbench generation for function fftWrapper: /home/zero/Desktop/COaT_project/ComputeFFT/synthesis_no_opt/HLS_output//simulation/values.c
+  Prepared testbench
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-fexcess-precision=standard' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-fexcess-precision=standard' is not supported [-Wignored-optimization-argument]
+/home/zero/Desktop/COaT_project/ComputeFFT/synthesis_no_opt/../test.c:166:14: warning: implicit conversion from 'long long' to 'long' changes value from 2147483648 to -2147483648 [-Wconstant-conversion]
+    long m = 2147483648;
+         ~   ^~~~~~~~~~
+1 warning generated.
+
+  Summary of resources:
+     - ARRAY_1D_STD_BRAM_NN_SDS: 12
+     - ARRAY_1D_STD_BRAM_NN_SDS_BASE: 12
+     - ARRAY_1D_STD_DISTRAM_NN_SDS: 14
+     - ASSIGN_UNSIGNED_FU: 8
+     - BMEMORY_CTRLN: 1
+     - IIdata_converter_FU: 11
+     - IUdata_converter_FU: 83
+     - MUX_GATE: 806
+     - OR_GATE: 40
+     - UIdata_converter_FU: 139
+     - UUdata_converter_FU: 437
+     - __builtin_abs: 1
+     - addr_expr_FU: 28
+     - bit_and_expr_FU: 38
+     - bit_ior_concat_expr_FU: 34
+     - bus_merger: 28
+     - constant_value: 764
+     - extract_bit_expr_FU: 48
+     - flipflop_AR: 14
+     - gt_expr_FU: 41
+     - lshift_expr_FU: 84
+     - lt_expr_FU: 16
+     - lut_expr_FU: 399
+     - minus_expr_FU: 2
+     - multi_read_cond_FU: 25
+     - negate_expr_FU: 4
+     - plus_expr_FU: 44
+     - read_cond_FU: 151
+     - register_SE: 823
+     - register_STD: 613
+     - rshift_expr_FU: 105
+     - truth_andif_expr_FU: 8
+     - ui_bit_and_expr_FU: 193
+     - ui_bit_ior_concat_expr_FU: 54
+     - ui_bit_ior_expr_FU: 97
+     - ui_bit_xor_expr_FU: 22
+     - ui_cond_expr_FU: 88
+     - ui_eq_expr_FU: 136
+     - ui_extract_bit_expr_FU: 865
+     - ui_gt_expr_FU: 8
+     - ui_lshift_expr_FU: 399
+     - ui_lt_expr_FU: 25
+     - ui_minus_expr_FU: 42
+     - ui_mult_expr_FU: 5
+     - ui_ne_expr_FU: 12
+     - ui_negate_expr_FU: 9
+     - ui_plus_expr_FU: 191
+     - ui_pointer_plus_expr_FU: 202
+     - ui_rshift_expr_FU: 225
+     - ui_ternary_mp_expr_FU: 1
+     - ui_ternary_plus_expr_FU: 2
+     - ui_ternary_pm_expr_FU: 2
+Start reading vector           1's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                 7067 cycles.
+
+Simulation completed with success
+
+Start reading vector           2's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                 7067 cycles.
+
+Simulation completed with success
+
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/ComputeFFT/synthesis_no_opt/HLS_output//simulation/testbench_fftWrapper_tb.v:259: Verilog $finish
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/ComputeFFT/synthesis_no_opt/HLS_output//simulation/testbench_fftWrapper_tb.v:300: Verilog $finish
+- /home/zero/Desktop/COaT_project/ComputeFFT/synthesis_no_opt/HLS_output//simulation/testbench_fftWrapper_tb.v:300: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 7067 cycles;
+2. Simulation completed with SUCCESS; Execution time 7067 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 14134 cycles
+  Number of executions     : 2
+  Average execution        : 7067 cycles
+  Slices                   : 11225
+  Luts                     : 29772
+  Lut FF Pairs             : 29772
+  Power                    : 0.88100000000000001
+  Registers                : 26777
+  DSPs                     : 13
+  BRAMs                    : 44
+  Clock period             : 10
+  Design minimum period    : 12.17
+  Design slack             : -2.1699999999999999
+  Frequency                : 82.169268693508627
+  AreaxTime                : 2560552.47108
+  Time                     : 86.005390000000006
+  Tot. Time                : 172.01078000000001
