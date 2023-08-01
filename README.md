@@ -14,7 +14,7 @@ Currently the repository contains various test cases revolving around floating p
 
 ### Folder organization
 
-In each folder there are mainly of following files:
+In each folder there are always the following files:
 - **test.c**: The code for the test, the target of the HLS is always the function invoked by main whose name coincides with the test's one;
 - **test.ll**: The LLVM-IR representation of **test.c** obtained with TAFFO, usually with the value names preserved for readability;
 - **test_*.c**: Variants of **test.c** used to explore different behaviours of tools;
@@ -26,7 +26,7 @@ In each folder there are mainly of following files:
 - **results.txt**: Same as **results_opt.txt** but contains the results for the code **without utilizing TAFFO**;
 - **notes.txt**: Report regarding the status of the test, containing also additional comments or procedures used to perform the test;
 
-In some cases there are subfolders within a test's folder, those recursively mirror the same structure detailed above and their purpose is to separate the results and HLS output for slightly different versions of the test.
+In some cases there are subfolders within a test's folder, those recursively mirror the same structure detailed above, and their purpose is to separate the results and HLS output for slightly different versions of the test.
 
 ### The tests
 
@@ -73,12 +73,15 @@ The specific versions of the tools used in this project were chosed to let both 
 
 ### Coding conventions
 
-- Write the program as a function, its call-tree will be entirely synthesized. Lets call it "root function".
+The main conventions followed while developing the tests were:
+
+- Write the program as a function, its call-graph will be entirely synthesized. Lets call it "root function".
 - Within the code to be synthesized, avoid using arrays whose size is not known at compile-time.
 - Within the code to be synthesized, avoid using I/O related instructions, only rely on the pointers given as parameters or return.
 - Within the code to be synthesized, avoid avoid using recursion, convert it into iteration.
 - From the root function, to return a scalar values you can utilize "return", otherwise pass as argument a pointer to an array where the results will be written, avoid using "malloc".
-- Utilize TAFFO's annotations only within the root function and the one it calls, do not annotate the root function's definition itself.
+- Utilize TAFFO's annotations only within the root function and other functions it calls, do not annotate the root function's definition itself, this way the floating-point to fixed-point and viceversa conversion will be synthesized as well.
+- An effective method is, as the first thing in the root function, to copy over every received floating-point argument that you intend to convert into another instance of the same type that is annotated with TAFFO. Then continue to use this new instance withing the function.
 - Optionally, write a test-main that utilizes such function, giving it realistic inputs and printing the results.
 
 If Verilator's simulation fails, utilize verbosity level 4 "-v 4" and check which outputs differ from expected ones.
@@ -161,3 +164,9 @@ Copying from PandA-Bambu:<br>
 - `--no-unopt` : does NOT run through PandA, and Vivado, if enabled, the versions of the tests NOT optimized by TAFFO.
 
 The usage of `--no-regen-taffo` is highly suggested, as currently some of the `.ll` files were produced with TAFFO's develop branch, and other with the last version of TAFFO that used LLVM-12.
+
+<i>**Example:** a command that runs tests 1, 2 and 3, both with and without optimization, through PandA-Bambu and Vivado, without regenerating neither the LLVM-IR nor the values for the testbenches:</i>
+
+```
+./run_tests.sh --use=1,2,3 --vivado --no-regen-taffo
+```
