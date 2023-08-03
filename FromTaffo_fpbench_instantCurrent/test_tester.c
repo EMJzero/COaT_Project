@@ -2,16 +2,14 @@
 #include <math.h>
 
 #define M 1
-#define len 100
+#define len 9
 
-#ifndef M_PI
-#define M_PI 3.1415926535897931
-#endif
+#define pi 3.14159265359f
 
 float ex0(float t, float resistance, float frequency, float inductance, float maxVoltage)
 {
   float __attribute__((annotate("scalar(range(-10, 50))"))) impedance_re = resistance;
-  float __attribute__((annotate("scalar(range(-1400, 1400))"))) impedance_im = ((2.0f * M_PI) * frequency) * inductance;
+  float __attribute__((annotate("scalar(range(-1400, 1400))"))) impedance_im = ((2.0f * pi) * frequency) * inductance;
   float __attribute__((annotate("scalar(range(0, 1962500))"))) denom = (impedance_re * impedance_re) + (impedance_im * impedance_im);
   float __attribute__((annotate("scalar(range(-120, 600))"))) re_tmp = (maxVoltage * impedance_re);
   float __attribute__((annotate("scalar(range(-16800, 16800))"))) im_tmp = (maxVoltage * impedance_im);
@@ -23,7 +21,7 @@ float ex0(float t, float resistance, float frequency, float inductance, float ma
 
   float __attribute__((annotate("scalar(disabled)"))) atan_arg = current_im / current_re;
   float __attribute__((annotate("scalar(range(-0.8, 0.8))"))) theta = atan(atan_arg);
-  float __attribute__((annotate("scalar(range(6, 7))"))) cos_1 = (2.0f * M_PI);
+  float __attribute__((annotate("scalar(range(6, 7))"))) cos_1 = (2.0f * pi);
   float __attribute__((annotate("scalar(range(-70, 700))"))) cos_2 = (cos_1 * frequency);
   float __attribute__((annotate("scalar(range(-210000, 210000) final)"))) cos_3 = (cos_2 * t);
 
@@ -32,6 +30,24 @@ float ex0(float t, float resistance, float frequency, float inductance, float ma
   float __attribute__((annotate("scalar(range(-1, 1) final)"))) cos_5 = cos(cos_4);
   float __attribute__((annotate("scalar(range(-2048, 2048))"))) mmaxCurrent = maxCurrent;
   float __attribute__((annotate("target('result') scalar(range(-2048, 2048))"))) tmp = mmaxCurrent * cos_5;
+  printf("t = %lf\n", t);
+  printf("resistance = %lf\n", resistance);
+  printf("frequency = %lf\n", frequency);
+  printf("inductance = %lf\n", inductance);
+  printf("maxVoltage = %lf\n", maxVoltage);
+  printf("impedance_im = %lf\n", impedance_im);
+  printf("denom = %lf\n", denom);
+  printf("re_tmp = %lf\n", re_tmp);
+  printf("im_tmp = %lf\n", im_tmp);
+  printf("current_re = %lf\n", current_re);
+  printf("current_im = %lf\n", current_im);
+  printf("maxCurrent = %lf\n", maxCurrent);
+  printf("atan_arg = %lf\n", atan_arg);
+  printf("theta = %lf\n", theta);
+  printf("cos_2 = %lf\n", cos_2);
+  printf("cos_3 = %lf\n", cos_3);
+  printf("cos_5 = %lf\n", cos_5);
+  printf("tmp = %lf\n\n", tmp);
   return tmp;
 }
 
@@ -63,15 +79,69 @@ int main()
   float arr[len*5];
   float res[len];
 
-  for(int i = 0; i < len*5; i+=5)
-  {
-    arr[i] = i%300 - 0.56f;
-    arr[i + 1] = i%56 - 5.23f;
-    arr[i + 2] = i%107 - 6.93f;
-    arr[i + 3] = i%4 - 1.47f;
-    arr[i + 4] = i%14 - 1.75f;
-  }
+  int i = 0;
+  arr[i] = 270.67;
+  arr[i + 1] = 24.585;
+  arr[i + 2] = 29.916;
+  arr[i + 3] = -0.449;
+  arr[i + 4] = 2.9591;
+  
+  i = 1*5;
+  arr[i] = 204.75;
+  arr[i + 1] = 20.514;
+  arr[i + 2] = 2.2229;
+  arr[i + 3] = -0.467;
+  arr[i + 4] = 11.238;
+  
+  i = 2*5;
+  arr[i] = 133.95;
+  arr[i + 1] = -0.17;
+  arr[i + 2] = 19.949;
+  arr[i + 3] = -0.353;
+  arr[i + 4] = 11.69;
+  
+  i = 3*5;
+  arr[i] = 107.68;
+  arr[i + 1] = 19.12;
+  arr[i + 2] = -3.391;
+  arr[i + 3] = -0.237;
+  arr[i + 4] = 4.3512;
 
+  i = 4*5;
+  arr[i] = 95.175;
+  arr[i + 1] = 42.694;
+  arr[i + 2] = 40.37;
+  arr[i + 3] = -0.058;
+  arr[i + 4] = 11.612;
+  
+  i = 5*5;
+  arr[i] = 87.625;
+  arr[i + 1] = 16.185;
+  arr[i + 2] = 85.957;
+  arr[i + 3] = -0.861;
+  arr[i + 4] = 6.8365;
+  
+  i = 6*5;
+  arr[i] = 119.47;
+  arr[i + 1] = 13.311;
+  arr[i + 2] = 14.047;
+  arr[i + 3] = 0.5532;
+  arr[i + 4] = 2.2135;
+  
+  i = 7*5;
+  arr[i] = 111.93;
+  arr[i + 1] = -5.627;
+  arr[i + 2] = 79.042;
+  arr[i + 3] = -0.182;
+  arr[i + 4] = 8.0647;
+  
+  i = 8*5;
+  arr[i] = 1.2502;
+  arr[i + 1] = 11.968;
+  arr[i + 2] = 72.042;
+  arr[i + 3] = -1.697;
+  arr[i + 4] = 11.931;
+  
   test(arr, res);
 
   printf("Values Begin\n");

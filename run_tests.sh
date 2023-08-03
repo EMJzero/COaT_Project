@@ -49,6 +49,7 @@ path_names=(
   "FromTaffo_fpbench_CX,test"
   "FromTaffo_fpbench_CY,test"
   "FromTaffo_fpbench_doppler,test"
+  "FromTaffo_fpbench_instantCurrent,test"
   "FromTaffo_fpbench_leadLag,test"
   "FromTaffo_fpbench_triangle,test"
   "FromTaffo_fpbench_turbine1,test"

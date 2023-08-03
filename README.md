@@ -18,7 +18,7 @@ In each folder there are always the following files:
 - **test.c**: The code for the test, the target of the HLS is always the function invoked by main whose name coincides with the test's one;
 - **test.ll**: The LLVM-IR representation of **test.c** obtained with TAFFO, usually with the value names preserved for readability;
 - **test_*.c**: Variants of **test.c** used to explore different behaviours of tools;
-- **test.xml**: Contains the values for PandA-Bambu's simulations, note that for when the HLS starts from an LLVM-IR parameter names are in the form `PdN` with N realtive to the IR without preserved names. The same **test.xml** contains also the values for when the HLS is conducted directly from the source, and those share the name of the source's parameters.
+- **test.xml**: Contains the values for PandA-Bambu's simulations, note that for when the HLS starts from an LLVM-IR parameter names are in the form "PdN" with N realtive to the IR without preserved names. The same **test.xml** contains also the values for when the HLS is conducted directly from the source, and those share the name of the source's parameters.
 - **test_generator.py**: Python script used to generate **test.xml**'s content.
 - **panda_log_opt.txt**: Console output of PandA-Bambu. This is specific to the code **optimized with TAFFO**;
 - **panda_log.txt**: Same as **panda_log_opt.txt** but contains the log for the code **without utilizing TAFFO**;
@@ -88,6 +88,8 @@ If Verilator's simulation fails, utilize verbosity level 4 "-v 4" and check whic
 Likely the cause is too-large floating point values, try reducing the upper and lower bounds for values used in the testbenches below those specified in TAFFO's "scalar(range())".<br>
 Since you are forced to use array lengths known at compile time, even when not making use of an entire array, make sure to initialize it to valid values (usually 0), this is especially true for testbench values.
 
+Currently when TAFFO converts a floating point division in fixed point it is very likely that integer types larger than "i64", like "i96" and "i128", will be used in the IR. Such values cannot be currently handled by PandA-Bambu, resulting in a clang frontend error. In the next paragraph an option to prevent their usage is given, but if the division's operands are too small, it might result in division-by-0 exceptions. As of now the only solution to such issues is disabling TAFFO's optimization on the dividend and divisor variables with `__attribute__((annotate("scalar(disabled)")))`.
+
 ### CLI commands overview
 
 Here are the main commands used to generate the LLVM-IR, run the HLS and the simulations.
@@ -97,7 +99,7 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
     taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.c
     ```
     Add the `-lm` option if `math.h` needs to be linked.<br>
-    If types like `i96` or `i128` are generated in the LLVM-IRR, add the options `-Xconversion -maxtotalbitsconv -Xconversion 64` and `-Xdta -maxtotalbits -Xdta 64`. This is because currently PandA-Bambu cannot deal with such types, thus the first options prevents them from being used in intermediate types of multiplications and divisions, while the second one prevents them from being used as the integer version of originally-float values.
+    If types like `i96` or `i128` are generated in the LLVM-IR, add the options `-Xconversion -maxtotalbitsconv -Xconversion 64` and `-Xdta -maxtotalbits -Xdta 64`. This is because currently PandA-Bambu cannot deal with such types, thus the first options prevents them from being used in intermediate types of multiplications and divisions, while the second one prevents them from being used as the integer version of originally-float values.
 - Run the HLS on TAFFO's produced LLVM-IR:<br>
     ```
     bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=<function_name_wrt_the_IR> --compiler=I386_CLANG12 --simulate --simulator=VERILATOR --verilator-parallel |& tee panda_log_opt.txt
