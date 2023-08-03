@@ -1,10 +1,12 @@
 TAFFO:
 Works as expected.
 
-HLS without TAFFO:
-Simulation failed...
+HLS:
+Works as expected.
 
-HLS with TAFFO:
-Simulation failed...
 
-I am still investigating the cause of the failed simulations...
+Requires TAFFO's develop branch, thus use "--no-regen-taffo"!
+
+For some reason (still under investigation) if the some value of x1 gets above 4.0, the testbenches fail with absurd floating
+point errors (ex: 17.5 rounded to 17, see panda_log_opt_weird.txt last value of first testbench). I suspect the cause
+to be within the synthesis of conversions...
