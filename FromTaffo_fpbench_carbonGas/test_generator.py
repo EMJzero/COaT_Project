@@ -3,7 +3,7 @@ import sys
 
 template = "\n\t<testbench\n\tPd5=\"{arr_}\"\n\tPd6=\"{res_}\"\n\tarr=\"{arr_}\"\n\tres=\"{res_}\"/>"
 
-len_code_constant = 200
+len_code_constant = 100
 how_many_testbenches = 2
 
 # upper bound is included
@@ -13,7 +13,7 @@ def gen(min_, max_):
 def to_string(values):
     res = ""
     for value in values:
-        if value < 0.001:
+        if value < 0.001 and value != 0:
             value = 0.001
         res += str(value)[:5] + ", "
 

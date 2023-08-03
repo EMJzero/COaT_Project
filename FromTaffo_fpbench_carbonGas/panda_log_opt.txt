@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-aNkp7z/usr/bin/bambu --use-raw -v 2 --top-fname=test --compiler=I386_CLANG12 --simulate --simulator=VERILATOR test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-wZosdn/usr/bin/bambu --use-raw -v 2 --top-fname=test --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
 
 
 ********************************************************************************
@@ -152,60 +152,514 @@ Available devices:
  - xcku060-3ffva1156-VVD
  - xcu280-2Lfsvh2892-VVD
 Library Name     : STD_FU
-  Total cells    : 3931
+  Total cells    : 3911
   - combinational: 0
-  - others: 3931
+  - others: 3911
 
 warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
 1 warning generated.
-Error in compilation
 warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
-clang-12: ../../../etc/clang_plugin/dumpGimple.cpp:2935: int64_t llvm::DumpGimpleRaw::TREE_INT_CST_LOW(const void *): Assertion `val.getNumWords() == 1' failed.
-PLEASE submit a bug report to https://bugs.llvm.org/ and include the crash backtrace, preprocessed source, and associated run script.
-Stack dump:
-0.	Program arguments: /tmp/.mount_bambu-aNkp7z/usr/bin/clang-12 -D__NO_INLINE__ -D_FORTIFY_SOURCE=0 -m32 -fplugin=/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_topfname.so -mllvm -internalize-outputdir=/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/panda-temp/ -mllvm -panda-TFN=test -mllvm -panda-Internalize -c -fplugin=/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_expandMemOps.so -c -fplugin=/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so -mllvm -panda-outputdir=/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/panda-temp/ -mllvm -panda-infile=/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/test.ll -mllvm -panda-cost-table=store_expr|32=10,load_expr|32=10,nop_expr|32=10,mult_expr|1=0.88300000000000001,mult_expr|8=4.5490000000000004,mult_expr|16=5.5519999999999996,mult_expr|32=8.488999999999999,mult_expr|64=12.434999999999999,plus_expr|1=0.91100000000000003,plus_expr|8=1.883,plus_expr|16=2.181,plus_expr|32=2.5939999999999999,plus_expr|64=3.556,trunc_div_expr|1=0.91100000000000003,trunc_div_expr|8=17.141999999999999,trunc_div_expr|16=46.957999999999998,trunc_div_expr|32=112.78700000000001,trunc_div_expr|64=304.17700000000002,trunc_mod_expr|1=0.91100000000000003,trunc_mod_expr|8=18.117999999999999,trunc_mod_expr|16=41.697000000000003,trunc_mod_expr|32=113.28400000000001,trunc_mod_expr|64=303.31999999999999,lshift_expr|1=0.91100000000000003,lshift_expr|8=2.0990000000000002,lshift_expr|16=2.3540000000000001,lshift_expr|32=3.032,lshift_expr|64=3.609,rshift_expr|1=0.91100000000000003,rshift_expr|8=1.9970000000000001,rshift_expr|16=2.452,rshift_expr|32=3.004,rshift_expr|64=3.6640000000000001,bit_and_expr|1=0.91100000000000003,bit_and_expr|8=0.97499999999999998,bit_and_expr|16=1.0329999999999999,bit_and_expr|32=1.0960000000000001,bit_and_expr|64=1.1830000000000001,bit_ior_expr|1=0.91100000000000003,bit_ior_expr|8=0.97499999999999998,bit_ior_expr|16=1.0329999999999999,bit_ior_expr|32=1.0960000000000001,bit_ior_expr|64=1.1830000000000001,bit_xor_expr|1=0.88300000000000001,bit_xor_expr|8=1.056,bit_xor_expr|16=1.137,bit_xor_expr|32=1.0900000000000001,bit_xor_expr|64=1.206,cond_expr|1=1.032,cond_expr|8=1.849,cond_expr|16=2.2919999999999998,cond_expr|32=2.7879999999999998,cond_expr|64=3.468,Fmult_expr|32=14.948,Fmult_expr|64=20,Fplus_expr|32=20,Fplus_expr|64=30,Frdiv_expr|32=60,Frdiv_expr|64=110 -mllvm -panda-topfname=test -emit-llvm -o /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/panda-temp//run-c817-e9c4-f038-fee8.o -O2 -fno-builtin-bcmp -fno-builtin-memcpy -fno-builtin-memmove -fno-builtin-memset -finline-functions -fno-slp-vectorize -fno-stack-protector -fno-vectorize -fwrapv "-Dprintf(fmt, ...)=" -D__BAMBU__ -Wuninitialized /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/test.ll
-1.	Per-module optimization passes
-2.	Running pass 'clang12_plugin_dumpGimpleSSA' on module '/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/test.ll'.
-Stack dump without symbol names (ensure you have llvm-symbolizer in your PATH or set the environment var `LLVM_SYMBOLIZER_PATH` to point to it):
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm3sys15PrintStackTraceERNS_11raw_ostreamEi+0x23)[0x24c18a3]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm3sys17RunSignalHandlersEv+0xee)[0x24bf7ee]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm3sys15CleanupOnSignalEm+0xdd)[0x24c0d5d]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12[0x244d170]
-/lib/x86_64-linux-gnu/libc.so.6(+0x42520)[0x7fe649c42520]
-/lib/x86_64-linux-gnu/libc.so.6(pthread_kill+0x12c)[0x7fe649c96a7c]
-/lib/x86_64-linux-gnu/libc.so.6(raise+0x16)[0x7fe649c42476]
-/lib/x86_64-linux-gnu/libc.so.6(abort+0xd3)[0x7fe649c287f3]
-/lib/x86_64-linux-gnu/libc.so.6(+0x2871b)[0x7fe649c2871b]
-/lib/x86_64-linux-gnu/libc.so.6(+0x39e96)[0x7fe649c39e96]
-/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(+0x6f46f)[0x7fe64906f46f]
-/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm13DumpGimpleRaw21dequeue_and_serializeEv+0xef5)[0x7fe64907acb5]
-/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm13DumpGimpleRaw29SerializeGimpleGlobalTreeNodeEPKv+0xc8)[0x7fe64907c7d8]
-/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm13DumpGimpleRaw4execERNS_6ModuleERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEENS_12function_refIFRNS_17TargetLibraryInfoERNS_8FunctionEEEENSB_IFRNS_19TargetTransformInfoESF_EEENSB_IFRNS_13DominatorTreeESF_EEENSB_IFRNS_8LoopInfoESF_EEENSB_IFRNS_20MemorySSAWrapperPassESF_EEENSB_IFRNS_13LazyValueInfoESF_EEENSB_IFRNS_15AssumptionCacheESF_EEENSB_IFRNS_25OptimizationRemarkEmitterESF_EEESA_+0x3cd)[0x7fe64907fa8d]
-/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm28clang12_plugin_dumpGimpleSSA4execERNS_6ModuleENS_12function_refIFRNS_17TargetLibraryInfoERNS_8FunctionEEEENS3_IFRNS_19TargetTransformInfoES7_EEENS3_IFRNS_13DominatorTreeES7_EEENS3_IFRNS_8LoopInfoES7_EEENS3_IFRNS_20MemorySSAWrapperPassES7_EEENS3_IFRNS_13LazyValueInfoES7_EEENS3_IFRNS_15AssumptionCacheES7_EEENS3_IFRNS_25OptimizationRemarkEmitterES7_EEERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE+0x1106)[0x7fe6490624a6]
-/tmp/.mount_bambu-aNkp7z/usr/gcc_plugins/clang12_plugin_dumpGimpleSSA.so(_ZN4llvm28clang12_plugin_dumpGimpleSSA11runOnModuleERNS_6ModuleE+0x16f)[0x7fe64906128f]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm6legacy15PassManagerImpl3runERNS_6ModuleE+0x3cf)[0x1e6d08f]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang17EmitBackendOutputERNS_17DiagnosticsEngineERKNS_19HeaderSearchOptionsERKNS_14CodeGenOptionsERKNS_13TargetOptionsERKNS_11LangOptionsERKN4llvm10DataLayoutEPNSE_6ModuleENS_13BackendActionESt10unique_ptrINSE_17raw_pwrite_streamESt14default_deleteISM_EE+0x2c85)[0x269d3b5]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang13CodeGenAction13ExecuteActionEv+0x78b)[0x3192f8b]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang14FrontendAction7ExecuteEv+0x57)[0x2bea627]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang16CompilerInstance13ExecuteActionERNS_14FrontendActionE+0x711)[0x2b75151]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang25ExecuteCompilerInvocationEPNS_16CompilerInstanceE+0x59c)[0x2c7f38c]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_Z8cc1_mainN4llvm8ArrayRefIPKcEES2_Pv+0x5f2)[0xa06e72]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12[0xa056b7]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12[0x2a39b12]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN4llvm20CrashRecoveryContext9RunSafelyENS_12function_refIFvvEEE+0xdd)[0x244cf5d]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZNK5clang6driver10CC1Command7ExecuteEN4llvm8ArrayRefINS2_8OptionalINS2_9StringRefEEEEEPNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEPb+0x139)[0x2a394b9]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZNK5clang6driver11Compilation14ExecuteCommandERKNS0_7CommandERPS3_+0x3dd)[0x2a0941d]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZNK5clang6driver11Compilation11ExecuteJobsERKNS0_7JobListERN4llvm15SmallVectorImplISt4pairIiPKNS0_7CommandEEEE+0x77)[0x2a09667]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_ZN5clang6driver6Driver18ExecuteCompilationERNS0_11CompilationERN4llvm15SmallVectorImplISt4pairIiPKNS0_7CommandEEEE+0x188)[0x2a21208]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(main+0x29ad)[0xa0506d]
-/lib/x86_64-linux-gnu/libc.so.6(+0x29d90)[0x7fe649c29d90]
-/lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0x80)[0x7fe649c29e40]
-/tmp/.mount_bambu-aNkp7z/usr/bin/clang-12(_start+0x29)[0xa023d9]
-clang-12: error: clang frontend command failed with exit code 134 (use -v to see invocation)
-clang version 12.0.1
-Target: i386-unknown-linux-gnu
-Thread model: posix
-InstalledDir: /tmp/.mount_bambu-aNkp7z/usr/bin
-clang-12: note: diagnostic msg: Error generating preprocessed source(s) - no preprocessable inputs.
-error -> Front-end compiler returns an error during compilation 2
+1 warning generated.
+  Bit Value Opt: lt_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 24
+  Bit Value Opt: ne_expr optimized, nbits = 24
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 9
+  Bit Value Opt: ne_expr optimized, nbits = 9
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: ne_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 4
+  Bit Value Opt: eq_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 36
+  Bit Value Opt: eq_expr optimized, nbits = 36
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: eq_expr optimized, nbits = 20
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: eq_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 12
+  Bit Value Opt: eq_expr optimized, nbits = 12
+  Bit Value Opt: bit_and_expr optimized, nbits = 44
+  Bit Value Opt: eq_expr optimized, nbits = 44
+  Bit Value Opt: bit_and_expr optimized, nbits = 28
+  Bit Value Opt: eq_expr optimized, nbits = 28
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 31
+  Bit Value Opt: plus_expr optimized, nbits = 23
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 31
+  Bit Value Opt: plus_expr optimized, nbits = 23
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 6
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 6
+Function call to __int64_to_float32e8m23b_127nih inlined in test
 
+  Functions to be synthesized:
+    __divdi3
+    __udivdi3
+    test
+    __float_mule8m23b_127nih
+    __float32_to_uint32_round_to_zeroe8m23b_127nih
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: internal_495411 - 495411 - internal_495411 in function test
+      Id: 495411
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 5
+      Maximum number of loads per function: 1
+Warning: This function uses unknown addresses: test
+    BRAM bitsize: 16
+    Spec may not exploit DATA bus width
+    Spec accesses data having an address unknown at compile time
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 32
+    SIZE bus bitsize: 6
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 400
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __divdi3:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function __float_mule8m23b_127nih:
+    Number of complex operations: 1
+    Number of complex operations: 1
+  Time to perform module allocation: 0.02 seconds
+
+
+  Module allocation information for function __udivdi3:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function __divdi3:
+    Number of control steps: 5
+    Minimum slack: 5.1892333303333507
+    Estimated max frequency (MHz): 207.86707580421742
+  Time to perform scheduling: 0.00 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __divdi3:
+    Number of operations: 66
+    Number of basic blocks: 5
+    Number of states: 3
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of control steps: 7
+    Minimum slack: 7.4129999990000064
+    Estimated max frequency (MHz): 386.54812509217408
+  Time to perform scheduling: 0.00 seconds
+
+  Number of function call sites = 4
+
+  State Transition Graph Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of operations: 27
+    Number of basic blocks: 7
+    Number of states: 5
+    Minimum number of cycles: 2
+    Maximum number of cycles 3
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_mule8m23b_127nih:
+    Number of control steps: 3
+    Minimum slack: 4.4063999819999973
+    Estimated max frequency (MHz): 178.77574313179994
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 5
+
+  State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of operations: 84
+    Number of basic blocks: 3
+    Number of states: 1
+    Minimum number of cycles: 1
+    Maximum number of cycles 1
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __udivdi3:
+    Number of control steps: 5
+    Minimum slack: 7.0609586546666661
+    Estimated max frequency (MHz): 340.24699978713096
+  Time to perform scheduling: 0.00 seconds
+
+  Number of function call sites = 2
+
+  State Transition Graph Information of function __udivdi3:
+    Number of operations: 45
+    Number of basic blocks: 5
+    Number of states: 3
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __divdi3:
+    Bound operations:57/66
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Bound operations:27/27
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_mule8m23b_127nih:
+    Bound operations:75/84
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __udivdi3:
+    Bound operations:40/45
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __divdi3:
+    Number of storage values inserted: 12
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of storage values inserted: 5
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_mule8m23b_127nih:
+    Number of storage values inserted: 0
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __udivdi3:
+    Number of storage values inserted: 6
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __divdi3:
+    Register allocation algorithm obtains a sub-optimal result: 10 registers(LB:9)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __divdi3:
+    Number of modules instantiated: 66
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 834
+    Estimated area of MUX21: 0
+    Total estimated area: 834
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __divdi3:
+    Register allocation algorithm obtains a sub-optimal result: 10 registers(LB:9)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __divdi3:
+    Number of allocated multiplexers (2-to-1 equivalent): 6
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __divdi3: 325
+
+  Module binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of modules instantiated: 27
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 252
+    Estimated area of MUX21: 0
+    Total estimated area: 252
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Register allocation algorithm obtains a sub-optimal result: 5 registers(LB:4)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float32_to_uint32_round_to_zeroe8m23b_127nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 2
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float32_to_uint32_round_to_zeroe8m23b_127nih: 71
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 0 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_mule8m23b_127nih:
+    Number of modules instantiated: 84
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 732
+    Estimated area of MUX21: 0
+    Total estimated area: 732
+    Estimated number of DSPs: 2
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 0 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_mule8m23b_127nih: 0
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __udivdi3:
+    Register allocation algorithm obtains an optimal result: 5 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __udivdi3:
+    Number of modules instantiated: 45
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 414
+    Estimated area of MUX21: 0
+    Total estimated area: 414
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __udivdi3:
+    Register allocation algorithm obtains an optimal result: 5 registers
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __udivdi3:
+    Number of allocated multiplexers (2-to-1 equivalent): 5
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __udivdi3: 256
+
+  Module allocation information for function test:
+    Number of complex operations: 18
+    Number of complex operations: 18
+  Time to perform module allocation: 0.05 seconds
+
+
+  Scheduling Information of function test:
+    Number of control steps: 20
+    Minimum slack: 0.90931465866662298
+    Estimated max frequency (MHz): 110.0027074365028
+  Time to perform scheduling: 0.06 seconds
+
+  Number of function call sites = 0
+
+  State Transition Graph Information of function test:
+    Number of operations: 512
+    Number of basic blocks: 11
+    Number of states: 22
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function test:
+    Bound operations:397/512
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function test:
+    Number of storage values inserted: 68
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function test:
+    Register allocation algorithm obtains a sub-optimal result: 64 registers(LB:26)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function test:
+    Number of modules instantiated: 499
+    Number of performance conflicts: 17
+    Estimated resources area (no Muxes and address logic): 17229
+    Estimated area of MUX21: 475
+    Total estimated area: 17704
+    Estimated number of DSPs: 3
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function test:
+    Register allocation algorithm obtains a sub-optimal result: 64 registers(LB:26)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function test:
+    Number of allocated multiplexers (2-to-1 equivalent): 26
+  Time to perform interconnection binding: 0.02 seconds
+
+  Total number of flip-flops in function test: 1438
+[0m  Parameter Pd5 (495332) (testvector 0) allocated at 1073741824 : reserved_mem_size = 400
+Padding of 112 for parameter Pd5
+  Parameter Pd6 (495333) (testvector 0) allocated at 1073742336 : reserved_mem_size = 400
+Padding of 112 for parameter Pd6
+  Parameter Pd5 (495332) (testvector 1) allocated at 1073742848 : reserved_mem_size = 400
+Padding of 112 for parameter Pd5
+  Parameter Pd6 (495333) (testvector 1) allocated at 1073743360 : reserved_mem_size = 400
+Padding of 112 for parameter Pd6
+  C-based testbench generation for function test: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/synthesis_with_opt/HLS_output//simulation/values.c
+  Prepared testbench
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+
+  Summary of resources:
+     - ARRAY_1D_STD_BRAM_NN_SDS: 1
+     - ARRAY_1D_STD_BRAM_NN_SDS_BASE: 1
+     - BMEMORY_CTRLN: 1
+     - IIdata_converter_FU: 5
+     - IUdata_converter_FU: 27
+     - MUX_GATE: 46
+     - OR_GATE: 4
+     - SIMPLEJOIN_FU: 3
+     - UIdata_converter_FU: 16
+     - UUdata_converter_FU: 124
+     - __builtin_abs: 1
+     - addr_expr_FU: 1
+     - constant_value: 227
+     - extract_bit_expr_FU: 124
+     - flipflop_AR: 5
+     - gt_expr_FU: 4
+     - lshift_expr_FU: 3
+     - lt_expr_FU: 1
+     - lut_expr_FU: 122
+     - multi_read_cond_FU: 1
+     - negate_expr_FU: 1
+     - read_cond_FU: 11
+     - register_SE: 58
+     - register_STD: 36
+     - rshift_expr_FU: 4
+     - ui_bit_and_expr_FU: 52
+     - ui_bit_ior_concat_expr_FU: 9
+     - ui_bit_ior_expr_FU: 26
+     - ui_bit_xor_expr_FU: 5
+     - ui_cond_expr_FU: 23
+     - ui_eq_expr_FU: 10
+     - ui_extract_bit_expr_FU: 123
+     - ui_fshl_expr_FU: 3
+     - ui_lshift_expr_FU: 69
+     - ui_lt_expr_FU: 4
+     - ui_minus_expr_FU: 3
+     - ui_mult_expr_FU: 3
+     - ui_ne_expr_FU: 3
+     - ui_negate_expr_FU: 4
+     - ui_plus_expr_FU: 21
+     - ui_pointer_plus_expr_FU: 10
+     - ui_rshift_expr_FU: 57
+     - ui_ternary_plus_expr_FU: 3
+Start reading vector           1's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                14077 cycles.
+
+Simulation completed with success
+
+Start reading vector           2's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                14077 cycles.
+
+Simulation completed with success
+
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:247: Verilog $finish
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:288: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:288: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 14077 cycles;
+2. Simulation completed with SUCCESS; Execution time 14077 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 28154 cycles
+  Number of executions     : 2
+  Average execution        : 14077 cycles
+  Slices                   : 982
+  Luts                     : 2500
+  Lut FF Pairs             : 2500
+  Power                    : 0.35399999999999998
+  Registers                : 1543
+  DSPs                     : 2
+  BRAMs                    : 2
+  Clock period             : 10
+  Design minimum period    : 13.606
+  Design slack             : -3.6059999999999999
+  Frequency                : 73.496986623548437
+  AreaxTime                : 478829.15499999997
+  Time                     : 191.53166199999998
+  Tot. Time                : 383.06332399999997

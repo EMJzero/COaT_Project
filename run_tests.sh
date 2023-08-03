@@ -46,6 +46,7 @@ path_names=(
   "FromPanda_mm_float_inside_opt/128x128,mm"
   "FromPanda_mm_float_inside_opt/256x256,mm"
   "FromTaffo_axbench_inversek2j,test"
+  "FromTaffo_fpbench_carbonGas,test"
   "FromTaffo_fpbench_CX,test"
   "FromTaffo_fpbench_CY,test"
   "FromTaffo_fpbench_doppler,test"
