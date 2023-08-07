@@ -54,6 +54,7 @@ Here is the current list of tests:
 - **FromTaffo_test3**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c);
 - **NormalizeVector**: Transforms a vector to have a unitary norm;
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;
+- **TrainLogisticRegression**: Perform the gradient descent training of a logistic regression machine learning model [-> wikipedia <-](https://en.wikipedia.org/wiki/Logistic_regression);
 
 Currently not all test are working all the way through TAFFO, HLS and simulation, refer to the **notes.txt** files for the details of each test.
 

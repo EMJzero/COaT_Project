@@ -1,0 +1,9 @@
+TAFFO:
+Works as expected.
+
+HLS:
+Works as expected.
+
+Requires TAFFO's develop branch, thus do not recompile!
+
+Enlarging the real ranges from [0, 1] to [-0.1, 1.1] was required to prevent massive errors from TAFFO.

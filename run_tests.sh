@@ -55,6 +55,7 @@ path_names=(
   "FromTaffo_fpbench_leadLag,test"
   "FromTaffo_fpbench_triangle,test"
   "FromTaffo_fpbench_turbine1,test"
+  "TrainLogisticRegression,gradient_descent"
   ) 
 
 # Function to check if an option is present in the command-line arguments
