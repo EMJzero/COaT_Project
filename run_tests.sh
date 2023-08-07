@@ -55,6 +55,7 @@ path_names=(
   "FromTaffo_fpbench_leadLag,test"
   "FromTaffo_fpbench_triangle,test"
   "FromTaffo_fpbench_turbine1,test"
+  "NormalizeVector,normalize"
   "TrainLogisticRegression,gradient_descent"
   ) 
 
@@ -170,10 +171,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the option "--vivado" is specified
     if option_present "--vivado" "$@"; then
       # If "--vivado" is present, add the "--evaluation" option to the invocation of BAMBU
-      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation "$device_name" |& tee ../panda_log_opt.txt 
+      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --evaluation "$device_name" |& tee ../panda_log_opt.txt 
     else
       # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
-      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel "$device_name" |& tee ../panda_log_opt.txt 
+      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding "$device_name" |& tee ../panda_log_opt.txt 
     fi
   fi
 
@@ -187,10 +188,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the option "--vivado" is specified
     if option_present "--vivado" "$@"; then
       # If "--vivado" is present, add the "--evaluation" option to the invocation of BAMBU
-      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation "$device_name" |& tee ../panda_log.txt 
+      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --evaluation "$device_name" |& tee ../panda_log.txt 
     else
       # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
-      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel "$device_name" |& tee ../panda_log.txt 
+      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding "$device_name" |& tee ../panda_log.txt 
     fi
   fi
 

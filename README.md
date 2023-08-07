@@ -86,7 +86,7 @@ The main conventions followed while developing the tests were:
 - Optionally, write a test-main that utilizes such function, giving it realistic inputs and printing the results.
 
 If Verilator's simulation fails, utilize verbosity level 4 "-v 4" and check which outputs differ from expected ones.
-Likely the cause is too-large floating point values, try reducing the upper and lower bounds for values used in the testbenches below those specified in TAFFO's "scalar(range())".<br>
+Likely the cause is too-large floating point values, try reducing the upper and lower bounds for values used in the testbenches below those specified in TAFFO's "scalar(range())". Alternatively ensure the "--libm-std-rounding" option is specified for PandA-Bambu, as it forces the usage of correct (but more costly) functions of "math.h".<br>
 Since you are forced to use array lengths known at compile time, even when not making use of an entire array, make sure to initialize it to valid values (usually 0), this is especially true for testbench values.
 
 Currently when TAFFO converts a floating point division in fixed point it is very likely that integer types larger than "i64", like "i96" and "i128", will be used in the IR. Such values cannot be currently handled by PandA-Bambu, resulting in a clang frontend error. In the next paragraph an option to prevent their usage is given, but if the division's operands are too small, it might result in division-by-0 exceptions. As of now the only solution to such issues is disabling TAFFO's optimization on the dividend and divisor variables with `__attribute__((annotate("scalar(disabled)")))`.

@@ -1,9 +1,13 @@
 TAFFO:
 Works as expected.
 
+HLS:
+Works as expected.
+
 The "main" requires a silly trick with the input matrices being filled in a separate step, but that is not relevant since
 the goal has always been to optimize the "normalize" function, and that is properly accomplished.
 
 The specified ranges are for commodity, they can be all removed without any issue.
 
-Currently "math.h"'s "sqrtf" function is used, but the TAFFO-optimized "NRsqrt", currently commented-out, can be used instead, it just makes the IR more a pain to read *-* !
+Currently "math.h"'s "sqrtf" function is used, but the TAFFO-optimized "NRsqrt", currently commented-out,
+can be used instead, it just makes the IR more a pain to read *-* ! It might be more efficient tho...

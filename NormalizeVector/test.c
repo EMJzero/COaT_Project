@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <time.h>
 
-#define SIZE 8
+#define len 8
 
 //Square root implemented with the Newton-Raphson method
 /*float NRsqrt(float n __attribute((annotate("scalar()")))) __attribute((annotate("scalar()")))
@@ -27,50 +26,41 @@
     return mid;
 }*/
 
-void normalize(float * in_v __attribute((annotate("scalar(range(0, 256))"))), float * out_v __attribute((annotate("scalar(range(0, 1))"))))
-{
-    float norm_squared __attribute((annotate("target('norm_squared') scalar(range(0, 524288))"))) = 0;
-    for (int i = 0; i < SIZE; i++)
+void normalize(float * in_v_f, float * out_v_f) {
+    float in_v[len] __attribute((annotate("target('in_vector') scalar(range(0, 256))")));
+    
+    for (int i = 0; i < len; i++)
+        in_v[i] = in_v_f[i];
+
+    float norm_squared __attribute((annotate("scalar(range(0, 524288))"))) = 0;
+    
+    #pragma unroll(8)
+    for (int i = 0; i < len; i++)
         norm_squared += in_v[i] * in_v[i];
-    printf("Norm squared: %.4f\n", norm_squared);
+    //printf("Norm squared: %.10f\n", norm_squared);
 
     float norm __attribute((annotate("scalar(range(0, 1024))"))) = sqrtf(norm_squared); //NRsqrt(norm_squared);
-    printf("Norm: %.4f\n", norm);
-    if(norm != 0) 
-    {
-        for (int i = 0; i < SIZE; i++)
-            out_v[i] = in_v[i] / norm;
+    //printf("Norm: %.10f\n", norm);
+    
+    if(norm != 0) {
+        for (int i = 0; i < len; i++)
+            out_v_f[i] = in_v[i] / norm;
     }
 }
 
-int main()
-{
-    //float source[] = {4, 2, 7, 8, 2, 1, 5, 11};
-    srand((unsigned int)time(NULL));
-
-    float in_v[SIZE] __attribute((annotate("target('in_vector') scalar(range(0, 256))")));
-    float out_v[SIZE] __attribute((annotate("target('out_vector') scalar(range(0, 1))")));
-
-    /*
-        Doing the direct assignment:
-            '''float in_v[SIZE] __attribute((annotate("target('in_vector') scalar(range(0, 256))"))) = {4, 2, 7, 8, 2, 1, 5, 11};'''
-        does not work, the silly copying step from "source" is required, so that "fptoui" is used in the IR.
-        Likely something is screwed up with the direct conversion via "llvm.memcpy.p0i8.p0i8.i64"...
-    */
-
-    for (int i = 0; i < SIZE; i++)
-        in_v[i] = (float)rand()/(float)(16777216);  //16777216  = 2^24
-        //in_v[i] = source[i];
+int main() {
+    float in_v[len] = {4, 2, 7, 8, 2, 1, 5, 11};
+    float out_v[len];
 
     printf("Initial vector: ");
-    for (int i = 0; i < SIZE; i++)
+    for (int i = 0; i < len; i++)
         printf("%.2f ", in_v[i]);
     putchar('\n');
 
     normalize(in_v, out_v);
 
     printf("Result: ");
-    for (int i = 0; i < SIZE; i++)
+    for (int i = 0; i < len; i++)
         printf("%.2f ", out_v[i]);
     putchar('\n');
 

@@ -1,0 +1,1508 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-IXcyOG/usr/bin/bambu -v 2 --top-fname=normalize --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2023 Politecnico di Milano
+ Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
+
+Parameters parsed in 0.13 seconds
+
+Target technology = FPGA
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3911
+  - combinational: 0
+  - others: 3911
+
+!! Unknown ext. calls:
+llvm.var.annotation
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: bit_xor_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: ne_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 11
+  Bit Value Opt: eq_expr optimized, nbits = 11
+  Bit Value Opt: bit_and_expr optimized, nbits = 19
+  Bit Value Opt: eq_expr optimized, nbits = 19
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: eq_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 25
+  Bit Value Opt: eq_expr optimized, nbits = 25
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: eq_expr optimized, nbits = 26
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: ne_expr optimized, nbits = 26
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 22
+  Bit Value Opt: ne_expr optimized, nbits = 22
+  Bit Value Opt: bit_and_expr optimized, nbits = 9
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 9
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 26
+  Bit Value Opt: ne_expr optimized, nbits = 26
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 22
+  Bit Value Opt: ne_expr optimized, nbits = 22
+  Bit Value Opt: bit_and_expr optimized, nbits = 47
+  Bit Value Opt: ne_expr optimized, nbits = 47
+  Bit Value Opt: bit_and_expr optimized, nbits = 9
+  Bit Value Opt: ne_expr optimized, nbits = 9
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: ne_expr optimized, nbits = 24
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: plus_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 22
+Function call to __hide_ieee754_sqrtf inlined in __internal_sqrtf
+Function call to __float_ltgt_quiete8m23b_127nih inlined in normalize
+
+  Functions to be synthesized:
+    __internal_sqrtf
+    normalize
+    __float_mule8m23b_127nih
+    __float_adde8m23b_127nih
+    __float_divSRT4e8m23b_127nih
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 32 bytes
+    Internal variable: internal_475455 - 475455 - internal_475455 in function normalize
+      Id: 475455
+      Base Address: 32
+      Size: 32
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 23
+      Maximum number of loads per function: 15
+Warning: This function uses unknown addresses: normalize
+    BRAM bitsize: 16
+    Spec may not exploit DATA bus width
+    Spec accesses data having an address unknown at compile time
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 32
+    SIZE bus bitsize: 6
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 32
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __float_adde8m23b_127nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.04 seconds
+
+
+  Module allocation information for function __float_divSRT4e8m23b_127nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.04 seconds
+
+
+  Module allocation information for function __float_mule8m23b_127nih:
+    Number of complex operations: 1
+    Number of complex operations: 1
+  Time to perform module allocation: 0.02 seconds
+
+
+  Scheduling Information of function __float_adde8m23b_127nih:
+    Number of control steps: 4
+    Minimum slack: 0.14211997399999216
+    Estimated max frequency (MHz): 101.44168902061249
+  Time to perform scheduling: 0.04 seconds
+
+  Number of function call sites = 8
+
+  State Transition Graph Information of function __float_adde8m23b_127nih:
+    Number of operations: 400
+    Number of basic blocks: 3
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function __float_divSRT4e8m23b_127nih:
+    Number of control steps: 5
+    Minimum slack: 3.6121333143333838
+    Estimated max frequency (MHz): 156.54678615066362
+  Time to perform scheduling: 0.03 seconds
+
+  Number of function call sites = 8
+
+  State Transition Graph Information of function __float_divSRT4e8m23b_127nih:
+    Number of operations: 261
+    Number of basic blocks: 5
+    Number of states: 3
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_mule8m23b_127nih:
+    Number of control steps: 4
+    Minimum slack: 0.14046665266666675
+    Estimated max frequency (MHz): 101.4246785087923
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 8
+
+  State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of operations: 124
+    Number of basic blocks: 3
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __float_adde8m23b_127nih:
+    Bound operations:345/400
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_divSRT4e8m23b_127nih:
+    Bound operations:181/261
+  Time to perform easy binding: 0.01 seconds
+
+
+  Easy binding information for function __float_mule8m23b_127nih:
+    Bound operations:105/124
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __float_adde8m23b_127nih:
+    Number of storage values inserted: 47
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_divSRT4e8m23b_127nih:
+    Number of storage values inserted: 22
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_mule8m23b_127nih:
+    Number of storage values inserted: 6
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_adde8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 47 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_adde8m23b_127nih:
+    Number of modules instantiated: 400
+    Number of performance conflicts: 28
+    Estimated resources area (no Muxes and address logic): 4806
+    Estimated area of MUX21: 0
+    Total estimated area: 4806
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_adde8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 47 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_adde8m23b_127nih: 189
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_adde8m23b_127nih: function pipelining may come for free
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_divSRT4e8m23b_127nih:
+    Register allocation algorithm obtains a sub-optimal result: 19 registers(LB:18)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_divSRT4e8m23b_127nih:
+    Number of modules instantiated: 261
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 2471
+    Estimated area of MUX21: 0
+    Total estimated area: 2471
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_divSRT4e8m23b_127nih:
+    Register allocation algorithm obtains a sub-optimal result: 19 registers(LB:18)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float_divSRT4e8m23b_127nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 4
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_divSRT4e8m23b_127nih: 481
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 6 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_mule8m23b_127nih:
+    Number of modules instantiated: 124
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 1401
+    Estimated area of MUX21: 0
+    Total estimated area: 1401
+    Estimated number of DSPs: 3
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 6 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_mule8m23b_127nih: 99
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_mule8m23b_127nih: function pipelining may come for free
+
+  Module allocation information for function __internal_sqrtf:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.03 seconds
+
+
+  Scheduling Information of function __internal_sqrtf:
+    Number of control steps: 11
+    Minimum slack: 5.9046639970000063
+    Estimated max frequency (MHz): 244.18020872218077
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __internal_sqrtf:
+    Number of operations: 100
+    Number of basic blocks: 11
+    Number of states: 9
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __internal_sqrtf:
+    Bound operations:54/100
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __internal_sqrtf:
+    Number of storage values inserted: 24
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __internal_sqrtf:
+    Register allocation algorithm obtains a sub-optimal result: 23 registers(LB:12)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __internal_sqrtf:
+    Number of modules instantiated: 100
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 906
+    Estimated area of MUX21: 0
+    Total estimated area: 906
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __internal_sqrtf:
+    Register allocation algorithm obtains a sub-optimal result: 23 registers(LB:12)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __internal_sqrtf:
+    Number of allocated multiplexers (2-to-1 equivalent): 8
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __internal_sqrtf: 488
+
+  Module allocation information for function normalize:
+    Number of complex operations: 64
+    Number of complex operations: 64
+  Time to perform module allocation: 0.02 seconds
+
+
+  Scheduling Information of function normalize:
+    Number of control steps: 41
+    Minimum slack: 0.14046665066665948
+    Estimated max frequency (MHz): 101.42467848821829
+  Time to perform scheduling: 0.02 seconds
+
+  Number of function call sites = 0
+
+  State Transition Graph Information of function normalize:
+    Number of operations: 193
+    Number of basic blocks: 5
+    Number of states: 44
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function normalize:
+    Bound operations:106/193
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function normalize:
+    Number of storage values inserted: 87
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function normalize:
+    Register allocation algorithm obtains a sub-optimal result: 76 registers(LB:26)
+  Time to perform register binding: 0.01 seconds
+
+  Iteration 1 completed in 0.00 seconds
+
+  Register binding information for function normalize:
+    Register allocation algorithm obtains a sub-optimal result: 76 registers(LB:26)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 2 completed in 0.00 seconds
+  Clique covering computation completed in 0.01 seconds
+
+  Module binding information for function normalize:
+    Number of modules instantiated: 141
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 18573
+    Estimated area of MUX21: 800
+    Total estimated area: 19373
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.02 seconds
+
+
+  Register binding information for function normalize:
+    Register allocation algorithm obtains a sub-optimal result: 76 registers(LB:26)
+  Time to perform register binding: 0.01 seconds
+
+
+  Connection Binding Information for function normalize:
+    Number of allocated multiplexers (2-to-1 equivalent): 66
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function normalize: 2432
+[0m  Parameter in_v_f (475365) (testvector 0) allocated at 1073741824 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 0) allocated at 1073741856 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 1) allocated at 1073741888 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 1) allocated at 1073741920 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 2) allocated at 1073741952 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 2) allocated at 1073741984 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 3) allocated at 1073742016 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 3) allocated at 1073742048 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 4) allocated at 1073742080 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 4) allocated at 1073742112 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 5) allocated at 1073742144 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 5) allocated at 1073742176 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 6) allocated at 1073742208 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 6) allocated at 1073742240 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 7) allocated at 1073742272 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 7) allocated at 1073742304 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 8) allocated at 1073742336 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 8) allocated at 1073742368 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 9) allocated at 1073742400 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 9) allocated at 1073742432 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 10) allocated at 1073742464 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 10) allocated at 1073742496 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 11) allocated at 1073742528 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 11) allocated at 1073742560 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 12) allocated at 1073742592 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 12) allocated at 1073742624 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 13) allocated at 1073742656 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 13) allocated at 1073742688 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 14) allocated at 1073742720 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 14) allocated at 1073742752 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 15) allocated at 1073742784 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 15) allocated at 1073742816 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 16) allocated at 1073742848 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 16) allocated at 1073742880 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 17) allocated at 1073742912 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 17) allocated at 1073742944 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 18) allocated at 1073742976 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 18) allocated at 1073743008 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 19) allocated at 1073743040 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 19) allocated at 1073743072 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 20) allocated at 1073743104 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 20) allocated at 1073743136 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 21) allocated at 1073743168 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 21) allocated at 1073743200 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 22) allocated at 1073743232 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 22) allocated at 1073743264 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 23) allocated at 1073743296 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 23) allocated at 1073743328 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 24) allocated at 1073743360 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 24) allocated at 1073743392 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 25) allocated at 1073743424 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 25) allocated at 1073743456 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 26) allocated at 1073743488 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 26) allocated at 1073743520 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 27) allocated at 1073743552 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 27) allocated at 1073743584 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 28) allocated at 1073743616 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 28) allocated at 1073743648 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 29) allocated at 1073743680 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 29) allocated at 1073743712 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 30) allocated at 1073743744 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 30) allocated at 1073743776 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 31) allocated at 1073743808 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 31) allocated at 1073743840 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 32) allocated at 1073743872 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 32) allocated at 1073743904 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 33) allocated at 1073743936 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 33) allocated at 1073743968 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 34) allocated at 1073744000 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 34) allocated at 1073744032 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 35) allocated at 1073744064 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 35) allocated at 1073744096 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 36) allocated at 1073744128 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 36) allocated at 1073744160 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 37) allocated at 1073744192 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 37) allocated at 1073744224 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 38) allocated at 1073744256 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 38) allocated at 1073744288 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 39) allocated at 1073744320 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 39) allocated at 1073744352 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 40) allocated at 1073744384 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 40) allocated at 1073744416 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 41) allocated at 1073744448 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 41) allocated at 1073744480 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 42) allocated at 1073744512 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 42) allocated at 1073744544 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 43) allocated at 1073744576 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 43) allocated at 1073744608 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 44) allocated at 1073744640 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 44) allocated at 1073744672 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 45) allocated at 1073744704 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 45) allocated at 1073744736 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 46) allocated at 1073744768 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 46) allocated at 1073744800 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 47) allocated at 1073744832 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 47) allocated at 1073744864 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 48) allocated at 1073744896 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 48) allocated at 1073744928 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 49) allocated at 1073744960 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 49) allocated at 1073744992 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 50) allocated at 1073745024 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 50) allocated at 1073745056 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 51) allocated at 1073745088 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 51) allocated at 1073745120 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 52) allocated at 1073745152 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 52) allocated at 1073745184 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 53) allocated at 1073745216 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 53) allocated at 1073745248 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 54) allocated at 1073745280 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 54) allocated at 1073745312 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 55) allocated at 1073745344 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 55) allocated at 1073745376 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 56) allocated at 1073745408 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 56) allocated at 1073745440 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 57) allocated at 1073745472 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 57) allocated at 1073745504 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 58) allocated at 1073745536 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 58) allocated at 1073745568 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 59) allocated at 1073745600 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 59) allocated at 1073745632 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 60) allocated at 1073745664 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 60) allocated at 1073745696 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 61) allocated at 1073745728 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 61) allocated at 1073745760 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 62) allocated at 1073745792 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 62) allocated at 1073745824 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  Parameter in_v_f (475365) (testvector 63) allocated at 1073745856 : reserved_mem_size = 32
+Padding of 0 for parameter in_v_f
+  Parameter out_v_f (475366) (testvector 63) allocated at 1073745888 : reserved_mem_size = 32
+Padding of 0 for parameter out_v_f
+  C-based testbench generation for function normalize: /home/zero/Desktop/COaT_project/NormalizeVector/synthesis_no_opt/HLS_output//simulation/values.c
+  Prepared testbench
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-fexcess-precision=standard' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-fexcess-precision=standard' is not supported [-Wignored-optimization-argument]
+
+  Summary of resources:
+     - ARRAY_1D_STD_DISTRAM_NN_SDS: 1
+     - ASSIGN_UNSIGNED_FU: 5
+     - BMEMORY_CTRLN: 1
+     - IIdata_converter_FU: 6
+     - IUdata_converter_FU: 11
+     - MUX_GATE: 82
+     - OR_GATE: 6
+     - SIMPLEJOIN_FU: 4
+     - UIdata_converter_FU: 15
+     - UUdata_converter_FU: 302
+     - addr_expr_FU: 1
+     - constant_value: 357
+     - flipflop_AR: 8
+     - lshift_expr_FU: 2
+     - lt_expr_FU: 2
+     - lut_expr_FU: 240
+     - read_cond_FU: 7
+     - register_SE: 118
+     - register_STD: 100
+     - rshift_expr_FU: 7
+     - ui_bit_and_expr_FU: 99
+     - ui_bit_ior_concat_expr_FU: 12
+     - ui_bit_ior_expr_FU: 60
+     - ui_bit_xor_expr_FU: 2
+     - ui_cond_expr_FU: 54
+     - ui_eq_expr_FU: 20
+     - ui_extract_bit_expr_FU: 552
+     - ui_gt_expr_FU: 2
+     - ui_lshift_expr_FU: 120
+     - ui_lt_expr_FU: 3
+     - ui_minus_expr_FU: 5
+     - ui_mult_expr_FU: 4
+     - ui_ne_expr_FU: 21
+     - ui_negate_expr_FU: 6
+     - ui_plus_expr_FU: 29
+     - ui_pointer_plus_expr_FU: 21
+     - ui_rshift_expr_FU: 102
+     - ui_ternary_mp_expr_FU: 2
+     - ui_ternary_plus_expr_FU: 4
+     - ui_ternary_pm_expr_FU: 1
+Start reading vector           1's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector           2's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector           3's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector           4's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector           5's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector           6's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector           7's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector           8's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector           9's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          10's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          11's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          12's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          13's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          14's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          15's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          16's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          17's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          18's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          19's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          20's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          21's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          22's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          23's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          24's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          25's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          26's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          27's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          28's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          29's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          30's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          31's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          32's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          33's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          34's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          35's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          36's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          37's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          38's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          39's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          40's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          41's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          42's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          43's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          44's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          45's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          46's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          47's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          48's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          49's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          50's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          51's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          52's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          53's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          54's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          55's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          56's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          57's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          58's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          59's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          60's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          61's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          62's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          63's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+Start reading vector          64's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+Simulation ended after                  122 cycles.
+
+Simulation completed with success
+
+No more values found. Simulation(s) executed:          64.
+
+- /home/zero/Desktop/COaT_project/NormalizeVector/synthesis_no_opt/HLS_output//simulation/testbench_normalize_tb.v:247: Verilog $finish
+No more values found. Simulation(s) executed:          64.
+
+- /home/zero/Desktop/COaT_project/NormalizeVector/synthesis_no_opt/HLS_output//simulation/testbench_normalize_tb.v:288: Verilog $finish
+- /home/zero/Desktop/COaT_project/NormalizeVector/synthesis_no_opt/HLS_output//simulation/testbench_normalize_tb.v:288: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 122 cycles;
+2. Simulation completed with SUCCESS; Execution time 122 cycles;
+3. Simulation completed with SUCCESS; Execution time 122 cycles;
+4. Simulation completed with SUCCESS; Execution time 122 cycles;
+5. Simulation completed with SUCCESS; Execution time 122 cycles;
+6. Simulation completed with SUCCESS; Execution time 122 cycles;
+7. Simulation completed with SUCCESS; Execution time 122 cycles;
+8. Simulation completed with SUCCESS; Execution time 122 cycles;
+9. Simulation completed with SUCCESS; Execution time 122 cycles;
+10. Simulation completed with SUCCESS; Execution time 122 cycles;
+11. Simulation completed with SUCCESS; Execution time 122 cycles;
+12. Simulation completed with SUCCESS; Execution time 122 cycles;
+13. Simulation completed with SUCCESS; Execution time 122 cycles;
+14. Simulation completed with SUCCESS; Execution time 122 cycles;
+15. Simulation completed with SUCCESS; Execution time 122 cycles;
+16. Simulation completed with SUCCESS; Execution time 122 cycles;
+17. Simulation completed with SUCCESS; Execution time 122 cycles;
+18. Simulation completed with SUCCESS; Execution time 122 cycles;
+19. Simulation completed with SUCCESS; Execution time 122 cycles;
+20. Simulation completed with SUCCESS; Execution time 122 cycles;
+21. Simulation completed with SUCCESS; Execution time 122 cycles;
+22. Simulation completed with SUCCESS; Execution time 122 cycles;
+23. Simulation completed with SUCCESS; Execution time 122 cycles;
+24. Simulation completed with SUCCESS; Execution time 122 cycles;
+25. Simulation completed with SUCCESS; Execution time 122 cycles;
+26. Simulation completed with SUCCESS; Execution time 122 cycles;
+27. Simulation completed with SUCCESS; Execution time 122 cycles;
+28. Simulation completed with SUCCESS; Execution time 122 cycles;
+29. Simulation completed with SUCCESS; Execution time 122 cycles;
+30. Simulation completed with SUCCESS; Execution time 122 cycles;
+31. Simulation completed with SUCCESS; Execution time 122 cycles;
+32. Simulation completed with SUCCESS; Execution time 122 cycles;
+33. Simulation completed with SUCCESS; Execution time 122 cycles;
+34. Simulation completed with SUCCESS; Execution time 122 cycles;
+35. Simulation completed with SUCCESS; Execution time 122 cycles;
+36. Simulation completed with SUCCESS; Execution time 122 cycles;
+37. Simulation completed with SUCCESS; Execution time 122 cycles;
+38. Simulation completed with SUCCESS; Execution time 122 cycles;
+39. Simulation completed with SUCCESS; Execution time 122 cycles;
+40. Simulation completed with SUCCESS; Execution time 122 cycles;
+41. Simulation completed with SUCCESS; Execution time 122 cycles;
+42. Simulation completed with SUCCESS; Execution time 122 cycles;
+43. Simulation completed with SUCCESS; Execution time 122 cycles;
+44. Simulation completed with SUCCESS; Execution time 122 cycles;
+45. Simulation completed with SUCCESS; Execution time 122 cycles;
+46. Simulation completed with SUCCESS; Execution time 122 cycles;
+47. Simulation completed with SUCCESS; Execution time 122 cycles;
+48. Simulation completed with SUCCESS; Execution time 122 cycles;
+49. Simulation completed with SUCCESS; Execution time 122 cycles;
+50. Simulation completed with SUCCESS; Execution time 122 cycles;
+51. Simulation completed with SUCCESS; Execution time 122 cycles;
+52. Simulation completed with SUCCESS; Execution time 122 cycles;
+53. Simulation completed with SUCCESS; Execution time 122 cycles;
+54. Simulation completed with SUCCESS; Execution time 122 cycles;
+55. Simulation completed with SUCCESS; Execution time 122 cycles;
+56. Simulation completed with SUCCESS; Execution time 122 cycles;
+57. Simulation completed with SUCCESS; Execution time 122 cycles;
+58. Simulation completed with SUCCESS; Execution time 122 cycles;
+59. Simulation completed with SUCCESS; Execution time 122 cycles;
+60. Simulation completed with SUCCESS; Execution time 122 cycles;
+61. Simulation completed with SUCCESS; Execution time 122 cycles;
+62. Simulation completed with SUCCESS; Execution time 122 cycles;
+63. Simulation completed with SUCCESS; Execution time 122 cycles;
+64. Simulation completed with SUCCESS; Execution time 122 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 7808 cycles
+  Number of executions     : 64
+  Average execution        : 122 cycles
+  Slices                   : 1229
+  Luts                     : 3098
+  Lut FF Pairs             : 3098
+  Power                    : 0.35999999999999999
+  Registers                : 3269
+  DSPs                     : 8
+  BRAMs                    : 0
+  Clock period             : 10
+  Design minimum period    : 9.8059999999999992
+  Design slack             : 0.19400000000000084
+  Frequency                : 101.97838058331635
+  AreaxTime                : 3706.2365359999994
+  Time                     : 1.1963319999999997
+  Tot. Time                : 76.565247999999983
