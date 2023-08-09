@@ -52,6 +52,7 @@ Here is the current list of tests:
 - **FromTaffo_fpbench_triangle**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/triangle);
 - **FromTaffo_fpbench_turbine1**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/turbine1);
 - **FromTaffo_test3**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c);
+- **MDPPolicyIteration**: Solves a simple Markov Decision Process via the Policy Iteration Method [-> wikipedia <-](https://en.wikipedia.org/wiki/Markov_decision_process#Policy_iteration);
 - **NormalizeVector**: Transforms a vector to have a unitary norm;
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;
 - **TrainLogisticRegression**: Perform the gradient descent training of a logistic regression machine learning model [-> wikipedia <-](https://en.wikipedia.org/wiki/Logistic_regression);
@@ -62,7 +63,7 @@ Currently not all test are working all the way through TAFFO, HLS and simulation
 
 A major decision to be made during the process is where to place the floating point to fixed point conversion. Since generating appropriate test values and verifying test results with the conversion **not** synthesized proved challenging (I am still exploring this possibility), note that **all the following results and those in the repository assume that the conversion is synthesized** and the I/O with the design is performed with floating point values. 
 
-The latest comprehensive list of measured performance metrics on the various test can be reviewed here:<br>
+The latest comprehensive list of measured performance metrics on the various tests can be reviewed here:<br>
 [--> link to the excel document <--](https://polimi365-my.sharepoint.com/:x:/g/personal/10669641_polimi_it/EQ8R5ElhK_BKmf_rSk1-DioBY5HdXF9fdG_eAb6Fkf4CdQ?e=v3GLxB)
 
 ## Procedures
@@ -76,20 +77,28 @@ The specific versions of the tools used in this project were chosed to let both 
 
 The main conventions followed while developing the tests were:
 
-- Write the program as a function, its call-graph will be entirely synthesized. Lets call it "root function".
-- Within the code to be synthesized, avoid using arrays whose size is not known at compile-time.
-- Within the code to be synthesized, avoid using I/O related instructions, only rely on the pointers given as parameters or return.
-- Within the code to be synthesized, avoid avoid using recursion, convert it into iteration.
-- From the root function, to return a scalar values you can utilize "return", otherwise pass as argument a pointer to an array where the results will be written, avoid using "malloc".
-- Utilize TAFFO's annotations only within the root function and other functions it calls, do not annotate the root function's definition itself, this way the floating-point to fixed-point and viceversa conversion will be synthesized as well.
-- An effective method is, as the first thing in the root function, to copy over every received floating-point argument that you intend to convert into another instance of the same type that is annotated with TAFFO. Then continue to use this new instance withing the function.
+- **Write the program as a function**, its call-graph will be entirely synthesized. Lets call it "top function".
+- Within the code to be synthesized, **use only arrays whose size is known at compile-time**.
+- Within the code to be synthesized, **avoid using I/O related instructions** (no printf and alike), only rely on the pointers given as parameters or return.
+- Within the code to be synthesized, avoid **avoid using recursion**, convert it into iteration.
+- From the top function, to return a scalar values you can utilize "return", otherwise pass as argument a pointer to an array where the results will be written, avoid using "malloc".
+- Utilize TAFFO's annotations only within the top function and other functions it calls, do not annotate the top function's definition itself, this way the floating-point to fixed-point and viceversa conversion will be synthesized as well.
+- An effective approach to write the top function is, as the first thing within it, to copy over every received floating-point argument that you intend to convert into another instance of the same data structure that is, however, annotated with TAFFO. Then continue to use this new instance withing the function.
 - Optionally, write a test-main that utilizes such function, giving it realistic inputs and printing the results.
 
-If Verilator's simulation fails, utilize verbosity level 4 "-v 4" and check which outputs differ from expected ones.
-Likely the cause is too-large floating point values, try reducing the upper and lower bounds for values used in the testbenches below those specified in TAFFO's "scalar(range())". Alternatively ensure the "--libm-std-rounding" option is specified for PandA-Bambu, as it forces the usage of correct (but more costly) functions of "math.h".<br>
-Since you are forced to use array lengths known at compile time, even when not making use of an entire array, make sure to initialize it to valid values (usually 0), this is especially true for testbench values.
+### Common issues:
 
-Currently when TAFFO converts a floating point division in fixed point it is very likely that integer types larger than "i64", like "i96" and "i128", will be used in the IR. Such values cannot be currently handled by PandA-Bambu, resulting in a clang frontend error. In the next paragraph an option to prevent their usage is given, but if the division's operands are too small, it might result in division-by-0 exceptions. As of now the only solution to such issues is disabling TAFFO's optimization on the dividend and divisor variables with `__attribute__((annotate("scalar(disabled)")))`.
+The most common issues solved while developing the tests were:
+
+- If **PandA-Bambu could not find the specified top function** check the name's correctness within the IR file, and if withing the IR file the function is specified as "internal" alter that to "dso_local".
+- If **PandA-Bambu could not find the implementation for some function(s)** check that any compiler flag relative to libraries to link is passed through to PandA-Bambu. This is often the case for "math.h". If the funciton in question is "fmuladd" run `remove_fmuladd.py <path/to/.ll>`. If it is any other LLVM intrinsic function you will have to manually modify the IR to remove it.
+- If **Verilator's simulation fails**, utilize verbosity level 4 `-v 4` and check which outputs differ from expected ones. One likely cause might be too-large floating point values, try reducing the upper and lower bounds for values used in the testbenches below those specified in TAFFO's `scalar(range())`. Alternatively ensure the `--libm-std-rounding` option is specified for PandA-Bambu, as it forces it to use the correct (but more costly) implementations of "math.h"'s functions.
+- A single **"stoull" printed after a simulation error** means that there is a scalar value written as an array (with curly braces) in the testbench values, remove the braces.
+- If **verilator returns a size error** check that testbenches initialize all the function parameters even if they are not fully utilized, as their size must be static at compile time and they must be entirely specified, regardless of wheather or not they are fully utilized.
+- If **the simulation could not find some parameter**, remember that when you give PandA-Bambu the IR file, it expects parameters progressively named as PdN (where N usually starts at 5), while if it is given the C file it expectes parameter named as in it. Check the testbenches accordingly to this, use the error printed to adjust the initial value of N if needed.
+- If you PandA-Bambu gives a **clang frontend error** the cause might be one of:
+    - You have some arrays whose size is not static at compile time withing the function(s) to be synthesized.
+    - Currently when TAFFO converts a floating point division in fixed point it is very likely that integer types larger than "i64", like "i96" and "i128", will be used in the IR. Such values cannot be currently handled by PandA-Bambu, resulting in the clang frontend error. In the next paragraph an option to prevent their usage is given, but if the division's operands are too small, it might result in division-by-0 exceptions. As of now the only solution to such issues is disabling TAFFO's optimization on the dividend and divisor variables with `__attribute__((annotate("scalar(disabled)")))`.
 
 ### CLI commands overview
 
@@ -121,9 +130,10 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
     python3 test_generator.py <args> > test.xml
     ```
     Different generators might require some command-line arguments.
-- Gather and print flip-flop counts:<br>
+- Gather and print flip-flop counts and Vivado's results summary:<br>
     ```
     python3 get_flipflops_count.py
+    python3 get_vivado_results.py
     ```
 
 ## Run all the tests
@@ -166,7 +176,7 @@ Copying from PandA-Bambu:<br>
 - `--no-opt` : does NOT run through PandA, and Vivado, if enabled, the TAFFO-optimized versions of the tests. 
 - `--no-unopt` : does NOT run through PandA, and Vivado, if enabled, the versions of the tests NOT optimized by TAFFO.
 
-The usage of `--no-regen-taffo` is highly suggested, as currently some of the `.ll` files were produced with TAFFO's develop branch, and other with the last version of TAFFO that used LLVM-12.
+The usage of `--no-regen-taffo` is highly suggested, as currently some of the `.ll` files were produced with TAFFO's develop branch, and others with the last version of TAFFO that used LLVM-12.
 
 <i>**Example:** a command that runs tests 1, 2 and 3, both with and without optimization, through PandA-Bambu and Vivado, without regenerating neither the LLVM-IR nor the values for the testbenches:</i>
 
