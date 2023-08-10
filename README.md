@@ -84,7 +84,7 @@ The main conventions followed while developing the tests were:
 - From the top function, to return a scalar values you can utilize "return", otherwise pass as argument a pointer to an array where the results will be written, avoid using "malloc".
 - Utilize TAFFO's annotations only within the top function and other functions it calls, do not annotate the top function's definition itself, this way the floating-point to fixed-point and viceversa conversion will be synthesized as well.
 - An effective approach to write the top function is, as the first thing within it, to copy over every received floating-point argument that you intend to convert into another instance of the same data structure that is, however, annotated with TAFFO. Then continue to use this new instance withing the function.
-- **Specify the interface of the top function in "interface.xml"**, giving the type and, eventually, size, of every parameter. This is because when giving PandA-Bambu and “.ll” file as input, such file retains less information that its “.c” counterpart and those need to be reinstated via “interfaces.xml”. See example below.
+- **Specify the interface of the top function in "interfaces.xml"**, giving the type and, eventually, size, of every parameter. This is because when giving PandA-Bambu and “.ll” file as input, such file retains less information that its “.c” counterpart and those need to be reinstated via “interfaces.xml”. See example below.
 - **Write in "test.xml"** the testbenches for the code. See example below.
 - Optionally, write a test-main that utilizes such function, giving it realistic inputs and printing the results.
 
