@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<module>
+<function id="test">
+<arg id="Pd58" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="400"/>
+</function>
+</module>

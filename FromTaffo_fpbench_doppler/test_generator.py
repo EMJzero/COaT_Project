@@ -21,7 +21,7 @@ def generate_values():
     arr1 = gen(-100,100)
     arr2 = gen(20, 20000)
     arr3 = gen(-30, 50)
-    res = [0 for i in range(3*len_code_constant)]
+    res = [0 for i in range(len_code_constant)]
 
     arr = []
     for d_ in zip(arr1, arr2, arr3):

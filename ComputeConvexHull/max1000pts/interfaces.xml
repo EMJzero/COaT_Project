@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<module>
+<function id="computeConvexHull">
+<arg id="Pd98" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="1000"/>
+<arg id="Pd99" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="1000"/>
+<arg id="Pd100" interface_type="default" interface_typename="int" interface_typename_include="" interface_typename_orig="int"/>
+<arg id="Pd101" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="1000"/>
+<arg id="Pd102" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="1000"/>
+</function>
+</module>
