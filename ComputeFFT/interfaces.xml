@@ -2,10 +2,10 @@
 <module>
 <function id="fft">
 <arg id="Pd80" interface_type="default" interface_typename="int" interface_typename_include="" interface_typename_orig="int"/>
-<arg id="Pd81" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="64"/>
-<arg id="Pd82" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="64"/>
-<arg id="Pd83" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="64"/>
-<arg id="Pd84" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="64"/>
+<arg id="Pd81" interface_type="array" interface_typename="double*" interface_typename_include="" interface_typename_orig="double*" size="64"/>
+<arg id="Pd82" interface_type="array" interface_typename="double*" interface_typename_include="" interface_typename_orig="double*" size="64"/>
+<arg id="Pd83" interface_type="array" interface_typename="double*" interface_typename_include="" interface_typename_orig="double*" size="64"/>
+<arg id="Pd84" interface_type="array" interface_typename="double*" interface_typename_include="" interface_typename_orig="double*" size="64"/>
 <arg id="Pd85" interface_type="default" interface_typename="int" interface_typename_include="" interface_typename_orig="int"/>
 </function>
 </module>

@@ -17,7 +17,6 @@ Currently the repository contains various test cases revolving around floating p
 In each folder there are always the following files:
 - **test.c**: The code for the test, the target of the HLS is always the function invoked by main whose name coincides with the test's one;
 - **test.ll**: The LLVM-IR representation of **test.c** obtained with TAFFO, usually with the value names preserved for readability;
-- **test_*.c**: Variants of **test.c** used to explore different behaviours of tools;
 - **test.xml**: Contains the values for PandA-Bambu's simulations;
 - **test_generator.py**: Python script used to generate **test.xml**'s content;
 - **interfaces.xml**: Specifies the interface of the top function that will be synthesized;
@@ -58,7 +57,7 @@ Here is the current list of tests:
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;
 - **TrainLogisticRegression**: Performs the gradient descent training of a logistic regression machine learning model [-> wikipedia <-](https://en.wikipedia.org/wiki/Logistic_regression);
 
-Currently not all test are working all the way through TAFFO, HLS and simulation, refer to the **notes.txt** files for the details of each test.
+Currently not all test work under the same conditions, refer to the **notes.txt** files for the details of each test.
 
 ### Results
 
@@ -78,7 +77,7 @@ The specific versions of the tools used in this project were chosed to let both 
 
 The main conventions followed while developing the tests were:
 
-- **Write the program as a function**, its call-graph will be entirely synthesized. Lets call it "top function".
+- **Write the program as a function**, its call-graph will be entirely synthesized. Lets call it **"top function"**.
 - Within the code to be synthesized, **use only arrays whose size is known at compile-time**.
 - Within the code to be synthesized, **avoid using I/O related instructions** (no printf and alike), only rely on the pointers given as parameters or return.
 - Within the code to be synthesized, avoid **avoid using recursion**, convert it into iteration.
@@ -124,13 +123,13 @@ int main() {
     <function id="top_function">
         <!-- Use "default" for scalars and "array" for array pointers -->
         <arg id="Pd5" interface_type="default" interface_typename="int" interface_typename_include="" interface_typename_orig="int"/>
-        <!-- For "size" specify the maximum one as per the code constant -->
+        <!-- For "size" specify the maximum possible one as per the code constants -->
         <arg id="Pd6" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="4"/>
     </function>
 </module>
 ```
 
-**Note:** Consider pointers to a scalar value as arrays (thus use "array") of size 1.
+**Note:** Consider any pointer to a scalar value as an "array" of size 1.
 
 ```XML
 <!-- filename: "test.xml" -->
@@ -143,6 +142,7 @@ int main() {
     v_float="{array_value_0, array_value_1, array_value_2, array_value_3}"
     />
 </function>
+<!-- in practice replace "scalar" and "array_value_N" with actual values -->
 ```
 
 **Note:** When the HLS starts from the LLVM-IR, parameter names must be in the form "PdN" with "N" realtive to the IR without preserved names. While when the HLS starts from the C source parameter names must exactly match those used in C. Thus it is useful to specify in the same testbench the values twice, once w.r.t. the IR and once w.r.t. the C source.

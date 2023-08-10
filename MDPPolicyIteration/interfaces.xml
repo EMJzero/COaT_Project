@@ -2,7 +2,7 @@
 <module>
 <function id="policyIteration">
 <arg id="Pd5" interface_type="default" interface_typename="int" interface_typename_include="" interface_typename_orig="int"/>
-<arg id="Pd6" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="16"/>
+<arg id="Pd6" interface_type="array" interface_typename="double*" interface_typename_include="" interface_typename_orig="double*" size="16"/>
 <arg id="Pd7" interface_type="array" interface_typename="int*" interface_typename_include="" interface_typename_orig="int*" size="16"/>
 </function>
 </module>

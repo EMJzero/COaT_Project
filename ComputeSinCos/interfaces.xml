@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <module>
-<function id="computeConvexHull">
-<arg id="Pd5" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="1"/>
-<arg id="Pd6" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="1"/>
+<function id="manual_cos">
+<arg id="Pd5" interface_type="array" interface_typename="double*" interface_typename_include="" interface_typename_orig="double*" size="1"/>
+<arg id="Pd6" interface_type="array" interface_typename="double*" interface_typename_include="" interface_typename_orig="double*" size="1"/>
 </function>
 </module>
