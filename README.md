@@ -71,7 +71,7 @@ The latest comprehensive list of measured performance metrics on the various tes
 The specific versions of the tools used in this project were chosed to let both use LLVM-12, since it is the only LLVM version both fully support:
 - **TAFFO**: master branch pre-merge of spring 2023 https://github.com/TAFFO-org/TAFFO/tree/0a8cb2d7d699977f9ae3894493b95f3098e7a067<br>
     The lastest "master" branch was used as well whenever possible, but it uses LLVM-15, thus it is often incompatible with PandA-Bambu's LLVM-12. The version at the link instead uses LLVM-12 as well.
-- **PandA-Bambu**: AppImage released in early 2023 https://github.com/ferrandi/PandA-bambu/releases/tag/v2023.1
+- **PandA-Bambu**: AppImage released in early 2023 https://github.com/ferrandi/PandA-bambu/releases/tag/v2023.1. Just by changing the used clang version to 16 [this](https://release.bambuhls.eu/bambu-dev-LP.AppImage) version should work too, however its testing is still ongoing.
 
 ### Coding conventions
 
