@@ -86,6 +86,32 @@ The main conventions followed while developing the tests were:
 - An effective approach to write the top function is, as the first thing within it, to copy over every received floating-point argument that you intend to convert into another instance of the same data structure that is, however, annotated with TAFFO. Then continue to use this new instance withing the function.
 - Optionally, write a test-main that utilizes such function, giving it realistic inputs and printing the results.
 
+<i>**Example**:</i>
+
+```C
+#define SIZE 4
+
+void top_function(int size, float *v_float) {
+    // Instantiate the vector that TAFFO will convert to fixed point
+    float v[SIZE] __attribute((annotate("target('v') scalar()")));
+
+    // Copy over the floating point array to the one converted to fixed point
+    for (int i = 0; i < size && i < SIZE; i++)
+        v[i] = v_float[i];
+
+    // Operate on v
+
+    // Copy back the fixed point array to the floating point one
+    for (int i = 0; i < size && i < SIZE; i++)
+        v_float[i] = v[i];
+}
+
+int main() {
+    float v_test[SIZE] = {1, 2, 3, 4};
+    top_function(SIZE, v_test);
+}
+```
+
 ### Common issues:
 
 The most common issues solved while developing the tests were:
@@ -136,7 +162,7 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
     python3 get_vivado_results.py
     ```
 
-## Run all the tests
+## Run the tests
 
 Before running the tests:
 
