@@ -15,7 +15,7 @@ Currently the repository contains various test cases revolving around floating p
 ### Folder organization
 
 In each folder there are always the following files:
-- **test.c**: The code for the test, the target of the HLS is always the function invoked by main whose name coincides with the test's one;
+- **test.c**: The source code for the test;
 - **test.ll**: The LLVM-IR representation of **test.c** obtained with TAFFO, usually with the value names preserved for readability;
 - **test.xml**: Contains the values for PandA-Bambu's simulations;
 - **test_generator.py**: Python script used to generate **test.xml**'s content;
