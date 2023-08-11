@@ -1,0 +1,8 @@
+TAFFO:
+Works as expected.
+
+HLS:
+Works as excpected.
+
+Vivado evaluation:
+Now working, currently under investigation...

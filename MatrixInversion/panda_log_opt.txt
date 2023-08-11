@@ -1,0 +1,1475 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-Zc7y11/usr/bin/bambu --use-raw -v 2 --top-fname=invert_matrix --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2023 Politecnico di Milano
+ Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
+
+Parameters parsed in 0.12 seconds
+
+Target technology = FPGA
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3911
+  - combinational: 0
+  - others: 3911
+
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+  Analyzing function invert_matrix
+    Interface specification:
+      Protocol  : array
+      Bitwidth  : 32
+      Alignment : 4
+    Interface specification:
+      Protocol  : array
+      Bitwidth  : 32
+      Alignment : 4
+  Analyzed function invert_matrix
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 23
+  Bit Value Opt: ne_expr optimized, nbits = 23
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 9
+  Bit Value Opt: ne_expr optimized, nbits = 9
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: ne_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 16
+  Bit Value Opt: eq_expr optimized, nbits = 16
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 28
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 24
+  Bit Value Opt: bit_xor_expr optimized, nbits = 24
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 31
+  Bit Value Opt: plus_expr optimized, nbits = 23
+  Bit Value Opt: plus_expr optimized, nbits = 6
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 8
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 8
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 14
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 14
+  Bit Value Opt: cond_expr optimized, nbits = 14
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 14
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 14
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 12
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 24
+  Bit Value Opt: cond_expr optimized, nbits = 3
+Function call to absolute_5_s6_26fixp inlined in invert_matrix
+Function call to absolute_5_s6_26fixp inlined in invert_matrix
+  Bit Value Opt: gt_expr optimized, nbits = 12
+
+  Functions to be synthesized:
+    __divdi3
+    invert_matrix
+    swap_rows_1_fixp
+    scale_row_7_fixp
+    add_scaled_row_3_fixp
+    __float_mule8m23b_127nih
+    __float32_to_int32_round_to_zeroe8m23b_127nih
+    __int32_to_float32e8m23b_127nih
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 64 bytes
+    Internal variable: internal_475563 - 475563 - internal_475563 in function invert_matrix
+      Id: 475563
+      Base Address: 64
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+    Internal variable: internal_475742 - 475742 - internal_475742 in function invert_matrix
+      Id: 475742
+      Base Address: 128
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+  This function performs unaligned accesses: invert_matrix
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 8
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 128
+    Internally allocated memory: 128
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __divdi3:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.02 seconds
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 64 bytes
+    Internal variable: internal_475563 - 475563 - internal_475563 in function invert_matrix
+      Id: 475563
+      Base Address: 64
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+    Internal variable: internal_475742 - 475742 - internal_475742 in function invert_matrix
+      Id: 475742
+      Base Address: 128
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+  This function performs unaligned accesses: invert_matrix
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 8
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 128
+    Internally allocated memory: 128
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __float32_to_int32_round_to_zeroe8m23b_127nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.01 seconds
+
+
+  Module allocation information for function __float_mule8m23b_127nih:
+    Number of complex operations: 1
+    Number of complex operations: 1
+  Time to perform module allocation: 0.02 seconds
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 64 bytes
+    Internal variable: internal_475563 - 475563 - internal_475563 in function invert_matrix
+      Id: 475563
+      Base Address: 64
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+    Internal variable: internal_475742 - 475742 - internal_475742 in function invert_matrix
+      Id: 475742
+      Base Address: 128
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+  This function performs unaligned accesses: invert_matrix
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 8
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 128
+    Internally allocated memory: 128
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __int32_to_float32e8m23b_127nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.03 seconds
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 64 bytes
+    Internal variable: internal_475563 - 475563 - internal_475563 in function invert_matrix
+      Id: 475563
+      Base Address: 64
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+    Internal variable: internal_475742 - 475742 - internal_475742 in function invert_matrix
+      Id: 475742
+      Base Address: 128
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+  This function performs unaligned accesses: invert_matrix
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 8
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 128
+    Internally allocated memory: 128
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function add_scaled_row_3_fixp:
+    Number of complex operations: 12
+    Number of complex operations: 12
+  Time to perform module allocation: 0.03 seconds
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 64 bytes
+    Internal variable: internal_475563 - 475563 - internal_475563 in function invert_matrix
+      Id: 475563
+      Base Address: 64
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+    Internal variable: internal_475742 - 475742 - internal_475742 in function invert_matrix
+      Id: 475742
+      Base Address: 128
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+  This function performs unaligned accesses: invert_matrix
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 8
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 128
+    Internally allocated memory: 128
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 64 bytes
+    Internal variable: internal_475563 - 475563 - internal_475563 in function invert_matrix
+      Id: 475563
+      Base Address: 64
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+    Internal variable: internal_475742 - 475742 - internal_475742 in function invert_matrix
+      Id: 475742
+      Base Address: 128
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+  This function performs unaligned accesses: invert_matrix
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 8
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 128
+    Internally allocated memory: 128
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function scale_row_7_fixp:
+    Number of complex operations: 9
+    Number of complex operations: 9
+  Time to perform module allocation: 0.02 seconds
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 64 bytes
+    Internal variable: internal_475563 - 475563 - internal_475563 in function invert_matrix
+      Id: 475563
+      Base Address: 64
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+    Internal variable: internal_475742 - 475742 - internal_475742 in function invert_matrix
+      Id: 475742
+      Base Address: 128
+      Size: 64
+      Has proxied accesses
+      Used &(object)
+      Number of functions in which is used: 4
+      Maximum number of references per function: 12
+      Maximum number of loads per function: 6
+  This function performs unaligned accesses: invert_matrix
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 8
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 128
+    Internally allocated memory: 128
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function swap_rows_1_fixp:
+    Number of complex operations: 12
+    Number of complex operations: 12
+  Time to perform module allocation: 0.03 seconds
+
+
+  Scheduling Information of function __divdi3:
+    Number of control steps: 5
+    Minimum slack: 6.7200666606666593
+    Estimated max frequency (MHz): 304.88424505702113
+  Time to perform scheduling: 0.00 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __divdi3:
+    Number of operations: 67
+    Number of basic blocks: 5
+    Number of states: 3
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float32_to_int32_round_to_zeroe8m23b_127nih:
+    Number of control steps: 7
+    Minimum slack: 7.4129999990000064
+    Estimated max frequency (MHz): 386.54812509217408
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 3
+
+  State Transition Graph Information of function __float32_to_int32_round_to_zeroe8m23b_127nih:
+    Number of operations: 47
+    Number of basic blocks: 7
+    Number of states: 5
+    Minimum number of cycles: 2
+    Maximum number of cycles 3
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_mule8m23b_127nih:
+    Number of control steps: 3
+    Minimum slack: 4.4063999819999973
+    Estimated max frequency (MHz): 178.77574313179994
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 6
+
+  State Transition Graph Information of function __float_mule8m23b_127nih:
+    Number of operations: 76
+    Number of basic blocks: 3
+    Number of states: 1
+    Minimum number of cycles: 1
+    Maximum number of cycles 1
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __int32_to_float32e8m23b_127nih:
+    Number of control steps: 8
+    Minimum slack: 0.73086131733333137
+    Estimated max frequency (MHz): 107.88488922600808
+  Time to perform scheduling: 0.02 seconds
+
+  Number of function call sites = 3
+
+  State Transition Graph Information of function __int32_to_float32e8m23b_127nih:
+    Number of operations: 273
+    Number of basic blocks: 8
+    Number of states: 7
+    Minimum number of cycles: 3
+    Maximum number of cycles 5
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function add_scaled_row_3_fixp:
+    Number of control steps: 17
+    Minimum slack: 1.6493999939999704
+    Estimated max frequency (MHz): 119.75187403078644
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 2
+
+  State Transition Graph Information of function add_scaled_row_3_fixp:
+    Number of operations: 148
+    Number of basic blocks: 9
+    Number of states: 15
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function scale_row_7_fixp:
+    Number of control steps: 14
+    Minimum slack: 2.569399991999965
+    Estimated max frequency (MHz): 134.57863415112726
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 2
+
+  State Transition Graph Information of function scale_row_7_fixp:
+    Number of operations: 127
+    Number of basic blocks: 9
+    Number of states: 12
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function swap_rows_1_fixp:
+    Number of control steps: 20
+    Minimum slack: 7.3036666646666708
+    Estimated max frequency (MHz): 370.87402618058604
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 2
+
+  State Transition Graph Information of function swap_rows_1_fixp:
+    Number of operations: 126
+    Number of basic blocks: 9
+    Number of states: 18
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __divdi3:
+    Bound operations:62/67
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float32_to_int32_round_to_zeroe8m23b_127nih:
+    Bound operations:41/47
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_mule8m23b_127nih:
+    Bound operations:65/76
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __int32_to_float32e8m23b_127nih:
+    Bound operations:224/273
+  Time to perform easy binding: 0.01 seconds
+
+
+  Easy binding information for function add_scaled_row_3_fixp:
+    Bound operations:77/148
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function scale_row_7_fixp:
+    Bound operations:86/127
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function swap_rows_1_fixp:
+    Bound operations:67/126
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __divdi3:
+    Number of storage values inserted: 22
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float32_to_int32_round_to_zeroe8m23b_127nih:
+    Number of storage values inserted: 6
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_mule8m23b_127nih:
+    Number of storage values inserted: 0
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __int32_to_float32e8m23b_127nih:
+    Number of storage values inserted: 19
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function add_scaled_row_3_fixp:
+    Number of storage values inserted: 32
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function scale_row_7_fixp:
+    Number of storage values inserted: 24
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function swap_rows_1_fixp:
+    Number of storage values inserted: 33
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __divdi3:
+    Register allocation algorithm obtains a sub-optimal result: 20 registers(LB:19)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __divdi3:
+    Number of modules instantiated: 67
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 825
+    Estimated area of MUX21: 0
+    Total estimated area: 825
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __divdi3:
+    Register allocation algorithm obtains a sub-optimal result: 20 registers(LB:19)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __divdi3:
+    Number of allocated multiplexers (2-to-1 equivalent): 6
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __divdi3: 334
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float32_to_int32_round_to_zeroe8m23b_127nih:
+    Register allocation algorithm obtains a sub-optimal result: 6 registers(LB:4)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float32_to_int32_round_to_zeroe8m23b_127nih:
+    Number of modules instantiated: 47
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 556
+    Estimated area of MUX21: 0
+    Total estimated area: 556
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float32_to_int32_round_to_zeroe8m23b_127nih:
+    Register allocation algorithm obtains a sub-optimal result: 6 registers(LB:4)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float32_to_int32_round_to_zeroe8m23b_127nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 2
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float32_to_int32_round_to_zeroe8m23b_127nih: 103
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 0 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_mule8m23b_127nih:
+    Number of modules instantiated: 76
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 724
+    Estimated area of MUX21: 0
+    Total estimated area: 724
+    Estimated number of DSPs: 2
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_mule8m23b_127nih:
+    Register allocation algorithm obtains an optimal result: 0 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_mule8m23b_127nih: 0
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __int32_to_float32e8m23b_127nih:
+    Register allocation algorithm obtains a sub-optimal result: 17 registers(LB:11)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __int32_to_float32e8m23b_127nih:
+    Number of modules instantiated: 273
+    Number of performance conflicts: 2
+    Estimated resources area (no Muxes and address logic): 2634
+    Estimated area of MUX21: 0
+    Total estimated area: 2634
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __int32_to_float32e8m23b_127nih:
+    Register allocation algorithm obtains a sub-optimal result: 17 registers(LB:11)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __int32_to_float32e8m23b_127nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 3
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __int32_to_float32e8m23b_127nih: 364
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function add_scaled_row_3_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 30 registers(LB:21)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function add_scaled_row_3_fixp:
+    Number of modules instantiated: 139
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 997
+    Estimated area of MUX21: 207
+    Total estimated area: 1204
+    Estimated number of DSPs: 3
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function add_scaled_row_3_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 30 registers(LB:21)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function add_scaled_row_3_fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 14
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function add_scaled_row_3_fixp: 389
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function scale_row_7_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:16)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function scale_row_7_fixp:
+    Number of modules instantiated: 122
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 805
+    Estimated area of MUX21: 171
+    Total estimated area: 976
+    Estimated number of DSPs: 6
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function scale_row_7_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:16)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function scale_row_7_fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 10
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function scale_row_7_fixp: 347
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function swap_rows_1_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 28 registers(LB:20)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+
+  Register binding information for function swap_rows_1_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 28 registers(LB:20)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 2 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function swap_rows_1_fixp:
+    Number of modules instantiated: 116
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 855
+    Estimated area of MUX21: 171
+    Total estimated area: 1026
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function swap_rows_1_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 28 registers(LB:20)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function swap_rows_1_fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 15
+  Time to perform interconnection binding: 0.01 seconds
+
+  Total number of flip-flops in function swap_rows_1_fixp: 301
+
+  Module allocation information for function invert_matrix:
+    Number of complex operations: 33
+    Number of complex operations: 33
+  Time to perform module allocation: 0.07 seconds
+
+
+  Scheduling Information of function invert_matrix:
+    Number of control steps: 53
+    Minimum slack: 0.13886131733334334
+    Estimated max frequency (MHz): 101.40816716813269
+  Time to perform scheduling: 0.03 seconds
+
+  Number of function call sites = 0
+
+  State Transition Graph Information of function invert_matrix:
+    Number of operations: 478
+    Number of basic blocks: 32
+    Number of states: 62
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Easy binding information for function invert_matrix:
+    Bound operations:269/478
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function invert_matrix:
+    Number of storage values inserted: 110
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function invert_matrix:
+    Register allocation algorithm obtains a sub-optimal result: 97 registers(LB:34)
+  Time to perform register binding: 0.01 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.01 seconds
+
+  Module binding information for function invert_matrix:
+    Number of modules instantiated: 455
+    Number of performance conflicts: 4
+    Estimated resources area (no Muxes and address logic): 24178
+    Estimated area of MUX21: 720
+    Total estimated area: 24898
+    Estimated number of DSPs: 3
+  Time to perform module binding: 0.02 seconds
+
+
+  Register binding information for function invert_matrix:
+    Register allocation algorithm obtains a sub-optimal result: 97 registers(LB:34)
+  Time to perform register binding: 0.01 seconds
+
+
+  Connection Binding Information for function invert_matrix:
+    Number of allocated multiplexers (2-to-1 equivalent): 54
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function invert_matrix: 1872
+[0m  Parameter Pd150 (475509) (testvector 0) allocated at 1073741824 : reserved_mem_size = 64
+Padding of 0 for parameter Pd150
+  Parameter Pd151 (475510) (testvector 0) allocated at 1073741888 : reserved_mem_size = 64
+Padding of 0 for parameter Pd151
+  Parameter Pd150 (475509) (testvector 1) allocated at 1073741952 : reserved_mem_size = 64
+Padding of 0 for parameter Pd150
+  Parameter Pd151 (475510) (testvector 1) allocated at 1073742016 : reserved_mem_size = 64
+Padding of 0 for parameter Pd151
+  Parameter Pd150 (475509) (testvector 2) allocated at 1073742080 : reserved_mem_size = 64
+Padding of 0 for parameter Pd150
+  Parameter Pd151 (475510) (testvector 2) allocated at 1073742144 : reserved_mem_size = 64
+Padding of 0 for parameter Pd151
+  Parameter Pd150 (475509) (testvector 3) allocated at 1073742208 : reserved_mem_size = 64
+Padding of 0 for parameter Pd150
+  Parameter Pd151 (475510) (testvector 3) allocated at 1073742272 : reserved_mem_size = 64
+Padding of 0 for parameter Pd151
+  Parameter Pd150 (475509) (testvector 4) allocated at 1073742336 : reserved_mem_size = 64
+Padding of 0 for parameter Pd150
+  Parameter Pd151 (475510) (testvector 4) allocated at 1073742400 : reserved_mem_size = 64
+Padding of 0 for parameter Pd151
+  Parameter Pd150 (475509) (testvector 5) allocated at 1073742464 : reserved_mem_size = 64
+Padding of 0 for parameter Pd150
+  Parameter Pd151 (475510) (testvector 5) allocated at 1073742528 : reserved_mem_size = 64
+Padding of 0 for parameter Pd151
+  Parameter Pd150 (475509) (testvector 6) allocated at 1073742592 : reserved_mem_size = 64
+Padding of 0 for parameter Pd150
+  Parameter Pd151 (475510) (testvector 6) allocated at 1073742656 : reserved_mem_size = 64
+Padding of 0 for parameter Pd151
+  Parameter Pd150 (475509) (testvector 7) allocated at 1073742720 : reserved_mem_size = 64
+Padding of 0 for parameter Pd150
+  Parameter Pd151 (475510) (testvector 7) allocated at 1073742784 : reserved_mem_size = 64
+Padding of 0 for parameter Pd151
+  C-based testbench generation for function invert_matrix: /home/zero/Desktop/COaT_project/MatrixInversion/synthesis_with_opt/HLS_output//simulation/values.c
+  Prepared testbench
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+
+  Summary of resources:
+     - ADDRESS_DECODING_LOGIC_NN: 2
+     - ARRAY_1D_STD_BRAM_NN: 2
+     - ARRAY_1D_STD_BRAM_NN_SP: 2
+     - ASSIGN_SIGNED_FU: 2
+     - BMEMORY_CTRLN: 3
+     - BRAM_MEMORY_CORE_SMALL: 2
+     - BRAM_MEMORY_NN_CORE: 2
+     - IIdata_converter_FU: 9
+     - IUdata_converter_FU: 27
+     - MUX_GATE: 109
+     - OR_GATE: 9
+     - Pd150_bambu_artificial_ParmMgr_modgen: 1
+     - Pd151_bambu_artificial_ParmMgr_modgen: 1
+     - SIMPLEJOIN_FU: 2
+     - TRUE_DUAL_PORT_BYTE_ENABLING_RAM: 2
+     - UIdata_converter_FU: 33
+     - UUdata_converter_FU: 190
+     - __builtin_abs: 2
+     - addr_expr_FU: 2
+     - bus_merger: 7
+     - constant_value: 385
+     - extract_bit_expr_FU: 2
+     - flipflop_AR: 8
+     - gt_expr_FU: 5
+     - join_signal: 19
+     - lshift_expr_FU: 3
+     - lt_expr_FU: 3
+     - lut_expr_FU: 180
+     - minus_expr_FU: 2
+     - mult_expr_FU: 3
+     - multi_read_cond_FU: 7
+     - read_cond_FU: 35
+     - register_SE: 191
+     - register_STD: 54
+     - rshift_expr_FU: 13
+     - split_signal: 7
+     - ui_bit_and_expr_FU: 70
+     - ui_bit_ior_concat_expr_FU: 22
+     - ui_bit_ior_expr_FU: 32
+     - ui_bit_xor_expr_FU: 5
+     - ui_cond_expr_FU: 42
+     - ui_eq_expr_FU: 42
+     - ui_extract_bit_expr_FU: 446
+     - ui_fshl_expr_FU: 1
+     - ui_gt_expr_FU: 2
+     - ui_lshift_expr_FU: 148
+     - ui_lt_expr_FU: 2
+     - ui_mult_expr_FU: 13
+     - ui_ne_expr_FU: 4
+     - ui_negate_expr_FU: 7
+     - ui_plus_expr_FU: 66
+     - ui_pointer_plus_expr_FU: 36
+     - ui_rshift_expr_FU: 137
+     - ui_ternary_plus_expr_FU: 3
+     - ui_view_convert_expr_FU: 9
+Start reading vector           1's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd151 = 1057451008   expected = 1057451008 
+
+ Pd151 = 1055727616   expected = 1055727616 
+
+ Pd151 = 3199971328   expected = 3199971328 
+
+ Pd151 = 3210692608   expected = 3210692608 
+
+ Pd151 = 1056194560   expected = 1056194560 
+
+ Pd151 = 1054312448   expected = 1054312448 
+
+ Pd151 = 3200159744   expected = 3200159744 
+
+ Pd151 = 3208768512   expected = 3208768512 
+
+ Pd151 = 1053321216   expected = 1053321216 
+
+ Pd151 = 1052051456   expected = 1052051456 
+
+ Pd151 = 3199731712   expected = 3199731712 
+
+ Pd151 = 3208576000   expected = 3208576000 
+
+ Pd151 = 1049270272   expected = 1049270272 
+
+ Pd151 = 1050472448   expected = 1050472448 
+
+ Pd151 = 3192553472   expected = 3192553472 
+
+ Pd151 = 3204840448   expected = 3204840448 
+
+Simulation ended after                 1038 cycles.
+
+Simulation completed with success
+
+Start reading vector           2's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd151 = 1038794752   expected = 1038794752 
+
+ Pd151 = 3178004480   expected = 3178004480 
+
+ Pd151 = 1037516800   expected = 1037516800 
+
+ Pd151 = 3169746944   expected = 3169746944 
+
+ Pd151 = 1022033920   expected = 1022033920 
+
+ Pd151 = 3179520000   expected = 3179520000 
+
+ Pd151 = 1010368512   expected = 1010368512 
+
+ Pd151 = 3173908480   expected = 3173908480 
+
+ Pd151 = 3180060672   expected = 3180060672 
+
+ Pd151 = 1034592256   expected = 1034592256 
+
+ Pd151 = 3182960640   expected = 3182960640 
+
+ Pd151 = 3158048768   expected = 3158048768 
+
+ Pd151 = 1028587520   expected = 1028587520 
+
+ Pd151 = 3148742656   expected = 3148742656 
+
+ Pd151 = 3159228416   expected = 3159228416 
+
+ Pd151 = 1007878144   expected = 1007878144 
+
+Simulation ended after                  998 cycles.
+
+Simulation completed with success
+
+Start reading vector           3's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd151 = 3182903296   expected = 3182903296 
+
+ Pd151 = 3127902208   expected = 3127902208 
+
+ Pd151 = 1027244032   expected = 1027244032 
+
+ Pd151 = 3186843648   expected = 3186843648 
+
+ Pd151 =  983564288   expected =  983564288 
+
+ Pd151 = 1034469376   expected = 1034469376 
+
+ Pd151 = 3156803584   expected = 3156803584 
+
+ Pd151 = 1036689408   expected = 1036689408 
+
+ Pd151 = 3182780416   expected = 3182780416 
+
+ Pd151 = 3179773952   expected = 3179773952 
+
+ Pd151 = 3182870528   expected = 3182870528 
+
+ Pd151 = 3192176640   expected = 3192176640 
+
+ Pd151 = 1025933312   expected = 1025933312 
+
+ Pd151 = 1029783552   expected = 1029783552 
+
+ Pd151 =  999161856   expected =  999161856 
+
+ Pd151 = 1023918080   expected = 1023918080 
+
+Simulation ended after                 1078 cycles.
+
+Simulation completed with success
+
+Start reading vector           4's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd151 = 1030881280   expected = 1030881280 
+
+ Pd151 = 1041035264   expected = 1041035264 
+
+ Pd151 = 3163291648   expected = 3163291648 
+
+ Pd151 = 3188477952   expected = 3188477952 
+
+ Pd151 = 3196309504   expected = 3196309504 
+
+ Pd151 = 3211635712   expected = 3211635712 
+
+ Pd151 = 1049817088   expected = 1049817088 
+
+ Pd151 = 1057315840   expected = 1057315840 
+
+ Pd151 = 1010171904   expected = 1010171904 
+
+ Pd151 = 1017380864   expected = 1017380864 
+
+ Pd151 = 3180281856   expected = 3180281856 
+
+ Pd151 = 1000341504   expected = 1000341504 
+
+ Pd151 = 1034633216   expected = 1034633216 
+
+ Pd151 = 1040474112   expected = 1040474112 
+
+ Pd151 = 3152936960   expected = 3152936960 
+
+ Pd151 = 3176169472   expected = 3176169472 
+
+Simulation ended after                 1038 cycles.
+
+Simulation completed with success
+
+Start reading vector           5's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd151 = 1029079040   expected = 1029079040 
+
+ Pd151 = 1012137984   expected = 1012137984 
+
+ Pd151 = 1037025280   expected = 1037025280 
+
+ Pd151 = 3173367808   expected = 3173367808 
+
+ Pd151 = 3162505216   expected = 3162505216 
+
+ Pd151 = 3181494272   expected = 3181494272 
+
+ Pd151 = 3178168320   expected = 3178168320 
+
+ Pd151 = 1026441216   expected = 1026441216 
+
+ Pd151 = 1021116416   expected = 1021116416 
+
+ Pd151 = 3158114304   expected = 3158114304 
+
+ Pd151 = 3171909632   expected = 3171909632 
+
+ Pd151 = 3158704128   expected = 3158704128 
+
+ Pd151 = 1032970240   expected = 1032970240 
+
+ Pd151 = 3132620800   expected = 3132620800 
+
+ Pd151 = 1028849664   expected = 1028849664 
+
+ Pd151 = 1021116416   expected = 1021116416 
+
+Simulation ended after                  998 cycles.
+
+Simulation completed with success
+
+Start reading vector           6's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd151 = 1081796096   expected = 1081796096 
+
+ Pd151 = 1037778944   expected = 1037778944 
+
+ Pd151 = 3229497600   expected = 3229497600 
+
+ Pd151 = 3233751680   expected = 3233751680 
+
+ Pd151 = 1075519232   expected = 1075519232 
+
+ Pd151 = 1034067968   expected = 1034067968 
+
+ Pd151 = 3222997760   expected = 3222997760 
+
+ Pd151 = 3228592640   expected = 3228592640 
+
+ Pd151 = 3229148416   expected = 3229148416 
+
+ Pd151 = 1014956032   expected = 1014956032 
+
+ Pd151 = 1082086656   expected = 1082086656 
+
+ Pd151 = 1086121600   expected = 1086121600 
+
+ Pd151 = 3223141376   expected = 3223141376 
+
+ Pd151 = 3162177536   expected = 3162177536 
+
+ Pd151 = 1075542272   expected = 1075542272 
+
+ Pd151 = 1080712704   expected = 1080712704 
+
+Simulation ended after                 1038 cycles.
+
+Simulation completed with success
+
+Start reading vector           7's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd151 = 1026555904   expected = 1026555904 
+
+ Pd151 = 3180052480   expected = 3180052480 
+
+ Pd151 = 1005060096   expected = 1005060096 
+
+ Pd151 = 3180634112   expected = 3180634112 
+
+ Pd151 = 1041092608   expected = 1041092608 
+
+ Pd151 = 3179331584   expected = 3179331584 
+
+ Pd151 = 3183747072   expected = 3183747072 
+
+ Pd151 = 3184877568   expected = 3184877568 
+
+ Pd151 = 3189829632   expected = 3189829632 
+
+ Pd151 = 1017020416   expected = 1017020416 
+
+ Pd151 = 1027932160   expected = 1027932160 
+
+ Pd151 = 1028669440   expected = 1028669440 
+
+ Pd151 = 1035362304   expected = 1035362304 
+
+ Pd151 =  974127104   expected =  974127104 
+
+ Pd151 = 3171287040   expected = 3171287040 
+
+ Pd151 = 3184427008   expected = 3184427008 
+
+Simulation ended after                  998 cycles.
+
+Simulation completed with success
+
+Start reading vector           8's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd151 = 1025916928   expected = 1025916928 
+
+ Pd151 = 1027162112   expected = 1027162112 
+
+ Pd151 = 3162734592   expected = 3162734592 
+
+ Pd151 = 3175989248   expected = 3175989248 
+
+ Pd151 = 1011286016   expected = 1011286016 
+
+ Pd151 = 3170336768   expected = 3170336768 
+
+ Pd151 = 1028292608   expected = 1028292608 
+
+ Pd151 = 3179683840   expected = 3179683840 
+
+ Pd151 = 3185418240   expected = 3185418240 
+
+ Pd151 = 1031815168   expected = 1031815168 
+
+ Pd151 = 3182616576   expected = 3182616576 
+
+ Pd151 = 1032110080   expected = 1032110080 
+
+ Pd151 = 1033396224   expected = 1033396224 
+
+ Pd151 = 3180167168   expected = 3180167168 
+
+ Pd151 = 1009254400   expected = 1009254400 
+
+ Pd151 = 3172286464   expected = 3172286464 
+
+Simulation ended after                 1038 cycles.
+
+Simulation completed with success
+
+No more values found. Simulation(s) executed:           8.
+
+- /home/zero/Desktop/COaT_project/MatrixInversion/synthesis_with_opt/HLS_output//simulation/testbench_invert_matrix_tb.v:217: Verilog $finish
+No more values found. Simulation(s) executed:           8.
+
+- /home/zero/Desktop/COaT_project/MatrixInversion/synthesis_with_opt/HLS_output//simulation/testbench_invert_matrix_tb.v:258: Verilog $finish
+- /home/zero/Desktop/COaT_project/MatrixInversion/synthesis_with_opt/HLS_output//simulation/testbench_invert_matrix_tb.v:258: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 1038 cycles;
+2. Simulation completed with SUCCESS; Execution time 998 cycles;
+3. Simulation completed with SUCCESS; Execution time 1078 cycles;
+4. Simulation completed with SUCCESS; Execution time 1038 cycles;
+5. Simulation completed with SUCCESS; Execution time 998 cycles;
+6. Simulation completed with SUCCESS; Execution time 1038 cycles;
+7. Simulation completed with SUCCESS; Execution time 998 cycles;
+8. Simulation completed with SUCCESS; Execution time 1038 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 8224 cycles
+  Number of executions     : 8
+  Average execution        : 1028 cycles
+  Slices                   : 1348
+  Luts                     : 3708
+  Lut FF Pairs             : 3708
+  Power                    : 0.35999999999999999
+  Registers                : 2539
+  DSPs                     : 11
+  BRAMs                    : 8
+  Clock period             : 10
+  Design minimum period    : 12.353
+  Design slack             : -2.3529999999999998
+  Frequency                : 80.95199546668826
+  AreaxTime                : 47087.461872
+  Time                     : 12.698884
+  Tot. Time                : 101.591072

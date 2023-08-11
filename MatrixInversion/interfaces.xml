@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<module>
+<function id="invert_matrix">
+<arg id="Pd149" interface_type="default" interface_typename="int" interface_typename_include="" interface_typename_orig="int"/>
+<arg id="Pd150" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="16"/>
+<arg id="Pd151" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="16"/>
+</function>
+</module>

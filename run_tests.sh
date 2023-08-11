@@ -55,6 +55,7 @@ path_names=(
   "FromTaffo_fpbench_leadLag,test"
   "FromTaffo_fpbench_triangle,test"
   "FromTaffo_fpbench_turbine1,test"
+  "MatrixInversion,invert_matrix"
   "MDPPolicyIteration,policyIteration"
   "NormalizeVector,normalize"
   "TrainLogisticRegression,gradient_descent"

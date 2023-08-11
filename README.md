@@ -52,6 +52,7 @@ Here is the current list of tests:
 - **FromTaffo_fpbench_triangle**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/triangle);
 - **FromTaffo_fpbench_turbine1**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/tree/master/test/fpbench/turbine1);
 - **FromTaffo_test3**: Example from here [-> taffo-github <-](https://github.com/TAFFO-org/TAFFO/blob/master/test/simple-test-cases/test3.c);
+- **MatrixInversion**: Computes the inverse of a matrix via the Gauss-Jordan method [-> wikipedia <-](https://en.wikipedia.org/wiki/Gaussian_elimination#Finding_the_inverse_of_a_matrix);
 - **MDPPolicyIteration**: Solves a simple Markov Decision Process via the Policy Iteration Method [-> wikipedia <-](https://en.wikipedia.org/wiki/Markov_decision_process#Policy_iteration);
 - **NormalizeVector**: Transforms a vector to have a unitary norm;
 - **SimpleTaffoTest**: A few trivial tests to verify that TAFFO and PandA-Bambu are working properly;
@@ -194,8 +195,9 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
     python3 test_generator.py <args> > test.xml
     ```
     Different generators might require some command-line arguments.
-- Gather and print flip-flop counts and Vivado's results summary:<br>
+- Gather and print simulation results, flip-flop counts and Vivado's results summary:<br>
     ```
+    python3 get_verilator_results.py
     python3 get_flipflops_count.py
     python3 get_vivado_results.py
     ```
