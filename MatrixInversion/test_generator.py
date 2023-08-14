@@ -1,6 +1,6 @@
 import random as rnd
 
-template = "\n\t<testbench\n\tPd149=\"N_\"\n\tPd150=\"{M_f_}\"\n\tPd151=\"{M_inv_f_}\"\n\tN=\"N_\"\n\tM_f=\"{M_f_}\"\n\tM_inv_f=\"{M_inv_f_}\"/>"
+template = "\n\t<testbench\n\tPd147=\"N_\"\n\tPd148=\"{M_f_}\"\n\tPd149=\"{M_inv_f_}\"\n\tN=\"N_\"\n\tM_f=\"{M_f_}\"\n\tM_inv_f=\"{M_inv_f_}\"/>"
 
 size_code_constant = 4
 how_many_testbenches = 8

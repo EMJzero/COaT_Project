@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-Zc7y11/usr/bin/bambu --use-raw -v 2 --top-fname=invert_matrix --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-nd2YSe/usr/bin/bambu --use-raw -v 2 --top-fname=invert_matrix --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
 
 
 ********************************************************************************
@@ -17,7 +17,7 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
-Parameters parsed in 0.12 seconds
+Parameters parsed in 0.13 seconds
 
 Target technology = FPGA
 Library Name     : STD_FU
@@ -314,7 +314,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
   Module allocation information for function __divdi3:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.02 seconds
+  Time to perform module allocation: 0.01 seconds
 
 
   Memory allocation information:
@@ -595,7 +595,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
     Number of control steps: 3
     Minimum slack: 4.4063999819999973
     Estimated max frequency (MHz): 178.77574313179994
-  Time to perform scheduling: 0.01 seconds
+  Time to perform scheduling: 0.00 seconds
 
   Number of function call sites = 6
 
@@ -624,7 +624,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
     Maximum number of cycles 5
     Parameters are registered
     Done port is registered
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function add_scaled_row_3_fixp:
@@ -692,7 +692,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
 
   Easy binding information for function __int32_to_float32e8m23b_127nih:
     Bound operations:224/273
-  Time to perform easy binding: 0.01 seconds
+  Time to perform easy binding: 0.00 seconds
 
 
   Easy binding information for function add_scaled_row_3_fixp:
@@ -805,7 +805,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
 
   Connection Binding Information for function __float32_to_int32_round_to_zeroe8m23b_127nih:
     Number of allocated multiplexers (2-to-1 equivalent): 2
-  Time to perform interconnection binding: 0.00 seconds
+  Time to perform interconnection binding: 0.01 seconds
 
   Total number of flip-flops in function __float32_to_int32_round_to_zeroe8m23b_127nih: 103
   Slack computed in 0.00 seconds
@@ -835,7 +835,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
   Time to perform register binding: 0.00 seconds
 
   Total number of flip-flops in function __float_mule8m23b_127nih: 0
-  Slack computed in 0.00 seconds
+  Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
@@ -867,7 +867,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
   Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function __int32_to_float32e8m23b_127nih: 364
-  Slack computed in 0.00 seconds
+  Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
@@ -980,7 +980,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
     Number of control steps: 53
     Minimum slack: 0.13886131733334334
     Estimated max frequency (MHz): 101.40816716813269
-  Time to perform scheduling: 0.03 seconds
+  Time to perform scheduling: 0.04 seconds
 
   Number of function call sites = 0
 
@@ -989,7 +989,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
     Number of basic blocks: 32
     Number of states: 62
     Done port is registered
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Easy binding information for function invert_matrix:
@@ -1001,17 +1001,17 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
     Number of storage values inserted: 110
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.01 seconds
+  Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function invert_matrix:
     Register allocation algorithm obtains a sub-optimal result: 97 registers(LB:34)
-  Time to perform register binding: 0.01 seconds
+  Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
-  Clique covering computation completed in 0.01 seconds
+  Clique covering computation completed in 0.00 seconds
 
   Module binding information for function invert_matrix:
     Number of modules instantiated: 455
@@ -1020,7 +1020,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
     Estimated area of MUX21: 720
     Total estimated area: 24898
     Estimated number of DSPs: 3
-  Time to perform module binding: 0.02 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function invert_matrix:
@@ -1030,7 +1030,7 @@ Function call to absolute_5_s6_26fixp inlined in invert_matrix
 
   Connection Binding Information for function invert_matrix:
     Number of allocated multiplexers (2-to-1 equivalent): 54
-  Time to perform interconnection binding: 0.00 seconds
+  Time to perform interconnection binding: 0.01 seconds
 
   Total number of flip-flops in function invert_matrix: 1872
 [0m  Parameter Pd150 (475509) (testvector 0) allocated at 1073741824 : reserved_mem_size = 64
@@ -1131,232 +1131,232 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 Start reading vector           1's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
- Pd151 = 1057451008   expected = 1057451008 
+ Pd151 = 1025032192   expected = 1025032192 
 
- Pd151 = 1055727616   expected = 1055727616 
+ Pd151 = 3138125824   expected = 3138125824 
 
- Pd151 = 3199971328   expected = 3199971328 
+ Pd151 = 3175792640   expected = 3175792640 
 
- Pd151 = 3210692608   expected = 3210692608 
+ Pd151 = 1035902976   expected = 1035902976 
 
- Pd151 = 1056194560   expected = 1056194560 
+ Pd151 = 1030930432   expected = 1030930432 
 
- Pd151 = 1054312448   expected = 1054312448 
+ Pd151 = 1031913472   expected = 1031913472 
 
- Pd151 = 3200159744   expected = 3200159744 
+ Pd151 = 3180847104   expected = 3180847104 
 
- Pd151 = 3208768512   expected = 3208768512 
+ Pd151 = 1022230528   expected = 1022230528 
 
- Pd151 = 1053321216   expected = 1053321216 
+ Pd151 = 3164798976   expected = 3164798976 
 
- Pd151 = 1052051456   expected = 1052051456 
+ Pd151 = 1028685824   expected = 1028685824 
 
- Pd151 = 3199731712   expected = 3199731712 
+ Pd151 = 1037910016   expected = 1037910016 
 
- Pd151 = 3208576000   expected = 3208576000 
+ Pd151 = 1026539520   expected = 1026539520 
 
- Pd151 = 1049270272   expected = 1049270272 
+ Pd151 = 1030045696   expected = 1030045696 
 
- Pd151 = 1050472448   expected = 1050472448 
+ Pd151 = 3170304000   expected = 3170304000 
 
- Pd151 = 3192553472   expected = 3192553472 
+ Pd151 = 1043152896   expected = 1043152896 
 
- Pd151 = 3204840448   expected = 3204840448 
+ Pd151 = 1029341184   expected = 1029341184 
 
-Simulation ended after                 1038 cycles.
+Simulation ended after                 1078 cycles.
 
 Simulation completed with success
 
 Start reading vector           2's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
- Pd151 = 1038794752   expected = 1038794752 
+ Pd151 = 3133145088   expected = 3133145088 
 
- Pd151 = 3178004480   expected = 3178004480 
+ Pd151 = 3171352576   expected = 3171352576 
 
- Pd151 = 1037516800   expected = 1037516800 
+ Pd151 = 1014235136   expected = 1014235136 
 
- Pd151 = 3169746944   expected = 3169746944 
+ Pd151 = 1027145728   expected = 1027145728 
 
- Pd151 = 1022033920   expected = 1022033920 
+ Pd151 = 1041190912   expected = 1041190912 
 
- Pd151 = 3179520000   expected = 3179520000 
+ Pd151 = 1040793600   expected = 1040793600 
 
- Pd151 = 1010368512   expected = 1010368512 
+ Pd151 = 1011941376   expected = 1011941376 
 
- Pd151 = 3173908480   expected = 3173908480 
+ Pd151 = 3181109248   expected = 3181109248 
 
- Pd151 = 3180060672   expected = 3180060672 
+ Pd151 = 3179593728   expected = 3179593728 
 
- Pd151 = 1034592256   expected = 1034592256 
+ Pd151 = 1008205824   expected = 1008205824 
 
- Pd151 = 3182960640   expected = 3182960640 
+ Pd151 = 1033437184   expected = 1033437184 
 
- Pd151 = 3158048768   expected = 3158048768 
+ Pd151 = 3168272384   expected = 3168272384 
 
- Pd151 = 1028587520   expected = 1028587520 
+ Pd151 = 3197413376   expected = 3197413376 
 
- Pd151 = 3148742656   expected = 3148742656 
+ Pd151 = 3197968384   expected = 3197968384 
 
- Pd151 = 3159228416   expected = 3159228416 
+ Pd151 = 1027932160   expected = 1027932160 
 
- Pd151 = 1007878144   expected = 1007878144 
+ Pd151 = 1030537216   expected = 1030537216 
 
-Simulation ended after                  998 cycles.
+Simulation ended after                 1038 cycles.
 
 Simulation completed with success
 
 Start reading vector           3's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
- Pd151 = 3182903296   expected = 3182903296 
+ Pd151 = 1025703936   expected = 1025703936 
 
- Pd151 = 3127902208   expected = 3127902208 
+ Pd151 = 1012465664   expected = 1012465664 
 
- Pd151 = 1027244032   expected = 1027244032 
+ Pd151 = 1025146880   expected = 1025146880 
 
- Pd151 = 3186843648   expected = 3186843648 
+ Pd151 = 1007550464   expected = 1007550464 
 
- Pd151 =  983564288   expected =  983564288 
+ Pd151 = 3162800128   expected = 3162800128 
 
- Pd151 = 1034469376   expected = 1034469376 
+ Pd151 = 1017774080   expected = 1017774080 
 
- Pd151 = 3156803584   expected = 3156803584 
+ Pd151 =  990117888   expected =  990117888 
 
- Pd151 = 1036689408   expected = 1036689408 
+ Pd151 = 3171647488   expected = 3171647488 
 
- Pd151 = 3182780416   expected = 3182780416 
+ Pd151 = 1025261568   expected = 1025261568 
 
- Pd151 = 3179773952   expected = 3179773952 
+ Pd151 = 3161325568   expected = 3161325568 
 
- Pd151 = 3182870528   expected = 3182870528 
+ Pd151 = 3180257280   expected = 3180257280 
 
- Pd151 = 3192176640   expected = 3192176640 
+ Pd151 = 3179905024   expected = 3179905024 
 
- Pd151 = 1025933312   expected = 1025933312 
+ Pd151 = 3173974016   expected = 3173974016 
 
- Pd151 = 1029783552   expected = 1029783552 
+ Pd151 = 1033527296   expected = 1033527296 
 
- Pd151 =  999161856   expected =  999161856 
+ Pd151 = 3170140160   expected = 3170140160 
 
- Pd151 = 1023918080   expected = 1023918080 
+ Pd151 = 1034510336   expected = 1034510336 
 
-Simulation ended after                 1078 cycles.
+Simulation ended after                  958 cycles.
 
 Simulation completed with success
 
 Start reading vector           4's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
- Pd151 = 1030881280   expected = 1030881280 
+ Pd151 = 1008730112   expected = 1008730112 
 
- Pd151 = 1041035264   expected = 1041035264 
+ Pd151 = 1037246464   expected = 1037246464 
 
- Pd151 = 3163291648   expected = 3163291648 
+ Pd151 = 1035255808   expected = 1035255808 
 
- Pd151 = 3188477952   expected = 3188477952 
+ Pd151 = 1016332288   expected = 1016332288 
 
- Pd151 = 3196309504   expected = 3196309504 
+ Pd151 = 3158114304   expected = 3158114304 
 
- Pd151 = 3211635712   expected = 3211635712 
+ Pd151 = 1006108672   expected = 1006108672 
 
- Pd151 = 1049817088   expected = 1049817088 
+ Pd151 = 3176185856   expected = 3176185856 
 
- Pd151 = 1057315840   expected = 1057315840 
+ Pd151 = 1032085504   expected = 1032085504 
 
- Pd151 = 1010171904   expected = 1010171904 
+ Pd151 = 3158310912   expected = 3158310912 
 
- Pd151 = 1017380864   expected = 1017380864 
+ Pd151 = 1037221888   expected = 1037221888 
 
- Pd151 = 3180281856   expected = 3180281856 
+ Pd151 = 1023868928   expected = 1023868928 
 
- Pd151 = 1000341504   expected = 1000341504 
+ Pd151 = 3169615872   expected = 3169615872 
 
- Pd151 = 1034633216   expected = 1034633216 
+ Pd151 = 1034215424   expected = 1034215424 
 
- Pd151 = 1040474112   expected = 1040474112 
+ Pd151 = 3137339392   expected = 3137339392 
 
- Pd151 = 3152936960   expected = 3152936960 
+ Pd151 = 3181379584   expected = 3181379584 
 
- Pd151 = 3176169472   expected = 3176169472 
+ Pd151 = 3181453312   expected = 3181453312 
 
-Simulation ended after                 1038 cycles.
+Simulation ended after                  998 cycles.
 
 Simulation completed with success
 
 Start reading vector           5's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
- Pd151 = 1029079040   expected = 1029079040 
+ Pd151 = 3192791040   expected = 3192791040 
 
- Pd151 = 1012137984   expected = 1012137984 
+ Pd151 = 3188994048   expected = 3188994048 
 
- Pd151 = 1037025280   expected = 1037025280 
+ Pd151 = 1043075072   expected = 1043075072 
 
- Pd151 = 3173367808   expected = 3173367808 
+ Pd151 = 1046368256   expected = 1046368256 
 
- Pd151 = 3162505216   expected = 3162505216 
+ Pd151 = 1042157568   expected = 1042157568 
 
- Pd151 = 3181494272   expected = 3181494272 
+ Pd151 = 1028866048   expected = 1028866048 
 
- Pd151 = 3178168320   expected = 3178168320 
+ Pd151 = 3180224512   expected = 3180224512 
 
- Pd151 = 1026441216   expected = 1026441216 
+ Pd151 = 3189751808   expected = 3189751808 
 
- Pd151 = 1021116416   expected = 1021116416 
+ Pd151 = 3175776256   expected = 3175776256 
 
- Pd151 = 3158114304   expected = 3158114304 
+ Pd151 = 1019183104   expected = 1019183104 
 
- Pd151 = 3171909632   expected = 3171909632 
+ Pd151 = 3138125824   expected = 3138125824 
 
- Pd151 = 3158704128   expected = 3158704128 
+ Pd151 = 3163258880   expected = 3163258880 
 
- Pd151 = 1032970240   expected = 1032970240 
+ Pd151 = 1050634240   expected = 1050634240 
 
- Pd151 = 3132620800   expected = 3132620800 
+ Pd151 = 1049104384   expected = 1049104384 
 
- Pd151 = 1028849664   expected = 1028849664 
+ Pd151 = 3184754688   expected = 3184754688 
 
- Pd151 = 1021116416   expected = 1021116416 
+ Pd151 = 3197337600   expected = 3197337600 
 
-Simulation ended after                  998 cycles.
+Simulation ended after                 1078 cycles.
 
 Simulation completed with success
 
 Start reading vector           6's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
- Pd151 = 1081796096   expected = 1081796096 
+ Pd151 = 1034297344   expected = 1034297344 
 
- Pd151 = 1037778944   expected = 1037778944 
+ Pd151 = 3180281856   expected = 3180281856 
 
- Pd151 = 3229497600   expected = 3229497600 
+ Pd151 = 1002962944   expected = 1002962944 
 
- Pd151 = 3233751680   expected = 3233751680 
+ Pd151 = 1032019968   expected = 1032019968 
 
- Pd151 = 1075519232   expected = 1075519232 
+ Pd151 = 1012989952   expected = 1012989952 
 
- Pd151 = 1034067968   expected = 1034067968 
+ Pd151 = 1000603648   expected = 1000603648 
 
- Pd151 = 3222997760   expected = 3222997760 
+ Pd151 = 3176546304   expected = 3176546304 
 
- Pd151 = 3228592640   expected = 3228592640 
+ Pd151 = 1030782976   expected = 1030782976 
 
- Pd151 = 3229148416   expected = 3229148416 
+ Pd151 = 3181305856   expected = 3181305856 
 
- Pd151 = 1014956032   expected = 1014956032 
+ Pd151 = 1037762560   expected = 1037762560 
 
- Pd151 = 1082086656   expected = 1082086656 
+ Pd151 = 3175579648   expected = 3175579648 
 
- Pd151 = 1086121600   expected = 1086121600 
+ Pd151 = 3186851840   expected = 3186851840 
 
- Pd151 = 3223141376   expected = 3223141376 
+ Pd151 = 3180158976   expected = 3180158976 
 
- Pd151 = 3162177536   expected = 3162177536 
+ Pd151 = 3169583104   expected = 3169583104 
 
- Pd151 = 1075542272   expected = 1075542272 
+ Pd151 = 1011941376   expected = 1011941376 
 
- Pd151 = 1080712704   expected = 1080712704 
+ Pd151 = 3177709568   expected = 3177709568 
 
 Simulation ended after                 1038 cycles.
 
@@ -1365,37 +1365,37 @@ Simulation completed with success
 Start reading vector           7's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
- Pd151 = 1026555904   expected = 1026555904 
+ Pd151 = 1014366208   expected = 1014366208 
 
- Pd151 = 3180052480   expected = 3180052480 
+ Pd151 = 3167977472   expected = 3167977472 
 
- Pd151 = 1005060096   expected = 1005060096 
+ Pd151 = 1035649024   expected = 1035649024 
 
- Pd151 = 3180634112   expected = 3180634112 
+ Pd151 = 3171794944   expected = 3171794944 
 
- Pd151 = 1041092608   expected = 1041092608 
+ Pd151 = 3146514432   expected = 3146514432 
 
- Pd151 = 3179331584   expected = 3179331584 
+ Pd151 = 3181895680   expected = 3181895680 
 
- Pd151 = 3183747072   expected = 3183747072 
+ Pd151 = 3165356032   expected = 3165356032 
 
- Pd151 = 3184877568   expected = 3184877568 
+ Pd151 = 3169124352   expected = 3169124352 
 
- Pd151 = 3189829632   expected = 3189829632 
+ Pd151 = 3179642880   expected = 3179642880 
 
- Pd151 = 1017020416   expected = 1017020416 
+ Pd151 = 1021476864   expected = 1021476864 
 
- Pd151 = 1027932160   expected = 1027932160 
+ Pd151 = 1017774080   expected = 1017774080 
 
- Pd151 = 1028669440   expected = 1028669440 
+ Pd151 = 1032585216   expected = 1032585216 
 
- Pd151 = 1035362304   expected = 1035362304 
+ Pd151 = 1016922112   expected = 1016922112 
 
- Pd151 =  974127104   expected =  974127104 
+ Pd151 = 1019248640   expected = 1019248640 
 
- Pd151 = 3171287040   expected = 3171287040 
+ Pd151 = 1024868352   expected = 1024868352 
 
- Pd151 = 3184427008   expected = 3184427008 
+ Pd151 = 1030209536   expected = 1030209536 
 
 Simulation ended after                  998 cycles.
 
@@ -1404,39 +1404,39 @@ Simulation completed with success
 Start reading vector           8's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
- Pd151 = 1025916928   expected = 1025916928 
+ Pd151 = 1033175040   expected = 1033175040 
 
- Pd151 = 1027162112   expected = 1027162112 
+ Pd151 = 1023344640   expected = 1023344640 
 
- Pd151 = 3162734592   expected = 3162734592 
+ Pd151 = 3170828288   expected = 3170828288 
 
- Pd151 = 3175989248   expected = 3175989248 
+ Pd151 = 3160342528   expected = 3160342528 
 
- Pd151 = 1011286016   expected = 1011286016 
+ Pd151 = 1041203200   expected = 1041203200 
 
- Pd151 = 3170336768   expected = 3170336768 
+ Pd151 = 3173203968   expected = 3173203968 
 
- Pd151 = 1028292608   expected = 1028292608 
+ Pd151 = 1034919936   expected = 1034919936 
 
- Pd151 = 3179683840   expected = 3179683840 
+ Pd151 = 3180232704   expected = 3180232704 
 
- Pd151 = 3185418240   expected = 3185418240 
+ Pd151 = 1028931584   expected = 1028931584 
 
- Pd151 = 1031815168   expected = 1031815168 
+ Pd151 = 3159752704   expected = 3159752704 
 
- Pd151 = 3182616576   expected = 3182616576 
+ Pd151 = 3170598912   expected = 3170598912 
 
- Pd151 = 1032110080   expected = 1032110080 
+ Pd151 = 3180142592   expected = 3180142592 
 
- Pd151 = 1033396224   expected = 1033396224 
+ Pd151 = 1043103744   expected = 1043103744 
 
- Pd151 = 3180167168   expected = 3180167168 
+ Pd151 = 1016594432   expected = 1016594432 
 
- Pd151 = 1009254400   expected = 1009254400 
+ Pd151 = 1032962048   expected = 1032962048 
 
- Pd151 = 3172286464   expected = 3172286464 
+ Pd151 = 3184746496   expected = 3184746496 
 
-Simulation ended after                 1038 cycles.
+Simulation ended after                  998 cycles.
 
 Simulation completed with success
 
@@ -1447,18 +1447,18 @@ No more values found. Simulation(s) executed:           8.
 
 - /home/zero/Desktop/COaT_project/MatrixInversion/synthesis_with_opt/HLS_output//simulation/testbench_invert_matrix_tb.v:258: Verilog $finish
 - /home/zero/Desktop/COaT_project/MatrixInversion/synthesis_with_opt/HLS_output//simulation/testbench_invert_matrix_tb.v:258: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 1038 cycles;
-2. Simulation completed with SUCCESS; Execution time 998 cycles;
-3. Simulation completed with SUCCESS; Execution time 1078 cycles;
-4. Simulation completed with SUCCESS; Execution time 1038 cycles;
-5. Simulation completed with SUCCESS; Execution time 998 cycles;
+1. Simulation completed with SUCCESS; Execution time 1078 cycles;
+2. Simulation completed with SUCCESS; Execution time 1038 cycles;
+3. Simulation completed with SUCCESS; Execution time 958 cycles;
+4. Simulation completed with SUCCESS; Execution time 998 cycles;
+5. Simulation completed with SUCCESS; Execution time 1078 cycles;
 6. Simulation completed with SUCCESS; Execution time 1038 cycles;
 7. Simulation completed with SUCCESS; Execution time 998 cycles;
-8. Simulation completed with SUCCESS; Execution time 1038 cycles;
+8. Simulation completed with SUCCESS; Execution time 998 cycles;
 Analyzing Xilinx synthesis results
-  Total cycles             : 8224 cycles
+  Total cycles             : 8184 cycles
   Number of executions     : 8
-  Average execution        : 1028 cycles
+  Average execution        : 1023 cycles
   Slices                   : 1348
   Luts                     : 3708
   Lut FF Pairs             : 3708
@@ -1470,6 +1470,6 @@ Analyzing Xilinx synthesis results
   Design minimum period    : 12.353
   Design slack             : -2.3529999999999998
   Frequency                : 80.95199546668826
-  AreaxTime                : 47087.461872
-  Time                     : 12.698884
-  Tot. Time                : 101.591072
+  AreaxTime                : 46858.437251999996
+  Time                     : 12.637118999999998
+  Tot. Time                : 101.09695199999999

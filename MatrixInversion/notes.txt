@@ -5,4 +5,4 @@ HLS:
 Works as excpected.
 
 Vivado evaluation:
-Now working, currently under investigation...
+Works only with the newest version of PandA-Bambu: https://release.bambuhls.eu/bambu-dev-LP.AppImage
