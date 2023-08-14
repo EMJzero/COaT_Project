@@ -90,6 +90,34 @@ get_tuples_to_use() {
   echo "${tuples[@]}"
 }
 
+# Array of allowed options
+allowed_options=(
+    "--use=all"
+    "--use="
+    "--vivado"
+    "--device-name="
+    "--gen"
+    "--no-regen-taffo"
+    "--no-opt"
+    "--no-unopt"
+)
+
+# Loop through the provided options if all provided options are valid
+for arg in "${@}"; do
+    is_allowed=false
+    for allowed_arg in "${allowed_options[@]}"; do
+        if [[ "${arg}" == ${allowed_arg}* ]]; then
+            is_allowed=true
+            break
+        fi
+    done
+
+    if [ "${is_allowed}" = false ]; then
+        echo "Error: Option '${arg}' is not allowed."
+        exit 1
+    fi
+done
+
 # Parse command-line arguments to get the --use option value
 use_option="none"
 for arg in "$@"; do
