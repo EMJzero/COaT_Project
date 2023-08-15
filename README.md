@@ -69,10 +69,13 @@ The latest comprehensive list of measured performance metrics on the various tes
 
 ## Procedures
 
-The specific versions of the tools used in this project were chosed to let both use LLVM-12, since it is the only LLVM version both fully support:
-- **TAFFO**: master branch pre-merge of spring 2023 https://github.com/TAFFO-org/TAFFO/tree/0a8cb2d7d699977f9ae3894493b95f3098e7a067<br>
-    The lastest "master" branch was used as well whenever possible, but it uses LLVM-15, thus it is often incompatible with PandA-Bambu's LLVM-12. The version at the link instead uses LLVM-12 as well.
-- **PandA-Bambu**: AppImage released in early 2023 https://github.com/ferrandi/PandA-bambu/releases/tag/v2023.1. Just by changing the used clang version to 16 [this](https://release.bambuhls.eu/bambu-dev-LP.AppImage) version should work too, however its testing is still ongoing.
+The specific versions of the tools used in this project were chosed to let both use LLVM-12, since it is the only LLVM version both fully support as of summer 2023:
+- **TAFFO**: master branch pre-merge of spring 2023 [-> taffo-master <-](https://github.com/TAFFO-org/TAFFO/tree/0a8cb2d7d699977f9ae3894493b95f3098e7a067).
+- **PandA-Bambu**: AppImage released in early 2023 [-> panda-2023.1 <-](https://github.com/ferrandi/PandA-bambu/releases/tag/v2023.1).
+
+Other versions of the tools were also occasionally used:
+- **TAFFO**: develop branch as of summer 2023 [-> taffo-develop <-](https://github.com/TAFFO-org/TAFFO/tree/0d359eefb973811405da1f6f100b761a386f5b8c). This has been used when the older version led to errors, however it uses LLVM-15, thus it is sometimes incompatible with PandA-Bambu's LLVM-12 and the older version was generally preferred. Refer to "notes.txt" to know if its usage is required, and run the produced IR through "remove_fmuladd.py" if needed.
+- **PandA-Bambu**: Develop AppImage with loop pipelining and LLVM-16 support of summer 2023 [-> panda-dev-LP-direct-download <-](https://release.bambuhls.eu/bambu-dev-LP.AppImage). This version was tested on all tests and works fine, even often producing better results, however final results remain based on the 2023.1 release for consistency and because it allows for matching LLVM versions, as this develop AppImage dropped support for LLVM-12. Consequently using this version requires an adjustment to PandA-Bambu's CLI options, where `--compiler=I386_CLANG12` is changed in `--compiler=I386_CLANG16`.
 
 ### Coding conventions
 
@@ -146,7 +149,7 @@ int main() {
 <!-- in practice replace "scalar" and "array_value_N" with actual values -->
 ```
 
-**Note:** When the HLS starts from the LLVM-IR, parameter names must be in the form "PdN" with "N" realtive to the IR without preserved names. While when the HLS starts from the C source parameter names must exactly match those used in C. Thus it is useful to specify in the same testbench the values twice, once w.r.t. the IR and once w.r.t. the C source.
+**Note:** When the HLS starts from the LLVM-IR, parameter names must be in the form "PdN" with "N" realtive to the IR without preserved names, while when the HLS starts from the C source parameter names must exactly match those used in C. Thus it is useful to specify in the same testbench the values twice, once w.r.t. the IR and once w.r.t. the C source, allowing the same testbench to be used for both.
 
 **Note:** For names in the form "PdN", "N" normally starts at "5" with the first parameter and increase by one with each successive one, however this might not always be the case, refer to the error PandA-Bambu gives for missing parameters to get the initial value of "N". This applies to both "interfaces.xml" and "test.xml".
 
@@ -155,14 +158,14 @@ int main() {
 The most common issues solved while developing the tests were:
 
 - If **PandA-Bambu could not find the specified top function** check the name's correctness within the IR file, and if withing the IR file the function is specified as "internal" alter that to "dso_local".
-- If **PandA-Bambu could not find the implementation for some function(s)** check that any compiler flag relative to libraries to link is passed through to PandA-Bambu. This is often the case for "math.h". If the funciton in question is "fmuladd" run `remove_fmuladd.py <path/to/.ll>`. If it is any other LLVM intrinsic function you will have to manually modify the IR to remove it.
+- If **PandA-Bambu could not find the implementation for some function(s)** check that any compiler flag relative to libraries to link is passed through to PandA-Bambu. This is often the case for "math.h". If the function in question is "fmuladd" run `remove_fmuladd.py <path/to/.ll>`. If it is any other LLVM intrinsic function you will have to manually modify the IR to remove it.
 - If **Verilator's simulation fails**, utilize verbosity level 4 `-v 4` and check which outputs differ from expected ones. One likely cause might be too-large floating point values, try reducing the upper and lower bounds for values used in the testbenches below those specified in TAFFO's `scalar(range())`. Alternatively ensure the `--libm-std-rounding` option is specified for PandA-Bambu, as it forces it to use the correct (but more costly) implementations of "math.h"'s functions.
 - A single **"stoull" printed after a simulation error** means that there is a scalar value written as an array (with curly braces) in the testbench values, remove the braces.
 - If **verilator returns a size error** check that testbenches initialize all the function parameters in their entirety even if they are not fully utilized, as their size must be static at compile time and they must be entirely specified, regardless of wheather or not they are fully utilized.
 - If **the simulation could not find some parameter**, remember that when you give PandA-Bambu the IR file, it expects parameters progressively named as PdN (where N usually starts at 5), while if it is given the C file it expectes parameter named as in it. Check the testbenches accordingly to this, use the error printed to adjust the initial value of N if needed.
 - If the simulation returns **"ERROR: Co-sim: Memory parameter ... (...) mismatch with respect to gold reference."** you have specified the wrong types or array sizes within "interfaces.xml".
 - If you PandA-Bambu gives a **clang frontend error** the cause might be one of:
-    - You have some arrays whose size is not static at compile time withing the function(s) to be synthesized.
+    - You have some arrays whose size is not static at compile time within the function(s) to be synthesized.
     - Currently when TAFFO converts a floating point division in fixed point it is very likely that integer types larger than "i64", like "i96" and "i128", will be used in the IR. Such values cannot be currently handled by PandA-Bambu, resulting in the clang frontend error. In the next paragraph an option to prevent their usage is given, but if the division's operands are too small, it might result in division-by-0 exceptions. As of now the only solution to such issues is disabling TAFFO's optimization on the dividend and divisor variables with `__attribute__((annotate("scalar(disabled)")))`.
 
 ### CLI commands overview
@@ -174,7 +177,7 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
     taffo -fno-discard-value-names -S -emit-llvm -o test.ll test.c
     ```
     Add the `-lm` option if `math.h` needs to be linked.<br>
-    If types like `i96` or `i128` are generated in the LLVM-IR, add the options `-Xconversion -maxtotalbitsconv -Xconversion 64` and `-Xdta -maxtotalbits -Xdta 64`. This is because currently PandA-Bambu cannot deal with such types, thus the first options prevents them from being used in intermediate types of multiplications and divisions, while the second one prevents them from being used as the integer version of originally-float values.
+    If types like `i96` or `i128` are generated in the LLVM-IR, add the options `-Xconversion -maxtotalbitsconv -Xconversion 64` and `-Xdta -maxtotalbits -Xdta 64`. This is because currently PandA-Bambu cannot deal with such types, thus the first option prevents them from being used in intermediate types of multiplications and divisions, while the second one prevents them from being used as the integer version of originally-float values.
 - Run the HLS on TAFFO's produced LLVM-IR:<br>
     ```
     bambu-2023.1.AppImage test.ll --use-raw -v 2 --top-fname=<function_name_wrt_the_IR> --compiler=I386_CLANG12 --generate-interface=INFER --interface-xml-filename=interfaces.xml --simulate --simulator=VERILATOR --verilator-parallel |& tee panda_log_opt.txt
