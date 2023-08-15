@@ -1,6 +1,10 @@
 # COaT_Project 2023
 Project for the Code Optimization and Transformation course 2023 - integrate TAFFO and PandA-Bambu.
 
+<p align="center">
+    <img src="https://github.com/EMJzero/COaT_Project/blob/b2e7db613a321f18a1cdda22eaad6748008469bd/logo_2.png" alt="PROJECT_LOGO" height="200">
+</p>
+
 ## Goal
 
 Perform the HLS (High Level Synthesis) of programs that have first had their floating point operations optimized in fixed point ones with the aid of TAFFO. The HLS part is instead done via PandA-Bambu. <br>
