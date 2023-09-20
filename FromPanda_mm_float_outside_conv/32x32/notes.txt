@@ -1,0 +1,14 @@
+TAFFO:
+Works as expected.
+
+PandA:
+Works as expected.
+
+Required tricks:
+- make the new fixed point function "dso_local"
+- change the interface to ints* and longs*
+- add code to force TAFFO to do a convertion at the start of main, so that you can immediately get the scale factor,
+    copy such scale factor into your test_generator and generate already scaled input values for the now-fixed-point function!
+
+
+Well removing the coversion here yields virtually no benefit! Nice!

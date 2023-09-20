@@ -1,0 +1,22 @@
+TAFFO:
+Works as expected.
+
+HLS:
+Works as expected.
+
+PandA-Bambu does NOT support int96, so its usage must be prevented...untill then this test will not work!
+FIXED with: 
+ - DEPRECATED: requires the usage of "-Xconversion -maxtotalbitsconv -Xconversion 64" and "-Xdta -maxtotalbits -Xdta 64" options!
+ - CURRENT FIX: usage of TAFFO's develop branch
+
+ => thus use --no-taffo-regen for this one!
+
+Required tricks:
+- make the new fixed point function "dso_local"
+- change the interface to ints* and longs*
+- add code to force TAFFO to do a convertion at the start of main, so that you can immediately get the scale factor,
+    copy such scale factor into your test_generator and generate already scaled input values for the now-fixed-point function!
+
+
+Well removing the coversion here yields virtually no benefit...the problem its just that the code does not benefit from TAFFO once synthesized!
+However removing the optimization recovers a bit of performance.

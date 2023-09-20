@@ -1,7 +1,22 @@
 TAFFO:
 Works as expected.
 
-The "main" requires a silly trick with the input matrices being filled in a separate step, but that is not relevant since
-the goal has always been to optimize the "mm" function, and that is properly accomplished.
+PandA:
+Works as expected.
 
 The specified ranges are for commodity, they can be all removed without any issue.
+
+Fun fact, the size of the arrays to allocate within syntesized functions must be STATIC at compile time...
+Also check that constant folding is performed...
+
+--> Remember to recompile with different constants for every testbench...
+--> Or create one file with multiple functions, one per dimensions... (Nah, in the end one folder per size...)
+
+Generator usage:
+Go into a folder NxN and run: python3 ../test_generator.py N > test.xml
+
+
+
+The "test_direct_conversion.c" variant is useless, as it performs the conversion before and
+after every product, as obviously the values in memory are stored as floats...
+Hence the conversion loops employed in the "test.c" are necessary to bring out some improvements.

@@ -1,0 +1,886 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-eGhC8m/usr/bin/bambu --use-raw -v 2 --top-fname=test_1_fixp --compiler=I386_CLANG12 --generate-interface=INFER --interface-xml-filename=interfaces.xml --simulate --simulator=VERILATOR --verilator-parallel test.ll 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2023 Politecnico di Milano
+ Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
+
+Parameters parsed in 0.14 seconds
+
+Target technology = FPGA
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3931
+  - combinational: 0
+  - others: 3931
+
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+  Analyzing function test_1_fixp
+    Interface specification:
+      Protocol  : array
+      Bitwidth  : 32
+      Alignment : 4
+    Interface specification:
+      Protocol  : array
+      Bitwidth  : 64
+      Alignment : 8
+  Analyzed function test_1_fixp
+  Bit Value Opt: lt_expr optimized, nbits = 52
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 6
+
+  Functions to be synthesized:
+    __divdi3
+    __udivdi3
+    test_1_fixp
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 32 bytes
+  This function performs unaligned accesses: test_1_fixp
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 5
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 0
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __divdi3:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.02 seconds
+
+
+  Module allocation information for function __udivdi3:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function __divdi3:
+    Number of control steps: 5
+    Minimum slack: 0.68273333033335004
+    Estimated max frequency (MHz): 107.32761392948065
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __divdi3:
+    Number of operations: 66
+    Number of basic blocks: 5
+    Number of states: 3
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __udivdi3:
+    Number of control steps: 5
+    Minimum slack: 4.322298654666672
+    Estimated max frequency (MHz): 176.12761559251965
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 2
+
+  State Transition Graph Information of function __udivdi3:
+    Number of operations: 45
+    Number of basic blocks: 5
+    Number of states: 3
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __divdi3:
+    Bound operations:57/66
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __udivdi3:
+    Bound operations:40/45
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __divdi3:
+    Number of storage values inserted: 12
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __udivdi3:
+    Number of storage values inserted: 6
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __divdi3:
+    Register allocation algorithm obtains a sub-optimal result: 10 registers(LB:9)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __divdi3:
+    Number of modules instantiated: 66
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 801
+    Estimated area of MUX21: 0
+    Total estimated area: 801
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __divdi3:
+    Register allocation algorithm obtains a sub-optimal result: 10 registers(LB:9)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __divdi3:
+    Number of allocated multiplexers (2-to-1 equivalent): 6
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __divdi3: 325
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __udivdi3:
+    Register allocation algorithm obtains an optimal result: 5 registers
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __udivdi3:
+    Number of modules instantiated: 45
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 385
+    Estimated area of MUX21: 0
+    Total estimated area: 385
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __udivdi3:
+    Register allocation algorithm obtains an optimal result: 5 registers
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __udivdi3:
+    Number of allocated multiplexers (2-to-1 equivalent): 5
+  Time to perform interconnection binding: 0.01 seconds
+
+  Total number of flip-flops in function __udivdi3: 256
+
+  Module allocation information for function test_1_fixp:
+    Number of complex operations: 5
+    Number of complex operations: 5
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function test_1_fixp:
+    Number of control steps: 9
+    Minimum slack: 1.1102230246251565e-15
+    Estimated max frequency (MHz): 100.00000000000001
+  Time to perform scheduling: 0.00 seconds
+
+  Number of function call sites = 0
+
+  State Transition Graph Information of function test_1_fixp:
+    Number of operations: 37
+    Number of basic blocks: 5
+    Number of states: 9
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function test_1_fixp:
+    Bound operations:33/37
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function test_1_fixp:
+    Number of storage values inserted: 13
+  Time to compute storage value information: 0.01 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function test_1_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 12 registers(LB:7)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function test_1_fixp:
+    Number of modules instantiated: 37
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 6229
+    Estimated area of MUX21: 0
+    Total estimated area: 6229
+    Estimated number of DSPs: 3
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function test_1_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 12 registers(LB:7)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function test_1_fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 3
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function test_1_fixp: 419
+[0m  Parameter Pd5 (424770) (testvector 0) allocated at 1073741824 : reserved_mem_size = 400
+Padding of 16 for parameter Pd5
+  Parameter Pd6 (424771) (testvector 0) allocated at 1073742240 : reserved_mem_size = 800
+Padding of 0 for parameter Pd6
+  Parameter Pd5 (424770) (testvector 1) allocated at 1073743040 : reserved_mem_size = 400
+Padding of 16 for parameter Pd5
+  Parameter Pd6 (424771) (testvector 1) allocated at 1073743456 : reserved_mem_size = 800
+Padding of 0 for parameter Pd6
+  C-based testbench generation for function test_1_fixp: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c
+  Prepared testbench
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:1715:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+      test_1_fixp(Pd5, Pd6);
+                  ^~~
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
+void test_1_fixp(int*, long*);
+                     ^
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:1715:24: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+      test_1_fixp(Pd5, Pd6);
+                       ^~~
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:76:29: note: passing argument to parameter here
+void test_1_fixp(int*, long*);
+                            ^
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:1745:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+      test_1_fixp(Pd5, Pd6);
+                  ^~~
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
+void test_1_fixp(int*, long*);
+                     ^
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:1745:24: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+      test_1_fixp(Pd5, Pd6);
+                       ^~~
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:76:29: note: passing argument to parameter here
+void test_1_fixp(int*, long*);
+                            ^
+4 warnings generated.
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+
+  Summary of resources:
+     - IIdata_converter_FU: 3
+     - IUdata_converter_FU: 7
+     - MUX_GATE: 19
+     - Pd5_bambu_artificial_ParmMgr_modgen: 1
+     - Pd6_bambu_artificial_ParmMgr_modgen: 1
+     - SIMPLEJOIN_FU: 1
+     - UIdata_converter_FU: 7
+     - UUdata_converter_FU: 60
+     - constant_value: 40
+     - flipflop_AR: 3
+     - lshift_expr_FU: 3
+     - lut_expr_FU: 17
+     - read_cond_FU: 4
+     - register_SE: 29
+     - register_STD: 3
+     - rshift_expr_FU: 4
+     - ui_bit_and_expr_FU: 10
+     - ui_bit_ior_expr_FU: 6
+     - ui_bit_xor_expr_FU: 3
+     - ui_cond_expr_FU: 2
+     - ui_eq_expr_FU: 3
+     - ui_extract_bit_expr_FU: 25
+     - ui_fshl_expr_FU: 3
+     - ui_lshift_expr_FU: 14
+     - ui_lt_expr_FU: 3
+     - ui_minus_expr_FU: 1
+     - ui_mult_expr_FU: 1
+     - ui_plus_expr_FU: 7
+     - ui_pointer_plus_expr_FU: 2
+     - ui_rshift_expr_FU: 2
+     - ui_ternary_plus_expr_FU: 3
+Start reading vector           1's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd6 =    16169284258681586   expected =    16169284258681586 
+
+ Pd6 =     8545817019000334   expected =     8545817019000334 
+
+ Pd6 =    18207421916961781   expected =    18207421916961781 
+
+ Pd6 =     6747183965061512   expected =     6747183965061512 
+
+ Pd6 =     6186225202869665   expected =     6186225202869665 
+
+ Pd6 =    15156063814404580   expected =    15156063814404580 
+
+ Pd6 =    13245604808655549   expected =    13245604808655549 
+
+ Pd6 =     4819357671422536   expected =     4819357671422536 
+
+ Pd6 =     6196019945698503   expected =     6196019945698503 
+
+ Pd6 =    15922988379649169   expected =    15922988379649169 
+
+ Pd6 =     4904518932153159   expected =     4904518932153159 
+
+ Pd6 =     5563637689031973   expected =     5563637689031973 
+
+ Pd6 =    15291323393811422   expected =    15291323393811422 
+
+ Pd6 =    15592098716134090   expected =    15592098716134090 
+
+ Pd6 =     5682518452161515   expected =     5682518452161515 
+
+ Pd6 =     7758070744391186   expected =     7758070744391186 
+
+ Pd6 =    15828954577118428   expected =    15828954577118428 
+
+ Pd6 =     5634133361515090   expected =     5634133361515090 
+
+ Pd6 =     9000931297855808   expected =     9000931297855808 
+
+ Pd6 =    17334609933432706   expected =    17334609933432706 
+
+ Pd6 =     5075538960913166   expected =     5075538960913166 
+
+ Pd6 =    14620122202755094   expected =    14620122202755094 
+
+ Pd6 =    15123134714558609   expected =    15123134714558609 
+
+ Pd6 =    14296905051231871   expected =    14296905051231871 
+
+ Pd6 =     8670485806367279   expected =     8670485806367279 
+
+ Pd6 =     4046349811250942   expected =     4046349811250942 
+
+ Pd6 =    12659966375742826   expected =    12659966375742826 
+
+ Pd6 =    16419613482182766   expected =    16419613482182766 
+
+ Pd6 =     7520356188271326   expected =     7520356188271326 
+
+ Pd6 =     4462256956553260   expected =     4462256956553260 
+
+ Pd6 =    13922970144623843   expected =    13922970144623843 
+
+ Pd6 =     4472342303154806   expected =     4472342303154806 
+
+ Pd6 =    17697504104348559   expected =    17697504104348559 
+
+ Pd6 =    11546779351336773   expected =    11546779351336773 
+
+ Pd6 =     5759837791317915   expected =     5759837791317915 
+
+ Pd6 =    14266397634832496   expected =    14266397634832496 
+
+ Pd6 =     6760401994306244   expected =     6760401994306244 
+
+ Pd6 =    12424235162130959   expected =    12424235162130959 
+
+ Pd6 =    17493344130893635   expected =    17493344130893635 
+
+ Pd6 =     8312370598165685   expected =     8312370598165685 
+
+ Pd6 =    11370688176587710   expected =    11370688176587710 
+
+ Pd6 =     4488834777712172   expected =     4488834777712172 
+
+ Pd6 =     5650179019824691   expected =     5650179019824691 
+
+ Pd6 =    13473786905097413   expected =    13473786905097413 
+
+ Pd6 =     4654960072126036   expected =     4654960072126036 
+
+ Pd6 =     5658524952574640   expected =     5658524952574640 
+
+ Pd6 =     7509033271827192   expected =     7509033271827192 
+
+ Pd6 =     8177420293001392   expected =     8177420293001392 
+
+ Pd6 =    18248062161719872   expected =    18248062161719872 
+
+ Pd6 =     6264011691413201   expected =     6264011691413201 
+
+ Pd6 =    15171841729996316   expected =    15171841729996316 
+
+ Pd6 =    18836422096922552   expected =    18836422096922552 
+
+ Pd6 =    16927672237268165   expected =    16927672237268165 
+
+ Pd6 =    13594938225183797   expected =    13594938225183797 
+
+ Pd6 =    18445414054673332   expected =    18445414054673332 
+
+ Pd6 =    18806676258701966   expected =    18806676258701966 
+
+ Pd6 =    16038042010608442   expected =    16038042010608442 
+
+ Pd6 =     9692238345532432   expected =     9692238345532432 
+
+ Pd6 =     7528451675257874   expected =     7528451675257874 
+
+ Pd6 =     5447794398544479   expected =     5447794398544479 
+
+ Pd6 =    17892598853708115   expected =    17892598853708115 
+
+ Pd6 =    12621792728219443   expected =    12621792728219443 
+
+ Pd6 =    17700817365338969   expected =    17700817365338969 
+
+ Pd6 =    17240624985213090   expected =    17240624985213090 
+
+ Pd6 =    11455044491070412   expected =    11455044491070412 
+
+ Pd6 =    11400121504692704   expected =    11400121504692704 
+
+ Pd6 =    12012779786082203   expected =    12012779786082203 
+
+ Pd6 =     6630404888790800   expected =     6630404888790800 
+
+ Pd6 =     7830894629804872   expected =     7830894629804872 
+
+ Pd6 =    14583060251514459   expected =    14583060251514459 
+
+ Pd6 =    13428156369211759   expected =    13428156369211759 
+
+ Pd6 =    12303150314410690   expected =    12303150314410690 
+
+ Pd6 =    18300915441413936   expected =    18300915441413936 
+
+ Pd6 =    15974047121469132   expected =    15974047121469132 
+
+ Pd6 =    16635476813934048   expected =    16635476813934048 
+
+ Pd6 =     4756727012022968   expected =     4756727012022968 
+
+ Pd6 =     9028215956448379   expected =     9028215956448379 
+
+ Pd6 =    15296284350313010   expected =    15296284350313010 
+
+ Pd6 =     6026147400921220   expected =     6026147400921220 
+
+ Pd6 =    15432394024729372   expected =    15432394024729372 
+
+ Pd6 =    10935905069595523   expected =    10935905069595523 
+
+ Pd6 =    17171072206680180   expected =    17171072206680180 
+
+ Pd6 =     7605214984117471   expected =     7605214984117471 
+
+ Pd6 =    17909515457600678   expected =    17909515457600678 
+
+ Pd6 =    17928002993344762   expected =    17928002993344762 
+
+ Pd6 =    14811187450231115   expected =    14811187450231115 
+
+ Pd6 =     4037737918485439   expected =     4037737918485439 
+
+ Pd6 =    14651454414593039   expected =    14651454414593039 
+
+ Pd6 =    17526073360443005   expected =    17526073360443005 
+
+ Pd6 =    12549841421549811   expected =    12549841421549811 
+
+ Pd6 =    17337933810133815   expected =    17337933810133815 
+
+ Pd6 =    12176187023111825   expected =    12176187023111825 
+
+ Pd6 =     4380508540052260   expected =     4380508540052260 
+
+ Pd6 =    12654156879146989   expected =    12654156879146989 
+
+ Pd6 =    13731330907606645   expected =    13731330907606645 
+
+ Pd6 =     9237241454909550   expected =     9237241454909550 
+
+ Pd6 =     9654255653459904   expected =     9654255653459904 
+
+ Pd6 =     4149755481936507   expected =     4149755481936507 
+
+ Pd6 =    14641323767658574   expected =    14641323767658574 
+
+ Pd6 =     6569993796191101   expected =     6569993796191101 
+
+Simulation ended after                13502 cycles.
+
+Simulation completed with success
+
+Start reading vector           2's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd6 =    11471479577794936   expected =    11471479577794936 
+
+ Pd6 =    13523058729539453   expected =    13523058729539453 
+
+ Pd6 =     4054444556280136   expected =     4054444556280136 
+
+ Pd6 =    15782518604440691   expected =    15782518604440691 
+
+ Pd6 =    10461671763605564   expected =    10461671763605564 
+
+ Pd6 =    11433372017886841   expected =    11433372017886841 
+
+ Pd6 =     6841835944623017   expected =     6841835944623017 
+
+ Pd6 =    17333576987193190   expected =    17333576987193190 
+
+ Pd6 =    18642522161654686   expected =    18642522161654686 
+
+ Pd6 =    17641202823386588   expected =    17641202823386588 
+
+ Pd6 =    65712761141576912   expected =    65712761141576912 
+
+ Pd6 =    15474794715582878   expected =    15474794715582878 
+
+ Pd6 =    11271442229691748   expected =    11271442229691748 
+
+ Pd6 =    15952807223145810   expected =    15952807223145810 
+
+ Pd6 =     4448546795905096   expected =     4448546795905096 
+
+ Pd6 =     7843568053601959   expected =     7843568053601959 
+
+ Pd6 =     5397808968348608   expected =     5397808968348608 
+
+ Pd6 =     9548646843544210   expected =     9548646843544210 
+
+ Pd6 =     6261395785470987   expected =     6261395785470987 
+
+ Pd6 =     4801940385770023   expected =     4801940385770023 
+
+ Pd6 =    13265357091544233   expected =    13265357091544233 
+
+ Pd6 =    15744086899557031   expected =    15744086899557031 
+
+ Pd6 =    16209561824959455   expected =    16209561824959455 
+
+ Pd6 =     6651047790665722   expected =     6651047790665722 
+
+ Pd6 =    17874400626857002   expected =    17874400626857002 
+
+ Pd6 =     5236850887226639   expected =     5236850887226639 
+
+ Pd6 =     6278186164715961   expected =     6278186164715961 
+
+ Pd6 =    18175119658151162   expected =    18175119658151162 
+
+ Pd6 =     4165347312554411   expected =     4165347312554411 
+
+ Pd6 =     4112477852846107   expected =     4112477852846107 
+
+ Pd6 =    10652134860971278   expected =    10652134860971278 
+
+ Pd6 =     7721387298036753   expected =     7721387298036753 
+
+ Pd6 =     5965090821886937   expected =     5965090821886937 
+
+ Pd6 =     5727583095053662   expected =     5727583095053662 
+
+ Pd6 =    12554193784100477   expected =    12554193784100477 
+
+ Pd6 =    18525368792941826   expected =    18525368792941826 
+
+ Pd6 =    14421318783347601   expected =    14421318783347601 
+
+ Pd6 =    14096325579525266   expected =    14096325579525266 
+
+ Pd6 =     6554416967764810   expected =     6554416967764810 
+
+ Pd6 =     5722840880497817   expected =     5722840880497817 
+
+ Pd6 =     6189451369473087   expected =     6189451369473087 
+
+ Pd6 =     9159151053745165   expected =     9159151053745165 
+
+ Pd6 =     4597051820774322   expected =     4597051820774322 
+
+ Pd6 =     4480538277847816   expected =     4480538277847816 
+
+ Pd6 =     7081453132372026   expected =     7081453132372026 
+
+ Pd6 =     9313976813136225   expected =     9313976813136225 
+
+ Pd6 =     6110509023567468   expected =     6110509023567468 
+
+ Pd6 =    15977392387046848   expected =    15977392387046848 
+
+ Pd6 =     9121028024705333   expected =     9121028024705333 
+
+ Pd6 =     9859788422625383   expected =     9859788422625383 
+
+ Pd6 =    14137011021242540   expected =    14137011021242540 
+
+ Pd6 =     4085995008906993   expected =     4085995008906993 
+
+ Pd6 =     5912886965612067   expected =     5912886965612067 
+
+ Pd6 =     5087693603899444   expected =     5087693603899444 
+
+ Pd6 =     4027537181955638   expected =     4027537181955638 
+
+ Pd6 =    14217578024187490   expected =    14217578024187490 
+
+ Pd6 =    17241957114181237   expected =    17241957114181237 
+
+ Pd6 =    11584819948642077   expected =    11584819948642077 
+
+ Pd6 =    13312976472238311   expected =    13312976472238311 
+
+ Pd6 =     9475257382248033   expected =     9475257382248033 
+
+ Pd6 =     9873258430402310   expected =     9873258430402310 
+
+ Pd6 =    11767445428594147   expected =    11767445428594147 
+
+ Pd6 =     6176504822470815   expected =     6176504822470815 
+
+ Pd6 =     5921156450892146   expected =     5921156450892146 
+
+ Pd6 =     8064019263685384   expected =     8064019263685384 
+
+ Pd6 =     6756354981976211   expected =     6756354981976211 
+
+ Pd6 =    10330686877165296   expected =    10330686877165296 
+
+ Pd6 =    53754105715776815   expected =    53754105715776815 
+
+ Pd6 =     6762881311088215   expected =     6762881311088215 
+
+ Pd6 =    17506896868352328   expected =    17506896868352328 
+
+ Pd6 =     7694088615124914   expected =     7694088615124914 
+
+ Pd6 =     7051708098118417   expected =     7051708098118417 
+
+ Pd6 =    13942446135437041   expected =    13942446135437041 
+
+ Pd6 =    12295854142833058   expected =    12295854142833058 
+
+ Pd6 =    17469502112166248   expected =    17469502112166248 
+
+ Pd6 =    11044011498586059   expected =    11044011498586059 
+
+ Pd6 =     4112015853869418   expected =     4112015853869418 
+
+ Pd6 =     6679429830845745   expected =     6679429830845745 
+
+ Pd6 =    15873617166060682   expected =    15873617166060682 
+
+ Pd6 =    10250118771754537   expected =    10250118771754537 
+
+ Pd6 =     5637131567183845   expected =     5637131567183845 
+
+ Pd6 =    14734234355045729   expected =    14734234355045729 
+
+ Pd6 =    15391245360704600   expected =    15391245360704600 
+
+ Pd6 =     9480551124424470   expected =     9480551124424470 
+
+ Pd6 =    15251933343818026   expected =    15251933343818026 
+
+ Pd6 =     5947589417511846   expected =     5947589417511846 
+
+ Pd6 =     8908002349032211   expected =     8908002349032211 
+
+ Pd6 =     9090876536184996   expected =     9090876536184996 
+
+ Pd6 =    15346418739016827   expected =    15346418739016827 
+
+ Pd6 =     9801439086170759   expected =     9801439086170759 
+
+ Pd6 =     5975368833888730   expected =     5975368833888730 
+
+ Pd6 =    13491779678836559   expected =    13491779678836559 
+
+ Pd6 =    51707026553671925   expected =    51707026553671925 
+
+ Pd6 =     4312612414621729   expected =     4312612414621729 
+
+ Pd6 =    12299875897465590   expected =    12299875897465590 
+
+ Pd6 =     4134741458825442   expected =     4134741458825442 
+
+ Pd6 =    14958032237164526   expected =    14958032237164526 
+
+ Pd6 =     5191157705661558   expected =     5191157705661558 
+
+ Pd6 =     8089993204187073   expected =     8089993204187073 
+
+ Pd6 =     4097978963487139   expected =     4097978963487139 
+
+Simulation ended after                13502 cycles.
+
+Simulation completed with success
+
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:215: Verilog $finish
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 13502 cycles;
+2. Simulation completed with SUCCESS; Execution time 13502 cycles;
+  Total cycles             : 27004 cycles
+  Number of executions     : 2
+  Average execution        : 13502 cycles

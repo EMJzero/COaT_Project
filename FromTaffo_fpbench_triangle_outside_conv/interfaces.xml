@@ -4,4 +4,8 @@
 <arg id="Pd17" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="300"/>
 <arg id="Pd18" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="100"/>
 </function>
+<function id="test_1_fixp">
+<arg id="Pd17" interface_type="array" interface_typename="unsigned int*" interface_typename_include="" interface_typename_orig="unsigned int*" size="300"/>
+<arg id="Pd18" interface_type="array" interface_typename="unsigned int*" interface_typename_include="" interface_typename_orig="unsigned int*" size="100"/>
+</function>
 </module>

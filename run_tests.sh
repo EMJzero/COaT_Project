@@ -40,11 +40,11 @@ path_names=(
   "ComputePi,compute_pi"
   "ComputeSinCos,manual_cos"
   "ComputeSqrt,NRsqrt"
-  "FromPanda_mm_float_inside_opt/16x16,mm"
-  "FromPanda_mm_float_inside_opt/32x32,mm"
-  "FromPanda_mm_float_inside_opt/64x64,mm"
-  "FromPanda_mm_float_inside_opt/128x128,mm"
-  "FromPanda_mm_float_inside_opt/256x256,mm"
+  "FromPanda_mm_float/16x16,mm"
+  "FromPanda_mm_float/32x32,mm"
+  "FromPanda_mm_float/64x64,mm"
+  "FromPanda_mm_float/128x128,mm"
+  "FromPanda_mm_float/256x256,mm"
   "FromTaffo_axbench_inversek2j,test"
   "FromTaffo_fpbench_carbonGas,test"
   "FromTaffo_fpbench_CX,test"
@@ -180,10 +180,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the environment variable TAFFO exists
     if [ -n "$TAFFO" ]; then
       # If TAFFO exists, run the executable specified in TAFFO
-      "$TAFFO" -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
+      "$TAFFO" -enable-err -err-out taffo_err_log.txt -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
     else
       # If TAFFO does not exist, run the command "taffo"
-      taffo -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
+      taffo -enable-err -err-out taffo_err_log.txt -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
     fi
   fi
 
@@ -207,10 +207,10 @@ for tuple in "${tuples_to_use[@]}"; do
       # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
       "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml "$device_name" |& tee ../panda_log_opt.txt 
     fi
+    # Move verilator results in parent folder
+    cp results.txt ../results_opt.txt
   fi
 
-  # Move verilator results in parent folder
-  cp results.txt ../results_opt.txt
   cd -
   cd "$path"/synthesis_no_opt
 
@@ -224,10 +224,10 @@ for tuple in "${tuples_to_use[@]}"; do
       # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
       "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding "$device_name" |& tee ../panda_log.txt 
     fi
+    # Move verilator results in parent folder
+    cp results.txt ../results.txt
   fi
 
-  # Move verilator results in parent folder
-  cp results.txt ../results.txt
 
   # Change back to the original directory before the next iteration
   cd -
