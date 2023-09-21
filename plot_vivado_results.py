@@ -47,7 +47,8 @@ def process_files(filename, data):
         for file in files:
             if file == filename:
                 file_path = os.path.join(root, file)
-                process_file(file_path)
+                if "_outside_conv" not in file_path:
+                    process_file(file_path)
 
     return result
 
@@ -73,7 +74,8 @@ y_bounds = {
     'Power': [-1, 1],
     'Registers': [-1, 1],
     #'DSPs': [-1, 1],
-    #'BRAMs': [-1, 1]
+    #'BRAMs': [-1, 1],
+    'AreaxTime': [-1, 1]
 }
 
 def update_maxmin(key, val):
@@ -105,14 +107,15 @@ for i in range(len(result_opt)):
     result_opt[i].pop('BRAMs')
     result_opt[i].pop('Design slack')
     result_opt[i].pop('Frequency')
-    result_opt[i].pop('AreaxTime')
+    result_opt[i]['AreaxTime'] = result_opt[i]['AreaxTime'] / result_no_opt[i]['AreaxTime']
+    update_maxmin('AreaxTime', result_opt[i]['AreaxTime'])
     results.append(result_opt[i])
 
 for res in results:
     name_tokens = res['Test'].split('\\')
     name = name_tokens[-2]
     if name_tokens[-3] != 'Tests':
-        name = name_tokens[-3] + '(' + name + ')'
+        name = name_tokens[-3] + '\n(' + name + ')'
     #if 'opt' in name_tokens[-1]:
     #    name += ' - OPT'
     name = name.replace('Compute', '')
@@ -125,25 +128,28 @@ test_names = df['Test']
 
 df = df.drop(columns=['Test'])
 
-plt.figure(figsize=(12, 8))
+plt.figure(figsize=(28/2, 21/2))
 
 plt.axhline(y=1, color='red', linestyle='--', linewidth=2)
 
-for i, row in df.iterrows():
-    plt.plot(range(len(df.columns)), row, 'o-', label=test_names[i])
+marker_styles = ['o', '*', 'X', 'D', 's', '^', 'D', 'v', '1', '2', 'P']
 
-plt.xticks(range(len(df.columns)), df.columns, rotation=45)
+for i, row in df.iterrows():
+    marker_style = marker_styles[i % len(marker_styles)]
+    plt.plot(range(len(df.columns)), row, marker_style + '-', label=test_names[i])
+
+plt.xticks(range(len(df.columns)), df.columns, rotation=0)
 plt.xlabel('Objectives')
 plt.ylabel('Optimized / Unoptimized')
 
 plt.text(-0.35, 1.025, "worst", color='red', fontsize=12)
 plt.text(-0.35, 0.94, "better", color='red', fontsize=12)
 
-plt.legend(title='Test Name', bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.legend(title='Test Name', bbox_to_anchor=(1.02, 0.5), loc='center left')
 
 plt.xlim(-0.5, len(df.columns) - 0.8)
 
-plt.title('Parallel Coordinates Plot for Test Results')
+#plt.title('Parallel Coordinates Plot for Test Results')
 plt.grid(True)
 plt.tight_layout()
 plt.show()

@@ -205,8 +205,9 @@ Here are the main commands used to generate the LLVM-IR, run the HLS and the sim
     python3 test_generator.py <args> > test.xml
     ```
     Different generators might require some command-line arguments.
-- Gather and print simulation results, flip-flop counts and Vivado's results summary:<br>
+- Gather and print the errors, simulation results, flip-flop counts and Vivado's results summary:<br>
     ```
+    python3 get_taffo_errors.py
     python3 get_verilator_results.py
     python3 get_flipflops_count.py
     python3 get_vivado_results.py
