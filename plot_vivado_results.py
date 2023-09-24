@@ -34,7 +34,7 @@ def process_files(filename, data):
         with open(file_path, 'r') as file:
             lines = file.readlines()
             current_dict = {}
-            current_dict["Test"] = file_path[-56:]
+            current_dict["Test"] = file_path[-64:]
             for line in lines:
                 for datum in data:
                     if (line.strip()).startswith(datum):
@@ -133,16 +133,18 @@ for i in range(len(result_opt)):
     update_maxmin('AreaxTime', result_opt[i]['AreaxTime'])
     results.append(result_opt[i])
 
+current_folder = os.getcwd().split('\\')[-1]
 for res in results:
     name_tokens = res['Test'].split('\\')
     name = name_tokens[-2]
-    if name_tokens[-3] != 'Tests':
+    if name_tokens[-3] != current_folder:
         name = name_tokens[-3] + '\n(' + name + ')'
     #if 'opt' in name_tokens[-1]:
     #    name += ' - OPT'
     if 'Pi' not in name:
         name = name.replace('Compute', '')
     name = name.replace('FromPanda_mm_float', 'MatrixProduct')
+    name = name.replace('max1', '1')
     name = name.replace('FromTaffo_fpbench', 'fpbench')
     res['Test'] = name
 
@@ -158,7 +160,11 @@ test_names = df['Test']
 
 df = df.drop(columns=['Test'])
 
-plt.figure(figsize=(28/2, 21/2))
+scale = 1/2
+#plt.figure(figsize=(28*scale, 21*scale))
+plt.figure(figsize=(32*scale, 18*scale))
+
+plt.rcParams.update({'font.size': 18})
 
 plt.axhline(y=1, color='red', linestyle='--', linewidth=2)
 
@@ -174,12 +180,13 @@ plt.ylabel('Optimized / Unoptimized')
 
 y_min, y_max = plt.ylim()
 curr_y_range = y_max - y_min
-plt.text(-0.35, 1 + 0.025*((curr_y_range)/1.7706771703861004), "worst", color='red', fontsize=12)
-plt.text(-0.35, 1 - 0.06*((curr_y_range)/1.7706771703861004), "better", color='red', fontsize=12)
+plt.text(-0.4, 1 + 0.025*((curr_y_range)/1.7706771703861004), "worst", color='red', fontsize=18)
+plt.text(-0.4, 1 - 0.07*((curr_y_range)/1.7706771703861004), "better", color='red', fontsize=18)
 
-plt.legend(title='Test Name', bbox_to_anchor=(1.02, 0.5), loc='center left')
+plt.legend(title='Benchmark Name', bbox_to_anchor=(1.02, 0.5), loc='center left')
 
 plt.xlim(-0.5, len(df.columns) - 0.8)
+#plt.ylim(bottom=0)
 
 #plt.title('Parallel Coordinates Plot for Test Results')
 plt.grid(True)

@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
+import random
 import os
 import re
 
@@ -34,7 +35,7 @@ def process_files(filename, data):
         with open(file_path, 'r') as file:
             lines = file.readlines()
             current_dict = {}
-            current_dict["Test"] = file_path[-56:]
+            current_dict["Test"] = file_path[-64:]
             for line in lines:
                 for datum in data:
                     if (line.strip()).startswith(datum):
@@ -136,16 +137,19 @@ for i in range(len(result_opt)):
     result_opt[i].pop('AreaxTime')
     results.append(result_opt[i])
 
+current_folder = os.getcwd().split('\\')[-1]
 for res in results:
     name_tokens = res['Test'].split('\\')
     name = name_tokens[-2]
-    if name_tokens[-3] != 'Tests':
+    if name_tokens[-3] != current_folder:
         name = name_tokens[-3] + '(' + name + ')'
     #if 'opt' in name_tokens[-1]:
     #    name += ' - OPT'
-    if 'Pi' not in name:
+    if 'Pi' not in name and 'SinCos' not in name:
         name = name.replace('Compute', '')
+    name = name.replace('SinCos', 'Sin&Cos')    
     name = name.replace('FromPanda_mm_float', 'MatrixProduct')
+    name = name.replace('max1', '1')
     name = name.replace('FromTaffo_fpbench', 'fpbench')
     res['Test'] = name
 
@@ -155,41 +159,81 @@ def print_current_plot_range():
     print(f"X Range: ({x_min}, {x_max})")
     print(f"Y Range: ({y_min}, {y_max})")
 
+#random.seed(1)
+#random.shuffle(results)
+
 names = [res['Test'] for res in results]
 x = [res['Time'] for res in results]
 y = [res['Luts'] for res in results]
 
-plt.figure(figsize=(28/2, 21/2))
+scale = 1/2
+plt.figure(figsize=(32*scale, 18*scale))
+
+plt.rcParams.update({'font.size': 18})
 scatter = plt.scatter(x, y, c=range(len(results)), cmap='tab10', marker='o', label='Data Points')
 
-above_text = False
 for i, name in enumerate(names):
-    offset = (0, -20) if above_text or 'instant' in name else (0, 10)
+    position = (0, 1)
+    if name == 'MatrixProduct(32x32)':
+        position = (1.5, 0.7)
+    elif name == 'MatrixProduct(64x64)':
+        position = (1.2, -0.9)
+    elif name == 'MatrixProduct(128x128)':
+        position = (-0.2, 2.5)
+    elif name == 'ConvexHull(1000pts)':
+        #position = (-1, 0.5)
+        position = (0.57, -0.65)
+        #position = (2, 0.12)
+    elif name == 'ConvexHull(100pts)':
+        #position = (1, -0.5)
+        position = (2, 0.12)
+        #position = (0.5, -0.65)
+    elif name == 'Sqrt':
+        position = (0.9, -0.5)
+    elif name == 'MatrixInversion':
+        position = (-0.8, -0.8)
+    elif name == 'MDPPolicyIteration':
+        #position = (0.1, -1.6)
+        position = (0.1, -2.2)
+    elif name == 'TrainLogisticRegression':
+        position = (1, 1)
+    elif name == 'fpbench_leadLag':
+        position = (0.6, -2.5)
+    elif name == 'fpbench_triangle':
+        position = (-1.2, -1.4)
+    elif name == 'fpbench_CY':
+        position = (0, -1)
+    elif name == 'fpbench_instantCurrent':
+        position = (0.6, 1.6)
+    elif name == 'fpbench_jetEngine':
+        position = (0, -1)
+    elif name == 'fpbench_doppler':
+        position = (-1, 1)
+            
+    offset_x = 60*position[0]
+    offset_y = 20*position[1] - 10*(position[1] < 0)
+    
+    label_x = x[i] + offset_x
+    label_y = y[i] + offset_y
+    
     plt.annotate(
         name,
         (x[i], y[i]),
-        textcoords="offset points",
-        xytext=offset,
+        xytext=(label_x, label_y),
+        textcoords='offset points',
+        arrowprops=dict(arrowstyle="-", color=scatter.to_rgba(i)),
         ha='center',
-        fontsize=10,
+        fontsize=18,
         color=scatter.to_rgba(i)
     )
-    above_text = not above_text
-    
+
 plt.axvline(x=1, color='red', linestyle='--', label='Vertical Line (x=1)')
-
 plt.axhline(y=1, color='red', linestyle='--', label='Horizontal Line (y=1)')
-
 plt.plot(1, 1, 'ro', label='Baseline Point (1, 1)')
-plt.text(1.01, 1.03, 'worst', fontsize=8, color='red')
-plt.text(0.91, 1.03, 'less time', fontsize=8, color='red')
-plt.text(1.01, 0.95, 'less LUTs', fontsize=8, color='red')
-plt.text(0.94, 0.95, 'better', fontsize=8, color='red')
 
 plt.xlabel('Time (optimized / unoptimized)')
 plt.ylabel('LUTs (optimized / unoptimized)')
 
 plt.grid(True)
 plt.tight_layout()
-print_current_plot_range()
 plt.show()
