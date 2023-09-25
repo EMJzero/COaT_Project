@@ -70,9 +70,9 @@ void manual_sin(float * x_f, float * res)
 
 int test(float * arr)
 {
-  float __attribute__((annotate("target('main') scalar(range(1, 10))"))) radius[len];
+  float __attribute__((annotate("target('test') scalar(range(1, 10))"))) radius[len];
   float __attribute__((annotate("scalar(range(0, 360))"))) theta[len];
-  float __attribute__((annotate("scalar(range(-100, 100))"))) res[len];
+  float __attribute__((annotate("errtarget('res') scalar(range(-100, 100))"))) res[len];
 
   float __attribute__((annotate("scalar(range(-10, 10) type(64 54))"))) radiant;
   float __attribute__((annotate("scalar(range(-100, 100))"))) c;

@@ -1,4 +1,4 @@
 
 *** Target Errors: ***
-Computed error for target y: 4.768372e-07
-Computed error for target x: 4.768372e-07
+Computed error for target y: 3.725290e-09
+Computed error for target x: 3.725290e-09

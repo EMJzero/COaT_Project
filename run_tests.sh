@@ -167,6 +167,8 @@ for tuple in "${tuples_to_use[@]}"; do
   # Split the tuple into path and name using comma as the delimiter
   IFS=',' read -r path name <<< "$tuple"
 
+  echo working on $path...
+
   # Change directory to the current path being iterated over
   cd "$path"
 
@@ -180,10 +182,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the environment variable TAFFO exists
     if [ -n "$TAFFO" ]; then
       # If TAFFO exists, run the executable specified in TAFFO
-      "$TAFFO" -enable-err -err-out taffo_err_log.txt -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
+      "$TAFFO" -enable-err -err-out taffo_err_log.txt -Xerr -relerror -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
     else
       # If TAFFO does not exist, run the command "taffo"
-      taffo -enable-err -err-out taffo_err_log.txt -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
+      taffo -enable-err -err-out taffo_err_log.txt -Xerr -relerror -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
     fi
   fi
 

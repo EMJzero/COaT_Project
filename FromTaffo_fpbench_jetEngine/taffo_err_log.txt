@@ -1,4 +1,4 @@
 
 *** Target Errors: ***
-Computed error for target test_x1: 1.490116e-08
-Computed error for target test_x2: 1.862645e-08
+Computed error for target test_x1: 2.980232e-09
+Computed error for target test_x2: 3.725290e-09

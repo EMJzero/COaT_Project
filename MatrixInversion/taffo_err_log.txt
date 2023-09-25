@@ -1,5 +1,5 @@
 
 *** Target Errors: ***
-Computed error for target inverse_matrix: 1.876445e-04
-Computed error for target matrix: 2.489181e-04
-Computed error for target abs_res: 1.490116e-08
+Computed error for target inverse_matrix: 2.561146e-07
+Computed error for target matrix: 5.977932e-08
+Computed error for target abs_res: 2.793968e-09

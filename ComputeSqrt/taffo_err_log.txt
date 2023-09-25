@@ -1,5 +1,6 @@
 
 *** Target Errors: ***
-Computed error for target mid: 1.235352e-02
-Computed error for target hi: 8.140625e-03
-Computed error for target lo: 3.015995e-06
+Computed error for target input: 9.313226e-10
+Computed error for target mid: 5.531311e-05
+Computed error for target hi: 1.862645e-09
+Computed error for target lo: 1.956243e-08

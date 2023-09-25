@@ -1,4 +1,4 @@
 
 *** Target Errors: ***
-Computed error for target state_value_function: 1.020730e-07
-Computed error for target rewards_matrix: 1.862645e-09
+Computed error for target state_value_function: 2.793968e-11
+Computed error for target rewards_matrix: 2.793968e-09

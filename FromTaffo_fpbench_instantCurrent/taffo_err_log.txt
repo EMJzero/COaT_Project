@@ -1,7 +1,7 @@
 
 *** Target Errors: ***
-Computed error for target inductance: 4.470348e-08
-Computed error for target frequency: 4.172325e-07
-Computed error for target t: 1.668930e-06
-Computed error for target resistence: 2.086163e-07
-Computed error for target maxVoltage: 5.215406e-08
+Computed error for target inductance: 2.235174e-08
+Computed error for target frequency: 4.172325e-09
+Computed error for target t: 5.563100e-09
+Computed error for target resistence: 4.172325e-09
+Computed error for target maxVoltage: 4.346172e-09

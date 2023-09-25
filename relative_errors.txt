@@ -1,0 +1,27 @@
+Output error(s) for:
+
+ComputeConvexHull/max100pts: useless, as it is reported on pure coordinates
+ComputeConvexHull/max1000pts: useless, as it is reported on pure coordinates
+ComputeFFT: out_real: 3.725290e-12, out_imag: 4.656613e-12
+ComputePi: pi: 2.980232e-08
+ComputeSinCos: useless, apparently error cannot be computed if the value is disabled
+ComputeSqrt: useless, apparently error cannot be computed if the value is disabled
+FromPanda_mm_float/16x16: result_c: 7.404801e-16
+FromPanda_mm_float/32x32: result_c: 1.012321e-16
+FromPanda_mm_float/64x64: result_c: 1.987062e-17
+FromPanda_mm_float/128x128: result_c: 3.389386e-18
+FromPanda_mm_float/256x256: I AM NOT COMPILING THIS AGAIN!
+FromTaffo_axbench_inversek2j: t1t2xy: 1.425775e-07
+FromTaffo_fpbench_carbonGas: ret: 2.350182e-06
+FromTaffo_fpbench_CX: res: 2.334383e-09
+FromTaffo_fpbench_CY: res: 2.686095e-09
+FromTaffo_fpbench_doppler: unrercoverable as the result array is not converted
+FromTaffo_fpbench_instantCurrent: ||
+FromTaffo_fpbench_jetEngine: ||
+FromTaffo_fpbench_leadLag: ||
+FromTaffo_fpbench_triangle: ||
+FromTaffo_fpbench_turbine1: ||
+MatrixInversion: inverse_matrix: 2.561146e-07
+MDPPolicyIteration: state_value_function: 2.793968e-11
+NormalizeVector: unrercoverable as the result array is not converted
+TrainLogisticRegression: weights: 4.656613e-09

@@ -48,7 +48,7 @@ void test(float * arr, float * res)
       float pbb = p * b * b;
 
       float __attribute__((annotate("scalar(range(17123, 998543130625))"))) annnbvv = a * n * n * n * b / v[j] / v[j];
-      float __attribute__((annotate("scalar(range(-995480895487, 35382589.0))"))) ret = (pv + ann - pbb - annnbvv);
+      float __attribute__((annotate("errtarget('ret') scalar(range(-995480895487, 35382589.0))"))) ret = (pv + ann - pbb - annnbvv);
 
       res[j] = ret;
     }

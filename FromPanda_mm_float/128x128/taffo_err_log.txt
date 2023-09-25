@@ -1,5 +1,5 @@
 
 *** Target Errors: ***
-Computed error for target input_b: 1.192093e-07
-Computed error for target result_c: 6.105006e-05
-Computed error for target input_a: 1.192093e-07
+Computed error for target input_b: 1.862645e-09
+Computed error for target result_c: 3.389386e-18
+Computed error for target input_a: 1.862645e-09
