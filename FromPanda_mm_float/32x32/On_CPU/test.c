@@ -7,14 +7,26 @@
 #define A_COLS 32
 #define B_COLS 32
 
-void mm(float * __restrict__ in_a  __attribute((annotate("target('input_a') scalar(range(0, 256))"))),
-    float * __restrict__ in_b __attribute((annotate("target('input_a') scalar(range(0, 256))"))),
-    float * __restrict__ out_c __attribute((annotate("target('result_c') scalar()"))))
+void mm(float * __restrict__ in_a_f,
+    float * __restrict__ in_b_f,
+    float * __restrict__ out_c_f)
 {
+
+    float in_a[A_ROWS * A_COLS] __attribute((annotate("target('input_a') scalar(range(0, 256))")));
+    float in_b[A_COLS * B_COLS] __attribute((annotate("target('input_b') scalar(range(0, 256))")));
+    float out_c[A_ROWS * B_COLS] __attribute((annotate("target('result_c') scalar()")));
     float a __attribute((annotate("scalar(range(0, 256))"))), b __attribute((annotate("scalar(range(0, 256))")));
     float sum __attribute((annotate("scalar()"))) = 0;
 
     int i, j, k;
+
+    for (i = 0; i < A_ROWS; i++)
+        for (j = 0; j < A_COLS; j++)
+            in_a[i * A_COLS + j] = in_a_f[i * A_COLS + j];
+
+    for (i = 0; i < A_COLS; i++)
+        for (j = 0; j < B_COLS; j++)
+            in_b[i * B_COLS + j] = in_b_f[i * B_COLS + j];
 
     // Only this part is effectively improved by TAFFO
     for (i = 0; i < A_ROWS; i++)
@@ -31,6 +43,10 @@ void mm(float * __restrict__ in_a  __attribute((annotate("target('input_a') scal
             out_c[i * B_COLS + j] = sum;
         }
     }
+
+    for (i = 0; i < A_ROWS; i++)
+        for (j = 0; j < B_COLS; j++)
+            out_c_f[i * B_COLS + j] = out_c[i * B_COLS + j];
 }
 
 int main()

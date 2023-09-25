@@ -5,7 +5,7 @@
 #define FALSE 0
 #include "data.h"
 #ifndef M
-#define M 1000
+#define M 2
 #endif
 
 #ifdef APP_MFUNC
