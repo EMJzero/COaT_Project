@@ -107,7 +107,7 @@ for i in range(len(result_opt)):
     #results.append(result_no_opt[i])
     #normalize optimized values w.r.t. optimized ones
     # UNCOMMENT THIS FOR PLOT 1
-    if '16x16' in result_opt[i]['Test'] or '256x256' in result_opt[i]['Test'] or 'Normalize' in result_opt[i]['Test'] or 'bench' in result_opt[i]['Test']:
+    if '16x16' in result_opt[i]['Test'] or '256x256' in result_opt[i]['Test'] or 'Normalize' in result_opt[i]['Test'] or '100pts' in result_opt[i]['Test'] or 'bench' in result_opt[i]['Test']:
         continue
     # UNCOMMENT THIS FOR PLOT 2
     #if 'fpbench' not in result_opt[i]['Test'] or 'carbonGas' in result_opt[i]['Test']:
@@ -138,10 +138,13 @@ for res in results:
     name_tokens = res['Test'].split('\\')
     name = name_tokens[-2]
     if name_tokens[-3] != current_folder:
-        name = name_tokens[-3] + '\n(' + name + ')'
+        if name != 'max1000pts':
+            name = name_tokens[-3] + '\n(' + name + ')'
+        else:
+            name = name_tokens[-3]
     #if 'opt' in name_tokens[-1]:
     #    name += ' - OPT'
-    if 'Pi' not in name:
+    if 'Pi' not in name and 'SinCos' not in name:
         name = name.replace('Compute', '')
     name = name.replace('FromPanda_mm_float', 'MatrixProduct')
     name = name.replace('max1', '1')

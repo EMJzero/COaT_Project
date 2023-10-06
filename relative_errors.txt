@@ -1,27 +1,28 @@
 Output error(s) for:
 
-ComputeConvexHull/max100pts: useless, as it is reported on pure coordinates
-ComputeConvexHull/max1000pts: useless, as it is reported on pure coordinates
-ComputeFFT: out_real: 3.725290e-12, out_imag: 4.656613e-12
-ComputePi: pi: 2.980232e-08
-ComputeSinCos: useless, apparently TAFFO refuses compute it...
-ComputeSqrt: useless, apparently TAFFO refuses compute it...
-FromPanda_mm_float/16x16: result_c: 7.404801e-16
-FromPanda_mm_float/32x32: result_c: 1.012321e-16
-FromPanda_mm_float/64x64: result_c: 1.987062e-17
-FromPanda_mm_float/128x128: result_c: 3.389386e-18
-FromPanda_mm_float/256x256: I AM NOT COMPILING THIS AGAIN!
-FromTaffo_axbench_inversek2j: t1t2xy: 1.425775e-07
-FromTaffo_fpbench_carbonGas: ret: 2.350182e-06
-FromTaffo_fpbench_CX: res: 2.334383e-09
-FromTaffo_fpbench_CY: res: 2.686095e-09
-FromTaffo_fpbench_doppler: res: 2.181161e-20
-FromTaffo_fpbench_instantCurrent: res: 4.470348e-08
-FromTaffo_fpbench_jetEngine: res: 5.488956e-15
-FromTaffo_fpbench_leadLag: res: 9.907731e-09
-FromTaffo_fpbench_triangle: res: 7.599927e-11
-FromTaffo_fpbench_turbine1: res: 1.160300e-10
-MatrixInversion: inverse_matrix: 2.561146e-07
-MDPPolicyIteration: state_value_function: 2.793968e-11
-NormalizeVector: out_v: 7.275958e-20
-TrainLogisticRegression: weights: 4.656613e-09
+ComputeConvexHull/max100pts: NA
+ComputeConvexHull/max1000pts: NA
+ComputeFFT (out_real): 3.725290e-12
+ComputeFFT (out_imag): 4.656613e-12
+ComputePi: 2.980232e-08
+ComputeSinCos: NA
+ComputeSqrt: NA
+FromPanda_mm_float/16x16: 7.404801e-16
+FromPanda_mm_float/32x32: 1.012321e-16
+FromPanda_mm_float/64x64: 1.987062e-17
+FromPanda_mm_float/128x128: 3.389386e-18
+FromPanda_mm_float/256x256: NA
+FromTaffo_axbench_inversek2j: 1.425775e-07
+FromTaffo_fpbench_carbonGas: 2.350182e-06
+FromTaffo_fpbench_CX: 2.334383e-09
+FromTaffo_fpbench_CY: 2.686095e-09
+FromTaffo_fpbench_doppler: 2.181161e-20
+FromTaffo_fpbench_instantCurrent: 4.470348e-08
+FromTaffo_fpbench_jetEngine: 5.488956e-15
+FromTaffo_fpbench_leadLag: 9.907731e-09
+FromTaffo_fpbench_triangle: 7.599927e-11
+FromTaffo_fpbench_turbine1: 1.160300e-10
+MatrixInversion: 2.561146e-07
+MDPPolicyIteration: 2.793968e-11
+NormalizeVector: 7.275958e-20
+TrainLogisticRegression: 4.656613e-09

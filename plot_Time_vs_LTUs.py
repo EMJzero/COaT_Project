@@ -108,7 +108,7 @@ for i in range(len(result_opt)):
     #results.append(result_no_opt[i])
     #normalize optimized values w.r.t. optimized ones
     # UNCOMMENT THIS FOR PLOT 1
-    if '16x16' in result_opt[i]['Test'] or '256x256' in result_opt[i]['Test'] or 'Normalize' in result_opt[i]['Test'] or 'axbench' in result_opt[i]['Test'] or 'carbon' in result_opt[i]['Test'] or 'turbine' in result_opt[i]['Test']:
+    if '16x16' in result_opt[i]['Test'] or '256x256' in result_opt[i]['Test'] or 'Normalize' in result_opt[i]['Test'] or 'axbench' in result_opt[i]['Test'] or 'carbon' in result_opt[i]['Test'] or 'turbine' in result_opt[i]['Test'] or '100pts' in result_opt[i]['Test']:
         continue
     # UNCOMMENT THIS FOR PLOT 2
     #if 'fpbench' not in result_opt[i]['Test'] or 'carbonGas' in result_opt[i]['Test']:
@@ -142,12 +142,15 @@ for res in results:
     name_tokens = res['Test'].split('\\')
     name = name_tokens[-2]
     if name_tokens[-3] != current_folder:
-        name = name_tokens[-3] + '(' + name + ')'
+        if name != 'max1000pts':
+            name = name_tokens[-3] + '(' + name + ')'
+        else:
+            name = name_tokens[-3]
     #if 'opt' in name_tokens[-1]:
     #    name += ' - OPT'
     if 'Pi' not in name and 'SinCos' not in name:
         name = name.replace('Compute', '')
-    name = name.replace('SinCos', 'Sin&Cos')    
+    #name = name.replace('SinCos', 'Sin&Cos')    
     name = name.replace('FromPanda_mm_float', 'MatrixProduct')
     name = name.replace('max1', '1')
     name = name.replace('FromTaffo_fpbench', 'fpbench')
@@ -166,10 +169,10 @@ names = [res['Test'] for res in results]
 x = [res['Time'] for res in results]
 y = [res['Luts'] for res in results]
 
-scale = 1/2
-plt.figure(figsize=(32*scale, 18*scale))
-
 plt.rcParams.update({'font.size': 18})
+plt.figure(figsize=(16, 9))
+print(plt.gcf())
+
 scatter = plt.scatter(x, y, c=range(len(results)), cmap='tab10', marker='o', label='Data Points')
 
 for i, name in enumerate(names):
@@ -188,13 +191,15 @@ for i, name in enumerate(names):
         #position = (1, -0.5)
         position = (2, 0.12)
         #position = (0.5, -0.65)
+    elif name == 'ConvexHull':
+        position = (1.5, -0.3)
     elif name == 'Sqrt':
         position = (0.9, -0.5)
     elif name == 'MatrixInversion':
-        position = (-0.8, -0.8)
+        position = (-0.8, -0.7)
     elif name == 'MDPPolicyIteration':
         #position = (0.1, -1.6)
-        position = (0.1, -2.2)
+        position = (0, -2.2)
     elif name == 'TrainLogisticRegression':
         position = (1, 1)
     elif name == 'fpbench_leadLag':
@@ -204,7 +209,7 @@ for i, name in enumerate(names):
     elif name == 'fpbench_CY':
         position = (0, -1)
     elif name == 'fpbench_instantCurrent':
-        position = (0.6, 1.6)
+        position = (0.65, 1.6)
     elif name == 'fpbench_jetEngine':
         position = (0, -1)
     elif name == 'fpbench_doppler':
@@ -236,4 +241,5 @@ plt.ylabel('LUTs (optimized / unoptimized)')
 
 plt.grid(True)
 plt.tight_layout()
+#plt.savefig("TAFFO_PandA_plt3_rev3.png")
 plt.show()
