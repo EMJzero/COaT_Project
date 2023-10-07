@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<module>
+<function id="gradient_descent">
+<arg id="Pd17" interface_type="default" interface_typename="int" interface_typename_include="" interface_typename_orig="int"/>
+<arg id="Pd18" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="8"/>
+<arg id="Pd19" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="800"/>
+<arg id="Pd20" interface_type="array" interface_typename="float*" interface_typename_include="" interface_typename_orig="float*" size="100"/>
+</function>
+<function id="gradient_descent_3_fixp">
+<arg id="Pd17" interface_type="default" interface_typename="int" interface_typename_include="" interface_typename_orig="int"/>
+<arg id="Pd18" interface_type="array" interface_typename="int*" interface_typename_include="" interface_typename_orig="int*" size="8"/>
+<arg id="Pd19" interface_type="array" interface_typename="int*" interface_typename_include="" interface_typename_orig="int*" size="800"/>
+<arg id="Pd20" interface_type="array" interface_typename="int*" interface_typename_include="" interface_typename_orig="int*" size="100"/>
+</function>
+</module>

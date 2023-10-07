@@ -1,0 +1,2306 @@
+ ==  Bambu executed with: /tmp/.mount_bambu-H4j5sq/usr/bin/bambu --use-raw -v 2 --top-fname=gradient_descent_3_fixp --compiler=I386_CLANG12 --generate-interface=INFER --interface-xml-filename=interfaces.xml -lm --simulate --simulator=VERILATOR --verilator-parallel test.ll 
+
+
+********************************************************************************
+                    ____                  _
+                   | __ )  __ _ _ __ ___ | |_   _   _
+                   |  _ \ / _` | '_ ` _ \| '_ \| | | |
+                   | |_) | (_| | | | | | | |_) | |_| |
+                   |____/ \__,_|_| |_| |_|_.__/ \__,_|
+
+********************************************************************************
+                         High-Level Synthesis Tool
+
+                         Politecnico di Milano - DEIB
+                          System Architectures Group
+********************************************************************************
+                Copyright (C) 2004-2023 Politecnico di Milano
+ Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
+
+Parameters parsed in 0.13 seconds
+
+Target technology = FPGA
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 10
+  - combinational: 0
+  - others: 10
+
+Library Name     : STD_FU
+  Total cells    : 33
+  - combinational: 0
+  - others: 33
+
+Library Name     : STD_FU
+  Total cells    : 8
+  - combinational: 0
+  - others: 8
+
+Library Name     : STD_FU
+  Total cells    : 56
+  - combinational: 0
+  - others: 56
+
+Library Name     : STD_FU
+  Total cells    : 1
+  - combinational: 0
+  - others: 1
+
+Library Name     : CS_COMPONENT
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 0
+  - combinational: 0
+  - others: 0
+
+Library Name     : STD_FU
+  Total cells    : 3
+  - combinational: 0
+  - others: 3
+
+Library Name     : STD_FU
+  Total cells    : 21
+  - combinational: 0
+  - others: 21
+
+Library Name     : STD
+  Total cells    : 14
+  - combinational: 0
+  - others: 14
+
+Library Name     : STD_COMMON
+  Total cells    : 57
+  - combinational: 0
+  - others: 57
+
+Library Name     : STD_FU
+  Total cells    : 28
+  - combinational: 0
+  - others: 28
+
+Library Name     : STD_PC
+  Total cells    : 16
+  - combinational: 0
+  - others: 16
+
+Library Name     : STD_SOFT_FLOAT
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD
+  Total cells    : 72
+  - combinational: 0
+  - others: 72
+
+Library Name     : STD_FU
+  Total cells    : 2
+  - combinational: 0
+  - others: 2
+
+Library Name     : STD_FU
+  Total cells    : 9
+  - combinational: 0
+  - others: 9
+
+Library Name     : WBWrapper
+  Total cells    : 12
+  - combinational: 0
+  - others: 12
+
+Available devices:
+ - 5CSEMA5F31C6
+ - 5SGXEA7N2F45C1
+ - EP2C70F896C6
+ - EP2C70F896C6-R
+ - EP4SGX530KH40C2
+ - LFE335EA8FN484C
+ - LFE5U85F8BG756C
+ - LFE5UM85F8BG756C
+ - asap7-BC
+ - asap7-TC
+ - asap7-WC
+ - nangate45
+ - nx1h140tsp
+ - nx1h35S
+ - nx2h540tsc
+ - xc4vlx100-10ff1513
+ - xc5vlx110t-1ff1136
+ - xc5vlx330t-2ff1738
+ - xc5vlx50-3ff1153
+ - xc6vlx240t-1ff1156
+ - xc7a100t-1csg324-VVD
+ - xc7vx330t-1ffg1157
+ - xc7vx485t-2ffg1761-VVD
+ - xc7vx690t-3ffg1930-VVD
+ - xc7z020-1clg484
+ - xc7z020-1clg484-VVD
+ - xc7z020-1clg484-YOSYS-VVD
+ - xc7z045-2ffg900-VVD
+ - xcku060-3ffva1156-VVD
+ - xcu280-2Lfsvh2892-VVD
+Library Name     : STD_FU
+  Total cells    : 3931
+  - combinational: 0
+  - others: 3931
+
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+  Analyzing function gradient_descent_3_fixp
+    Interface specification:
+      Protocol  : array
+      Bitwidth  : 32
+      Alignment : 4
+    Interface specification:
+      Protocol  : array
+      Bitwidth  : 32
+      Alignment : 4
+    Interface specification:
+      Protocol  : array
+      Bitwidth  : 32
+      Alignment : 4
+  Analyzed function gradient_descent_3_fixp
+  Bit Value Opt: gt_expr optimized, nbits = 16
+  Bit Value Opt: cond_expr optimized, nbits = 52
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: bit_xor_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: ne_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: eq_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 40
+  Bit Value Opt: eq_expr optimized, nbits = 40
+  Bit Value Opt: bit_and_expr optimized, nbits = 48
+  Bit Value Opt: eq_expr optimized, nbits = 48
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: eq_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 54
+  Bit Value Opt: eq_expr optimized, nbits = 54
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: eq_expr optimized, nbits = 55
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: ne_expr optimized, nbits = 55
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 5
+  Bit Value Opt: plus_expr optimized, nbits = 3
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 51
+  Bit Value Opt: ne_expr optimized, nbits = 51
+  Bit Value Opt: bit_and_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 4
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: ne_expr optimized, nbits = 55
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_xor_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: ne_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: bit_and_expr optimized, nbits = 51
+  Bit Value Opt: ne_expr optimized, nbits = 51
+  Bit Value Opt: bit_and_expr optimized, nbits = 41
+  Bit Value Opt: ne_expr optimized, nbits = 41
+  Bit Value Opt: bit_and_expr optimized, nbits = 12
+  Bit Value Opt: ne_expr optimized, nbits = 12
+  Bit Value Opt: bit_and_expr optimized, nbits = 53
+  Bit Value Opt: ne_expr optimized, nbits = 53
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: cond_expr optimized, nbits = 5
+  Bit Value Opt: bit_xor_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: ne_expr optimized, nbits = 2
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: eq_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 40
+  Bit Value Opt: eq_expr optimized, nbits = 40
+  Bit Value Opt: bit_and_expr optimized, nbits = 48
+  Bit Value Opt: eq_expr optimized, nbits = 48
+  Bit Value Opt: bit_and_expr optimized, nbits = 52
+  Bit Value Opt: eq_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 54
+  Bit Value Opt: eq_expr optimized, nbits = 54
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: eq_expr optimized, nbits = 55
+  Bit Value Opt: bit_and_expr optimized, nbits = 55
+  Bit Value Opt: ne_expr optimized, nbits = 55
+  Bit Value Opt: bit_and_expr optimized, nbits = 16
+  Bit Value Opt: eq_expr optimized, nbits = 16
+  Bit Value Opt: bit_and_expr optimized, nbits = 28
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 2
+  Bit Value Opt: cond_expr optimized, nbits = 4
+  Bit Value Opt: plus_expr optimized, nbits = 63
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 63
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 11
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: plus_expr optimized, nbits = 23
+  Bit Value Opt: plus_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: minus_expr optimized, nbits = 10
+  Bit Value Opt: plus_expr optimized, nbits = 12
+  Bit Value Opt: bit_and_expr optimized, nbits = 10
+  Bit Value Opt: bit_and_expr optimized, nbits = 10
+  Bit Value Opt: bit_and_expr optimized, nbits = 10
+  Bit Value Opt: bit_and_expr optimized, nbits = 10
+  Bit Value Opt: bit_and_expr optimized, nbits = 10
+  Bit Value Opt: bit_and_expr optimized, nbits = 10
+  Bit Value Opt: bit_and_expr optimized, nbits = 10
+  Bit Value Opt: bit_and_expr optimized, nbits = 10
+  Bit Value Opt: plus_expr optimized, nbits = 10
+  Bit Value Opt: plus_expr optimized, nbits = 10
+  Bit Value Opt: plus_expr optimized, nbits = 10
+  Bit Value Opt: plus_expr optimized, nbits = 10
+  Bit Value Opt: plus_expr optimized, nbits = 10
+  Bit Value Opt: plus_expr optimized, nbits = 10
+  Bit Value Opt: plus_expr optimized, nbits = 10
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: minus_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 1
+  Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 1
+  Bit Value Opt: eq_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 52
+  Bit Value Opt: bit_and_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 3
+  Bit Value Opt: cond_expr optimized, nbits = 3
+Function call to __float64_to_int32_round_to_zeroe11m52b_1023nih inlined in __hide_ieee754_exp
+Function call to __float_gte11m52b_1023nih inlined in __hide_ieee754_exp
+Function call to __float_lte11m52b_1023nih inlined in __hide_ieee754_exp
+Function call to __float_gte11m52b_1023nih inlined in __hide_ieee754_exp
+Function call to __float64_to_uint64_round_to_zeroe11m52b_1023nih inlined in sigmoid_1_6_u1_31fixp
+Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
+
+  Functions to be synthesized:
+    __hide_ieee754_exp
+    __internal_exp
+    gradient_descent_3_fixp
+    sigmoid_1_6_u1_31fixp
+    __float_mule11m52b_1023nih
+    __float_adde11m52b_1023nih
+    __int32_to_float64e11m52b_1023nih
+    __float_sube11m52b_1023nih
+    __float_divSRT4e11m52b_1023nih
+
+  Adding proxy wrapper in function sigmoid_1_6_u1_31fixp
+  Adding proxy function in function __hide_ieee754_exp
+  Adding proxy wrapper in function sigmoid_1_6_u1_31fixp
+  Adding proxy function in function __hide_ieee754_exp
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 32 bytes
+    Internal variable: ln2HI - 424967 - ln2HI in function __hide_ieee754_exp
+      Id: 424967
+      Base Address: 32
+      Size: 16
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+    Internal variable: halF - 424996 - halF in function __hide_ieee754_exp
+      Id: 424996
+      Base Address: 32
+      Size: 16
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+    Internal variable: ln2LO - 425011 - ln2LO in function __hide_ieee754_exp
+      Id: 425011
+      Base Address: 32
+      Size: 16
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+  This function performs unaligned accesses: gradient_descent_3_fixp
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 6
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 48
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __float_adde11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.05 seconds
+
+
+  Module allocation information for function __float_divSRT4e11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.05 seconds
+
+
+  Module allocation information for function __float_mule11m52b_1023nih:
+    Number of complex operations: 4
+    Number of complex operations: 4
+  Time to perform module allocation: 0.03 seconds
+
+
+  Module allocation information for function __float_sube11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.05 seconds
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 32 bytes
+    Internal variable: ln2HI - 424967 - ln2HI in function __hide_ieee754_exp
+      Id: 424967
+      Base Address: 32
+      Size: 16
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      The variable has been trimmed to bitsize: 64 with bit-value pattern: U011111111100110001011100100001011111110111000000000000000000000
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+    Internal variable: halF - 424996 - halF in function __hide_ieee754_exp
+      Id: 424996
+      Base Address: 32
+      Size: 16
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      The variable has been trimmed to bitsize: 64 with bit-value pattern: U011111111100000000000000000000000000000000000000000000000000000
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+    Internal variable: ln2LO - 425011 - ln2LO in function __hide_ieee754_exp
+      Id: 425011
+      Base Address: 32
+      Size: 16
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      The variable has been trimmed to bitsize: 64 with bit-value pattern: U011110111101010001110011110111100110101011110010011110001110110
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+  This function performs unaligned accesses: gradient_descent_3_fixp
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 6
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 48
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Module allocation information for function __float_adde11m52b_1023nih:
+    Number of complex operations: 0
+  Time to perform module allocation: 0.04 seconds
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 32 bytes
+    Internal variable: ln2HI - 424967 - ln2HI in function __hide_ieee754_exp
+      Id: 424967
+      Base Address: 32
+      Size: 16
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      The variable has been trimmed to bitsize: 64 with bit-value pattern: U011111111100110001011100100001011111110111000000000000000000000
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+    Internal variable: halF - 424996 - halF in function __hide_ieee754_exp
+      Id: 424996
+      Base Address: 32
+      Size: 16
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      The variable has been trimmed to bitsize: 64 with bit-value pattern: U011111111100000000000000000000000000000000000000000000000000000
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+    Internal variable: ln2LO - 425011 - ln2LO in function __hide_ieee754_exp
+      Id: 425011
+      Base Address: 32
+      Size: 16
+      Is a private memory
+      Is a Read Only Memory
+      The variable is always accessed with the same data size
+      The variable has been trimmed to bitsize: 64 with bit-value pattern: U011110111101010001110011110111100110101011110010011110001110110
+      Number of functions in which is used: 1
+      Maximum number of references per function: 1
+      Maximum number of loads per function: 1
+  This function performs unaligned accesses: gradient_descent_3_fixp
+    BRAM bitsize: 64
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 64
+    ADDRESS bus bitsize: 6
+    SIZE bus bitsize: 7
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 48
+  Time to perform memory allocation: 0.01 seconds
+
+
+  Module allocation information for function __int32_to_float64e11m52b_1023nih:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.03 seconds
+
+
+  Scheduling Information of function __float_adde11m52b_1023nih:
+    Number of control steps: 6
+    Minimum slack: 0.054699991000000781
+    Estimated max frequency (MHz): 100.550008455758
+  Time to perform scheduling: 0.04 seconds
+
+  Number of function call sites = 10
+
+  State Transition Graph Information of function __float_adde11m52b_1023nih:
+    Number of operations: 438
+    Number of basic blocks: 3
+    Number of states: 5
+    Minimum number of cycles: 5
+    Maximum number of cycles 5
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function __float_divSRT4e11m52b_1023nih:
+    Number of control steps: 6
+    Minimum slack: 0.31460231533337546
+    Estimated max frequency (MHz): 103.24821267619642
+  Time to perform scheduling: 0.03 seconds
+
+  Number of function call sites = 2
+
+  State Transition Graph Information of function __float_divSRT4e11m52b_1023nih:
+    Number of operations: 229
+    Number of basic blocks: 5
+    Number of states: 5
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_mule11m52b_1023nih:
+    Number of control steps: 6
+    Minimum slack: 0.39039999400001446
+    Estimated max frequency (MHz): 104.06260399763008
+  Time to perform scheduling: 0.01 seconds
+
+
+  State Transition Graph Information of function __float_mule11m52b_1023nih:
+    Number of operations: 110
+    Number of basic blocks: 3
+    Number of states: 5
+    Minimum number of cycles: 5
+    Maximum number of cycles 5
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Scheduling Information of function __float_sube11m52b_1023nih:
+    Number of control steps: 6
+    Minimum slack: 0.054699991000000781
+    Estimated max frequency (MHz): 100.550008455758
+  Time to perform scheduling: 0.05 seconds
+
+  Number of function call sites = 7
+
+  State Transition Graph Information of function __float_sube11m52b_1023nih:
+    Number of operations: 438
+    Number of basic blocks: 3
+    Number of states: 5
+    Minimum number of cycles: 5
+    Maximum number of cycles 5
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Scheduling Information of function __int32_to_float64e11m52b_1023nih:
+    Number of control steps: 6
+    Minimum slack: 0.38866665966666258
+    Estimated max frequency (MHz): 104.04383706093772
+  Time to perform scheduling: 0.02 seconds
+
+
+  State Transition Graph Information of function __int32_to_float64e11m52b_1023nih:
+    Number of operations: 162
+    Number of basic blocks: 5
+    Number of states: 5
+    Minimum number of cycles: 4
+    Maximum number of cycles 4
+    Parameters are registered
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __float_adde11m52b_1023nih:
+    Bound operations:375/438
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_divSRT4e11m52b_1023nih:
+    Bound operations:139/229
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_mule11m52b_1023nih:
+    Bound operations:60/110
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __float_sube11m52b_1023nih:
+    Bound operations:375/438
+  Time to perform easy binding: 0.00 seconds
+
+
+  Easy binding information for function __int32_to_float64e11m52b_1023nih:
+    Bound operations:133/162
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __float_adde11m52b_1023nih:
+    Number of storage values inserted: 213
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_divSRT4e11m52b_1023nih:
+    Number of storage values inserted: 27
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_mule11m52b_1023nih:
+    Number of storage values inserted: 22
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __float_sube11m52b_1023nih:
+    Number of storage values inserted: 213
+  Time to compute storage value information: 0.00 seconds
+
+
+  Storage Value Information of function __int32_to_float64e11m52b_1023nih:
+    Number of storage values inserted: 8
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_adde11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_adde11m52b_1023nih:
+    Number of modules instantiated: 438
+    Number of performance conflicts: 26
+    Estimated resources area (no Muxes and address logic): 5644
+    Estimated area of MUX21: 0
+    Total estimated area: 5644
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_adde11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
+  Time to perform register binding: 0.01 seconds
+
+  Total number of flip-flops in function __float_adde11m52b_1023nih: 740
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_divSRT4e11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:18)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_divSRT4e11m52b_1023nih:
+    Number of modules instantiated: 229
+    Number of performance conflicts: 18
+    Estimated resources area (no Muxes and address logic): 2939
+    Estimated area of MUX21: 0
+    Total estimated area: 2939
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_divSRT4e11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:18)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __float_divSRT4e11m52b_1023nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 4
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_divSRT4e11m52b_1023nih: 915
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_mule11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:15)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_mule11m52b_1023nih:
+    Number of modules instantiated: 110
+    Number of performance conflicts: 11
+    Estimated resources area (no Muxes and address logic): 1555
+    Estimated area of MUX21: 0
+    Total estimated area: 1555
+    Estimated number of DSPs: 12
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __float_mule11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:15)
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_mule11m52b_1023nih: 535
+  Slack computed in 0.01 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __float_sube11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __float_sube11m52b_1023nih:
+    Number of modules instantiated: 438
+    Number of performance conflicts: 26
+    Estimated resources area (no Muxes and address logic): 5644
+    Estimated area of MUX21: 0
+    Total estimated area: 5644
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __float_sube11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __float_sube11m52b_1023nih: 740
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __int32_to_float64e11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 8 registers(LB:6)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function __int32_to_float64e11m52b_1023nih:
+    Number of modules instantiated: 162
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 730
+    Estimated area of MUX21: 0
+    Total estimated area: 730
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __int32_to_float64e11m52b_1023nih:
+    Register allocation algorithm obtains a sub-optimal result: 8 registers(LB:6)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function __int32_to_float64e11m52b_1023nih:
+    Number of allocated multiplexers (2-to-1 equivalent): 1
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function __int32_to_float64e11m52b_1023nih: 66
+
+  Module allocation information for function __hide_ieee754_exp:
+    Number of complex operations: 34
+    Number of complex operations: 34
+  Time to perform module allocation: 0.04 seconds
+
+
+  Scheduling Information of function __hide_ieee754_exp:
+    Number of control steps: 158
+    Minimum slack: 5.0000000000000003e-10
+    Estimated max frequency (MHz): 100.000000005
+  Time to perform scheduling: 0.02 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __hide_ieee754_exp:
+    Number of operations: 211
+    Number of basic blocks: 24
+    Number of states: 166
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Easy binding information for function __hide_ieee754_exp:
+    Bound operations:135/211
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __hide_ieee754_exp:
+    Number of storage values inserted: 90
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function __hide_ieee754_exp:
+    Register allocation algorithm obtains a sub-optimal result: 69 registers(LB:15)
+  Time to perform register binding: 0.01 seconds
+
+  Iteration 1 completed in 0.00 seconds
+
+  Register binding information for function __hide_ieee754_exp:
+    Register allocation algorithm obtains a sub-optimal result: 69 registers(LB:15)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 2 completed in 0.00 seconds
+  Clique covering computation completed in 0.01 seconds
+
+  Module binding information for function __hide_ieee754_exp:
+    Number of modules instantiated: 185
+    Number of performance conflicts: 21
+    Estimated resources area (no Muxes and address logic): 14229
+    Estimated area of MUX21: 412
+    Total estimated area: 14641
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
+
+
+  Register binding information for function __hide_ieee754_exp:
+    Register allocation algorithm obtains a sub-optimal result: 69 registers(LB:15)
+  Time to perform register binding: 0.01 seconds
+
+
+  Connection Binding Information for function __hide_ieee754_exp:
+    Number of allocated multiplexers (2-to-1 equivalent): 46
+  Time to perform interconnection binding: 0.01 seconds
+
+  Total number of flip-flops in function __hide_ieee754_exp: 1747
+
+  Module allocation information for function __internal_exp:
+    Number of complex operations: 1
+    Number of complex operations: 1
+  Time to perform module allocation: 0.01 seconds
+
+
+  Scheduling Information of function __internal_exp:
+    Number of control steps: 4
+    Minimum slack: 1.1102230246251565e-15
+    Estimated max frequency (MHz): 100.00000000000001
+  Time to perform scheduling: 0.00 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __internal_exp:
+    Number of operations: 4
+    Number of basic blocks: 3
+    Number of states: 3
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __internal_exp:
+    Bound operations:4/4
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __internal_exp:
+    Number of storage values inserted: 1
+  Time to compute storage value information: 0.00 seconds
+
+
+  Module binding information for function __internal_exp:
+    Number of modules instantiated: 4
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 2000
+    Estimated area of MUX21: 0
+    Total estimated area: 2000
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function __internal_exp:
+    Register allocation algorithm obtains an optimal result: 1 registers
+  Time to perform register binding: 0.00 seconds
+
+  Total number of flip-flops in function __internal_exp: 64
+
+  Module allocation information for function sigmoid_1_6_u1_31fixp:
+    Number of complex operations: 4
+    Number of complex operations: 4
+  Time to perform module allocation: 0.03 seconds
+
+
+  Scheduling Information of function sigmoid_1_6_u1_31fixp:
+    Number of control steps: 26
+    Minimum slack: 5.0000000000000003e-10
+    Estimated max frequency (MHz): 100.000000005
+  Time to perform scheduling: 0.00 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function sigmoid_1_6_u1_31fixp:
+    Number of operations: 101
+    Number of basic blocks: 10
+    Number of states: 25
+    Done port is registered
+  Time to perform creation of STG: 0.01 seconds
+
+
+  Easy binding information for function sigmoid_1_6_u1_31fixp:
+    Bound operations:90/101
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function sigmoid_1_6_u1_31fixp:
+    Number of storage values inserted: 23
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.00 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function sigmoid_1_6_u1_31fixp:
+    Register allocation algorithm obtains a sub-optimal result: 21 registers(LB:8)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.00 seconds
+  Clique covering computation completed in 0.00 seconds
+
+  Module binding information for function sigmoid_1_6_u1_31fixp:
+    Number of modules instantiated: 100
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 7144
+    Estimated area of MUX21: 68
+    Total estimated area: 7212
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.00 seconds
+
+
+  Register binding information for function sigmoid_1_6_u1_31fixp:
+    Register allocation algorithm obtains a sub-optimal result: 21 registers(LB:8)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function sigmoid_1_6_u1_31fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 10
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function sigmoid_1_6_u1_31fixp: 758
+
+  Module allocation information for function gradient_descent_3_fixp:
+    Number of complex operations: 50
+    Number of complex operations: 50
+  Time to perform module allocation: 0.09 seconds
+
+
+  Scheduling Information of function gradient_descent_3_fixp:
+    Number of control steps: 36
+    Minimum slack: 8.2156503822261584e-15
+    Estimated max frequency (MHz): 100.00000000000009
+  Time to perform scheduling: 0.04 seconds
+
+  Number of function call sites = 0
+
+  State Transition Graph Information of function gradient_descent_3_fixp:
+    Number of operations: 410
+    Number of basic blocks: 9
+    Number of states: 36
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function gradient_descent_3_fixp:
+    Bound operations:216/410
+  Time to perform easy binding: 0.01 seconds
+
+
+  Storage Value Information of function gradient_descent_3_fixp:
+    Number of storage values inserted: 133
+  Time to compute storage value information: 0.00 seconds
+
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.01 seconds
+  False-loop computation completed in 0.00 seconds
+  Iteration 0 completed in 0.00 seconds
+
+  Register binding information for function gradient_descent_3_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 116 registers(LB:44)
+  Time to perform register binding: 0.00 seconds
+
+  Iteration 1 completed in 0.01 seconds
+  Clique covering computation completed in 0.01 seconds
+
+  Module binding information for function gradient_descent_3_fixp:
+    Number of modules instantiated: 367
+    Number of performance conflicts: 98
+    Estimated resources area (no Muxes and address logic): 4215
+    Estimated area of MUX21: 618
+    Total estimated area: 4833
+    Estimated number of DSPs: 51
+  Time to perform module binding: 0.02 seconds
+
+
+  Register binding information for function gradient_descent_3_fixp:
+    Register allocation algorithm obtains a sub-optimal result: 116 registers(LB:44)
+  Time to perform register binding: 0.00 seconds
+
+
+  Connection Binding Information for function gradient_descent_3_fixp:
+    Number of allocated multiplexers (2-to-1 equivalent): 57
+  Time to perform interconnection binding: 0.00 seconds
+
+  Total number of flip-flops in function gradient_descent_3_fixp: 3510
+[0m  Parameter Pd18 (495334) (testvector 0) allocated at 1073741824 : reserved_mem_size = 32
+Padding of 0 for parameter Pd18
+  Parameter Pd19 (495335) (testvector 0) allocated at 1073741856 : reserved_mem_size = 1024
+Padding of 0 for parameter Pd19
+  Parameter Pd20 (495336) (testvector 0) allocated at 1073742880 : reserved_mem_size = 128
+Padding of 0 for parameter Pd20
+  Parameter Pd18 (495334) (testvector 1) allocated at 1073743008 : reserved_mem_size = 32
+Padding of 0 for parameter Pd18
+  Parameter Pd19 (495335) (testvector 1) allocated at 1073743040 : reserved_mem_size = 1024
+Padding of 0 for parameter Pd19
+  Parameter Pd20 (495336) (testvector 1) allocated at 1073744064 : reserved_mem_size = 128
+Padding of 0 for parameter Pd20
+  C-based testbench generation for function gradient_descent_3_fixp: /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c
+  Prepared testbench
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:2976:37: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+      gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
+                                    ^~~~
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:39: note: passing argument to parameter here
+void gradient_descent_3_fixp(int, int*, int*, int*);
+                                      ^
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:2976:43: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+      gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
+                                          ^~~~
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:45: note: passing argument to parameter here
+void gradient_descent_3_fixp(int, int*, int*, int*);
+                                            ^
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:2976:49: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+      gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
+                                                ^~~~
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:51: note: passing argument to parameter here
+void gradient_descent_3_fixp(int, int*, int*, int*);
+                                                  ^
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:3021:37: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+      gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
+                                    ^~~~
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:39: note: passing argument to parameter here
+void gradient_descent_3_fixp(int, int*, int*, int*);
+                                      ^
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:3021:43: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+      gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
+                                          ^~~~
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:45: note: passing argument to parameter here
+void gradient_descent_3_fixp(int, int*, int*, int*);
+                                            ^
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:3021:49: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+      gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
+                                                ^~~~
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:51: note: passing argument to parameter here
+void gradient_descent_3_fixp(int, int*, int*, int*);
+                                                  ^
+6 warnings generated.
+warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+
+  Summary of resources:
+     - ARRAY_1D_STD_DISTRAM_NN_SDS: 3
+     - ASSIGN_UNSIGNED_FU: 8
+     - IIdata_converter_FU: 38
+     - IUdata_converter_FU: 38
+     - MUX_GATE: 123
+     - OR_GATE: 11
+     - Pd18_bambu_artificial_ParmMgr_modgen: 1
+     - Pd19_bambu_artificial_ParmMgr_modgen: 1
+     - Pd20_bambu_artificial_ParmMgr_modgen: 1
+     - UIdata_converter_FU: 50
+     - UUdata_converter_FU: 191
+     - __builtin_abs: 1
+     - addr_expr_FU: 3
+     - constant_value: 411
+     - extract_bit_expr_FU: 48
+     - flipflop_AR: 8
+     - gt_expr_FU: 3
+     - lshift_expr_FU: 14
+     - lt_expr_FU: 4
+     - lut_expr_FU: 265
+     - mult_expr_FU: 17
+     - multi_read_cond_FU: 3
+     - negate_expr_FU: 1
+     - read_cond_FU: 16
+     - register_SE: 175
+     - register_STD: 521
+     - rshift_expr_FU: 27
+     - ui_bit_and_expr_FU: 112
+     - ui_bit_ior_concat_expr_FU: 11
+     - ui_bit_ior_expr_FU: 63
+     - ui_bit_xor_expr_FU: 6
+     - ui_cond_expr_FU: 49
+     - ui_eq_expr_FU: 47
+     - ui_extract_bit_expr_FU: 513
+     - ui_fshl_expr_FU: 1
+     - ui_gt_expr_FU: 3
+     - ui_lshift_expr_FU: 159
+     - ui_lt_expr_FU: 10
+     - ui_minus_expr_FU: 7
+     - ui_mult_expr_FU: 4
+     - ui_ne_expr_FU: 13
+     - ui_negate_expr_FU: 7
+     - ui_plus_expr_FU: 40
+     - ui_pointer_plus_expr_FU: 26
+     - ui_rshift_expr_FU: 145
+     - ui_ternary_mp_expr_FU: 1
+     - ui_ternary_plus_expr_FU: 3
+     - ui_ternary_pm_expr_FU: 2
+Start reading vector           1's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd18 = 4287519438   expected = 4287519438 
+
+ Pd18 = 4286442873   expected = 4286442873 
+
+ Pd18 = 4288060851   expected = 4288060851 
+
+ Pd18 = 4286950369   expected = 4286950369 
+
+ Pd18 = 4288001718   expected = 4288001718 
+
+ Pd18 = 4287788931   expected = 4287788931 
+
+ Pd18 = 4288287156   expected = 4288287156 
+
+ Pd18 = 4287617863   expected = 4287617863 
+
+ Pd19 =     130409   expected =     130409 
+
+ Pd19 =     341007   expected =     341007 
+
+ Pd19 =     186254   expected =     186254 
+
+ Pd19 =     405305   expected =     405305 
+
+ Pd19 =     336006   expected =     336006 
+
+ Pd19 =     808870   expected =     808870 
+
+ Pd19 =     301227   expected =     301227 
+
+ Pd19 =     358782   expected =     358782 
+
+ Pd19 =     112139   expected =     112139 
+
+ Pd19 =     506852   expected =     506852 
+
+ Pd19 =     140625   expected =     140625 
+
+ Pd19 =     245923   expected =     245923 
+
+ Pd19 =     464934   expected =     464934 
+
+ Pd19 =     388975   expected =     388975 
+
+ Pd19 =     285286   expected =     285286 
+
+ Pd19 =     450736   expected =     450736 
+
+ Pd19 =     493736   expected =     493736 
+
+ Pd19 =     851618   expected =     851618 
+
+ Pd19 =     341757   expected =     341757 
+
+ Pd19 =     192324   expected =     192324 
+
+ Pd19 =     455854   expected =     455854 
+
+ Pd19 =     399178   expected =     399178 
+
+ Pd19 =     124231   expected =     124231 
+
+ Pd19 =     641994   expected =     641994 
+
+ Pd19 =     478369   expected =     478369 
+
+ Pd19 =     393342   expected =     393342 
+
+ Pd19 =     444899   expected =     444899 
+
+ Pd19 =     128586   expected =     128586 
+
+ Pd19 =     396248   expected =     396248 
+
+ Pd19 =     301825   expected =     301825 
+
+ Pd19 =     197429   expected =     197429 
+
+ Pd19 =     516115   expected =     516115 
+
+ Pd19 =     119489   expected =     119489 
+
+ Pd19 =     467677   expected =     467677 
+
+ Pd19 =     446488   expected =     446488 
+
+ Pd19 =     408152   expected =     408152 
+
+ Pd19 =     382407   expected =     382407 
+
+ Pd19 =     162481   expected =     162481 
+
+ Pd19 =     240252   expected =     240252 
+
+ Pd19 =     496293   expected =     496293 
+
+ Pd19 =     359835   expected =     359835 
+
+ Pd19 =     497846   expected =     497846 
+
+ Pd19 =     337685   expected =     337685 
+
+ Pd19 =     536031   expected =     536031 
+
+ Pd19 =     445537   expected =     445537 
+
+ Pd19 =     288223   expected =     288223 
+
+ Pd19 =     286109   expected =     286109 
+
+ Pd19 =     140623   expected =     140623 
+
+ Pd19 =     513453   expected =     513453 
+
+ Pd19 =     541613   expected =     541613 
+
+ Pd19 =     156186   expected =     156186 
+
+ Pd19 =     245605   expected =     245605 
+
+ Pd19 =     447776   expected =     447776 
+
+ Pd19 =     125665   expected =     125665 
+
+ Pd19 =     335700   expected =     335700 
+
+ Pd19 =     303584   expected =     303584 
+
+ Pd19 =     118319   expected =     118319 
+
+ Pd19 =     943209   expected =     943209 
+
+ Pd19 =     236341   expected =     236341 
+
+ Pd19 =     921245   expected =     921245 
+
+ Pd19 =     108582   expected =     108582 
+
+ Pd19 =     145536   expected =     145536 
+
+ Pd19 =     917029   expected =     917029 
+
+ Pd19 =     345569   expected =     345569 
+
+ Pd19 =     437103   expected =     437103 
+
+ Pd19 =     135395   expected =     135395 
+
+ Pd19 =     501498   expected =     501498 
+
+ Pd19 =     496845   expected =     496845 
+
+ Pd19 =     248692   expected =     248692 
+
+ Pd19 =     310815   expected =     310815 
+
+ Pd19 =     993370   expected =     993370 
+
+ Pd19 =     810383   expected =     810383 
+
+ Pd19 =     528980   expected =     528980 
+
+ Pd19 =     302510   expected =     302510 
+
+ Pd19 =     419059   expected =     419059 
+
+ Pd19 =     864504   expected =     864504 
+
+ Pd19 =     149173   expected =     149173 
+
+ Pd19 =     159177   expected =     159177 
+
+ Pd19 =     191365   expected =     191365 
+
+ Pd19 =     238425   expected =     238425 
+
+ Pd19 =     457049   expected =     457049 
+
+ Pd19 =     190244   expected =     190244 
+
+ Pd19 =     357817   expected =     357817 
+
+ Pd19 =     525785   expected =     525785 
+
+ Pd19 =     251767   expected =     251767 
+
+ Pd19 =     373998   expected =     373998 
+
+ Pd19 =     347723   expected =     347723 
+
+ Pd19 =     384895   expected =     384895 
+
+ Pd19 =     504853   expected =     504853 
+
+ Pd19 =     185836   expected =     185836 
+
+ Pd19 =     182260   expected =     182260 
+
+ Pd19 =     415621   expected =     415621 
+
+ Pd19 =     151475   expected =     151475 
+
+ Pd19 =     120259   expected =     120259 
+
+ Pd19 =     296673   expected =     296673 
+
+ Pd19 =     473296   expected =     473296 
+
+ Pd19 =     375710   expected =     375710 
+
+ Pd19 =     244283   expected =     244283 
+
+ Pd19 =     620664   expected =     620664 
+
+ Pd19 =     146142   expected =     146142 
+
+ Pd19 =     439546   expected =     439546 
+
+ Pd19 =     227421   expected =     227421 
+
+ Pd19 =     144929   expected =     144929 
+
+ Pd19 =     482002   expected =     482002 
+
+ Pd19 =     742876   expected =     742876 
+
+ Pd19 =     831302   expected =     831302 
+
+ Pd19 =     302251   expected =     302251 
+
+ Pd19 =     364108   expected =     364108 
+
+ Pd19 =     477480   expected =     477480 
+
+ Pd19 =     117489   expected =     117489 
+
+ Pd19 =     420853   expected =     420853 
+
+ Pd19 =     310209   expected =     310209 
+
+ Pd19 =     433756   expected =     433756 
+
+ Pd19 =     165355   expected =     165355 
+
+ Pd19 =     297869   expected =     297869 
+
+ Pd19 =     829823   expected =     829823 
+
+ Pd19 =     339368   expected =     339368 
+
+ Pd19 =     890882   expected =     890882 
+
+ Pd19 =     417833   expected =     417833 
+
+ Pd19 =     431557   expected =     431557 
+
+ Pd19 =     192429   expected =     192429 
+
+ Pd19 =     528091   expected =     528091 
+
+ Pd19 =     427726   expected =     427726 
+
+ Pd19 =     495210   expected =     495210 
+
+ Pd19 =     232130   expected =     232130 
+
+ Pd19 =     467278   expected =     467278 
+
+ Pd19 =     111332   expected =     111332 
+
+ Pd19 =     510086   expected =     510086 
+
+ Pd19 =     300545   expected =     300545 
+
+ Pd19 =     117614   expected =     117614 
+
+ Pd19 =     358737   expected =     358737 
+
+ Pd19 =     357927   expected =     357927 
+
+ Pd19 =     321226   expected =     321226 
+
+ Pd19 =     183926   expected =     183926 
+
+ Pd19 =     213708   expected =     213708 
+
+ Pd19 =     147706   expected =     147706 
+
+ Pd19 =     570859   expected =     570859 
+
+ Pd19 =     348052   expected =     348052 
+
+ Pd19 =     320007   expected =     320007 
+
+ Pd19 =     357250   expected =     357250 
+
+ Pd19 =     250193   expected =     250193 
+
+ Pd19 =     391627   expected =     391627 
+
+ Pd19 =     311517   expected =     311517 
+
+ Pd19 =     291033   expected =     291033 
+
+ Pd19 =     469658   expected =     469658 
+
+ Pd19 =     423123   expected =     423123 
+
+ Pd19 =     257149   expected =     257149 
+
+ Pd19 =     284564   expected =     284564 
+
+ Pd19 =     390840   expected =     390840 
+
+ Pd19 =     363489   expected =     363489 
+
+ Pd19 =     500469   expected =     500469 
+
+ Pd19 =     462685   expected =     462685 
+
+ Pd19 =     408011   expected =     408011 
+
+ Pd19 =     976473   expected =     976473 
+
+ Pd19 =     329144   expected =     329144 
+
+ Pd19 =     202753   expected =     202753 
+
+ Pd19 =     405055   expected =     405055 
+
+ Pd19 =     340181   expected =     340181 
+
+ Pd19 =     160230   expected =     160230 
+
+ Pd19 =     155667   expected =     155667 
+
+ Pd19 =     451467   expected =     451467 
+
+ Pd19 =     278260   expected =     278260 
+
+ Pd19 =     255855   expected =     255855 
+
+ Pd19 =     140640   expected =     140640 
+
+ Pd19 =     429883   expected =     429883 
+
+ Pd19 =     234113   expected =     234113 
+
+ Pd19 =     139290   expected =     139290 
+
+ Pd19 =     171259   expected =     171259 
+
+ Pd19 =     278590   expected =     278590 
+
+ Pd19 =     219444   expected =     219444 
+
+ Pd19 =     456457   expected =     456457 
+
+ Pd19 =     474663   expected =     474663 
+
+ Pd19 =     119425   expected =     119425 
+
+ Pd19 =     282785   expected =     282785 
+
+ Pd19 =     182859   expected =     182859 
+
+ Pd19 =     115166   expected =     115166 
+
+ Pd19 =     332287   expected =     332287 
+
+ Pd19 =     288941   expected =     288941 
+
+ Pd19 =     123441   expected =     123441 
+
+ Pd19 =     686073   expected =     686073 
+
+ Pd19 =     434890   expected =     434890 
+
+ Pd19 =     784839   expected =     784839 
+
+ Pd19 =     139061   expected =     139061 
+
+ Pd19 =     523669   expected =     523669 
+
+ Pd19 =     695615   expected =     695615 
+
+ Pd19 =     718447   expected =     718447 
+
+ Pd19 =     320249   expected =     320249 
+
+ Pd19 =     144619   expected =     144619 
+
+ Pd19 =     470633   expected =     470633 
+
+ Pd19 =     374950   expected =     374950 
+
+ Pd19 =     415956   expected =     415956 
+
+ Pd19 =     456092   expected =     456092 
+
+ Pd19 =     492287   expected =     492287 
+
+ Pd19 =     468787   expected =     468787 
+
+ Pd19 =     491395   expected =     491395 
+
+ Pd19 =     419708   expected =     419708 
+
+ Pd19 =     519008   expected =     519008 
+
+ Pd19 =     339753   expected =     339753 
+
+ Pd19 =     223427   expected =     223427 
+
+ Pd19 =     161883   expected =     161883 
+
+ Pd19 =     216891   expected =     216891 
+
+ Pd19 =     139692   expected =     139692 
+
+ Pd19 =     299634   expected =     299634 
+
+ Pd19 =     329536   expected =     329536 
+
+ Pd19 =     145881   expected =     145881 
+
+ Pd19 =     399544   expected =     399544 
+
+ Pd19 =     476358   expected =     476358 
+
+ Pd19 =     346362   expected =     346362 
+
+ Pd19 =     262397   expected =     262397 
+
+ Pd19 =     407941   expected =     407941 
+
+ Pd19 =     387200   expected =     387200 
+
+ Pd19 =     180188   expected =     180188 
+
+ Pd19 =     387273   expected =     387273 
+
+ Pd19 =     424502   expected =     424502 
+
+ Pd19 =     607769   expected =     607769 
+
+ Pd19 =     478121   expected =     478121 
+
+ Pd19 =     209187   expected =     209187 
+
+ Pd19 =     518412   expected =     518412 
+
+ Pd19 =     418049   expected =     418049 
+
+ Pd19 =     369529   expected =     369529 
+
+ Pd19 =     134149   expected =     134149 
+
+ Pd19 =     320822   expected =     320822 
+
+ Pd19 =     818245   expected =     818245 
+
+ Pd19 =     344694   expected =     344694 
+
+ Pd19 =     335486   expected =     335486 
+
+ Pd19 =     137470   expected =     137470 
+
+ Pd19 =     489734   expected =     489734 
+
+ Pd19 =     160813   expected =     160813 
+
+ Pd19 =     123064   expected =     123064 
+
+ Pd19 =     333125   expected =     333125 
+
+ Pd19 =     137322   expected =     137322 
+
+ Pd19 =     442620   expected =     442620 
+
+ Pd19 =     296179   expected =     296179 
+
+ Pd19 =     654219   expected =     654219 
+
+ Pd19 =     517730   expected =     517730 
+
+ Pd19 =     618959   expected =     618959 
+
+ Pd19 =     557753   expected =     557753 
+
+ Pd19 =     437478   expected =     437478 
+
+ Pd19 =     245485   expected =     245485 
+
+ Pd19 =     138042   expected =     138042 
+
+ Pd19 =     447097   expected =     447097 
+
+ Pd19 =     452180   expected =     452180 
+
+ Pd19 =     415668   expected =     415668 
+
+ Pd19 =     452643   expected =     452643 
+
+ Pd19 =     770141   expected =     770141 
+
+ Pd19 =     150501   expected =     150501 
+
+ Pd19 =     180016   expected =     180016 
+
+ Pd19 =     247575   expected =     247575 
+
+ Pd19 =     130409   expected =     130409 
+
+ Pd19 =     341007   expected =     341007 
+
+ Pd19 =     186254   expected =     186254 
+
+ Pd19 =     405305   expected =     405305 
+
+ Pd19 =     336006   expected =     336006 
+
+ Pd19 =     808870   expected =     808870 
+
+ Pd19 =     301227   expected =     301227 
+
+ Pd19 =     358782   expected =     358782 
+
+Simulation ended after              7054900 cycles.
+
+Simulation completed with success
+
+Start reading vector           2's values from input file.
+
+Reading of vector values from input file completed. Simulation started.
+ Pd18 = 4288278520   expected = 4288278520 
+
+ Pd18 = 4287832807   expected = 4287832807 
+
+ Pd18 = 4287305359   expected = 4287305359 
+
+ Pd18 = 4288573635   expected = 4288573635 
+
+ Pd18 = 4287978092   expected = 4287978092 
+
+ Pd18 = 4288153746   expected = 4288153746 
+
+ Pd18 = 4288114604   expected = 4288114604 
+
+ Pd18 = 4287217590   expected = 4287217590 
+
+ Pd19 =     581795   expected =     581795 
+
+ Pd19 =     183580   expected =     183580 
+
+ Pd19 =     321189   expected =     321189 
+
+ Pd19 =     407502   expected =     407502 
+
+ Pd19 =     970153   expected =     970153 
+
+ Pd19 =     326592   expected =     326592 
+
+ Pd19 =     754392   expected =     754392 
+
+ Pd19 =     762516   expected =     762516 
+
+ Pd19 =     342358   expected =     342358 
+
+ Pd19 =     208959   expected =     208959 
+
+ Pd19 =     345364   expected =     345364 
+
+ Pd19 =     306758   expected =     306758 
+
+ Pd19 =     243403   expected =     243403 
+
+ Pd19 =     855328   expected =     855328 
+
+ Pd19 =     212282   expected =     212282 
+
+ Pd19 =     218078   expected =     218078 
+
+ Pd19 =     439533   expected =     439533 
+
+ Pd19 =     286199   expected =     286199 
+
+ Pd19 =     262819   expected =     262819 
+
+ Pd19 =     212314   expected =     212314 
+
+ Pd19 =     335400   expected =     335400 
+
+ Pd19 =     235658   expected =     235658 
+
+ Pd19 =     102672   expected =     102672 
+
+ Pd19 =     498079   expected =     498079 
+
+ Pd19 =     324467   expected =     324467 
+
+ Pd19 =     384639   expected =     384639 
+
+ Pd19 =     333752   expected =     333752 
+
+ Pd19 =     385547   expected =     385547 
+
+ Pd19 =     117683   expected =     117683 
+
+ Pd19 =     441965   expected =     441965 
+
+ Pd19 =     208062   expected =     208062 
+
+ Pd19 =     442299   expected =     442299 
+
+ Pd19 =     343423   expected =     343423 
+
+ Pd19 =     151773   expected =     151773 
+
+ Pd19 =     389583   expected =     389583 
+
+ Pd19 =     516700   expected =     516700 
+
+ Pd19 =     313198   expected =     313198 
+
+ Pd19 =     138200   expected =     138200 
+
+ Pd19 =     335507   expected =     335507 
+
+ Pd19 =     200602   expected =     200602 
+
+ Pd19 =     319557   expected =     319557 
+
+ Pd19 =     147123   expected =     147123 
+
+ Pd19 =     971274   expected =     971274 
+
+ Pd19 =     431612   expected =     431612 
+
+ Pd19 =     131395   expected =     131395 
+
+ Pd19 =     359108   expected =     359108 
+
+ Pd19 =     361690   expected =     361690 
+
+ Pd19 =     505961   expected =     505961 
+
+ Pd19 =     483444   expected =     483444 
+
+ Pd19 =     532586   expected =     532586 
+
+ Pd19 =     149301   expected =     149301 
+
+ Pd19 =     119892   expected =     119892 
+
+ Pd19 =     518816   expected =     518816 
+
+ Pd19 =     171754   expected =     171754 
+
+ Pd19 =     110664   expected =     110664 
+
+ Pd19 =     515524   expected =     515524 
+
+ Pd19 =     434801   expected =     434801 
+
+ Pd19 =     313791   expected =     313791 
+
+ Pd19 =     474662   expected =     474662 
+
+ Pd19 =     127029   expected =     127029 
+
+ Pd19 =     220830   expected =     220830 
+
+ Pd19 =     369841   expected =     369841 
+
+ Pd19 =     381104   expected =     381104 
+
+ Pd19 =     201682   expected =     201682 
+
+ Pd19 =     235472   expected =     235472 
+
+ Pd19 =     210697   expected =     210697 
+
+ Pd19 =     506475   expected =     506475 
+
+ Pd19 =     151353   expected =     151353 
+
+ Pd19 =     407518   expected =     407518 
+
+ Pd19 =     172810   expected =     172810 
+
+ Pd19 =     486138   expected =     486138 
+
+ Pd19 =     889164   expected =     889164 
+
+ Pd19 =     389786   expected =     389786 
+
+ Pd19 =     461228   expected =     461228 
+
+ Pd19 =     126616   expected =     126616 
+
+ Pd19 =     166225   expected =     166225 
+
+ Pd19 =     165749   expected =     165749 
+
+ Pd19 =     417334   expected =     417334 
+
+ Pd19 =     738629   expected =     738629 
+
+ Pd19 =     101831   expected =     101831 
+
+ Pd19 =     368133   expected =     368133 
+
+ Pd19 =     183578   expected =     183578 
+
+ Pd19 =     350637   expected =     350637 
+
+ Pd19 =     339129   expected =     339129 
+
+ Pd19 =     155858   expected =     155858 
+
+ Pd19 =     504591   expected =     504591 
+
+ Pd19 =     199544   expected =     199544 
+
+ Pd19 =     224875   expected =     224875 
+
+ Pd19 =     498011   expected =     498011 
+
+ Pd19 =     302907   expected =     302907 
+
+ Pd19 =     826860   expected =     826860 
+
+ Pd19 =     526942   expected =     526942 
+
+ Pd19 =     232556   expected =     232556 
+
+ Pd19 =     134919   expected =     134919 
+
+ Pd19 =     322246   expected =     322246 
+
+ Pd19 =     196655   expected =     196655 
+
+ Pd19 =     199119   expected =     199119 
+
+ Pd19 =     302627   expected =     302627 
+
+ Pd19 =     271045   expected =     271045 
+
+ Pd19 =     433868   expected =     433868 
+
+ Pd19 =     353409   expected =     353409 
+
+ Pd19 =     212064   expected =     212064 
+
+ Pd19 =     190104   expected =     190104 
+
+ Pd19 =     202147   expected =     202147 
+
+ Pd19 =     167327   expected =     167327 
+
+ Pd19 =     727629   expected =     727629 
+
+ Pd19 =     201755   expected =     201755 
+
+ Pd19 =     162744   expected =     162744 
+
+ Pd19 =     179802   expected =     179802 
+
+ Pd19 =     241396   expected =     241396 
+
+ Pd19 =     186264   expected =     186264 
+
+ Pd19 =     169118   expected =     169118 
+
+ Pd19 =     310910   expected =     310910 
+
+ Pd19 =     883411   expected =     883411 
+
+ Pd19 =     437213   expected =     437213 
+
+ Pd19 =     513158   expected =     513158 
+
+ Pd19 =     387542   expected =     387542 
+
+ Pd19 =     394074   expected =     394074 
+
+ Pd19 =     467924   expected =     467924 
+
+ Pd19 =     167091   expected =     167091 
+
+ Pd19 =     119851   expected =     119851 
+
+ Pd19 =     184557   expected =     184557 
+
+ Pd19 =     417431   expected =     417431 
+
+ Pd19 =     336069   expected =     336069 
+
+ Pd19 =     118520   expected =     118520 
+
+ Pd19 =     278595   expected =     278595 
+
+ Pd19 =     254008   expected =     254008 
+
+ Pd19 =     449453   expected =     449453 
+
+ Pd19 =     126081   expected =     126081 
+
+ Pd19 =     391314   expected =     391314 
+
+ Pd19 =     271340   expected =     271340 
+
+ Pd19 =     389135   expected =     389135 
+
+ Pd19 =     534143   expected =     534143 
+
+ Pd19 =     411140   expected =     411140 
+
+ Pd19 =     267054   expected =     267054 
+
+ Pd19 =     443551   expected =     443551 
+
+ Pd19 =     482593   expected =     482593 
+
+ Pd19 =     436921   expected =     436921 
+
+ Pd19 =     536636   expected =     536636 
+
+ Pd19 =     200694   expected =     200694 
+
+ Pd19 =     117644   expected =     117644 
+
+ Pd19 =     450814   expected =     450814 
+
+ Pd19 =     181797   expected =     181797 
+
+ Pd19 =     382553   expected =     382553 
+
+ Pd19 =     284377   expected =     284377 
+
+ Pd19 =     430758   expected =     430758 
+
+ Pd19 =     260047   expected =     260047 
+
+ Pd19 =     219821   expected =     219821 
+
+ Pd19 =     378801   expected =     378801 
+
+ Pd19 =     107124   expected =     107124 
+
+ Pd19 =     519622   expected =     519622 
+
+ Pd19 =     334094   expected =     334094 
+
+ Pd19 =     519189   expected =     519189 
+
+ Pd19 =     449333   expected =     449333 
+
+ Pd19 =     311093   expected =     311093 
+
+ Pd19 =     184166   expected =     184166 
+
+ Pd19 =     108017   expected =     108017 
+
+ Pd19 =     412356   expected =     412356 
+
+ Pd19 =     269999   expected =     269999 
+
+ Pd19 =     508842   expected =     508842 
+
+ Pd19 =     247040   expected =     247040 
+
+ Pd19 =     405601   expected =     405601 
+
+ Pd19 =     293823   expected =     293823 
+
+ Pd19 =     358179   expected =     358179 
+
+ Pd19 =     301845   expected =     301845 
+
+ Pd19 =     338642   expected =     338642 
+
+ Pd19 =     445078   expected =     445078 
+
+ Pd19 =     466832   expected =     466832 
+
+ Pd19 =     445262   expected =     445262 
+
+ Pd19 =     528194   expected =     528194 
+
+ Pd19 =     429885   expected =     429885 
+
+ Pd19 =     405849   expected =     405849 
+
+ Pd19 =     502370   expected =     502370 
+
+ Pd19 =     516957   expected =     516957 
+
+ Pd19 =     317372   expected =     317372 
+
+ Pd19 =     109314   expected =     109314 
+
+ Pd19 =     182022   expected =     182022 
+
+ Pd19 =     116018   expected =     116018 
+
+ Pd19 =     798656   expected =     798656 
+
+ Pd19 =     331487   expected =     331487 
+
+ Pd19 =     434703   expected =     434703 
+
+ Pd19 =     183316   expected =     183316 
+
+ Pd19 =     273279   expected =     273279 
+
+ Pd19 =     160586   expected =     160586 
+
+ Pd19 =     209396   expected =     209396 
+
+ Pd19 =     448675   expected =     448675 
+
+ Pd19 =     394431   expected =     394431 
+
+ Pd19 =     224782   expected =     224782 
+
+ Pd19 =     236222   expected =     236222 
+
+ Pd19 =     322790   expected =     322790 
+
+ Pd19 =     102027   expected =     102027 
+
+ Pd19 =     393163   expected =     393163 
+
+ Pd19 =     179032   expected =     179032 
+
+ Pd19 =     503476   expected =     503476 
+
+ Pd19 =     379056   expected =     379056 
+
+ Pd19 =     494964   expected =     494964 
+
+ Pd19 =     322378   expected =     322378 
+
+ Pd19 =     434365   expected =     434365 
+
+ Pd19 =     110159   expected =     110159 
+
+ Pd19 =     360931   expected =     360931 
+
+ Pd19 =     354042   expected =     354042 
+
+ Pd19 =     727591   expected =     727591 
+
+ Pd19 =     294903   expected =     294903 
+
+ Pd19 =     393400   expected =     393400 
+
+ Pd19 =     315584   expected =     315584 
+
+ Pd19 =     259765   expected =     259765 
+
+ Pd19 =     206037   expected =     206037 
+
+ Pd19 =     360443   expected =     360443 
+
+ Pd19 =     349218   expected =     349218 
+
+ Pd19 =     167204   expected =     167204 
+
+ Pd19 =     188921   expected =     188921 
+
+ Pd19 =     306419   expected =     306419 
+
+ Pd19 =     405364   expected =     405364 
+
+ Pd19 =     436971   expected =     436971 
+
+ Pd19 =     454552   expected =     454552 
+
+ Pd19 =     348768   expected =     348768 
+
+ Pd19 =     183257   expected =     183257 
+
+ Pd19 =     210581   expected =     210581 
+
+ Pd19 =     293785   expected =     293785 
+
+ Pd19 =     431636   expected =     431636 
+
+ Pd19 =     515227   expected =     515227 
+
+ Pd19 =     531442   expected =     531442 
+
+ Pd19 =     944475   expected =     944475 
+
+ Pd19 =     806440   expected =     806440 
+
+ Pd19 =     480789   expected =     480789 
+
+ Pd19 =     345741   expected =     345741 
+
+ Pd19 =     306142   expected =     306142 
+
+ Pd19 =     138294   expected =     138294 
+
+ Pd19 =     200711   expected =     200711 
+
+ Pd19 =     420894   expected =     420894 
+
+ Pd19 =     325401   expected =     325401 
+
+ Pd19 =     434081   expected =     434081 
+
+ Pd19 =     375203   expected =     375203 
+
+ Pd19 =     355096   expected =     355096 
+
+ Pd19 =     285983   expected =     285983 
+
+ Pd19 =     308832   expected =     308832 
+
+ Pd19 =     248159   expected =     248159 
+
+ Pd19 =     195509   expected =     195509 
+
+ Pd19 =     275354   expected =     275354 
+
+ Pd19 =     462799   expected =     462799 
+
+ Pd19 =     122950   expected =     122950 
+
+ Pd19 =     225753   expected =     225753 
+
+ Pd19 =     482533   expected =     482533 
+
+ Pd19 =     277300   expected =     277300 
+
+ Pd19 =     714538   expected =     714538 
+
+ Pd19 =     270518   expected =     270518 
+
+ Pd19 =     182196   expected =     182196 
+
+ Pd19 =     295047   expected =     295047 
+
+ Pd19 =     581795   expected =     581795 
+
+ Pd19 =     183580   expected =     183580 
+
+ Pd19 =     321189   expected =     321189 
+
+ Pd19 =     407502   expected =     407502 
+
+ Pd19 =     970153   expected =     970153 
+
+ Pd19 =     326592   expected =     326592 
+
+ Pd19 =     754392   expected =     754392 
+
+ Pd19 =     762516   expected =     762516 
+
+Simulation ended after              7054900 cycles.
+
+Simulation completed with success
+
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/testbench_gradient_descent_3_fixp_tb.v:238: Verilog $finish
+No more values found. Simulation(s) executed:           2.
+
+- /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/testbench_gradient_descent_3_fixp_tb.v:279: Verilog $finish
+- /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/testbench_gradient_descent_3_fixp_tb.v:279: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 7054900 cycles;
+2. Simulation completed with SUCCESS; Execution time 7054900 cycles;
+  Total cycles             : 14109800 cycles
+  Number of executions     : 2
+  Average execution        : 7054900 cycles

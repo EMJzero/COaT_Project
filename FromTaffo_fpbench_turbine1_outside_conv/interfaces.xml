@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<module>
+<function id="test_1_fixp">
+<arg id="Pd5" interface_type="array" interface_typename="int*" interface_typename_include="" interface_typename_orig="int*" size="100"/>
+<arg id="Pd6" interface_type="array" interface_typename="int*" interface_typename_include="" interface_typename_orig="int*" size="100"/>
+<arg id="Pd7" interface_type="array" interface_typename="int*" interface_typename_include="" interface_typename_orig="int*" size="100"/>
+<arg id="Pd8" interface_type="array" interface_typename="int*" interface_typename_include="" interface_typename_orig="int*" size="100"/>
+</function>
+</module>

@@ -1,0 +1,19 @@
+TAFFO:
+Works as expected.
+
+HLS:
+Works as expected.
+
+Requires TAFFO's develop branch, thus do not recompile!
+
+Enlarging the real ranges from [0, 1] to [-0.1, 1.1] was required to prevent massive errors from TAFFO.
+
+Required tricks:
+- make the new fixed point function "dso_local"
+- change the interface to ints* and longs*
+- add code to force TAFFO to do a convertion at the start of main, so that you can immediately get the scale factor,
+    copy such scale factor into your test_generator and generate already scaled input values for the now-fixed-point function!
+
+
+This seems overall worse than its counterpart, but that is simply due to the randomly generated dataset, that takes longer to converge.
+Anyway "exp" still not converted, and there is not much benefit in not synthesizing the convertion!
