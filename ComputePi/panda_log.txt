@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-DPjWg0/usr/bin/bambu -v 2 --top-fname=compute_pi --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-K6HlkD/usr/bin/bambu -O0 -v 2 --top-fname=compute_pi --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
 
 
 ********************************************************************************
@@ -17,7 +17,7 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
-Parameters parsed in 0.12 seconds
+Parameters parsed in 0.16 seconds
 
 Target technology = FPGA
 Library Name     : STD_FU
@@ -312,10 +312,6 @@ llvm.var.annotation
   Bit Value Opt: plus_expr optimized, nbits = 63
   Bit Value Opt: plus_expr optimized, nbits = 52
   Bit Value Opt: plus_expr optimized, nbits = 11
-  Bit Value Opt: bit_and_expr optimized, nbits = 1
-  Bit Value Opt: plus_expr optimized, nbits = 1
-  Bit Value Opt: plus_expr optimized, nbits = 1
-  Bit Value Opt: eq_expr optimized, nbits = 1
   Bit Value Opt: cond_expr optimized, nbits = 6
   Bit Value Opt: cond_expr optimized, nbits = 52
   Bit Value Opt: bit_and_expr optimized, nbits = 2
@@ -324,296 +320,102 @@ llvm.var.annotation
   Bit Value Opt: cond_expr optimized, nbits = 3
 Function call to __float_mule11m52b_1023nih inlined in compute_pi
 Function call to __float64_to_float32_ieee inlined in compute_pi
+Function call to __int32_to_float64e11m52b_1023nih inlined in compute_pi
+Function call to __float_adde11m52b_1023nih inlined in compute_pi
+Function call to __float_divSRT4e11m52b_1023nih inlined in compute_pi
 
   Functions to be synthesized:
     compute_pi
-    __int32_to_float64e11m52b_1023nih
-    __float_divSRT4e11m52b_1023nih
-    __float_adde11m52b_1023nih
 
 
   Memory allocation information:
   Sparse memory alignemnt set to 32 bytes
+    Internal variable: internal_475398 - 475398 - internal_475398 in function compute_pi
+      Id: 475398
+      Base Address: 32
+      Size: 8
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 4
+      Maximum number of loads per function: 2
 Warning: This function uses unknown addresses: compute_pi
-    BRAM bitsize: 16
+    BRAM bitsize: 32
     Spec may not exploit DATA bus width
     Spec accesses data having an address unknown at compile time
     Internal data is not externally accessible
-    DATA bus bitsize: 32
+    DATA bus bitsize: 64
     ADDRESS bus bitsize: 32
-    SIZE bus bitsize: 6
+    SIZE bus bitsize: 7
     Internally allocated memory (no private memories): 0
-    Internally allocated memory: 0
-  Time to perform memory allocation: 0.01 seconds
+    Internally allocated memory: 8
+  Time to perform memory allocation: 0.00 seconds
 
-
-  Module allocation information for function __float_adde11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
-  Time to perform module allocation: 0.04 seconds
-
-
-  Module allocation information for function __float_divSRT4e11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
-  Time to perform module allocation: 0.05 seconds
-
-
-  Module allocation information for function __int32_to_float64e11m52b_1023nih:
-    Number of complex operations: 0
-    Number of complex operations: 0
-  Time to perform module allocation: 0.02 seconds
-
-
-  Scheduling Information of function __float_adde11m52b_1023nih:
-    Number of control steps: 4
-    Minimum slack: 0.11253464066666591
-    Estimated max frequency (MHz): 101.13815458842987
-  Time to perform scheduling: 0.05 seconds
-
-  Number of function call sites = 3
-
-  State Transition Graph Information of function __float_adde11m52b_1023nih:
-    Number of operations: 438
-    Number of basic blocks: 3
-    Number of states: 3
-    Minimum number of cycles: 3
-    Maximum number of cycles 3
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.01 seconds
-
-
-  Scheduling Information of function __float_divSRT4e11m52b_1023nih:
-    Number of control steps: 5
-    Minimum slack: 2.7191333143333831
-    Estimated max frequency (MHz): 137.34628625581581
-  Time to perform scheduling: 0.02 seconds
-
-  Number of function call sites = 3
-
-  State Transition Graph Information of function __float_divSRT4e11m52b_1023nih:
-    Number of operations: 219
-    Number of basic blocks: 5
-    Number of states: 3
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __int32_to_float64e11m52b_1023nih:
-    Number of control steps: 5
-    Minimum slack: 1.0565666486666594
-    Estimated max frequency (MHz): 111.81388184112917
-  Time to perform scheduling: 0.02 seconds
-
-  Number of function call sites = 3
-
-  State Transition Graph Information of function __int32_to_float64e11m52b_1023nih:
-    Number of operations: 162
-    Number of basic blocks: 5
-    Number of states: 4
-    Minimum number of cycles: 3
-    Maximum number of cycles 3
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Easy binding information for function __float_adde11m52b_1023nih:
-    Bound operations:375/438
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __float_divSRT4e11m52b_1023nih:
-    Bound operations:138/219
-  Time to perform easy binding: 0.00 seconds
-
-
-  Easy binding information for function __int32_to_float64e11m52b_1023nih:
-    Bound operations:133/162
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function __float_adde11m52b_1023nih:
-    Number of storage values inserted: 206
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __float_divSRT4e11m52b_1023nih:
-    Number of storage values inserted: 21
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __int32_to_float64e11m52b_1023nih:
-    Number of storage values inserted: 4
-  Time to compute storage value information: 0.00 seconds
-
-  Slack computed in 0.01 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-  Iteration 0 completed in 0.00 seconds
-
-  Register binding information for function __float_adde11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 206 registers
-  Time to perform register binding: 0.00 seconds
-
-  Iteration 1 completed in 0.00 seconds
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __float_adde11m52b_1023nih:
-    Number of modules instantiated: 438
-    Number of performance conflicts: 31
-    Estimated resources area (no Muxes and address logic): 5660
-    Estimated area of MUX21: 0
-    Total estimated area: 5660
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.01 seconds
-
-
-  Register binding information for function __float_adde11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 206 registers
-  Time to perform register binding: 0.00 seconds
-
-  Total number of flip-flops in function __float_adde11m52b_1023nih: 400
-  All registers are without enable: function pipelining may come for free
-  Resources are not shared in function __float_adde11m52b_1023nih: function pipelining may come for free
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-  Iteration 0 completed in 0.00 seconds
-
-  Register binding information for function __float_divSRT4e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:17)
-  Time to perform register binding: 0.00 seconds
-
-  Iteration 1 completed in 0.00 seconds
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __float_divSRT4e11m52b_1023nih:
-    Number of modules instantiated: 219
-    Number of performance conflicts: 8
-    Estimated resources area (no Muxes and address logic): 2812
-    Estimated area of MUX21: 0
-    Total estimated area: 2812
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __float_divSRT4e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:17)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __float_divSRT4e11m52b_1023nih:
-    Number of allocated multiplexers (2-to-1 equivalent): 4
-  Time to perform interconnection binding: 0.01 seconds
-
-  Total number of flip-flops in function __float_divSRT4e11m52b_1023nih: 835
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-  Iteration 0 completed in 0.00 seconds
-
-  Register binding information for function __int32_to_float64e11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 4 registers
-  Time to perform register binding: 0.00 seconds
-
-  Iteration 1 completed in 0.00 seconds
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __int32_to_float64e11m52b_1023nih:
-    Number of modules instantiated: 162
-    Number of performance conflicts: 1
-    Estimated resources area (no Muxes and address logic): 729
-    Estimated area of MUX21: 0
-    Total estimated area: 729
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __int32_to_float64e11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 4 registers
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __int32_to_float64e11m52b_1023nih:
-    Number of allocated multiplexers (2-to-1 equivalent): 1
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __int32_to_float64e11m52b_1023nih: 50
-  All registers are without enable: function pipelining may come for free
-  Resources are not shared in function __int32_to_float64e11m52b_1023nih: function pipelining may come for free
 
   Module allocation information for function compute_pi:
-    Number of complex operations: 12
-    Number of complex operations: 12
-  Time to perform module allocation: 0.06 seconds
+    Number of complex operations: 7
+    Number of complex operations: 7
+  Time to perform module allocation: 0.15 seconds
 
 
   Scheduling Information of function compute_pi:
-    Number of control steps: 24
-    Minimum slack: 0.022414641666834101
-    Estimated max frequency (MHz): 100.22464996150711
-  Time to perform scheduling: 0.03 seconds
+    Number of control steps: 17
+    Minimum slack: 0.30106797699990945
+    Estimated max frequency (MHz): 103.1041353448602
+  Time to perform scheduling: 0.12 seconds
 
   Number of function call sites = 0
 
   State Transition Graph Information of function compute_pi:
-    Number of operations: 259
-    Number of basic blocks: 9
-    Number of states: 26
+    Number of operations: 1055
+    Number of basic blocks: 13
+    Number of states: 15
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
+  Time to perform creation of STG: 0.01 seconds
 
 
   Easy binding information for function compute_pi:
-    Bound operations:182/259
-  Time to perform easy binding: 0.00 seconds
+    Bound operations:781/1055
+  Time to perform easy binding: 0.01 seconds
 
 
   Storage Value Information of function compute_pi:
-    Number of storage values inserted: 37
+    Number of storage values inserted: 128
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.01 seconds
-  Weight computation completed in 0.00 seconds
+  Weight computation completed in 0.01 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function compute_pi:
-    Register allocation algorithm obtains a sub-optimal result: 31 registers(LB:13)
+    Register allocation algorithm obtains a sub-optimal result: 122 registers(LB:67)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
-
-  Register binding information for function compute_pi:
-    Register allocation algorithm obtains a sub-optimal result: 31 registers(LB:13)
-  Time to perform register binding: 0.00 seconds
-
-  Iteration 2 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function compute_pi:
-    Number of modules instantiated: 255
-    Number of performance conflicts: 8
-    Estimated resources area (no Muxes and address logic): 11981
-    Estimated area of MUX21: 138
-    Total estimated area: 12119
+    Number of modules instantiated: 1051
+    Number of performance conflicts: 275
+    Estimated resources area (no Muxes and address logic): 11987
+    Estimated area of MUX21: 200
+    Total estimated area: 12187
     Estimated number of DSPs: 5
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.02 seconds
 
 
   Register binding information for function compute_pi:
-    Register allocation algorithm obtains a sub-optimal result: 31 registers(LB:13)
-  Time to perform register binding: 0.00 seconds
+    Register allocation algorithm obtains a sub-optimal result: 122 registers(LB:67)
+  Time to perform register binding: 0.01 seconds
 
 
   Connection Binding Information for function compute_pi:
-    Number of allocated multiplexers (2-to-1 equivalent): 14
-  Time to perform interconnection binding: 0.01 seconds
+    Number of allocated multiplexers (2-to-1 equivalent): 12
+  Time to perform interconnection binding: 0.03 seconds
 
-  Total number of flip-flops in function compute_pi: 1048
-[0m  Parameter res (495333) (testvector 0) allocated at 1073741824 : reserved_mem_size = 4
+  Total number of flip-flops in function compute_pi: 2014
+[0m  Parameter res (475366) (testvector 0) allocated at 1073741824 : reserved_mem_size = 4
 Padding of 28 for parameter res
   C-based testbench generation for function compute_pi: /home/zero/Desktop/COaT_project/ComputePi/synthesis_no_opt/HLS_output//simulation/values.c
   Prepared testbench
@@ -623,70 +425,69 @@ clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored
 clang-12: warning: optimization flag '-fexcess-precision=standard' is not supported [-Wignored-optimization-argument]
 
   Summary of resources:
+     - ARRAY_1D_STD_DISTRAM_NN_SDS: 1
      - ASSIGN_UNSIGNED_FU: 7
      - BMEMORY_CTRLN: 1
-     - IIdata_converter_FU: 12
-     - IUdata_converter_FU: 26
-     - MUX_GATE: 24
-     - OR_GATE: 3
-     - SIMPLEJOIN_FU: 1
-     - UIdata_converter_FU: 23
-     - UUdata_converter_FU: 129
-     - __builtin_abs: 2
-     - constant_value: 332
-     - extract_bit_expr_FU: 96
-     - flipflop_AR: 5
+     - IIdata_converter_FU: 7
+     - IUdata_converter_FU: 15
+     - MUX_GATE: 12
+     - UIdata_converter_FU: 13
+     - UUdata_converter_FU: 86
+     - __builtin_abs: 1
+     - addr_expr_FU: 1
+     - constant_value: 149
+     - extract_bit_expr_FU: 48
      - lshift_expr_FU: 2
      - lt_expr_FU: 1
-     - lut_expr_FU: 206
-     - multi_read_cond_FU: 4
-     - read_cond_FU: 4
-     - register_SE: 62
-     - register_STD: 223
-     - rshift_expr_FU: 7
-     - ui_bit_and_expr_FU: 82
-     - ui_bit_ior_concat_expr_FU: 15
-     - ui_bit_ior_expr_FU: 64
+     - lut_expr_FU: 175
+     - multi_read_cond_FU: 2
+     - read_cond_FU: 3
+     - register_SE: 39
+     - register_STD: 83
+     - rshift_expr_FU: 5
+     - ui_bit_and_expr_FU: 59
+     - ui_bit_ior_concat_expr_FU: 9
+     - ui_bit_ior_expr_FU: 44
      - ui_bit_xor_expr_FU: 5
-     - ui_cond_expr_FU: 61
-     - ui_eq_expr_FU: 32
-     - ui_extract_bit_expr_FU: 324
+     - ui_cond_expr_FU: 42
+     - ui_eq_expr_FU: 24
+     - ui_extract_bit_expr_FU: 282
      - ui_gt_expr_FU: 1
-     - ui_lshift_expr_FU: 149
+     - ui_lshift_expr_FU: 98
      - ui_lt_expr_FU: 2
-     - ui_minus_expr_FU: 5
+     - ui_minus_expr_FU: 3
      - ui_mult_expr_FU: 2
-     - ui_ne_expr_FU: 11
-     - ui_negate_expr_FU: 6
-     - ui_plus_expr_FU: 23
-     - ui_rshift_expr_FU: 134
-     - ui_ternary_mp_expr_FU: 2
+     - ui_ne_expr_FU: 8
+     - ui_negate_expr_FU: 3
+     - ui_plus_expr_FU: 15
+     - ui_rshift_expr_FU: 86
+     - ui_ternary_mp_expr_FU: 1
      - ui_ternary_plus_expr_FU: 1
      - ui_ternary_pm_expr_FU: 1
 Start reading vector           1's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
-Simulation ended after              1277959 cycles.
+Simulation ended after              2228232 cycles.
 
 Simulation completed with success
 
 - /home/zero/Desktop/COaT_project/ComputePi/synthesis_no_opt/HLS_output//simulation/testbench_compute_pi_tb.v:695: Verilog $finish
-1. Simulation completed with SUCCESS; Execution time 1277959 cycles;
+1. Simulation completed with SUCCESS; Execution time 2228232 cycles;
 Analyzing Xilinx synthesis results
-  Total cycles             : 1277959 cycles
+  Total cycles             : 2228232 cycles
   Number of executions     : 1
-  Average execution        : 1277959 cycles
-  Slices                   : 1063
-  Luts                     : 3310
-  Lut FF Pairs             : 3310
-  Power                    : 0.34599999999999997
-  Registers                : 2147
+  Average execution        : 2228232 cycles
+  Slices                   : 767
+  Luts                     : 2238
+  Lut FF Pairs             : 2238
+  Power                    : 0.36199999999999999
+  Registers                : 1221
   DSPs                     : 0
   BRAMs                    : 0
   Clock period             : 10
-  Design minimum period    : 10.640000000000001
-  Design slack             : -0.64000000000000057
-  Frequency                : 93.984962406015029
-  AreaxTime                : 45007671.245600007
-  Time                     : 13597.483760000001
-  Tot. Time                : 13597.483760000001
+  Design minimum period    : 10.586
+  Design slack             : -0.5860000000000003
+  Frequency                : 94.464386926128853
+  AreaxTime                : 52790087.124575995
+  Time                     : 23588.063952
+  Tot. Time                : 23588.063952

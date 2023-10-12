@@ -182,10 +182,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the environment variable TAFFO exists
     if [ -n "$TAFFO" ]; then
       # If TAFFO exists, run the executable specified in TAFFO
-      "$TAFFO" -enable-err -err-out taffo_err_log.txt -Xerr -relerror -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
+      "$TAFFO" -enable-err -err-out taffo_err_log.txt -Xerr -relerror -fno-discard-value-names -S -O0 -emit-llvm -lm -o test.ll test.c
     else
       # If TAFFO does not exist, run the command "taffo"
-      taffo -enable-err -err-out taffo_err_log.txt -Xerr -relerror -fno-discard-value-names -S -emit-llvm -lm -o test.ll test.c
+      taffo -enable-err -err-out taffo_err_log.txt -Xerr -relerror -fno-discard-value-names -S -O0 -emit-llvm -lm -o test.ll test.c
     fi
   fi
 
@@ -204,10 +204,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the option "--vivado" is specified
     if option_present "--vivado" "$@"; then
       # If "--vivado" is present, add the "--evaluation" option to the invocation of BAMBU
-      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation "$device_name" |& tee ../panda_log_opt.txt 
+      "$BAMBU" ../test.ll --use-raw -O0 -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation "$device_name" |& tee ../panda_log_opt.txt 
     else
       # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
-      "$BAMBU" ../test.ll --use-raw -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml "$device_name" |& tee ../panda_log_opt.txt 
+      "$BAMBU" ../test.ll --use-raw -O0 -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml "$device_name" |& tee ../panda_log_opt.txt 
     fi
     # Move verilator results in parent folder
     cp results.txt ../results_opt.txt
@@ -221,10 +221,10 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the option "--vivado" is specified
     if option_present "--vivado" "$@"; then
       # If "--vivado" is present, add the "--evaluation" option to the invocation of BAMBU
-      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --evaluation "$device_name" |& tee ../panda_log.txt 
+      "$BAMBU" ../test.c -O0 -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --evaluation "$device_name" |& tee ../panda_log.txt 
     else
       # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
-      "$BAMBU" ../test.c -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding "$device_name" |& tee ../panda_log.txt 
+      "$BAMBU" ../test.c -O0 -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding "$device_name" |& tee ../panda_log.txt 
     fi
     # Move verilator results in parent folder
     cp results.txt ../results.txt

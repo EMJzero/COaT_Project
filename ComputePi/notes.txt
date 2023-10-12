@@ -6,3 +6,6 @@ HLS:
 Works as expected.
 
 Requires TAFFO develop branch!
+
+RUN WITH -O0 BOTH ON TAFFO AND BAMBU!!
+Otherwise results get all over the place...
