@@ -40,6 +40,7 @@ path_names=(
   "ComputePi,compute_pi"
   "ComputeSinCos,manual_cos"
   "ComputeSqrt,NRsqrt"
+  "DivisionTest,test"
   "FromPanda_mm_float/16x16,mm"
   "FromPanda_mm_float/32x32,mm"
   "FromPanda_mm_float/64x64,mm"

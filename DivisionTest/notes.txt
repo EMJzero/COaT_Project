@@ -1,0 +1,7 @@
+TAFFO:
+Works as expected.
+
+HLS:
+Works as expected.
+
+Objective: prove that divisions are the cause of the underperforming nature of many tests!
