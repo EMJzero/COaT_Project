@@ -108,7 +108,7 @@ for i in range(len(result_opt)):
     #results.append(result_no_opt[i])
     #normalize optimized values w.r.t. optimized ones
     # UNCOMMENT THIS FOR PLOT 1
-    if '16x16' in result_opt[i]['Test'] or '256x256' in result_opt[i]['Test'] or 'Normalize' in result_opt[i]['Test'] or 'axbench' in result_opt[i]['Test'] or 'carbon' in result_opt[i]['Test'] or 'turbine' in result_opt[i]['Test'] or '100pts' in result_opt[i]['Test']:
+    if '16x16' in result_opt[i]['Test'] or '256x256' in result_opt[i]['Test'] or 'Division' in result_opt[i]['Test'] or 'Normalize' in result_opt[i]['Test'] or 'axbench' in result_opt[i]['Test'] or 'carbon' in result_opt[i]['Test'] or 'turbine' in result_opt[i]['Test'] or '100pts' in result_opt[i]['Test']:
         continue
     # UNCOMMENT THIS FOR PLOT 2
     #if 'fpbench' not in result_opt[i]['Test'] or 'carbonGas' in result_opt[i]['Test']:
@@ -193,6 +193,8 @@ for i, name in enumerate(names):
         #position = (0.5, -0.65)
     elif name == 'ConvexHull':
         position = (1.5, -0.3)
+    elif name == 'ComputePi':
+        position = (0.5, 1.2)
     elif name == 'Sqrt':
         position = (0.9, -0.5)
     elif name == 'MatrixInversion':
@@ -241,5 +243,5 @@ plt.ylabel('LUTs (optimized / unoptimized)')
 
 plt.grid(True)
 plt.tight_layout()
-#plt.savefig("TAFFO_PandA_plt3_rev3.png")
+#plt.savefig("TAFFO_PandA_plt3_rev4.png")
 plt.show()

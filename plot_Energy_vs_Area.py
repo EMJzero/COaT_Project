@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
+import random
 import os
 import re
 
@@ -94,8 +95,8 @@ y_bounds = {
     #'DSPs': [-1, 1],
     #'BRAMs': [-1, 1],
     'AreaxTime': [-1, 1],
-    #'Area': [-1, 1],
-    'Energy': [-1, 1]
+    'Energy': [-1, 1],
+    'Area': [-1, 1]
 }
 
 def update_maxmin(key, val):
@@ -116,17 +117,19 @@ for i in range(len(result_opt)):
     #    continue
 
     # COMPOSITE METRICS:
-    #result_opt[i]['Area'] = (result_opt[i]['AreaxTime'] / result_opt[i]['Time']) / (result_no_opt[i]['AreaxTime'] / result_no_opt[i]['Time'])
-    #update_maxmin('Area', result_opt[i]['Area'])
+    result_opt[i]['Area'] = (result_opt[i]['AreaxTime'] * result_opt[i]['Time']) / (result_no_opt[i]['AreaxTime'] * result_no_opt[i]['Time'])
+    update_maxmin('Area', result_opt[i]['Area'])
     result_opt[i]['Energy'] = (result_opt[i]['Power'] * result_opt[i]['Time']) / (result_no_opt[i]['Power'] * result_no_opt[i]['Time'])
     update_maxmin('Energy', result_opt[i]['Energy'])
 
     # NATIVE METRICS:
-    result_opt[i]['Time'] = result_opt[i]['Time'] / result_no_opt[i]['Time']
-    update_maxmin('Time', result_opt[i]['Time'])
+    #result_opt[i]['Time'] = result_opt[i]['Time'] / result_no_opt[i]['Time']
+    #update_maxmin('Time', result_opt[i]['Time'])
+    result_opt[i].pop('Time')
     result_opt[i].pop('Average execution')
-    result_opt[i]['Luts'] = result_opt[i]['Luts'] / result_no_opt[i]['Luts']
-    update_maxmin('Luts', result_opt[i]['Luts'])
+    #result_opt[i]['Luts'] = result_opt[i]['Luts'] / result_no_opt[i]['Luts']
+    #update_maxmin('Luts', result_opt[i]['Luts'])
+    result_opt[i].pop('Luts')
     #result_opt[i]['Power'] = result_opt[i]['Power'] / result_no_opt[i]['Power']
     #update_maxmin('Power', result_opt[i]['Power'])
     result_opt[i].pop('Power')
@@ -141,8 +144,9 @@ for i in range(len(result_opt)):
     result_opt[i].pop('BRAMs')
     result_opt[i].pop('Design slack')
     result_opt[i].pop('Frequency')
-    result_opt[i]['AreaxTime'] = result_opt[i]['AreaxTime'] / result_no_opt[i]['AreaxTime']
-    update_maxmin('AreaxTime', result_opt[i]['AreaxTime'])
+    #result_opt[i]['AreaxTime'] = result_opt[i]['AreaxTime'] / result_no_opt[i]['AreaxTime']
+    #update_maxmin('AreaxTime', result_opt[i]['AreaxTime'])
+    result_opt[i].pop('AreaxTime')
     results.append(result_opt[i])
 
 current_folder = os.getcwd().split('\\')[-1]
@@ -151,13 +155,14 @@ for res in results:
     name = name_tokens[-2]
     if name_tokens[-3] != current_folder:
         if name != 'max1000pts':
-            name = name_tokens[-3] + '\n(' + name + ')'
+            name = name_tokens[-3] + '(' + name + ')'
         else:
             name = name_tokens[-3]
     #if 'opt' in name_tokens[-1]:
     #    name += ' - OPT'
     if 'Pi' not in name and 'SinCos' not in name:
         name = name.replace('Compute', '')
+    #name = name.replace('SinCos', 'Sin&Cos')    
     name = name.replace('FromPanda_mm_float', 'MatrixProduct')
     name = name.replace('max1', '1')
     name = name.replace('FromTaffo_fpbench', 'fpbench')
@@ -169,46 +174,85 @@ def print_current_plot_range():
     print(f"X Range: ({x_min}, {x_max})")
     print(f"Y Range: ({y_min}, {y_max})")
 
-df = pd.DataFrame(results)
+#random.seed(1)
+#random.shuffle(results)
 
-test_names = df['Test']
-
-df = df.drop(columns=['Test'])
-
-df = df[['Time', 'Luts', 'AreaxTime', 'Energy']]
-
-scale = 1/2
-#plt.figure(figsize=(28*scale, 21*scale))
-plt.figure(figsize=(32*scale, 18*scale))
+names = [res['Test'] for res in results]
+x = [res['Area'] for res in results]
+y = [res['Energy'] for res in results]
 
 plt.rcParams.update({'font.size': 18})
+plt.figure(figsize=(16, 9))
+print(plt.gcf())
 
-plt.axhline(y=1, color='red', linestyle='--', linewidth=2)
+scatter = plt.scatter(x, y, c=range(len(results)), cmap='tab10', marker='o', label='Data Points')
 
-marker_styles = ['o', '*', 'X', 'D', 's', '^', 'v', 'P', 'H', '1', '2']
+for i, name in enumerate(names):
+    position = (0, 1)
+    if name == 'MatrixProduct(32x32)':
+        position = (0.6, 1.1)
+    elif name == 'MatrixProduct(64x64)':
+        position = (2.3, 0.4)
+    elif name == 'MatrixProduct(128x128)':
+        position = (2.35, -0.02)
+    elif name == 'ConvexHull(1000pts)':
+        position = (0.57, -0.65)
+    elif name == 'ConvexHull(100pts)':
+        position = (2, 0.12)
+    elif name == 'ConvexHull':
+        position = (1.5, -0.3)
+    elif name == 'Sqrt':
+        position = (1, -0.5)
+    elif name == 'MatrixInversion':
+        position = (-0.8, -0.7)
+    elif name == 'MDPPolicyIteration':
+        position = (-1, -1)
+    elif name == 'FFT':
+        position = (0, -1)
+    elif name == 'ComputeSinCos':
+        position = (1, 0.6)
+    elif name == 'TrainLogisticRegression':
+        position = (-2.2, -1)
+    elif name == 'fpbench_leadLag':
+        position = (0.6, -2.5)
+    elif name == 'fpbench_triangle':
+        position = (-1.2, -1.4)
+    elif name == 'fpbench_CY':
+        position = (0, -1)
+    elif name == 'fpbench_instantCurrent':
+        position = (0.65, 1.6)
+    elif name == 'fpbench_jetEngine':
+        position = (0, -1)
+    elif name == 'fpbench_doppler':
+        position = (-1, 1)
+            
+    offset_x = 60*position[0]
+    offset_y = 20*position[1] - 10*(position[1] < 0)
+    
+    label_x = x[i] + offset_x
+    label_y = y[i] + offset_y
+    
+    plt.annotate(
+        name,
+        (x[i], y[i]),
+        xytext=(label_x, label_y),
+        textcoords='offset points',
+        arrowprops=dict(arrowstyle="-", color=scatter.to_rgba(i)),
+        ha='center',
+        fontsize=18,
+        color=scatter.to_rgba(i)
+    )
 
-for i, row in df.iterrows():
-    marker_style = marker_styles[i % len(marker_styles)]
-    plt.plot(range(len(df.columns)), row, marker_style + '-', label=test_names[i])
+plt.axvline(x=1, color='red', linestyle='--', label='Vertical Line (x=1)')
+plt.axhline(y=1, color='red', linestyle='--', label='Horizontal Line (y=1)')
+plt.plot(1, 1, 'ro', label='Baseline Point (1, 1)')
 
-plt.xticks(range(len(df.columns)), df.columns, rotation=0)
-plt.xlabel('Objectives')
-plt.ylabel('Optimized / Unoptimized')
+plt.xlabel('Area (optimized / unoptimized)')
+plt.ylabel('Energy (optimized / unoptimized)')
+#plt.xlim(top=3.5)
+plt.xlim(left=0)
 
-y_min, y_max = plt.ylim()
-curr_y_range = y_max - y_min
-plt.text(-0.4, 1 + 0.025*((curr_y_range)/1.7706771703861004), "worst", color='red', fontsize=18)
-plt.text(-0.4, 1 - 0.07*((curr_y_range)/1.7706771703861004), "better", color='red', fontsize=18)
-
-plt.legend(title='Benchmark Name', bbox_to_anchor=(1.02, 0.5), loc='center left')
-
-plt.xlim(-0.5, len(df.columns) - 0.8)
-#plt.ylim(top=3.5)
-#plt.ylim(bottom=0)
-
-#plt.title('Parallel Coordinates Plot for Test Results')
 plt.grid(True)
 plt.tight_layout()
-print_current_plot_range()
-plt.savefig("TAFFO_PandA_plt1_rev9.png")
+#plt.savefig("TAFFO_PandA_plt4_rev0.png")
 plt.show()
