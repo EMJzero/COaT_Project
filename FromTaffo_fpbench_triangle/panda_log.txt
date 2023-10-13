@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-MSvcUm/usr/bin/bambu -v 2 --top-fname=test --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.c 
+ ==  Bambu executed with: /tmp/.mount_bambu-rjVU9a/usr/bin/bambu -v 2 -O0 --top-fname=test --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding --device-name=xc7vx690t-3ffg1930-VVD --parallel-backend --evaluation ../test.c 
 
 
 ********************************************************************************
@@ -17,7 +17,7 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
-Parameters parsed in 0.14 seconds
+Parameters parsed in 0.13 seconds
 
 Target technology = FPGA
 Library Name     : STD_FU
@@ -225,18 +225,21 @@ llvm.var.annotation
   Bit Value Opt: eq_expr optimized, nbits = 26
   Bit Value Opt: bit_and_expr optimized, nbits = 26
   Bit Value Opt: ne_expr optimized, nbits = 26
-  Bit Value Opt: bit_and_expr optimized, nbits = 31
-  Bit Value Opt: plus_expr optimized, nbits = 1
-  Bit Value Opt: bit_and_expr optimized, nbits = 26
-  Bit Value Opt: eq_expr optimized, nbits = 26
-  Bit Value Opt: bit_and_expr optimized, nbits = 23
-  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: eq_expr optimized, nbits = 1
   Bit Value Opt: plus_expr optimized, nbits = 1
   Bit Value Opt: plus_expr optimized, nbits = 1
-  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
   Bit Value Opt: plus_expr optimized, nbits = 1
   Bit Value Opt: eq_expr optimized, nbits = 1
-  Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: plus_expr optimized, nbits = 23
+  Bit Value Opt: bit_and_expr optimized, nbits = 23
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 22
+Function call to __hide_ieee754_sqrtf inlined in __internal_sqrtf
+Function call to ex0 inlined in test
 
   Functions to be synthesized:
     __internal_sqrtf
@@ -247,63 +250,33 @@ llvm.var.annotation
 
 
   Memory allocation information:
-  Sparse memory alignemnt set to 1024 bytes
-    Internal variable: internal_495414 - 495414 - internal_495414 in function test
-      Id: 495414
-      Base Address: 1024
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: internal_475486 - 475486 - internal_475486 in function test
+      Id: 475486
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
-      Maximum number of references per function: 3
+      Maximum number of references per function: 2
       Maximum number of loads per function: 1
-    Internal variable: internal_495438 - 495438 - internal_495438 in function test
-      Id: 495438
-      Base Address: 1024
+    Internal variable: internal_475508 - 475508 - internal_475508 in function test
+      Id: 475508
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
-      Maximum number of references per function: 3
+      Maximum number of references per function: 2
       Maximum number of loads per function: 1
-    Internal variable: internal_495456 - 495456 - internal_495456 in function test
-      Id: 495456
-      Base Address: 1024
+    Internal variable: internal_475526 - 475526 - internal_475526 in function test
+      Id: 475526
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
-      Maximum number of references per function: 3
-      Maximum number of loads per function: 1
-    Internal variable: sqrtf_a1 - 408269 - sqrtf_a1 in function __internal_sqrtf
-      Id: 408269
-      Base Address: 1024
-      Size: 1024
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrtf_a2 - 408835 - sqrtf_a2 in function __internal_sqrtf
-      Id: 408835
-      Base Address: 1024
-      Size: 512
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrtf_a0 - 409049 - sqrtf_a0 in function __internal_sqrtf
-      Id: 409049
-      Base Address: 1024
-      Size: 1024
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
+      Maximum number of references per function: 2
       Maximum number of loads per function: 1
 Warning: This function uses unknown addresses: test
     BRAM bitsize: 16
@@ -314,7 +287,7 @@ Warning: This function uses unknown addresses: test
     ADDRESS bus bitsize: 32
     SIZE bus bitsize: 6
     Internally allocated memory (no private memories): 0
-    Internally allocated memory: 3760
+    Internally allocated memory: 1200
   Time to perform memory allocation: 0.00 seconds
 
 
@@ -334,12 +307,6 @@ Warning: This function uses unknown addresses: test
     Number of complex operations: 0
     Number of complex operations: 0
   Time to perform module allocation: 0.04 seconds
-
-
-  Module allocation information for function __internal_sqrtf:
-    Number of complex operations: 5
-    Number of complex operations: 5
-  Time to perform module allocation: 0.02 seconds
 
 
   Scheduling Information of function __float_adde8m23b_127nih:
@@ -377,7 +344,7 @@ Warning: This function uses unknown addresses: test
     Maximum number of cycles 3
     Parameters are registered
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
+  Time to perform creation of STG: 0.01 seconds
 
 
   Scheduling Information of function __float_sube8m23b_127nih:
@@ -395,24 +362,6 @@ Warning: This function uses unknown addresses: test
     Minimum number of cycles: 3
     Maximum number of cycles 3
     Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.01 seconds
-
-
-  Scheduling Information of function __internal_sqrtf:
-    Number of control steps: 8
-    Minimum slack: 2.717999996000017
-    Estimated max frequency (MHz): 137.32491066337582
-  Time to perform scheduling: 0.01 seconds
-
-  Number of function call sites = 1
-
-  State Transition Graph Information of function __internal_sqrtf:
-    Number of operations: 93
-    Number of basic blocks: 7
-    Number of states: 6
-    Minimum number of cycles: 2
-    Maximum number of cycles 4
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
@@ -432,11 +381,6 @@ Warning: This function uses unknown addresses: test
   Time to perform easy binding: 0.00 seconds
 
 
-  Easy binding information for function __internal_sqrtf:
-    Bound operations:81/93
-  Time to perform easy binding: 0.00 seconds
-
-
   Storage Value Information of function __float_adde8m23b_127nih:
     Number of storage values inserted: 47
   Time to compute storage value information: 0.00 seconds
@@ -449,11 +393,6 @@ Warning: This function uses unknown addresses: test
 
   Storage Value Information of function __float_sube8m23b_127nih:
     Number of storage values inserted: 47
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __internal_sqrtf:
-    Number of storage values inserted: 18
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
@@ -543,47 +482,79 @@ Warning: This function uses unknown addresses: test
   Total number of flip-flops in function __float_sube8m23b_127nih: 189
   All registers are without enable: function pipelining may come for free
   Resources are not shared in function __float_sube8m23b_127nih: function pipelining may come for free
+
+  Module allocation information for function __internal_sqrtf:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.03 seconds
+
+
+  Scheduling Information of function __internal_sqrtf:
+    Number of control steps: 11
+    Minimum slack: 5.9046639970000063
+    Estimated max frequency (MHz): 244.18020872218077
+  Time to perform scheduling: 0.01 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __internal_sqrtf:
+    Number of operations: 100
+    Number of basic blocks: 11
+    Number of states: 9
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __internal_sqrtf:
+    Bound operations:54/100
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __internal_sqrtf:
+    Number of storage values inserted: 24
+  Time to compute storage value information: 0.00 seconds
+
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __internal_sqrtf:
-    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:10)
+    Register allocation algorithm obtains a sub-optimal result: 23 registers(LB:12)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __internal_sqrtf:
-    Number of modules instantiated: 93
+    Number of modules instantiated: 100
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 3742
+    Estimated resources area (no Muxes and address logic): 906
     Estimated area of MUX21: 0
-    Total estimated area: 3742
-    Estimated number of DSPs: 5
+    Total estimated area: 906
+    Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __internal_sqrtf:
-    Register allocation algorithm obtains a sub-optimal result: 18 registers(LB:10)
+    Register allocation algorithm obtains a sub-optimal result: 23 registers(LB:12)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function __internal_sqrtf:
-    Number of allocated multiplexers (2-to-1 equivalent): 2
+    Number of allocated multiplexers (2-to-1 equivalent): 8
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function __internal_sqrtf: 395
+  Total number of flip-flops in function __internal_sqrtf: 488
 
   Module allocation information for function test:
-    Number of complex operations: 26
-    Number of complex operations: 26
-  Time to perform module allocation: 0.02 seconds
+    Number of complex operations: 20
+    Number of complex operations: 20
+  Time to perform module allocation: 0.01 seconds
 
 
   Scheduling Information of function test:
-    Number of control steps: 35
+    Number of control steps: 33
     Minimum slack: 0.1404666506666879
     Estimated max frequency (MHz): 101.42467848821858
   Time to perform scheduling: 0.01 seconds
@@ -591,20 +562,20 @@ Warning: This function uses unknown addresses: test
   Number of function call sites = 0
 
   State Transition Graph Information of function test:
-    Number of operations: 137
+    Number of operations: 99
     Number of basic blocks: 6
-    Number of states: 34
+    Number of states: 32
     Done port is registered
-  Time to perform creation of STG: 0.00 seconds
+  Time to perform creation of STG: 0.01 seconds
 
 
   Easy binding information for function test:
-    Bound operations:54/137
+    Bound operations:45/99
   Time to perform easy binding: 0.00 seconds
 
 
   Storage Value Information of function test:
-    Number of storage values inserted: 47
+    Number of storage values inserted: 38
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
@@ -613,40 +584,40 @@ Warning: This function uses unknown addresses: test
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 43 registers(LB:17)
+    Register allocation algorithm obtains a sub-optimal result: 35 registers(LB:14)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function test:
-    Number of modules instantiated: 122
+    Number of modules instantiated: 90
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 13119
-    Estimated area of MUX21: 415
-    Total estimated area: 13534
+    Estimated resources area (no Muxes and address logic): 12828
+    Estimated area of MUX21: 275
+    Total estimated area: 13103
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 43 registers(LB:17)
+    Register allocation algorithm obtains a sub-optimal result: 35 registers(LB:14)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function test:
-    Number of allocated multiplexers (2-to-1 equivalent): 24
+    Number of allocated multiplexers (2-to-1 equivalent): 15
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function test: 1314
-[0m  Parameter arr (495332) (testvector 0) allocated at 1073741824 : reserved_mem_size = 1200
-Padding of 848 for parameter arr
-  Parameter res (495333) (testvector 0) allocated at 1073743872 : reserved_mem_size = 400
-Padding of 624 for parameter res
-  Parameter arr (495332) (testvector 1) allocated at 1073744896 : reserved_mem_size = 1200
-Padding of 848 for parameter arr
-  Parameter res (495333) (testvector 1) allocated at 1073746944 : reserved_mem_size = 400
-Padding of 624 for parameter res
+  Total number of flip-flops in function test: 1058
+[0m  Parameter arr (475431) (testvector 0) allocated at 1073741824 : reserved_mem_size = 1200
+Padding of 336 for parameter arr
+  Parameter res (475432) (testvector 0) allocated at 1073743360 : reserved_mem_size = 400
+Padding of 112 for parameter res
+  Parameter arr (475431) (testvector 1) allocated at 1073743872 : reserved_mem_size = 1200
+Padding of 336 for parameter arr
+  Parameter res (475432) (testvector 1) allocated at 1073745408 : reserved_mem_size = 400
+Padding of 112 for parameter res
   C-based testbench generation for function test: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_no_opt/HLS_output//simulation/values.c
   Prepared testbench
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
@@ -657,53 +628,53 @@ clang-12: warning: optimization flag '-fexcess-precision=standard' is not suppor
   Summary of resources:
      - ARRAY_1D_STD_BRAM_NN_SDS: 3
      - ARRAY_1D_STD_BRAM_NN_SDS_BASE: 3
-     - ARRAY_1D_STD_DISTRAM_NN_SDS: 3
-     - ASSIGN_UNSIGNED_FU: 6
+     - ASSIGN_UNSIGNED_FU: 5
      - BMEMORY_CTRLN: 1
      - IIdata_converter_FU: 8
-     - IUdata_converter_FU: 8
-     - MUX_GATE: 26
+     - IUdata_converter_FU: 9
+     - MUX_GATE: 23
      - OR_GATE: 2
-     - UIdata_converter_FU: 8
-     - UUdata_converter_FU: 199
-     - addr_expr_FU: 6
-     - constant_value: 343
+     - UIdata_converter_FU: 13
+     - UUdata_converter_FU: 190
+     - addr_expr_FU: 3
+     - constant_value: 326
      - flipflop_AR: 6
      - lshift_expr_FU: 8
-     - lut_expr_FU: 305
-     - multi_read_cond_FU: 1
-     - read_cond_FU: 3
-     - register_SE: 42
-     - register_STD: 223
-     - rshift_expr_FU: 8
-     - ui_bit_and_expr_FU: 92
-     - ui_bit_ior_concat_expr_FU: 8
-     - ui_bit_ior_expr_FU: 55
+     - lt_expr_FU: 2
+     - lut_expr_FU: 301
+     - read_cond_FU: 6
+     - register_SE: 40
+     - register_STD: 222
+     - rshift_expr_FU: 9
+     - ui_bit_and_expr_FU: 93
+     - ui_bit_ior_concat_expr_FU: 11
+     - ui_bit_ior_expr_FU: 50
      - ui_bit_xor_expr_FU: 8
-     - ui_cond_expr_FU: 42
-     - ui_eq_expr_FU: 9
-     - ui_extract_bit_expr_FU: 871
-     - ui_lshift_expr_FU: 142
-     - ui_lt_expr_FU: 4
-     - ui_minus_expr_FU: 5
-     - ui_mult_expr_FU: 3
+     - ui_cond_expr_FU: 46
+     - ui_eq_expr_FU: 10
+     - ui_extract_bit_expr_FU: 854
+     - ui_gt_expr_FU: 1
+     - ui_lshift_expr_FU: 135
+     - ui_lt_expr_FU: 6
+     - ui_minus_expr_FU: 6
+     - ui_mult_expr_FU: 1
      - ui_ne_expr_FU: 15
-     - ui_plus_expr_FU: 24
-     - ui_pointer_plus_expr_FU: 19
-     - ui_rshift_expr_FU: 89
+     - ui_plus_expr_FU: 29
+     - ui_pointer_plus_expr_FU: 10
+     - ui_rshift_expr_FU: 92
      - ui_ternary_plus_expr_FU: 1
      - ui_ternary_pm_expr_FU: 4
 Start reading vector           1's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
-Simulation ended after                 3048 cycles.
+Simulation ended after                 4352 cycles.
 
 Simulation completed with success
 
 Start reading vector           2's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
-Simulation ended after                 3050 cycles.
+Simulation ended after                 4402 cycles.
 
 Simulation completed with success
 
@@ -714,23 +685,23 @@ No more values found. Simulation(s) executed:           2.
 
 - /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:288: Verilog $finish
 - /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_no_opt/HLS_output//simulation/testbench_test_tb.v:288: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 3048 cycles;
-2. Simulation completed with SUCCESS; Execution time 3050 cycles;
+1. Simulation completed with SUCCESS; Execution time 4352 cycles;
+2. Simulation completed with SUCCESS; Execution time 4402 cycles;
 Analyzing Xilinx synthesis results
-  Total cycles             : 6098 cycles
+  Total cycles             : 8754 cycles
   Number of executions     : 2
-  Average execution        : 3049 cycles
-  Slices                   : 979
-  Luts                     : 2557
-  Lut FF Pairs             : 2557
-  Power                    : 0.379
-  Registers                : 1426
-  DSPs                     : 5
+  Average execution        : 4377 cycles
+  Slices                   : 945
+  Luts                     : 2482
+  Lut FF Pairs             : 2482
+  Power                    : 0.36099999999999999
+  Registers                : 1489
+  DSPs                     : 2
   BRAMs                    : 6
   Clock period             : 10
-  Design minimum period    : 11.814
-  Design slack             : -1.8140000000000001
-  Frequency                : 84.645336041984081
-  AreaxTime                : 92105.405502000009
-  Time                     : 36.020886000000004
-  Tot. Time                : 72.041772000000009
+  Design minimum period    : 11.534000000000001
+  Design slack             : -1.5340000000000007
+  Frequency                : 86.700190740419629
+  AreaxTime                : 125302.077276
+  Time                     : 50.484318000000002
+  Tot. Time                : 100.968636

@@ -252,8 +252,11 @@ Copying from PandA-Bambu:<br>
 - `--no-regen-taffo` : utilize the already existing, TAFFO-optimized, `.ll` files, without recompiling the source through TAFFO.
 - `--no-opt` : does NOT run through PandA, and Vivado, if enabled, the TAFFO-optimized versions of the tests. 
 - `--no-unopt` : does NOT run through PandA, and Vivado, if enabled, the versions of the tests NOT optimized by TAFFO.
+- `--opt-level=<level>' : pass through the choice of optimization level to TAFFO and PandA-Bambu, available levels are: "O0", "O1", "O2", "O3", "Os", "Of".
 
 **The usage of `--no-regen-taffo` is highly suggested**, as currently some of the `.ll` files were produced with TAFFO's develop branch, and others with the last version of TAFFO that used LLVM-12.
+
+**Usage of `--O0` is highly suggested** as well to ensure the fairness of results, as TAFFO does not necessarily optimize the IR the same way Bambu's internal LLVM version does.
 
 Note that using both `--no-opt` and `--no-unopt` will just result in recompilation through TAFFO.
 

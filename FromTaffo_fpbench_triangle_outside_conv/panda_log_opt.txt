@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-HA6hvd/usr/bin/bambu --use-raw -v 2 --top-fname=test_1_fixp --compiler=I386_CLANG12 --generate-interface=INFER --interface-xml-filename=interfaces.xml --simulate --simulator=VERILATOR --verilator-parallel -lm test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-vaqmw3/usr/bin/bambu --use-raw -v 2 -O3 --top-fname=test_1_fixp --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --device-name=xc7vx690t-3ffg1930-VVD --parallel-backend --evaluation ../test.ll 
 
 
 ********************************************************************************
@@ -17,7 +17,7 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
-Parameters parsed in 0.15 seconds
+Parameters parsed in 0.14 seconds
 
 Target technology = FPGA
 Library Name     : STD_FU
@@ -152,9 +152,9 @@ Available devices:
  - xcku060-3ffva1156-VVD
  - xcu280-2Lfsvh2892-VVD
 Library Name     : STD_FU
-  Total cells    : 3931
+  Total cells    : 3911
   - combinational: 0
-  - others: 3931
+  - others: 3911
 
 warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
 1 warning generated.
@@ -195,6 +195,17 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: ne_expr optimized, nbits = 12
   Bit Value Opt: bit_and_expr optimized, nbits = 53
   Bit Value Opt: ne_expr optimized, nbits = 53
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: eq_expr optimized, nbits = 20
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: eq_expr optimized, nbits = 20
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 19
+  Bit Value Opt: eq_expr optimized, nbits = 19
+  Bit Value Opt: plus_expr optimized, nbits = 21
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: plus_expr optimized, nbits = 20
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
   Bit Value Opt: bit_and_expr optimized, nbits = 16
   Bit Value Opt: eq_expr optimized, nbits = 16
   Bit Value Opt: bit_and_expr optimized, nbits = 28
@@ -208,10 +219,6 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: plus_expr optimized, nbits = 63
   Bit Value Opt: plus_expr optimized, nbits = 52
   Bit Value Opt: plus_expr optimized, nbits = 11
-  Bit Value Opt: bit_and_expr optimized, nbits = 63
-  Bit Value Opt: plus_expr optimized, nbits = 1
-  Bit Value Opt: plus_expr optimized, nbits = 24
-  Bit Value Opt: plus_expr optimized, nbits = 14
   Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 2
   Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 2
   Bit Value Opt: plus_expr optimized, nbits = 2
@@ -221,226 +228,117 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: plus_expr optimized, nbits = 1
   Bit Value Opt: eq_expr optimized, nbits = 1
   Bit Value Opt: bit_and_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
   Bit Value Opt: cond_expr optimized, nbits = 3
   Bit Value Opt: cond_expr optimized, nbits = 3
+Function call to __hide_ieee754_sqrt inlined in __internal_sqrt
 Function call to __int32_to_float64e11m52b_1023nih inlined in ex0_2_u9_23fixp
 Function call to __float64_to_uint32_round_to_zeroe11m52b_1023nih inlined in ex0_2_u9_23fixp
+Function call to ex0_2_u9_23fixp inlined in test_1_fixp
 
   Functions to be synthesized:
     __internal_sqrt
     test_1_fixp
-    ex0_2_u9_23fixp
     __float_mule11m52b_1023nih
 
 
   Memory allocation information:
-  Sparse memory alignemnt set to 8192 bytes
-    Internal variable: internal_495412 - 495412 - internal_495412 in function test_1_fixp
-      Id: 495412
-      Base Address: 8192
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: internal_475445 - 475445 - internal_475445 in function test_1_fixp
+      Id: 475445
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 3
       Maximum number of loads per function: 1
-    Internal variable: internal_495437 - 495437 - internal_495437 in function test_1_fixp
-      Id: 495437
-      Base Address: 8192
+    Internal variable: internal_475470 - 475470 - internal_475470 in function test_1_fixp
+      Id: 475470
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 3
       Maximum number of loads per function: 1
-    Internal variable: internal_495456 - 495456 - internal_495456 in function test_1_fixp
-      Id: 495456
-      Base Address: 8192
+    Internal variable: internal_475489 - 475489 - internal_475489 in function test_1_fixp
+      Id: 475489
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 3
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a0 - 415239 - sqrt_a0 in function __internal_sqrt
-      Id: 415239
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a3 - 417453 - sqrt_a3 in function __internal_sqrt
-      Id: 417453
-      Base Address: 8192
-      Size: 4096
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a4 - 418523 - sqrt_a4 in function __internal_sqrt
-      Id: 418523
-      Base Address: 8192
-      Size: 4096
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a2 - 419618 - sqrt_a2 in function __internal_sqrt
-      Id: 419618
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a1 - 420707 - sqrt_a1 in function __internal_sqrt
-      Id: 420707
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
       Maximum number of loads per function: 1
   This function performs unaligned accesses: test_1_fixp
-    BRAM bitsize: 64
+    BRAM bitsize: 32
     Spec may not exploit DATA bus width
     All the data have a known address
     Internal data is not externally accessible
-    DATA bus bitsize: 64
-    ADDRESS bus bitsize: 14
-    SIZE bus bitsize: 7
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 10
+    SIZE bus bitsize: 6
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 0
-    Internally allocated memory: 33968
+    Internally allocated memory: 1200
   Time to perform memory allocation: 0.00 seconds
 
 
   Module allocation information for function __float_mule11m52b_1023nih:
     Number of complex operations: 2
     Number of complex operations: 2
-  Time to perform module allocation: 0.03 seconds
+  Time to perform module allocation: 0.04 seconds
 
 
   Memory allocation information:
-  Sparse memory alignemnt set to 8192 bytes
-    Internal variable: internal_495412 - 495412 - internal_495412 in function test_1_fixp
-      Id: 495412
-      Base Address: 8192
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: internal_475445 - 475445 - internal_475445 in function test_1_fixp
+      Id: 475445
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 3
       Maximum number of loads per function: 1
-    Internal variable: internal_495437 - 495437 - internal_495437 in function test_1_fixp
-      Id: 495437
-      Base Address: 8192
+    Internal variable: internal_475470 - 475470 - internal_475470 in function test_1_fixp
+      Id: 475470
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 3
       Maximum number of loads per function: 1
-    Internal variable: internal_495456 - 495456 - internal_495456 in function test_1_fixp
-      Id: 495456
-      Base Address: 8192
+    Internal variable: internal_475489 - 475489 - internal_475489 in function test_1_fixp
+      Id: 475489
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 3
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a0 - 415239 - sqrt_a0 in function __internal_sqrt
-      Id: 415239
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 57 with bit-value pattern: 1UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a3 - 417453 - sqrt_a3 in function __internal_sqrt
-      Id: 417453
-      Base Address: 8192
-      Size: 4096
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 30 with bit-value pattern: UUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a4 - 418523 - sqrt_a4 in function __internal_sqrt
-      Id: 418523
-      Base Address: 8192
-      Size: 4096
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 21 with bit-value pattern: 1UUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a2 - 419618 - sqrt_a2 in function __internal_sqrt
-      Id: 419618
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 39 with bit-value pattern: 1UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a1 - 420707 - sqrt_a1 in function __internal_sqrt
-      Id: 420707
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 48 with bit-value pattern: UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
       Maximum number of loads per function: 1
   This function performs unaligned accesses: test_1_fixp
-    BRAM bitsize: 64
+    BRAM bitsize: 32
     Spec may not exploit DATA bus width
     All the data have a known address
     Internal data is not externally accessible
-    DATA bus bitsize: 64
-    ADDRESS bus bitsize: 14
-    SIZE bus bitsize: 7
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 10
+    SIZE bus bitsize: 6
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 0
-    Internally allocated memory: 33968
+    Internally allocated memory: 1200
   Time to perform memory allocation: 0.00 seconds
 
 
-  Module allocation information for function __internal_sqrt:
-    Number of complex operations: 18
-    Number of complex operations: 18
-  Time to perform module allocation: 0.06 seconds
-
-
   Memory allocation information:
-  Sparse memory alignemnt set to 8192 bytes
-    Internal variable: internal_495412 - 495412 - internal_495412 in function test_1_fixp
-      Id: 495412
-      Base Address: 8192
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: internal_475445 - 475445 - internal_475445 in function test_1_fixp
+      Id: 475445
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
@@ -448,9 +346,9 @@ Function call to __float64_to_uint32_round_to_zeroe11m52b_1023nih inlined in ex0
       Number of functions in which is used: 1
       Maximum number of references per function: 3
       Maximum number of loads per function: 1
-    Internal variable: internal_495437 - 495437 - internal_495437 in function test_1_fixp
-      Id: 495437
-      Base Address: 8192
+    Internal variable: internal_475470 - 475470 - internal_475470 in function test_1_fixp
+      Id: 475470
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
@@ -458,89 +356,34 @@ Function call to __float64_to_uint32_round_to_zeroe11m52b_1023nih inlined in ex0
       Number of functions in which is used: 1
       Maximum number of references per function: 3
       Maximum number of loads per function: 1
-    Internal variable: internal_495456 - 495456 - internal_495456 in function test_1_fixp
-      Id: 495456
-      Base Address: 8192
+    Internal variable: internal_475489 - 475489 - internal_475489 in function test_1_fixp
+      Id: 475489
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       The variable has been trimmed to bitsize: 32 with bit-value pattern: UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
       Number of functions in which is used: 1
       Maximum number of references per function: 3
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a0 - 415239 - sqrt_a0 in function __internal_sqrt
-      Id: 415239
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 57 with bit-value pattern: 1UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a3 - 417453 - sqrt_a3 in function __internal_sqrt
-      Id: 417453
-      Base Address: 8192
-      Size: 4096
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 30 with bit-value pattern: UUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a4 - 418523 - sqrt_a4 in function __internal_sqrt
-      Id: 418523
-      Base Address: 8192
-      Size: 4096
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 21 with bit-value pattern: 1UUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a2 - 419618 - sqrt_a2 in function __internal_sqrt
-      Id: 419618
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 39 with bit-value pattern: 1UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a1 - 420707 - sqrt_a1 in function __internal_sqrt
-      Id: 420707
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      The variable has been trimmed to bitsize: 48 with bit-value pattern: UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
       Maximum number of loads per function: 1
   This function performs unaligned accesses: test_1_fixp
-    BRAM bitsize: 64
+    BRAM bitsize: 32
     Spec may not exploit DATA bus width
     All the data have a known address
     Internal data is not externally accessible
-    DATA bus bitsize: 64
-    ADDRESS bus bitsize: 14
-    SIZE bus bitsize: 7
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 10
+    SIZE bus bitsize: 6
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 0
-    Internally allocated memory: 33968
+    Internally allocated memory: 1200
   Time to perform memory allocation: 0.00 seconds
 
 
   Scheduling Information of function __float_mule11m52b_1023nih:
-    Number of control steps: 4
-    Minimum slack: 0.057399982999997379
-    Estimated max frequency (MHz): 100.57731360913498
+    Number of control steps: 3
+    Minimum slack: 2.9413999819999996
+    Estimated max frequency (MHz): 141.67115255856959
   Time to perform scheduling: 0.01 seconds
 
   Number of function call sites = 2
@@ -548,29 +391,9 @@ Function call to __float64_to_uint32_round_to_zeroe11m52b_1023nih inlined in ex0
   State Transition Graph Information of function __float_mule11m52b_1023nih:
     Number of operations: 75
     Number of basic blocks: 3
-    Number of states: 3
-    Minimum number of cycles: 3
-    Maximum number of cycles 3
-    Parameters are registered
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Scheduling Information of function __internal_sqrt:
-    Number of control steps: 21
-    Minimum slack: 0.23100000000000276
-    Estimated max frequency (MHz): 102.36462278636508
-  Time to perform scheduling: 0.02 seconds
-
-  Number of function call sites = 1
-
-  State Transition Graph Information of function __internal_sqrt:
-    Number of operations: 186
-    Number of basic blocks: 7
-    Number of states: 19
-    Minimum number of cycles: 2
-    Maximum number of cycles 17
-    Done port is registered
+    Number of states: 1
+    Minimum number of cycles: 1
+    Maximum number of cycles 1
   Time to perform creation of STG: 0.00 seconds
 
 
@@ -579,18 +402,8 @@ Function call to __float64_to_uint32_round_to_zeroe11m52b_1023nih inlined in ex0
   Time to perform easy binding: 0.00 seconds
 
 
-  Easy binding information for function __internal_sqrt:
-    Bound operations:117/186
-  Time to perform easy binding: 0.00 seconds
-
-
   Storage Value Information of function __float_mule11m52b_1023nih:
-    Number of storage values inserted: 10
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __internal_sqrt:
-    Number of storage values inserted: 69
+    Number of storage values inserted: 0
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
@@ -599,7 +412,7 @@ Function call to __float64_to_uint32_round_to_zeroe11m52b_1023nih inlined in ex0
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_mule11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 10 registers
+    Register allocation algorithm obtains an optimal result: 0 registers
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
@@ -608,195 +421,155 @@ Function call to __float64_to_uint32_round_to_zeroe11m52b_1023nih inlined in ex0
   Module binding information for function __float_mule11m52b_1023nih:
     Number of modules instantiated: 75
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 538
+    Estimated resources area (no Muxes and address logic): 543
     Estimated area of MUX21: 0
-    Total estimated area: 538
+    Total estimated area: 543
     Estimated number of DSPs: 5
   Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __float_mule11m52b_1023nih:
-    Register allocation algorithm obtains an optimal result: 10 registers
+    Register allocation algorithm obtains an optimal result: 0 registers
   Time to perform register binding: 0.00 seconds
 
-  Total number of flip-flops in function __float_mule11m52b_1023nih: 199
-  All registers are without enable: function pipelining may come for free
-  Resources are not shared in function __float_mule11m52b_1023nih: function pipelining may come for free
+  Total number of flip-flops in function __float_mule11m52b_1023nih: 0
+
+  Module allocation information for function __internal_sqrt:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.04 seconds
+
+
+  Scheduling Information of function __internal_sqrt:
+    Number of control steps: 20
+    Minimum slack: 5.8774719990000142
+    Estimated max frequency (MHz): 242.56960771580782
+  Time to perform scheduling: 0.02 seconds
+
+  Number of function call sites = 1
+
+  State Transition Graph Information of function __internal_sqrt:
+    Number of operations: 194
+    Number of basic blocks: 20
+    Number of states: 18
+    Done port is registered
+  Time to perform creation of STG: 0.00 seconds
+
+
+  Easy binding information for function __internal_sqrt:
+    Bound operations:135/194
+  Time to perform easy binding: 0.00 seconds
+
+
+  Storage Value Information of function __internal_sqrt:
+    Number of storage values inserted: 60
+  Time to compute storage value information: 0.00 seconds
+
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __internal_sqrt:
-    Register allocation algorithm obtains a sub-optimal result: 69 registers(LB:25)
+    Register allocation algorithm obtains a sub-optimal result: 48 registers(LB:16)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function __internal_sqrt:
-    Number of modules instantiated: 186
-    Number of performance conflicts: 24
-    Estimated resources area (no Muxes and address logic): 6468
+    Number of modules instantiated: 193
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 1796
     Estimated area of MUX21: 0
-    Total estimated area: 6468
-    Estimated number of DSPs: 72
-  Time to perform module binding: 0.00 seconds
-
-
-  Register binding information for function __internal_sqrt:
-    Register allocation algorithm obtains a sub-optimal result: 69 registers(LB:25)
-  Time to perform register binding: 0.01 seconds
-
-
-  Connection Binding Information for function __internal_sqrt:
-    Number of allocated multiplexers (2-to-1 equivalent): 2
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __internal_sqrt: 2033
-
-  Module allocation information for function ex0_2_u9_23fixp:
-    Number of complex operations: 6
-    Number of complex operations: 6
-  Time to perform module allocation: 0.04 seconds
-
-
-  Scheduling Information of function ex0_2_u9_23fixp:
-    Number of control steps: 23
-    Minimum slack: 8.2156503822261584e-15
-    Estimated max frequency (MHz): 100.00000000000009
-  Time to perform scheduling: 0.03 seconds
-
-  Number of function call sites = 1
-
-  State Transition Graph Information of function ex0_2_u9_23fixp:
-    Number of operations: 229
-    Number of basic blocks: 9
-    Number of states: 22
-    Done port is registered
-  Time to perform creation of STG: 0.00 seconds
-
-
-  Easy binding information for function ex0_2_u9_23fixp:
-    Bound operations:182/229
-  Time to perform easy binding: 0.00 seconds
-
-
-  Storage Value Information of function ex0_2_u9_23fixp:
-    Number of storage values inserted: 28
-  Time to compute storage value information: 0.00 seconds
-
-  Slack computed in 0.00 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-  Iteration 0 completed in 0.00 seconds
-
-  Register binding information for function ex0_2_u9_23fixp:
-    Register allocation algorithm obtains a sub-optimal result: 28 registers(LB:6)
-  Time to perform register binding: 0.00 seconds
-
-  Iteration 1 completed in 0.00 seconds
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function ex0_2_u9_23fixp:
-    Number of modules instantiated: 228
-    Number of performance conflicts: 6
-    Estimated resources area (no Muxes and address logic): 5392
-    Estimated area of MUX21: 68
-    Total estimated area: 5460
-    Estimated number of DSPs: 23
+    Total estimated area: 1796
+    Estimated number of DSPs: 0
   Time to perform module binding: 0.01 seconds
 
 
-  Register binding information for function ex0_2_u9_23fixp:
-    Register allocation algorithm obtains a sub-optimal result: 28 registers(LB:6)
+  Register binding information for function __internal_sqrt:
+    Register allocation algorithm obtains a sub-optimal result: 48 registers(LB:16)
   Time to perform register binding: 0.00 seconds
 
 
-  Connection Binding Information for function ex0_2_u9_23fixp:
-    Number of allocated multiplexers (2-to-1 equivalent): 5
-  Time to perform interconnection binding: 0.00 seconds
+  Connection Binding Information for function __internal_sqrt:
+    Number of allocated multiplexers (2-to-1 equivalent): 35
+  Time to perform interconnection binding: 0.01 seconds
 
-  Total number of flip-flops in function ex0_2_u9_23fixp: 793
+  Total number of flip-flops in function __internal_sqrt: 1041
 
   Module allocation information for function test_1_fixp:
-    Number of complex operations: 16
-    Number of complex operations: 16
-  Time to perform module allocation: 0.02 seconds
+    Number of complex operations: 19
+    Number of complex operations: 19
+  Time to perform module allocation: 0.07 seconds
 
 
   Scheduling Information of function test_1_fixp:
-    Number of control steps: 13
-    Minimum slack: 5.0000000000000003e-10
-    Estimated max frequency (MHz): 100.000000005
-  Time to perform scheduling: 0.01 seconds
+    Number of control steps: 22
+    Minimum slack: 0.59856665366662942
+    Estimated max frequency (MHz): 106.36675953140779
+  Time to perform scheduling: 0.04 seconds
 
   Number of function call sites = 0
 
   State Transition Graph Information of function test_1_fixp:
-    Number of operations: 110
-    Number of basic blocks: 6
-    Number of states: 12
+    Number of operations: 333
+    Number of basic blocks: 11
+    Number of states: 21
     Done port is registered
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Easy binding information for function test_1_fixp:
-    Bound operations:34/110
+    Bound operations:210/333
   Time to perform easy binding: 0.00 seconds
 
 
   Storage Value Information of function test_1_fixp:
-    Number of storage values inserted: 28
+    Number of storage values inserted: 62
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.00 seconds
+  Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function test_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 25 registers(LB:15)
+    Register allocation algorithm obtains a sub-optimal result: 59 registers(LB:28)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
-
-  Register binding information for function test_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 25 registers(LB:15)
-  Time to perform register binding: 0.00 seconds
-
-  Iteration 2 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function test_1_fixp:
-    Number of modules instantiated: 100
-    Number of performance conflicts: 9
-    Estimated resources area (no Muxes and address logic): 2950
-    Estimated area of MUX21: 243
-    Total estimated area: 3193
-    Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
+    Number of modules instantiated: 321
+    Number of performance conflicts: 14
+    Estimated resources area (no Muxes and address logic): 6322
+    Estimated area of MUX21: 477
+    Total estimated area: 6799
+    Estimated number of DSPs: 13
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function test_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 25 registers(LB:15)
+    Register allocation algorithm obtains a sub-optimal result: 59 registers(LB:28)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function test_1_fixp:
-    Number of allocated multiplexers (2-to-1 equivalent): 15
+    Number of allocated multiplexers (2-to-1 equivalent): 22
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function test_1_fixp: 576
-[0m  Parameter Pd17 (495333) (testvector 0) allocated at 1073741824 : reserved_mem_size = 1200
-Padding of 6992 for parameter Pd17
-  Parameter Pd18 (495334) (testvector 0) allocated at 1073750016 : reserved_mem_size = 400
-Padding of 7792 for parameter Pd18
-  Parameter Pd17 (495333) (testvector 1) allocated at 1073758208 : reserved_mem_size = 1200
-Padding of 6992 for parameter Pd17
-  Parameter Pd18 (495334) (testvector 1) allocated at 1073766400 : reserved_mem_size = 400
-Padding of 7792 for parameter Pd18
-  C-based testbench generation for function test_1_fixp: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle_outside_conv/HLS_output//simulation/values.c
+  Total number of flip-flops in function test_1_fixp: 1124
+[0m  Parameter Pd17 (475366) (testvector 0) allocated at 1073741824 : reserved_mem_size = 1200
+Padding of 336 for parameter Pd17
+  Parameter Pd18 (475367) (testvector 0) allocated at 1073743360 : reserved_mem_size = 400
+Padding of 112 for parameter Pd18
+  Parameter Pd17 (475366) (testvector 1) allocated at 1073743872 : reserved_mem_size = 1200
+Padding of 336 for parameter Pd17
+  Parameter Pd18 (475367) (testvector 1) allocated at 1073745408 : reserved_mem_size = 400
+Padding of 112 for parameter Pd18
+  C-based testbench generation for function test_1_fixp: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c
   Prepared testbench
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
@@ -806,49 +579,50 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Summary of resources:
      - ARRAY_1D_STD_BRAM_NN_SDS: 3
      - ARRAY_1D_STD_BRAM_NN_SDS_BASE: 3
-     - ARRAY_1D_STD_DISTRAM_NN_SDS: 5
-     - ASSIGN_UNSIGNED_FU: 14
-     - IIdata_converter_FU: 8
-     - IUdata_converter_FU: 27
-     - MUX_GATE: 22
+     - ASSIGN_UNSIGNED_FU: 3
+     - IIdata_converter_FU: 7
+     - IUdata_converter_FU: 18
+     - MUX_GATE: 57
      - OR_GATE: 3
      - Pd17_bambu_artificial_ParmMgr_modgen: 1
      - Pd18_bambu_artificial_ParmMgr_modgen: 1
-     - UIdata_converter_FU: 26
-     - UUdata_converter_FU: 57
+     - UIdata_converter_FU: 24
+     - UUdata_converter_FU: 90
      - __builtin_abs: 1
-     - addr_expr_FU: 8
-     - constant_value: 129
+     - addr_expr_FU: 3
+     - constant_value: 119
      - extract_bit_expr_FU: 48
-     - flipflop_AR: 3
-     - lshift_expr_FU: 1
-     - lt_expr_FU: 2
-     - lut_expr_FU: 31
+     - flipflop_AR: 1
+     - gt_expr_FU: 2
+     - lshift_expr_FU: 2
+     - lt_expr_FU: 4
+     - lut_expr_FU: 42
      - mult_expr_FU: 1
      - multi_read_cond_FU: 2
-     - plus_expr_FU: 3
-     - read_cond_FU: 5
-     - register_SE: 48
-     - register_STD: 86
-     - rshift_expr_FU: 18
-     - ternary_plus_expr_FU: 1
-     - ui_bit_and_expr_FU: 43
-     - ui_bit_ior_concat_expr_FU: 8
-     - ui_bit_ior_expr_FU: 17
+     - plus_expr_FU: 1
+     - read_cond_FU: 13
+     - register_SE: 62
+     - register_STD: 45
+     - rshift_expr_FU: 9
+     - ui_bit_and_expr_FU: 33
+     - ui_bit_ior_concat_expr_FU: 10
+     - ui_bit_ior_expr_FU: 18
      - ui_bit_xor_expr_FU: 1
-     - ui_cond_expr_FU: 14
-     - ui_eq_expr_FU: 12
-     - ui_extract_bit_expr_FU: 9
-     - ui_fshl_expr_FU: 3
-     - ui_lshift_expr_FU: 77
-     - ui_minus_expr_FU: 5
-     - ui_mult_expr_FU: 17
-     - ui_ne_expr_FU: 1
+     - ui_cond_expr_FU: 23
+     - ui_eq_expr_FU: 20
+     - ui_extract_bit_expr_FU: 15
+     - ui_fshl_expr_FU: 5
+     - ui_lshift_expr_FU: 70
+     - ui_lt_expr_FU: 1
+     - ui_minus_expr_FU: 9
+     - ui_mult_expr_FU: 3
+     - ui_ne_expr_FU: 2
      - ui_negate_expr_FU: 1
-     - ui_plus_expr_FU: 22
-     - ui_pointer_plus_expr_FU: 21
-     - ui_rshift_expr_FU: 69
-     - ui_ternary_plus_expr_FU: 5
+     - ui_plus_expr_FU: 27
+     - ui_pointer_plus_expr_FU: 16
+     - ui_rshift_expr_FU: 61
+     - ui_ternary_plus_expr_FU: 1
+     - ui_ternary_pm_expr_FU: 1
 Start reading vector           1's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
@@ -1052,7 +826,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd18 =  178850805   expected =  178850805 
 
-Simulation ended after                 3152 cycles.
+Simulation ended after                 6451 cycles.
 
 Simulation completed with success
 
@@ -1259,19 +1033,34 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd18 = 2147483648   expected = 2147483648 
 
-Simulation ended after                 3272 cycles.
+Simulation ended after                 7434 cycles.
 
 Simulation completed with success
 
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:215: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_test_1_fixp_tb.v:215: Verilog $finish
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Verilog $finish
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 3152 cycles;
-2. Simulation completed with SUCCESS; Execution time 3272 cycles;
-  Total cycles             : 6424 cycles
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 6451 cycles;
+2. Simulation completed with SUCCESS; Execution time 7434 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 13885 cycles
   Number of executions     : 2
-  Average execution        : 3212 cycles
+  Average execution        : 6942 cycles
+  Slices                   : 812
+  Luts                     : 2431
+  Lut FF Pairs             : 2431
+  Power                    : 0.374
+  Registers                : 1687
+  DSPs                     : 14
+  BRAMs                    : 6
+  Clock period             : 10
+  Design minimum period    : 10.638
+  Design slack             : -0.6379999999999999
+  Frequency                : 94.002632073698067
+  AreaxTime                : 179526.90927599999
+  Time                     : 73.848996
+  Tot. Time                : 147.70863

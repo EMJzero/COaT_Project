@@ -15,6 +15,8 @@ print_help() {
   echo "  --no-regen-taffo : utilizes the already existent .ll files without recompiling the source through TAFFO."
   echo "  --no-opt : does NOT run through PandA, and Vivado, if enabled, the TAFFO-optimized versions of the tests."
   echo "  --no-unopt : does NOT run through PandA, and Vivado, if enabled, the versions of the tests NOT optimized by TAFFO."
+  echo "  --opt-level=<level> : pass through the choice of optimization level to TAFFO and PandA-Bambu, available levels are:"
+  echo "                        'O0', 'O1', 'O2', 'O3', 'Os', 'Of'"
   echo ""
   echo "Ensure to export the environment variable BAMBU (and optionally TAFFO as well) with the path to the relative executable or AppImage."
 }
@@ -60,6 +62,16 @@ path_names=(
   "MDPPolicyIteration,policyIteration"
   "NormalizeVector,normalize"
   "TrainLogisticRegression,gradient_descent"
+  #"FromPanda_mm_float_outside_conv/32x32,mm_1_fixp"
+  #"FromTaffo_fpbench_carbonGas_outside_conv,test_1_fixp"
+  #"FromTaffo_fpbench_triangle_outside_conv,test_1_fixp"
+  #"FromTaffo_fpbench_turbine1_outside_conv,test_1_fixp"
+  #"TrainLogisticRegression_outside_conv,gradient_descent_3_fixp"
+  #"FromPanda_mm_float_outside_conv/32x32,mm"
+  #"FromTaffo_fpbench_carbonGas_outside_conv,test"
+  #"FromTaffo_fpbench_triangle_outside_conv,test"
+  #"FromTaffo_fpbench_turbine1_outside_conv,test"
+  #"TrainLogisticRegression_outside_conv,gradient_descent"
   ) 
 
 # Function to check if an option is present in the command-line arguments
@@ -67,7 +79,7 @@ option_present() {
   local option="$1"
   shift
   for arg in "$@"; do
-    if [[ "$arg" == "$option" ]]; then
+    if [[ "$arg" == "$option"* ]]; then
       return 0
     fi
   done
@@ -91,6 +103,14 @@ get_tuples_to_use() {
   echo "${tuples[@]}"
 }
 
+run_command() {
+  # Join the command components into a single string and remove adjacent spaces
+  local command_string="$*"
+  command_string=$(echo "$command_string" | tr -s ' ')
+  
+  eval "$command_string"
+}
+
 # Array of allowed options
 allowed_options=(
     "--use=all"
@@ -101,6 +121,7 @@ allowed_options=(
     "--no-regen-taffo"
     "--no-opt"
     "--no-unopt"
+    "--opt-level="
 )
 
 # Loop through the provided options if all provided options are valid
@@ -153,15 +174,50 @@ if [ "${#tuples_to_use[@]}" -eq 0 ]; then
 fi
 
 # Check if the option "--device-name=<name>" is specified and extract the device name
-  device_name="--device-name=xc7vx690t-3ffg1930-VVD"
-  if option_present "--device-name=" "$@"; then
-    for arg in "$@"; do
-      if [[ "$arg" == --device-name=* ]]; then
-        device_name="${arg#*=}"
-        break
+device_name="--device-name=xc7vx690t-3ffg1930-VVD"
+if option_present "--device-name=" "$@"; then
+  for arg in "$@"; do
+    if [[ "$arg" == --device-name=* ]]; then
+      device_name="$arg"
+      break
+    fi
+  done
+fi
+
+# Array of allowed optimization levels
+allowed_levels=(
+    "O"
+    "O0"
+    "O1"
+    "O2"
+    "O3"
+    "Os"
+    "Of"
+)
+
+# Check if the option "--opt-level=<level>" is specified and extract the chosen level
+opt_level=""
+if option_present "--opt-level=" "$@"; then
+  for arg in "$@"; do
+    if [[ "$arg" == --opt-level=* ]]; then
+      is_allowed=false
+      for allowed_level in "${allowed_levels[@]}"; do
+          if [[ "${arg#*=}" == ${allowed_level}* ]]; then
+              is_allowed=true
+              break
+          fi
+      done
+
+      if [ "${is_allowed}" = false ]; then
+          echo "Error: Optimization level '${arg#*=}' is not allowed."
+          exit 1
       fi
-    done
-  fi
+
+      opt_level="-${arg#*=}"
+      break
+    fi
+  done
+fi
 
 # Iterate through the list of tuples (path, name)
 for tuple in "${tuples_to_use[@]}"; do
@@ -183,11 +239,13 @@ for tuple in "${tuples_to_use[@]}"; do
     # Check if the environment variable TAFFO exists
     if [ -n "$TAFFO" ]; then
       # If TAFFO exists, run the executable specified in TAFFO
-      "$TAFFO" -enable-err -err-out taffo_err_log.txt -Xerr -relerror -fno-discard-value-names -S -O0 -emit-llvm -lm -o test.ll test.c
+      command=("$TAFFO")
     else
       # If TAFFO does not exist, run the command "taffo"
-      taffo -enable-err -err-out taffo_err_log.txt -Xerr -relerror -fno-discard-value-names -S -O0 -emit-llvm -lm -o test.ll test.c
+      command=(taffo)
     fi
+    command+=(-enable-err -err-out taffo_err_log.txt -Xerr -relerror -fno-discard-value-names -S "$opt_level" -emit-llvm -lm -o test.ll test.c)
+    run_command "${command[@]}"
   fi
 
   # Prepare output directories
@@ -202,14 +260,13 @@ for tuple in "${tuples_to_use[@]}"; do
 
   # Check disabling option
   if ! option_present "--no-opt" "$@"; then
+    command=("$BAMBU" ../test.ll --use-raw -v 2 "$opt_level" --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml "$device_name")
     # Check if the option "--vivado" is specified
     if option_present "--vivado" "$@"; then
       # If "--vivado" is present, add the "--evaluation" option to the invocation of BAMBU
-      "$BAMBU" ../test.ll --use-raw -O0 -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation "$device_name" |& tee ../panda_log_opt.txt 
-    else
-      # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
-      "$BAMBU" ../test.ll --use-raw -O0 -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml "$device_name" |& tee ../panda_log_opt.txt 
+      command+=(--parallel-backend --evaluation)
     fi
+    run_command "${command[@]} |& tee ../panda_log_opt.txt"
     # Move verilator results in parent folder
     cp results.txt ../results_opt.txt
   fi
@@ -219,14 +276,13 @@ for tuple in "${tuples_to_use[@]}"; do
 
   # Check disabling option
   if ! option_present "--no-unopt" "$@"; then
+    command=("$BAMBU" ../test.c -v 2 "$opt_level" --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding "$device_name")
     # Check if the option "--vivado" is specified
     if option_present "--vivado" "$@"; then
       # If "--vivado" is present, add the "--evaluation" option to the invocation of BAMBU
-      "$BAMBU" ../test.c -O0 -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --evaluation "$device_name" |& tee ../panda_log.txt 
-    else
-      # If "--vivado" is not present, invoke BAMBU without the "--evaluation" option
-      "$BAMBU" ../test.c -O0 -v 2 --top-fname="$name" --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding "$device_name" |& tee ../panda_log.txt 
+      command+=(--parallel-backend --evaluation)
     fi
+    run_command "${command[@]} |& tee ../panda_log.txt"
     # Move verilator results in parent folder
     cp results.txt ../results.txt
   fi

@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-hJCUkx/usr/bin/bambu --use-raw -v 2 --top-fname=test_1_fixp --compiler=I386_CLANG12 --generate-interface=INFER --interface-xml-filename=interfaces.xml --simulate --simulator=VERILATOR --verilator-parallel test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-LXcK9U/usr/bin/bambu --use-raw -v 2 --top-fname=test_1_fixp --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
 
 
 ********************************************************************************
@@ -17,7 +17,7 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
-Parameters parsed in 0.15 seconds
+Parameters parsed in 0.13 seconds
 
 Target technology = FPGA
 Library Name     : STD_FU
@@ -152,9 +152,9 @@ Available devices:
  - xcku060-3ffva1156-VVD
  - xcu280-2Lfsvh2892-VVD
 Library Name     : STD_FU
-  Total cells    : 3931
+  Total cells    : 3911
   - combinational: 0
-  - others: 3931
+  - others: 3911
 
 warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
 1 warning generated.
@@ -214,7 +214,7 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
   Module allocation information for function __divdi3:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.02 seconds
 
 
   Module allocation information for function __udivdi3:
@@ -225,9 +225,9 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
 
   Scheduling Information of function __divdi3:
     Number of control steps: 5
-    Minimum slack: 4.0480666606666675
-    Estimated max frequency (MHz): 168.01263438074872
-  Time to perform scheduling: 0.00 seconds
+    Minimum slack: 6.7200666606666593
+    Estimated max frequency (MHz): 304.88424505702113
+  Time to perform scheduling: 0.01 seconds
 
   Number of function call sites = 1
 
@@ -236,13 +236,13 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
     Number of basic blocks: 5
     Number of states: 3
     Done port is registered
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function __udivdi3:
     Number of control steps: 5
-    Minimum slack: 4.322298654666672
-    Estimated max frequency (MHz): 176.12761559251965
+    Minimum slack: 7.0609586546666661
+    Estimated max frequency (MHz): 340.24699978713096
   Time to perform scheduling: 0.00 seconds
 
   Number of function call sites = 1
@@ -274,7 +274,7 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
     Number of storage values inserted: 6
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.00 seconds
+  Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
@@ -289,11 +289,11 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
   Module binding information for function __divdi3:
     Number of modules instantiated: 67
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 794
+    Estimated resources area (no Muxes and address logic): 825
     Estimated area of MUX21: 0
-    Total estimated area: 794
+    Total estimated area: 825
     Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function __divdi3:
@@ -321,9 +321,9 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
   Module binding information for function __udivdi3:
     Number of modules instantiated: 45
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 385
+    Estimated resources area (no Muxes and address logic): 414
     Estimated area of MUX21: 0
-    Total estimated area: 385
+    Total estimated area: 414
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
@@ -346,9 +346,9 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
 
 
   Scheduling Information of function test_1_fixp:
-    Number of control steps: 12
-    Minimum slack: 1.0063999939999857
-    Estimated max frequency (MHz): 111.19017960915066
+    Number of control steps: 9
+    Minimum slack: 0.24239999800001694
+    Estimated max frequency (MHz): 102.48421740950985
   Time to perform scheduling: 0.01 seconds
 
   Number of function call sites = 0
@@ -356,7 +356,7 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
   State Transition Graph Information of function test_1_fixp:
     Number of operations: 86
     Number of basic blocks: 5
-    Number of states: 12
+    Number of states: 9
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
@@ -367,16 +367,16 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
 
 
   Storage Value Information of function test_1_fixp:
-    Number of storage values inserted: 18
+    Number of storage values inserted: 15
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.00 seconds
+  Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function test_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 17 registers(LB:9)
+    Register allocation algorithm obtains a sub-optimal result: 14 registers(LB:9)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
@@ -384,90 +384,90 @@ Function call to ex0_2_s8_24fixp inlined in test_1_fixp
 
   Module binding information for function test_1_fixp:
     Number of modules instantiated: 86
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 4431
+    Number of performance conflicts: 14
+    Estimated resources area (no Muxes and address logic): 4432
     Estimated area of MUX21: 0
-    Total estimated area: 4431
+    Total estimated area: 4432
     Estimated number of DSPs: 15
-  Time to perform module binding: 0.00 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function test_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 17 registers(LB:9)
+    Register allocation algorithm obtains a sub-optimal result: 14 registers(LB:9)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function test_1_fixp:
-    Number of allocated multiplexers (2-to-1 equivalent): 1
+    Number of allocated multiplexers (2-to-1 equivalent): 2
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function test_1_fixp: 589
-[0m  Parameter Pd5 (424771) (testvector 0) allocated at 1073741824 : reserved_mem_size = 400
+  Total number of flip-flops in function test_1_fixp: 523
+[0m  Parameter Pd5 (475366) (testvector 0) allocated at 1073741824 : reserved_mem_size = 400
 Padding of 16 for parameter Pd5
-  Parameter Pd6 (424772) (testvector 0) allocated at 1073742240 : reserved_mem_size = 400
+  Parameter Pd6 (475367) (testvector 0) allocated at 1073742240 : reserved_mem_size = 400
 Padding of 16 for parameter Pd6
-  Parameter Pd7 (424773) (testvector 0) allocated at 1073742656 : reserved_mem_size = 400
+  Parameter Pd7 (475368) (testvector 0) allocated at 1073742656 : reserved_mem_size = 400
 Padding of 16 for parameter Pd7
-  Parameter Pd8 (424774) (testvector 0) allocated at 1073743072 : reserved_mem_size = 400
+  Parameter Pd8 (475369) (testvector 0) allocated at 1073743072 : reserved_mem_size = 400
 Padding of 16 for parameter Pd8
-  Parameter Pd5 (424771) (testvector 1) allocated at 1073743488 : reserved_mem_size = 400
+  Parameter Pd5 (475366) (testvector 1) allocated at 1073743488 : reserved_mem_size = 400
 Padding of 16 for parameter Pd5
-  Parameter Pd6 (424772) (testvector 1) allocated at 1073743904 : reserved_mem_size = 400
+  Parameter Pd6 (475367) (testvector 1) allocated at 1073743904 : reserved_mem_size = 400
 Padding of 16 for parameter Pd6
-  Parameter Pd7 (424773) (testvector 1) allocated at 1073744320 : reserved_mem_size = 400
+  Parameter Pd7 (475368) (testvector 1) allocated at 1073744320 : reserved_mem_size = 400
 Padding of 16 for parameter Pd7
-  Parameter Pd8 (424774) (testvector 1) allocated at 1073744736 : reserved_mem_size = 400
+  Parameter Pd8 (475369) (testvector 1) allocated at 1073744736 : reserved_mem_size = 400
 Padding of 16 for parameter Pd8
-  C-based testbench generation for function test_1_fixp: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c
+  C-based testbench generation for function test_1_fixp: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c
   Prepared testbench
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:3743:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3743:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6, Pd7, Pd8);
                   ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
 void test_1_fixp(int*, int*, int*, int*);
                      ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:3743:24: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3743:24: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6, Pd7, Pd8);
                        ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:76:28: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:28: note: passing argument to parameter here
 void test_1_fixp(int*, int*, int*, int*);
                            ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:3743:29: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3743:29: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6, Pd7, Pd8);
                             ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:76:34: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:34: note: passing argument to parameter here
 void test_1_fixp(int*, int*, int*, int*);
                                  ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:3743:34: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3743:34: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6, Pd7, Pd8);
                                  ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:76:40: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:40: note: passing argument to parameter here
 void test_1_fixp(int*, int*, int*, int*);
                                        ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:3797:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3797:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6, Pd7, Pd8);
                   ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
 void test_1_fixp(int*, int*, int*, int*);
                      ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:3797:24: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3797:24: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6, Pd7, Pd8);
                        ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:76:28: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:28: note: passing argument to parameter here
 void test_1_fixp(int*, int*, int*, int*);
                            ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:3797:29: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3797:29: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6, Pd7, Pd8);
                             ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:76:34: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:34: note: passing argument to parameter here
 void test_1_fixp(int*, int*, int*, int*);
                                  ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:3797:34: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3797:34: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6, Pd7, Pd8);
                                  ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/values.c:76:40: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:40: note: passing argument to parameter here
 void test_1_fixp(int*, int*, int*, int*);
                                        ^
 8 warnings generated.
@@ -478,20 +478,20 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
      - ASSIGN_UNSIGNED_FU: 2
      - IIdata_converter_FU: 2
      - IUdata_converter_FU: 5
-     - MUX_GATE: 12
+     - MUX_GATE: 13
      - Pd5_bambu_artificial_ParmMgr_modgen: 1
      - Pd6_bambu_artificial_ParmMgr_modgen: 1
      - Pd7_bambu_artificial_ParmMgr_modgen: 1
      - Pd8_bambu_artificial_ParmMgr_modgen: 1
      - UIdata_converter_FU: 5
-     - UUdata_converter_FU: 44
+     - UUdata_converter_FU: 45
      - constant_value: 37
      - flipflop_AR: 2
      - lshift_expr_FU: 1
      - lut_expr_FU: 17
      - read_cond_FU: 3
-     - register_SE: 37
-     - register_STD: 5
+     - register_SE: 35
+     - register_STD: 4
      - rshift_expr_FU: 2
      - ui_bit_and_expr_FU: 14
      - ui_bit_ior_concat_expr_FU: 3
@@ -713,7 +713,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd8 = 4269064713   expected = 4269064713 
 
-Simulation ended after                13802 cycles.
+Simulation ended after                13502 cycles.
 
 Simulation completed with success
 
@@ -920,19 +920,34 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd8 = 4167866892   expected = 4167866892 
 
-Simulation ended after                13802 cycles.
+Simulation ended after                13502 cycles.
 
 Simulation completed with success
 
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:233: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_test_1_fixp_tb.v:233: Verilog $finish
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:274: Verilog $finish
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:274: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 13802 cycles;
-2. Simulation completed with SUCCESS; Execution time 13802 cycles;
-  Total cycles             : 27604 cycles
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_test_1_fixp_tb.v:274: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_turbine1_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_test_1_fixp_tb.v:274: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 13502 cycles;
+2. Simulation completed with SUCCESS; Execution time 13502 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 27004 cycles
   Number of executions     : 2
-  Average execution        : 13802 cycles
+  Average execution        : 13502 cycles
+  Slices                   : 318
+  Luts                     : 773
+  Lut FF Pairs             : 773
+  Power                    : 0.36299999999999999
+  Registers                : 654
+  DSPs                     : 20
+  BRAMs                    : 0
+  Clock period             : 10
+  Design minimum period    : 9.8640000000000008
+  Design slack             : 0.13599999999999923
+  Frequency                : 101.37875101378751
+  AreaxTime                : 102951.021744
+  Time                     : 133.183728
+  Tot. Time                : 266.367456

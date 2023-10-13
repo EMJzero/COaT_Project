@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-eGhC8m/usr/bin/bambu --use-raw -v 2 --top-fname=test_1_fixp --compiler=I386_CLANG12 --generate-interface=INFER --interface-xml-filename=interfaces.xml --simulate --simulator=VERILATOR --verilator-parallel test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-Y7OqpO/usr/bin/bambu --use-raw -v 2 --top-fname=test_1_fixp --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
 
 
 ********************************************************************************
@@ -152,9 +152,9 @@ Available devices:
  - xcku060-3ffva1156-VVD
  - xcu280-2Lfsvh2892-VVD
 Library Name     : STD_FU
-  Total cells    : 3931
+  Total cells    : 3911
   - combinational: 0
-  - others: 3931
+  - others: 3911
 
 warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
 1 warning generated.
@@ -209,8 +209,8 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 
   Scheduling Information of function __divdi3:
     Number of control steps: 5
-    Minimum slack: 0.68273333033335004
-    Estimated max frequency (MHz): 107.32761392948065
+    Minimum slack: 5.1892333303333507
+    Estimated max frequency (MHz): 207.86707580421742
   Time to perform scheduling: 0.01 seconds
 
   Number of function call sites = 1
@@ -225,9 +225,9 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 
   Scheduling Information of function __udivdi3:
     Number of control steps: 5
-    Minimum slack: 4.322298654666672
-    Estimated max frequency (MHz): 176.12761559251965
-  Time to perform scheduling: 0.01 seconds
+    Minimum slack: 7.0609586546666661
+    Estimated max frequency (MHz): 340.24699978713096
+  Time to perform scheduling: 0.00 seconds
 
   Number of function call sites = 2
 
@@ -273,11 +273,11 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Module binding information for function __divdi3:
     Number of modules instantiated: 66
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 801
+    Estimated resources area (no Muxes and address logic): 834
     Estimated area of MUX21: 0
-    Total estimated area: 801
+    Total estimated area: 834
     Estimated number of DSPs: 0
-  Time to perform module binding: 0.00 seconds
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function __divdi3:
@@ -305,9 +305,9 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Module binding information for function __udivdi3:
     Number of modules instantiated: 45
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 385
+    Estimated resources area (no Muxes and address logic): 414
     Estimated area of MUX21: 0
-    Total estimated area: 385
+    Total estimated area: 414
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
@@ -319,20 +319,20 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 
   Connection Binding Information for function __udivdi3:
     Number of allocated multiplexers (2-to-1 equivalent): 5
-  Time to perform interconnection binding: 0.01 seconds
+  Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function __udivdi3: 256
 
   Module allocation information for function test_1_fixp:
     Number of complex operations: 5
     Number of complex operations: 5
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.02 seconds
 
 
   Scheduling Information of function test_1_fixp:
-    Number of control steps: 9
-    Minimum slack: 1.1102230246251565e-15
-    Estimated max frequency (MHz): 100.00000000000001
+    Number of control steps: 8
+    Minimum slack: 3.0383999950000127
+    Estimated max frequency (MHz): 143.64513894532524
   Time to perform scheduling: 0.00 seconds
 
   Number of function call sites = 0
@@ -340,7 +340,7 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   State Transition Graph Information of function test_1_fixp:
     Number of operations: 37
     Number of basic blocks: 5
-    Number of states: 9
+    Number of states: 8
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
@@ -351,8 +351,8 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 
 
   Storage Value Information of function test_1_fixp:
-    Number of storage values inserted: 13
-  Time to compute storage value information: 0.01 seconds
+    Number of storage values inserted: 12
+  Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
@@ -360,7 +360,7 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function test_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 12 registers(LB:7)
+    Register allocation algorithm obtains a sub-optimal result: 11 registers(LB:8)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
@@ -369,57 +369,57 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Module binding information for function test_1_fixp:
     Number of modules instantiated: 37
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 6229
+    Estimated resources area (no Muxes and address logic): 6230
     Estimated area of MUX21: 0
-    Total estimated area: 6229
+    Total estimated area: 6230
     Estimated number of DSPs: 3
   Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function test_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 12 registers(LB:7)
+    Register allocation algorithm obtains a sub-optimal result: 11 registers(LB:8)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function test_1_fixp:
-    Number of allocated multiplexers (2-to-1 equivalent): 3
+    Number of allocated multiplexers (2-to-1 equivalent): 4
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function test_1_fixp: 419
-[0m  Parameter Pd5 (424770) (testvector 0) allocated at 1073741824 : reserved_mem_size = 400
+  Total number of flip-flops in function test_1_fixp: 387
+[0m  Parameter Pd5 (475365) (testvector 0) allocated at 1073741824 : reserved_mem_size = 400
 Padding of 16 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 0) allocated at 1073742240 : reserved_mem_size = 800
+  Parameter Pd6 (475366) (testvector 0) allocated at 1073742240 : reserved_mem_size = 800
 Padding of 0 for parameter Pd6
-  Parameter Pd5 (424770) (testvector 1) allocated at 1073743040 : reserved_mem_size = 400
+  Parameter Pd5 (475365) (testvector 1) allocated at 1073743040 : reserved_mem_size = 400
 Padding of 16 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 1) allocated at 1073743456 : reserved_mem_size = 800
+  Parameter Pd6 (475366) (testvector 1) allocated at 1073743456 : reserved_mem_size = 800
 Padding of 0 for parameter Pd6
-  C-based testbench generation for function test_1_fixp: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c
+  C-based testbench generation for function test_1_fixp: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c
   Prepared testbench
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:1715:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:1715:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6);
                   ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
 void test_1_fixp(int*, long*);
                      ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:1715:24: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:1715:24: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       test_1_fixp(Pd5, Pd6);
                        ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:76:29: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:29: note: passing argument to parameter here
 void test_1_fixp(int*, long*);
                             ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:1745:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:1745:19: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       test_1_fixp(Pd5, Pd6);
                   ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:22: note: passing argument to parameter here
 void test_1_fixp(int*, long*);
                      ^
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:1745:24: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:1745:24: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       test_1_fixp(Pd5, Pd6);
                        ^~~
-/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/values.c:76:29: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:29: note: passing argument to parameter here
 void test_1_fixp(int*, long*);
                             ^
 4 warnings generated.
@@ -429,7 +429,7 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Summary of resources:
      - IIdata_converter_FU: 3
      - IUdata_converter_FU: 7
-     - MUX_GATE: 19
+     - MUX_GATE: 20
      - Pd5_bambu_artificial_ParmMgr_modgen: 1
      - Pd6_bambu_artificial_ParmMgr_modgen: 1
      - SIMPLEJOIN_FU: 1
@@ -440,8 +440,8 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
      - lshift_expr_FU: 3
      - lut_expr_FU: 17
      - read_cond_FU: 4
-     - register_SE: 29
-     - register_STD: 3
+     - register_SE: 30
+     - register_STD: 1
      - rshift_expr_FU: 4
      - ui_bit_and_expr_FU: 10
      - ui_bit_ior_expr_FU: 6
@@ -661,7 +661,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd6 =     6569993796191101   expected =     6569993796191101 
 
-Simulation ended after                13502 cycles.
+Simulation ended after                13402 cycles.
 
 Simulation completed with success
 
@@ -868,19 +868,34 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd6 =     4097978963487139   expected =     4097978963487139 
 
-Simulation ended after                13502 cycles.
+Simulation ended after                13402 cycles.
 
 Simulation completed with success
 
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:215: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_test_1_fixp_tb.v:215: Verilog $finish
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Verilog $finish
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 13502 cycles;
-2. Simulation completed with SUCCESS; Execution time 13502 cycles;
-  Total cycles             : 27004 cycles
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_carbonGas_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_test_1_fixp_tb.v:256: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 13402 cycles;
+2. Simulation completed with SUCCESS; Execution time 13402 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 26804 cycles
   Number of executions     : 2
-  Average execution        : 13502 cycles
+  Average execution        : 13402 cycles
+  Slices                   : 489
+  Luts                     : 1036
+  Lut FF Pairs             : 1036
+  Power                    : 0.33500000000000002
+  Registers                : 850
+  DSPs                     : 2
+  BRAMs                    : 0
+  Clock period             : 10
+  Design minimum period    : 10.970000000000001
+  Design slack             : -0.97000000000000064
+  Frequency                : 91.157702825888776
+  AreaxTime                : 152312.65784000003
+  Time                     : 147.01994000000002
+  Tot. Time                : 294.03988000000004

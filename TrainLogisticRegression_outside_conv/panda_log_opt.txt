@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-H4j5sq/usr/bin/bambu --use-raw -v 2 --top-fname=gradient_descent_3_fixp --compiler=I386_CLANG12 --generate-interface=INFER --interface-xml-filename=interfaces.xml -lm --simulate --simulator=VERILATOR --verilator-parallel test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-aGQvAa/usr/bin/bambu --use-raw -v 2 --top-fname=gradient_descent_3_fixp --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
 
 
 ********************************************************************************
@@ -17,7 +17,7 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
-Parameters parsed in 0.13 seconds
+Parameters parsed in 0.14 seconds
 
 Target technology = FPGA
 Library Name     : STD_FU
@@ -152,9 +152,9 @@ Available devices:
  - xcku060-3ffva1156-VVD
  - xcu280-2Lfsvh2892-VVD
 Library Name     : STD_FU
-  Total cells    : 3931
+  Total cells    : 3911
   - combinational: 0
-  - others: 3931
+  - others: 3911
 
 warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
 1 warning generated.
@@ -409,8 +409,8 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
   Memory allocation information:
   Sparse memory alignemnt set to 32 bytes
-    Internal variable: ln2HI - 424967 - ln2HI in function __hide_ieee754_exp
-      Id: 424967
+    Internal variable: ln2HI - 417787 - ln2HI in function __hide_ieee754_exp
+      Id: 417787
       Base Address: 32
       Size: 16
       Is a private memory
@@ -419,8 +419,8 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
       Number of functions in which is used: 1
       Maximum number of references per function: 1
       Maximum number of loads per function: 1
-    Internal variable: halF - 424996 - halF in function __hide_ieee754_exp
-      Id: 424996
+    Internal variable: halF - 417816 - halF in function __hide_ieee754_exp
+      Id: 417816
       Base Address: 32
       Size: 16
       Is a private memory
@@ -429,8 +429,8 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
       Number of functions in which is used: 1
       Maximum number of references per function: 1
       Maximum number of loads per function: 1
-    Internal variable: ln2LO - 425011 - ln2LO in function __hide_ieee754_exp
-      Id: 425011
+    Internal variable: ln2LO - 417831 - ln2LO in function __hide_ieee754_exp
+      Id: 417831
       Base Address: 32
       Size: 16
       Is a private memory
@@ -450,13 +450,13 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 0
     Internally allocated memory: 48
-  Time to perform memory allocation: 0.00 seconds
+  Time to perform memory allocation: 0.01 seconds
 
 
   Module allocation information for function __float_adde11m52b_1023nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.05 seconds
+  Time to perform module allocation: 0.04 seconds
 
 
   Module allocation information for function __float_divSRT4e11m52b_1023nih:
@@ -479,8 +479,8 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
   Memory allocation information:
   Sparse memory alignemnt set to 32 bytes
-    Internal variable: ln2HI - 424967 - ln2HI in function __hide_ieee754_exp
-      Id: 424967
+    Internal variable: ln2HI - 417787 - ln2HI in function __hide_ieee754_exp
+      Id: 417787
       Base Address: 32
       Size: 16
       Is a private memory
@@ -490,8 +490,8 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
       Number of functions in which is used: 1
       Maximum number of references per function: 1
       Maximum number of loads per function: 1
-    Internal variable: halF - 424996 - halF in function __hide_ieee754_exp
-      Id: 424996
+    Internal variable: halF - 417816 - halF in function __hide_ieee754_exp
+      Id: 417816
       Base Address: 32
       Size: 16
       Is a private memory
@@ -501,8 +501,8 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
       Number of functions in which is used: 1
       Maximum number of references per function: 1
       Maximum number of loads per function: 1
-    Internal variable: ln2LO - 425011 - ln2LO in function __hide_ieee754_exp
-      Id: 425011
+    Internal variable: ln2LO - 417831 - ln2LO in function __hide_ieee754_exp
+      Id: 417831
       Base Address: 32
       Size: 16
       Is a private memory
@@ -533,8 +533,8 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
   Memory allocation information:
   Sparse memory alignemnt set to 32 bytes
-    Internal variable: ln2HI - 424967 - ln2HI in function __hide_ieee754_exp
-      Id: 424967
+    Internal variable: ln2HI - 417787 - ln2HI in function __hide_ieee754_exp
+      Id: 417787
       Base Address: 32
       Size: 16
       Is a private memory
@@ -544,8 +544,8 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
       Number of functions in which is used: 1
       Maximum number of references per function: 1
       Maximum number of loads per function: 1
-    Internal variable: halF - 424996 - halF in function __hide_ieee754_exp
-      Id: 424996
+    Internal variable: halF - 417816 - halF in function __hide_ieee754_exp
+      Id: 417816
       Base Address: 32
       Size: 16
       Is a private memory
@@ -555,8 +555,8 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
       Number of functions in which is used: 1
       Maximum number of references per function: 1
       Maximum number of loads per function: 1
-    Internal variable: ln2LO - 425011 - ln2LO in function __hide_ieee754_exp
-      Id: 425011
+    Internal variable: ln2LO - 417831 - ln2LO in function __hide_ieee754_exp
+      Id: 417831
       Base Address: 32
       Size: 16
       Is a private memory
@@ -577,101 +577,100 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
     Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 0
     Internally allocated memory: 48
-  Time to perform memory allocation: 0.01 seconds
+  Time to perform memory allocation: 0.00 seconds
 
 
   Module allocation information for function __int32_to_float64e11m52b_1023nih:
     Number of complex operations: 0
     Number of complex operations: 0
-  Time to perform module allocation: 0.03 seconds
+  Time to perform module allocation: 0.02 seconds
 
 
   Scheduling Information of function __float_adde11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.054699991000000781
-    Estimated max frequency (MHz): 100.550008455758
-  Time to perform scheduling: 0.04 seconds
+    Number of control steps: 4
+    Minimum slack: 0.11253464066666591
+    Estimated max frequency (MHz): 101.13815458842987
+  Time to perform scheduling: 0.05 seconds
 
   Number of function call sites = 10
 
   State Transition Graph Information of function __float_adde11m52b_1023nih:
     Number of operations: 438
     Number of basic blocks: 3
-    Number of states: 5
-    Minimum number of cycles: 5
-    Maximum number of cycles 5
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
     Parameters are registered
     Done port is registered
   Time to perform creation of STG: 0.01 seconds
 
 
   Scheduling Information of function __float_divSRT4e11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.31460231533337546
-    Estimated max frequency (MHz): 103.24821267619642
-  Time to perform scheduling: 0.03 seconds
+    Number of control steps: 5
+    Minimum slack: 2.7191333143333831
+    Estimated max frequency (MHz): 137.34628625581581
+  Time to perform scheduling: 0.02 seconds
 
   Number of function call sites = 2
 
   State Transition Graph Information of function __float_divSRT4e11m52b_1023nih:
     Number of operations: 229
     Number of basic blocks: 5
-    Number of states: 5
-    Parameters are registered
+    Number of states: 3
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function __float_mule11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.39039999400001446
-    Estimated max frequency (MHz): 104.06260399763008
+    Number of control steps: 4
+    Minimum slack: 0.048433324333333971
+    Estimated max frequency (MHz): 100.4866904469601
   Time to perform scheduling: 0.01 seconds
 
 
   State Transition Graph Information of function __float_mule11m52b_1023nih:
     Number of operations: 110
     Number of basic blocks: 3
-    Number of states: 5
-    Minimum number of cycles: 5
-    Maximum number of cycles 5
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
     Parameters are registered
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function __float_sube11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.054699991000000781
-    Estimated max frequency (MHz): 100.550008455758
-  Time to perform scheduling: 0.05 seconds
+    Number of control steps: 4
+    Minimum slack: 0.11253464066666591
+    Estimated max frequency (MHz): 101.13815458842987
+  Time to perform scheduling: 0.04 seconds
 
   Number of function call sites = 7
 
   State Transition Graph Information of function __float_sube11m52b_1023nih:
     Number of operations: 438
     Number of basic blocks: 3
-    Number of states: 5
-    Minimum number of cycles: 5
-    Maximum number of cycles 5
+    Number of states: 3
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
     Parameters are registered
     Done port is registered
   Time to perform creation of STG: 0.01 seconds
 
 
   Scheduling Information of function __int32_to_float64e11m52b_1023nih:
-    Number of control steps: 6
-    Minimum slack: 0.38866665966666258
-    Estimated max frequency (MHz): 104.04383706093772
+    Number of control steps: 5
+    Minimum slack: 1.0565666486666594
+    Estimated max frequency (MHz): 111.81388184112917
   Time to perform scheduling: 0.02 seconds
 
 
   State Transition Graph Information of function __int32_to_float64e11m52b_1023nih:
     Number of operations: 162
     Number of basic blocks: 5
-    Number of states: 5
-    Minimum number of cycles: 4
-    Maximum number of cycles 4
+    Number of states: 4
+    Minimum number of cycles: 3
+    Maximum number of cycles 3
     Parameters are registered
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
@@ -703,36 +702,36 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
 
   Storage Value Information of function __float_adde11m52b_1023nih:
-    Number of storage values inserted: 213
+    Number of storage values inserted: 206
   Time to compute storage value information: 0.00 seconds
 
 
   Storage Value Information of function __float_divSRT4e11m52b_1023nih:
-    Number of storage values inserted: 27
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __float_mule11m52b_1023nih:
     Number of storage values inserted: 22
   Time to compute storage value information: 0.00 seconds
 
 
+  Storage Value Information of function __float_mule11m52b_1023nih:
+    Number of storage values inserted: 15
+  Time to compute storage value information: 0.00 seconds
+
+
   Storage Value Information of function __float_sube11m52b_1023nih:
-    Number of storage values inserted: 213
+    Number of storage values inserted: 206
   Time to compute storage value information: 0.00 seconds
 
 
   Storage Value Information of function __int32_to_float64e11m52b_1023nih:
-    Number of storage values inserted: 8
+    Number of storage values inserted: 4
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.00 seconds
+  Slack computed in 0.01 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_adde11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
+    Register allocation algorithm obtains an optimal result: 206 registers
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
@@ -740,26 +739,28 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
   Module binding information for function __float_adde11m52b_1023nih:
     Number of modules instantiated: 438
-    Number of performance conflicts: 26
-    Estimated resources area (no Muxes and address logic): 5644
+    Number of performance conflicts: 31
+    Estimated resources area (no Muxes and address logic): 5660
     Estimated area of MUX21: 0
-    Total estimated area: 5644
+    Total estimated area: 5660
     Estimated number of DSPs: 0
   Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function __float_adde11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
-  Time to perform register binding: 0.01 seconds
+    Register allocation algorithm obtains an optimal result: 206 registers
+  Time to perform register binding: 0.00 seconds
 
-  Total number of flip-flops in function __float_adde11m52b_1023nih: 740
-  Slack computed in 0.01 seconds
+  Total number of flip-flops in function __float_adde11m52b_1023nih: 400
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_adde11m52b_1023nih: function pipelining may come for free
+  Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_divSRT4e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:18)
+    Register allocation algorithm obtains a sub-optimal result: 19 registers(LB:18)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
@@ -767,16 +768,16 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
   Module binding information for function __float_divSRT4e11m52b_1023nih:
     Number of modules instantiated: 229
-    Number of performance conflicts: 18
-    Estimated resources area (no Muxes and address logic): 2939
+    Number of performance conflicts: 10
+    Estimated resources area (no Muxes and address logic): 2963
     Estimated area of MUX21: 0
-    Total estimated area: 2939
+    Total estimated area: 2963
     Estimated number of DSPs: 0
   Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function __float_divSRT4e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 24 registers(LB:18)
+    Register allocation algorithm obtains a sub-optimal result: 19 registers(LB:18)
   Time to perform register binding: 0.00 seconds
 
 
@@ -784,14 +785,14 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
     Number of allocated multiplexers (2-to-1 equivalent): 4
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function __float_divSRT4e11m52b_1023nih: 915
+  Total number of flip-flops in function __float_divSRT4e11m52b_1023nih: 847
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_mule11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:15)
+    Register allocation algorithm obtains an optimal result: 15 registers
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
@@ -799,26 +800,28 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
   Module binding information for function __float_mule11m52b_1023nih:
     Number of modules instantiated: 110
-    Number of performance conflicts: 11
-    Estimated resources area (no Muxes and address logic): 1555
+    Number of performance conflicts: 5
+    Estimated resources area (no Muxes and address logic): 1587
     Estimated area of MUX21: 0
-    Total estimated area: 1555
+    Total estimated area: 1587
     Estimated number of DSPs: 12
   Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __float_mule11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 22 registers(LB:15)
+    Register allocation algorithm obtains an optimal result: 15 registers
   Time to perform register binding: 0.00 seconds
 
-  Total number of flip-flops in function __float_mule11m52b_1023nih: 535
-  Slack computed in 0.01 seconds
+  Total number of flip-flops in function __float_mule11m52b_1023nih: 259
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_mule11m52b_1023nih: function pipelining may come for free
+  Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __float_sube11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
+    Register allocation algorithm obtains an optimal result: 206 registers
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
@@ -826,26 +829,28 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
   Module binding information for function __float_sube11m52b_1023nih:
     Number of modules instantiated: 438
-    Number of performance conflicts: 26
-    Estimated resources area (no Muxes and address logic): 5644
+    Number of performance conflicts: 31
+    Estimated resources area (no Muxes and address logic): 5660
     Estimated area of MUX21: 0
-    Total estimated area: 5644
+    Total estimated area: 5660
     Estimated number of DSPs: 0
-  Time to perform module binding: 0.01 seconds
+  Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __float_sube11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 213 registers(LB:205)
-  Time to perform register binding: 0.00 seconds
+    Register allocation algorithm obtains an optimal result: 206 registers
+  Time to perform register binding: 0.01 seconds
 
-  Total number of flip-flops in function __float_sube11m52b_1023nih: 740
+  Total number of flip-flops in function __float_sube11m52b_1023nih: 400
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __float_sube11m52b_1023nih: function pipelining may come for free
   Slack computed in 0.00 seconds
   Weight computation completed in 0.00 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function __int32_to_float64e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 8 registers(LB:6)
+    Register allocation algorithm obtains an optimal result: 4 registers
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
@@ -853,16 +858,16 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
   Module binding information for function __int32_to_float64e11m52b_1023nih:
     Number of modules instantiated: 162
-    Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 730
+    Number of performance conflicts: 1
+    Estimated resources area (no Muxes and address logic): 729
     Estimated area of MUX21: 0
-    Total estimated area: 730
+    Total estimated area: 729
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
 
   Register binding information for function __int32_to_float64e11m52b_1023nih:
-    Register allocation algorithm obtains a sub-optimal result: 8 registers(LB:6)
+    Register allocation algorithm obtains an optimal result: 4 registers
   Time to perform register binding: 0.00 seconds
 
 
@@ -870,18 +875,20 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
     Number of allocated multiplexers (2-to-1 equivalent): 1
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function __int32_to_float64e11m52b_1023nih: 66
+  Total number of flip-flops in function __int32_to_float64e11m52b_1023nih: 50
+  All registers are without enable: function pipelining may come for free
+  Resources are not shared in function __int32_to_float64e11m52b_1023nih: function pipelining may come for free
 
   Module allocation information for function __hide_ieee754_exp:
     Number of complex operations: 34
     Number of complex operations: 34
-  Time to perform module allocation: 0.04 seconds
+  Time to perform module allocation: 0.03 seconds
 
 
   Scheduling Information of function __hide_ieee754_exp:
-    Number of control steps: 158
-    Minimum slack: 5.0000000000000003e-10
-    Estimated max frequency (MHz): 100.000000005
+    Number of control steps: 104
+    Minimum slack: 0.048433324333294892
+    Estimated max frequency (MHz): 100.48669044695971
   Time to perform scheduling: 0.02 seconds
 
   Number of function call sites = 1
@@ -889,7 +896,7 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
   State Transition Graph Information of function __hide_ieee754_exp:
     Number of operations: 211
     Number of basic blocks: 24
-    Number of states: 166
+    Number of states: 108
     Done port is registered
   Time to perform creation of STG: 0.01 seconds
 
@@ -924,9 +931,9 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
   Module binding information for function __hide_ieee754_exp:
     Number of modules instantiated: 185
     Number of performance conflicts: 21
-    Estimated resources area (no Muxes and address logic): 14229
-    Estimated area of MUX21: 412
-    Total estimated area: 14641
+    Estimated resources area (no Muxes and address logic): 14230
+    Estimated area of MUX21: 413
+    Total estimated area: 14643
     Estimated number of DSPs: 0
   Time to perform module binding: 0.01 seconds
 
@@ -937,21 +944,21 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
 
 
   Connection Binding Information for function __hide_ieee754_exp:
-    Number of allocated multiplexers (2-to-1 equivalent): 46
-  Time to perform interconnection binding: 0.01 seconds
+    Number of allocated multiplexers (2-to-1 equivalent): 47
+  Time to perform interconnection binding: 0.00 seconds
 
   Total number of flip-flops in function __hide_ieee754_exp: 1747
 
   Module allocation information for function __internal_exp:
     Number of complex operations: 1
     Number of complex operations: 1
-  Time to perform module allocation: 0.01 seconds
+  Time to perform module allocation: 0.00 seconds
 
 
   Scheduling Information of function __internal_exp:
     Number of control steps: 4
-    Minimum slack: 1.1102230246251565e-15
-    Estimated max frequency (MHz): 100.00000000000001
+    Minimum slack: 5.0000000000000003e-10
+    Estimated max frequency (MHz): 100.000000005
   Time to perform scheduling: 0.00 seconds
 
   Number of function call sites = 1
@@ -993,23 +1000,23 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
   Module allocation information for function sigmoid_1_6_u1_31fixp:
     Number of complex operations: 4
     Number of complex operations: 4
-  Time to perform module allocation: 0.03 seconds
+  Time to perform module allocation: 0.02 seconds
 
 
   Scheduling Information of function sigmoid_1_6_u1_31fixp:
-    Number of control steps: 26
-    Minimum slack: 5.0000000000000003e-10
-    Estimated max frequency (MHz): 100.000000005
-  Time to perform scheduling: 0.00 seconds
+    Number of control steps: 21
+    Minimum slack: 6.4948046940571658e-15
+    Estimated max frequency (MHz): 100.00000000000007
+  Time to perform scheduling: 0.01 seconds
 
   Number of function call sites = 1
 
   State Transition Graph Information of function sigmoid_1_6_u1_31fixp:
     Number of operations: 101
     Number of basic blocks: 10
-    Number of states: 25
+    Number of states: 20
     Done port is registered
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Easy binding information for function sigmoid_1_6_u1_31fixp:
@@ -1036,9 +1043,9 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
   Module binding information for function sigmoid_1_6_u1_31fixp:
     Number of modules instantiated: 100
     Number of performance conflicts: 0
-    Estimated resources area (no Muxes and address logic): 7144
+    Estimated resources area (no Muxes and address logic): 7174
     Estimated area of MUX21: 68
-    Total estimated area: 7212
+    Total estimated area: 7242
     Estimated number of DSPs: 0
   Time to perform module binding: 0.00 seconds
 
@@ -1057,32 +1064,32 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
   Module allocation information for function gradient_descent_3_fixp:
     Number of complex operations: 50
     Number of complex operations: 50
-  Time to perform module allocation: 0.09 seconds
+  Time to perform module allocation: 0.08 seconds
 
 
   Scheduling Information of function gradient_descent_3_fixp:
-    Number of control steps: 36
-    Minimum slack: 8.2156503822261584e-15
-    Estimated max frequency (MHz): 100.00000000000009
-  Time to perform scheduling: 0.04 seconds
+    Number of control steps: 33
+    Minimum slack: 5.0000000000000003e-10
+    Estimated max frequency (MHz): 100.000000005
+  Time to perform scheduling: 0.03 seconds
 
   Number of function call sites = 0
 
   State Transition Graph Information of function gradient_descent_3_fixp:
     Number of operations: 410
     Number of basic blocks: 9
-    Number of states: 36
+    Number of states: 33
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
   Easy binding information for function gradient_descent_3_fixp:
     Bound operations:216/410
-  Time to perform easy binding: 0.01 seconds
+  Time to perform easy binding: 0.00 seconds
 
 
   Storage Value Information of function gradient_descent_3_fixp:
-    Number of storage values inserted: 133
+    Number of storage values inserted: 113
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
@@ -1091,82 +1098,82 @@ Function call to __udivdi3 inlined in sigmoid_1_6_u1_31fixp
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function gradient_descent_3_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 116 registers(LB:44)
+    Register allocation algorithm obtains a sub-optimal result: 96 registers(LB:43)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.01 seconds
   Clique covering computation completed in 0.01 seconds
 
   Module binding information for function gradient_descent_3_fixp:
-    Number of modules instantiated: 367
-    Number of performance conflicts: 98
-    Estimated resources area (no Muxes and address logic): 4215
-    Estimated area of MUX21: 618
-    Total estimated area: 4833
-    Estimated number of DSPs: 51
+    Number of modules instantiated: 363
+    Number of performance conflicts: 205
+    Estimated resources area (no Muxes and address logic): 4163
+    Estimated area of MUX21: 756
+    Total estimated area: 4919
+    Estimated number of DSPs: 39
   Time to perform module binding: 0.02 seconds
 
 
   Register binding information for function gradient_descent_3_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 116 registers(LB:44)
+    Register allocation algorithm obtains a sub-optimal result: 96 registers(LB:43)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function gradient_descent_3_fixp:
-    Number of allocated multiplexers (2-to-1 equivalent): 57
+    Number of allocated multiplexers (2-to-1 equivalent): 65
   Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function gradient_descent_3_fixp: 3510
-[0m  Parameter Pd18 (495334) (testvector 0) allocated at 1073741824 : reserved_mem_size = 32
+  Total number of flip-flops in function gradient_descent_3_fixp: 2891
+[0m  Parameter Pd18 (475367) (testvector 0) allocated at 1073741824 : reserved_mem_size = 32
 Padding of 0 for parameter Pd18
-  Parameter Pd19 (495335) (testvector 0) allocated at 1073741856 : reserved_mem_size = 1024
+  Parameter Pd19 (475368) (testvector 0) allocated at 1073741856 : reserved_mem_size = 1024
 Padding of 0 for parameter Pd19
-  Parameter Pd20 (495336) (testvector 0) allocated at 1073742880 : reserved_mem_size = 128
+  Parameter Pd20 (475369) (testvector 0) allocated at 1073742880 : reserved_mem_size = 128
 Padding of 0 for parameter Pd20
-  Parameter Pd18 (495334) (testvector 1) allocated at 1073743008 : reserved_mem_size = 32
+  Parameter Pd18 (475367) (testvector 1) allocated at 1073743008 : reserved_mem_size = 32
 Padding of 0 for parameter Pd18
-  Parameter Pd19 (495335) (testvector 1) allocated at 1073743040 : reserved_mem_size = 1024
+  Parameter Pd19 (475368) (testvector 1) allocated at 1073743040 : reserved_mem_size = 1024
 Padding of 0 for parameter Pd19
-  Parameter Pd20 (495336) (testvector 1) allocated at 1073744064 : reserved_mem_size = 128
+  Parameter Pd20 (475369) (testvector 1) allocated at 1073744064 : reserved_mem_size = 128
 Padding of 0 for parameter Pd20
-  C-based testbench generation for function gradient_descent_3_fixp: /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c
+  C-based testbench generation for function gradient_descent_3_fixp: /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c
   Prepared testbench
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:2976:37: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:2976:37: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
                                     ^~~~
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:39: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:39: note: passing argument to parameter here
 void gradient_descent_3_fixp(int, int*, int*, int*);
                                       ^
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:2976:43: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:2976:43: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
                                           ^~~~
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:45: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:45: note: passing argument to parameter here
 void gradient_descent_3_fixp(int, int*, int*, int*);
                                             ^
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:2976:49: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:2976:49: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
                                                 ^~~~
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:51: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:51: note: passing argument to parameter here
 void gradient_descent_3_fixp(int, int*, int*, int*);
                                                   ^
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:3021:37: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3021:37: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
                                     ^~~~
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:39: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:39: note: passing argument to parameter here
 void gradient_descent_3_fixp(int, int*, int*, int*);
                                       ^
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:3021:43: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3021:43: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
                                           ^~~~
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:45: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:45: note: passing argument to parameter here
 void gradient_descent_3_fixp(int, int*, int*, int*);
                                             ^
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:3021:49: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:3021:49: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       gradient_descent_3_fixp(Pd17, Pd18, Pd19, Pd20);
                                                 ^~~~
-/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/values.c:76:51: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/values.c:76:51: note: passing argument to parameter here
 void gradient_descent_3_fixp(int, int*, int*, int*);
                                                   ^
 6 warnings generated.
@@ -1176,9 +1183,9 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Summary of resources:
      - ARRAY_1D_STD_DISTRAM_NN_SDS: 3
      - ASSIGN_UNSIGNED_FU: 8
-     - IIdata_converter_FU: 38
+     - IIdata_converter_FU: 40
      - IUdata_converter_FU: 38
-     - MUX_GATE: 123
+     - MUX_GATE: 132
      - OR_GATE: 11
      - Pd18_bambu_artificial_ParmMgr_modgen: 1
      - Pd19_bambu_artificial_ParmMgr_modgen: 1
@@ -1194,12 +1201,12 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
      - lshift_expr_FU: 14
      - lt_expr_FU: 4
      - lut_expr_FU: 265
-     - mult_expr_FU: 17
+     - mult_expr_FU: 13
      - multi_read_cond_FU: 3
      - negate_expr_FU: 1
      - read_cond_FU: 16
-     - register_SE: 175
-     - register_STD: 521
+     - register_SE: 134
+     - register_STD: 510
      - rshift_expr_FU: 27
      - ui_bit_and_expr_FU: 112
      - ui_bit_ior_concat_expr_FU: 11
@@ -1753,7 +1760,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd19 =     358782   expected =     358782 
 
-Simulation ended after              7054900 cycles.
+Simulation ended after              5710930 cycles.
 
 Simulation completed with success
 
@@ -2288,19 +2295,34 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd19 =     762516   expected =     762516 
 
-Simulation ended after              7054900 cycles.
+Simulation ended after              5710930 cycles.
 
 Simulation completed with success
 
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/testbench_gradient_descent_3_fixp_tb.v:238: Verilog $finish
+- /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_gradient_descent_3_fixp_tb.v:238: Verilog $finish
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/testbench_gradient_descent_3_fixp_tb.v:279: Verilog $finish
-- /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/HLS_output//simulation/testbench_gradient_descent_3_fixp_tb.v:279: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 7054900 cycles;
-2. Simulation completed with SUCCESS; Execution time 7054900 cycles;
-  Total cycles             : 14109800 cycles
+- /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_gradient_descent_3_fixp_tb.v:279: Verilog $finish
+- /home/zero/Desktop/COaT_project/TrainLogisticRegression_outside_conv/synthesis_with_opt/HLS_output//simulation/testbench_gradient_descent_3_fixp_tb.v:279: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 5710930 cycles;
+2. Simulation completed with SUCCESS; Execution time 5710930 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 11421860 cycles
   Number of executions     : 2
-  Average execution        : 7054900 cycles
+  Average execution        : 5710930 cycles
+  Slices                   : 2628
+  Luts                     : 8025
+  Lut FF Pairs             : 8025
+  Power                    : 0.45200000000000001
+  Registers                : 5130
+  DSPs                     : 62
+  BRAMs                    : 0
+  Clock period             : 10
+  Design minimum period    : 10.399000000000001
+  Design slack             : -0.39900000000000091
+  Frequency                : 96.163092605058168
+  AreaxTime                : 476588387.58675003
+  Time                     : 59387.961070000005
+  Tot. Time                : 118775.92214000001

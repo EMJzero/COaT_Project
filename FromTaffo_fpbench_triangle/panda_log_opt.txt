@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-BuVuCt/usr/bin/bambu --use-raw -v 2 --top-fname=test --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-GSxIyi/usr/bin/bambu --use-raw -v 2 -O0 --top-fname=test --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --device-name=xc7vx690t-3ffg1930-VVD --parallel-backend --evaluation ../test.ll 
 
 
 ********************************************************************************
@@ -17,7 +17,7 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
-Parameters parsed in 0.15 seconds
+Parameters parsed in 0.14 seconds
 
 Target technology = FPGA
 Library Name     : STD_FU
@@ -160,6 +160,16 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 1 warning generated.
 warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
 1 warning generated.
+  Analyzing function test
+    Interface specification:
+      Protocol  : array
+      Bitwidth  : 32
+      Alignment : 4
+    Interface specification:
+      Protocol  : array
+      Bitwidth  : 32
+      Alignment : 4
+  Analyzed function test
   Bit Value Opt: plus_expr optimized, nbits = 1
   Bit Value Opt: bit_and_expr optimized, nbits = 1
   Bit Value Opt: bit_and_expr optimized, nbits = 53
@@ -213,6 +223,17 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: bit_and_expr optimized, nbits = 24
   Bit Value Opt: ne_expr optimized, nbits = 24
   Bit Value Opt: bit_and_expr optimized, nbits = 24
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: eq_expr optimized, nbits = 20
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: eq_expr optimized, nbits = 20
+  Bit Value Opt: plus_expr optimized, nbits = 2
+  Bit Value Opt: bit_and_expr optimized, nbits = 19
+  Bit Value Opt: eq_expr optimized, nbits = 19
+  Bit Value Opt: plus_expr optimized, nbits = 21
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
+  Bit Value Opt: plus_expr optimized, nbits = 20
+  Bit Value Opt: bit_and_expr optimized, nbits = 20
   Bit Value Opt: bit_and_expr optimized, nbits = 16
   Bit Value Opt: eq_expr optimized, nbits = 16
   Bit Value Opt: bit_and_expr optimized, nbits = 28
@@ -226,10 +247,6 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: plus_expr optimized, nbits = 63
   Bit Value Opt: plus_expr optimized, nbits = 52
   Bit Value Opt: plus_expr optimized, nbits = 11
-  Bit Value Opt: bit_and_expr optimized, nbits = 63
-  Bit Value Opt: plus_expr optimized, nbits = 1
-  Bit Value Opt: plus_expr optimized, nbits = 24
-  Bit Value Opt: plus_expr optimized, nbits = 14
   Bit Value Opt: bit_and_expr optimized, nbits = 8
   Bit Value Opt: eq_expr optimized, nbits = 8
   Bit Value Opt: bit_and_expr optimized, nbits = 24
@@ -252,8 +269,10 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: mult_expr/widen_mult_expr optimized, nbits = 2
   Bit Value Opt: plus_expr optimized, nbits = 1
   Bit Value Opt: plus_expr optimized, nbits = 1
+  Bit Value Opt: cond_expr optimized, nbits = 1
   Bit Value Opt: cond_expr optimized, nbits = 3
   Bit Value Opt: cond_expr optimized, nbits = 3
+Function call to __hide_ieee754_sqrt inlined in __internal_sqrt
   Bit Value Opt: cond_expr optimized, nbits = 3
   Bit Value Opt: cond_expr optimized, nbits = 4
   Bit Value Opt: cond_expr optimized, nbits = 4
@@ -265,107 +284,58 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Bit Value Opt: cond_expr optimized, nbits = 6
 Function call to __int32_to_float64e11m52b_1023nih inlined in ex0_1_u9_23fixp
 Function call to __float64_to_uint32_round_to_zeroe11m52b_1023nih inlined in ex0_1_u9_23fixp
+Function call to ex0_1_u9_23fixp inlined in test
 Function call to __uint32_to_float32e8m23b_127nih inlined in test
 
   Functions to be synthesized:
     __internal_sqrt
     test
-    ex0_1_u9_23fixp
     __float_mule11m52b_1023nih
     __float_mule8m23b_127nih
     __float32_to_int32_round_to_zeroe8m23b_127nih
 
 
   Memory allocation information:
-  Sparse memory alignemnt set to 8192 bytes
-    Internal variable: internal_495412 - 495412 - internal_495412 in function test
-      Id: 495412
-      Base Address: 8192
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: internal_475445 - 475445 - internal_475445 in function test
+      Id: 475445
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 2
       Maximum number of loads per function: 1
-    Internal variable: internal_495440 - 495440 - internal_495440 in function test
-      Id: 495440
-      Base Address: 8192
+    Internal variable: internal_475473 - 475473 - internal_475473 in function test
+      Id: 475473
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 2
       Maximum number of loads per function: 1
-    Internal variable: internal_495464 - 495464 - internal_495464 in function test
-      Id: 495464
-      Base Address: 8192
+    Internal variable: internal_475497 - 475497 - internal_475497 in function test
+      Id: 475497
+      Base Address: 512
       Size: 400
       Is a private memory
       The variable is always accessed with the same data size
       Number of functions in which is used: 1
       Maximum number of references per function: 2
       Maximum number of loads per function: 1
-    Internal variable: sqrt_a0 - 415239 - sqrt_a0 in function __internal_sqrt
-      Id: 415239
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a3 - 417453 - sqrt_a3 in function __internal_sqrt
-      Id: 417453
-      Base Address: 8192
-      Size: 4096
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a4 - 418523 - sqrt_a4 in function __internal_sqrt
-      Id: 418523
-      Base Address: 8192
-      Size: 4096
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a2 - 419618 - sqrt_a2 in function __internal_sqrt
-      Id: 419618
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-    Internal variable: sqrt_a1 - 420707 - sqrt_a1 in function __internal_sqrt
-      Id: 420707
-      Base Address: 8192
-      Size: 8192
-      Is a private memory
-      Is a Read Only Memory
-      The variable is always accessed with the same data size
-      Number of functions in which is used: 1
-      Maximum number of references per function: 1
-      Maximum number of loads per function: 1
-Warning: This function uses unknown addresses: test
+  This function performs unaligned accesses: test
     BRAM bitsize: 32
     Spec may not exploit DATA bus width
-    Spec accesses data having an address unknown at compile time
+    All the data have a known address
     Internal data is not externally accessible
-    DATA bus bitsize: 64
-    ADDRESS bus bitsize: 32
-    SIZE bus bitsize: 7
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 10
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
     Internally allocated memory (no private memories): 0
-    Internally allocated memory: 33968
-  Time to perform memory allocation: 0.01 seconds
+    Internally allocated memory: 1200
+  Time to perform memory allocation: 0.00 seconds
 
 
   Module allocation information for function __float32_to_int32_round_to_zeroe8m23b_127nih:
@@ -386,10 +356,93 @@ Warning: This function uses unknown addresses: test
   Time to perform module allocation: 0.02 seconds
 
 
-  Module allocation information for function __internal_sqrt:
-    Number of complex operations: 18
-    Number of complex operations: 18
-  Time to perform module allocation: 0.05 seconds
+  Memory allocation information:
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: internal_475445 - 475445 - internal_475445 in function test
+      Id: 475445
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+      Maximum number of loads per function: 1
+    Internal variable: internal_475473 - 475473 - internal_475473 in function test
+      Id: 475473
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+      Maximum number of loads per function: 1
+    Internal variable: internal_475497 - 475497 - internal_475497 in function test
+      Id: 475497
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+      Maximum number of loads per function: 1
+  This function performs unaligned accesses: test
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 10
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 1200
+  Time to perform memory allocation: 0.00 seconds
+
+
+  Memory allocation information:
+  Sparse memory alignemnt set to 512 bytes
+    Internal variable: internal_475445 - 475445 - internal_475445 in function test
+      Id: 475445
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      The variable has been trimmed to bitsize: 32 with bit-value pattern: UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+      Maximum number of loads per function: 1
+    Internal variable: internal_475473 - 475473 - internal_475473 in function test
+      Id: 475473
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      The variable has been trimmed to bitsize: 32 with bit-value pattern: UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+      Maximum number of loads per function: 1
+    Internal variable: internal_475497 - 475497 - internal_475497 in function test
+      Id: 475497
+      Base Address: 512
+      Size: 400
+      Is a private memory
+      The variable is always accessed with the same data size
+      The variable has been trimmed to bitsize: 32 with bit-value pattern: UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU
+      Number of functions in which is used: 1
+      Maximum number of references per function: 2
+      Maximum number of loads per function: 1
+  This function performs unaligned accesses: test
+    BRAM bitsize: 32
+    Spec may not exploit DATA bus width
+    All the data have a known address
+    Internal data is not externally accessible
+    DATA bus bitsize: 32
+    ADDRESS bus bitsize: 10
+    SIZE bus bitsize: 6
+    Code has LOADs or STOREs with unaligned accesses
+    Internally allocated memory (no private memories): 0
+    Internally allocated memory: 1200
+  Time to perform memory allocation: 0.00 seconds
 
 
   Scheduling Information of function __float32_to_int32_round_to_zeroe8m23b_127nih:
@@ -407,14 +460,14 @@ Warning: This function uses unknown addresses: test
     Minimum number of cycles: 2
     Maximum number of cycles 3
     Done port is registered
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function __float_mule11m52b_1023nih:
     Number of control steps: 3
     Minimum slack: 2.9413999819999996
     Estimated max frequency (MHz): 141.67115255856959
-  Time to perform scheduling: 0.00 seconds
+  Time to perform scheduling: 0.01 seconds
 
   Number of function call sites = 2
 
@@ -424,14 +477,14 @@ Warning: This function uses unknown addresses: test
     Number of states: 1
     Minimum number of cycles: 1
     Maximum number of cycles 1
-  Time to perform creation of STG: 0.01 seconds
+  Time to perform creation of STG: 0.00 seconds
 
 
   Scheduling Information of function __float_mule8m23b_127nih:
     Number of control steps: 3
     Minimum slack: 4.4063999819999973
     Estimated max frequency (MHz): 178.77574313179994
-  Time to perform scheduling: 0.00 seconds
+  Time to perform scheduling: 0.01 seconds
 
   Number of function call sites = 4
 
@@ -441,24 +494,6 @@ Warning: This function uses unknown addresses: test
     Number of states: 1
     Minimum number of cycles: 1
     Maximum number of cycles 1
-  Time to perform creation of STG: 0.01 seconds
-
-
-  Scheduling Information of function __internal_sqrt:
-    Number of control steps: 13
-    Minimum slack: 0.028199989999982578
-    Estimated max frequency (MHz): 100.28279738835219
-  Time to perform scheduling: 0.01 seconds
-
-  Number of function call sites = 1
-
-  State Transition Graph Information of function __internal_sqrt:
-    Number of operations: 186
-    Number of basic blocks: 7
-    Number of states: 11
-    Minimum number of cycles: 2
-    Maximum number of cycles 9
-    Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
@@ -477,11 +512,6 @@ Warning: This function uses unknown addresses: test
   Time to perform easy binding: 0.00 seconds
 
 
-  Easy binding information for function __internal_sqrt:
-    Bound operations:115/186
-  Time to perform easy binding: 0.00 seconds
-
-
   Storage Value Information of function __float32_to_int32_round_to_zeroe8m23b_127nih:
     Number of storage values inserted: 6
   Time to compute storage value information: 0.00 seconds
@@ -494,11 +524,6 @@ Warning: This function uses unknown addresses: test
 
   Storage Value Information of function __float_mule8m23b_127nih:
     Number of storage values inserted: 0
-  Time to compute storage value information: 0.00 seconds
-
-
-  Storage Value Information of function __internal_sqrt:
-    Number of storage values inserted: 56
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
@@ -587,68 +612,36 @@ Warning: This function uses unknown addresses: test
   Time to perform register binding: 0.00 seconds
 
   Total number of flip-flops in function __float_mule8m23b_127nih: 0
-  Slack computed in 0.01 seconds
-  Weight computation completed in 0.00 seconds
-  False-loop computation completed in 0.00 seconds
-  Iteration 0 completed in 0.00 seconds
 
-  Register binding information for function __internal_sqrt:
-    Register allocation algorithm obtains a sub-optimal result: 54 registers(LB:25)
-  Time to perform register binding: 0.00 seconds
-
-  Iteration 1 completed in 0.00 seconds
-  Clique covering computation completed in 0.00 seconds
-
-  Module binding information for function __internal_sqrt:
-    Number of modules instantiated: 183
-    Number of performance conflicts: 62
-    Estimated resources area (no Muxes and address logic): 6652
-    Estimated area of MUX21: 134
-    Total estimated area: 6786
-    Estimated number of DSPs: 58
-  Time to perform module binding: 0.01 seconds
+  Module allocation information for function __internal_sqrt:
+    Number of complex operations: 0
+    Number of complex operations: 0
+  Time to perform module allocation: 0.05 seconds
 
 
-  Register binding information for function __internal_sqrt:
-    Register allocation algorithm obtains a sub-optimal result: 54 registers(LB:25)
-  Time to perform register binding: 0.00 seconds
-
-
-  Connection Binding Information for function __internal_sqrt:
-    Number of allocated multiplexers (2-to-1 equivalent): 8
-  Time to perform interconnection binding: 0.00 seconds
-
-  Total number of flip-flops in function __internal_sqrt: 1710
-
-  Module allocation information for function ex0_1_u9_23fixp:
-    Number of complex operations: 4
-    Number of complex operations: 4
-  Time to perform module allocation: 0.04 seconds
-
-
-  Scheduling Information of function ex0_1_u9_23fixp:
-    Number of control steps: 15
-    Minimum slack: 6.4948046940571658e-15
-    Estimated max frequency (MHz): 100.00000000000007
+  Scheduling Information of function __internal_sqrt:
+    Number of control steps: 20
+    Minimum slack: 5.8774719990000142
+    Estimated max frequency (MHz): 242.56960771580782
   Time to perform scheduling: 0.02 seconds
 
   Number of function call sites = 1
 
-  State Transition Graph Information of function ex0_1_u9_23fixp:
-    Number of operations: 229
-    Number of basic blocks: 9
-    Number of states: 14
+  State Transition Graph Information of function __internal_sqrt:
+    Number of operations: 194
+    Number of basic blocks: 20
+    Number of states: 18
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
 
-  Easy binding information for function ex0_1_u9_23fixp:
-    Bound operations:182/229
+  Easy binding information for function __internal_sqrt:
+    Bound operations:135/194
   Time to perform easy binding: 0.00 seconds
 
 
-  Storage Value Information of function ex0_1_u9_23fixp:
-    Number of storage values inserted: 38
+  Storage Value Information of function __internal_sqrt:
+    Number of storage values inserted: 60
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
@@ -656,105 +649,105 @@ Warning: This function uses unknown addresses: test
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
-  Register binding information for function ex0_1_u9_23fixp:
-    Register allocation algorithm obtains a sub-optimal result: 38 registers(LB:22)
-  Time to perform register binding: 0.00 seconds
+  Register binding information for function __internal_sqrt:
+    Register allocation algorithm obtains a sub-optimal result: 48 registers(LB:16)
+  Time to perform register binding: 0.01 seconds
 
   Iteration 1 completed in 0.00 seconds
-  Clique covering computation completed in 0.00 seconds
+  Clique covering computation completed in 0.01 seconds
 
-  Module binding information for function ex0_1_u9_23fixp:
-    Number of modules instantiated: 227
-    Number of performance conflicts: 14
-    Estimated resources area (no Muxes and address logic): 5367
-    Estimated area of MUX21: 200
-    Total estimated area: 5567
-    Estimated number of DSPs: 13
-  Time to perform module binding: 0.00 seconds
+  Module binding information for function __internal_sqrt:
+    Number of modules instantiated: 193
+    Number of performance conflicts: 0
+    Estimated resources area (no Muxes and address logic): 1796
+    Estimated area of MUX21: 0
+    Total estimated area: 1796
+    Estimated number of DSPs: 0
+  Time to perform module binding: 0.01 seconds
 
 
-  Register binding information for function ex0_1_u9_23fixp:
-    Register allocation algorithm obtains a sub-optimal result: 38 registers(LB:22)
+  Register binding information for function __internal_sqrt:
+    Register allocation algorithm obtains a sub-optimal result: 48 registers(LB:16)
   Time to perform register binding: 0.00 seconds
 
 
-  Connection Binding Information for function ex0_1_u9_23fixp:
-    Number of allocated multiplexers (2-to-1 equivalent): 7
-  Time to perform interconnection binding: 0.01 seconds
+  Connection Binding Information for function __internal_sqrt:
+    Number of allocated multiplexers (2-to-1 equivalent): 35
+  Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function ex0_1_u9_23fixp: 712
+  Total number of flip-flops in function __internal_sqrt: 1041
 
   Module allocation information for function test:
-    Number of complex operations: 14
-    Number of complex operations: 14
-  Time to perform module allocation: 0.06 seconds
+    Number of complex operations: 16
+    Number of complex operations: 16
+  Time to perform module allocation: 0.10 seconds
 
 
   Scheduling Information of function test:
-    Number of control steps: 16
-    Minimum slack: 6.4948046940571658e-15
-    Estimated max frequency (MHz): 100.00000000000007
-  Time to perform scheduling: 0.03 seconds
+    Number of control steps: 25
+    Minimum slack: 0.59856665366662942
+    Estimated max frequency (MHz): 106.36675953140779
+  Time to perform scheduling: 0.07 seconds
 
   Number of function call sites = 0
 
   State Transition Graph Information of function test:
-    Number of operations: 341
-    Number of basic blocks: 9
-    Number of states: 17
+    Number of operations: 572
+    Number of basic blocks: 14
+    Number of states: 26
     Done port is registered
   Time to perform creation of STG: 0.01 seconds
 
 
   Easy binding information for function test:
-    Bound operations:222/341
-  Time to perform easy binding: 0.00 seconds
+    Bound operations:380/572
+  Time to perform easy binding: 0.01 seconds
 
 
   Storage Value Information of function test:
-    Number of storage values inserted: 44
+    Number of storage values inserted: 79
   Time to compute storage value information: 0.00 seconds
 
-  Slack computed in 0.01 seconds
-  Weight computation completed in 0.00 seconds
+  Slack computed in 0.00 seconds
+  Weight computation completed in 0.01 seconds
   False-loop computation completed in 0.00 seconds
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 41 registers(LB:21)
+    Register allocation algorithm obtains a sub-optimal result: 76 registers(LB:29)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function test:
-    Number of modules instantiated: 333
-    Number of performance conflicts: 1
-    Estimated resources area (no Muxes and address logic): 13355
-    Estimated area of MUX21: 240
-    Total estimated area: 13595
-    Estimated number of DSPs: 0
+    Number of modules instantiated: 562
+    Number of performance conflicts: 83
+    Estimated resources area (no Muxes and address logic): 16434
+    Estimated area of MUX21: 571
+    Total estimated area: 17005
+    Estimated number of DSPs: 13
   Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function test:
-    Register allocation algorithm obtains a sub-optimal result: 41 registers(LB:21)
+    Register allocation algorithm obtains a sub-optimal result: 76 registers(LB:29)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function test:
-    Number of allocated multiplexers (2-to-1 equivalent): 13
-  Time to perform interconnection binding: 0.01 seconds
+    Number of allocated multiplexers (2-to-1 equivalent): 21
+  Time to perform interconnection binding: 0.02 seconds
 
-  Total number of flip-flops in function test: 864
-[0m  Parameter Pd17 (495333) (testvector 0) allocated at 1073741824 : reserved_mem_size = 1200
-Padding of 6992 for parameter Pd17
-  Parameter Pd18 (495334) (testvector 0) allocated at 1073750016 : reserved_mem_size = 400
-Padding of 7792 for parameter Pd18
-  Parameter Pd17 (495333) (testvector 1) allocated at 1073758208 : reserved_mem_size = 1200
-Padding of 6992 for parameter Pd17
-  Parameter Pd18 (495334) (testvector 1) allocated at 1073766400 : reserved_mem_size = 400
-Padding of 7792 for parameter Pd18
+  Total number of flip-flops in function test: 1348
+[0m  Parameter Pd17 (475366) (testvector 0) allocated at 1073741824 : reserved_mem_size = 1200
+Padding of 336 for parameter Pd17
+  Parameter Pd18 (475367) (testvector 0) allocated at 1073743360 : reserved_mem_size = 400
+Padding of 112 for parameter Pd18
+  Parameter Pd17 (475366) (testvector 1) allocated at 1073743872 : reserved_mem_size = 1200
+Padding of 336 for parameter Pd17
+  Parameter Pd18 (475367) (testvector 1) allocated at 1073745408 : reserved_mem_size = 400
+Padding of 112 for parameter Pd18
   C-based testbench generation for function test: /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_with_opt/HLS_output//simulation/values.c
   Prepared testbench
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
@@ -765,90 +758,492 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Summary of resources:
      - ARRAY_1D_STD_BRAM_NN_SDS: 3
      - ARRAY_1D_STD_BRAM_NN_SDS_BASE: 3
-     - ARRAY_1D_STD_DISTRAM_NN_SDS: 5
-     - ASSIGN_UNSIGNED_FU: 13
-     - BMEMORY_CTRLN: 1
-     - IIdata_converter_FU: 10
-     - IUdata_converter_FU: 36
-     - MUX_GATE: 32
-     - OR_GATE: 3
+     - ASSIGN_UNSIGNED_FU: 2
+     - IIdata_converter_FU: 9
+     - IUdata_converter_FU: 27
+     - MUX_GATE: 60
+     - OR_GATE: 4
+     - Pd17_bambu_artificial_ParmMgr_modgen: 1
+     - Pd18_bambu_artificial_ParmMgr_modgen: 1
      - SIMPLEJOIN_FU: 1
-     - UIdata_converter_FU: 36
-     - UUdata_converter_FU: 112
+     - UIdata_converter_FU: 34
+     - UUdata_converter_FU: 138
      - __builtin_abs: 1
-     - addr_expr_FU: 8
-     - constant_value: 301
+     - addr_expr_FU: 3
+     - constant_value: 258
      - extract_bit_expr_FU: 48
-     - flipflop_AR: 4
-     - gt_expr_FU: 4
-     - lshift_expr_FU: 1
-     - lt_expr_FU: 3
-     - lut_expr_FU: 95
+     - flipflop_AR: 3
+     - gt_expr_FU: 6
+     - lshift_expr_FU: 2
+     - lt_expr_FU: 5
+     - lut_expr_FU: 106
      - mult_expr_FU: 1
      - multi_read_cond_FU: 3
      - negate_expr_FU: 1
-     - plus_expr_FU: 3
-     - read_cond_FU: 10
-     - register_SE: 57
-     - register_STD: 88
-     - rshift_expr_FU: 18
-     - ternary_plus_expr_FU: 1
-     - ui_bit_and_expr_FU: 82
-     - ui_bit_ior_concat_expr_FU: 14
-     - ui_bit_ior_expr_FU: 29
+     - plus_expr_FU: 1
+     - read_cond_FU: 18
+     - register_SE: 72
+     - register_STD: 64
+     - rshift_expr_FU: 9
+     - ui_bit_and_expr_FU: 72
+     - ui_bit_ior_concat_expr_FU: 16
+     - ui_bit_ior_expr_FU: 30
      - ui_bit_xor_expr_FU: 3
-     - ui_cond_expr_FU: 42
-     - ui_eq_expr_FU: 21
-     - ui_extract_bit_expr_FU: 157
-     - ui_fshl_expr_FU: 3
+     - ui_cond_expr_FU: 51
+     - ui_eq_expr_FU: 29
+     - ui_extract_bit_expr_FU: 163
+     - ui_fshl_expr_FU: 5
      - ui_gt_expr_FU: 1
-     - ui_lshift_expr_FU: 112
-     - ui_minus_expr_FU: 7
-     - ui_mult_expr_FU: 15
-     - ui_ne_expr_FU: 6
+     - ui_lshift_expr_FU: 104
+     - ui_lt_expr_FU: 1
+     - ui_minus_expr_FU: 11
+     - ui_mult_expr_FU: 5
+     - ui_ne_expr_FU: 7
      - ui_negate_expr_FU: 5
-     - ui_plus_expr_FU: 32
-     - ui_pointer_plus_expr_FU: 15
-     - ui_rshift_expr_FU: 116
-     - ui_ternary_plus_expr_FU: 5
+     - ui_plus_expr_FU: 37
+     - ui_pointer_plus_expr_FU: 10
+     - ui_rshift_expr_FU: 108
+     - ui_ternary_plus_expr_FU: 1
+     - ui_ternary_pm_expr_FU: 1
+     - ui_view_convert_expr_FU: 5
 Start reading vector           1's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
-Simulation ended after                 3019 cycles.
+ Pd18 = 1100104816   expected = 1100104816 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1086608637   expected = 1086608637 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1091730386   expected = 1091730386 
+
+ Pd18 = 1099251489   expected = 1099251489 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1092404598   expected = 1092404598 
+
+ Pd18 = 1095266482   expected = 1095266482 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1092360046   expected = 1092360046 
+
+ Pd18 = 1068065949   expected = 1068065949 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1099303924   expected = 1099303924 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1091910616   expected = 1091910616 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1087993493   expected = 1087993493 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1100232709   expected = 1100232709 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1078392245   expected = 1078392245 
+
+ Pd18 = 1095493646   expected = 1095493646 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1089759712   expected = 1089759712 
+
+ Pd18 = 1094728647   expected = 1094728647 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1094573516   expected = 1094573516 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1093023242   expected = 1093023242 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1098016610   expected = 1098016610 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1093645325   expected = 1093645325 
+
+ Pd18 = 1083222400   expected = 1083222400 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1076447494   expected = 1076447494 
+
+ Pd18 = 1091245570   expected = 1091245570 
+
+ Pd18 = 1074947360   expected = 1074947360 
+
+ Pd18 = 1052710084   expected = 1052710084 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1087551699   expected = 1087551699 
+
+ Pd18 = 1101906212   expected = 1101906212 
+
+ Pd18 = 1091981454   expected = 1091981454 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1092016143   expected = 1092016143 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1094958586   expected = 1094958586 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1093066252   expected = 1093066252 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1090562312   expected = 1090562312 
+
+ Pd18 = 1092357887   expected = 1092357887 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1093110450   expected = 1093110450 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1084728930   expected = 1084728930 
+
+ Pd18 = 1076346868   expected = 1076346868 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1064540978   expected = 1064540978 
+
+ Pd18 = 1070394531   expected = 1070394531 
+
+ Pd18 = 1090970629   expected = 1090970629 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1099109222   expected = 1099109222 
+
+ Pd18 = 1080196577   expected = 1080196577 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1091079726   expected = 1091079726 
+
+ Pd18 = 1102050763   expected = 1102050763 
+
+ Pd18 = 1093248222   expected = 1093248222 
+
+ Pd18 = 1072902122   expected = 1072902122 
+
+ Pd18 = 1099574139   expected = 1099574139 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+Simulation ended after                 8125 cycles.
 
 Simulation completed with success
 
 Start reading vector           2's values from input file.
 
 Reading of vector values from input file completed. Simulation started.
-Simulation ended after                 3029 cycles.
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1104019820   expected = 1104019820 
+
+ Pd18 = 1075220683   expected = 1075220683 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1097021717   expected = 1097021717 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1085657532   expected = 1085657532 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1100522894   expected = 1100522894 
+
+ Pd18 = 1078071928   expected = 1078071928 
+
+ Pd18 = 1051290668   expected = 1051290668 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1094992399   expected = 1094992399 
+
+ Pd18 = 1060381214   expected = 1060381214 
+
+ Pd18 = 1085457083   expected = 1085457083 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1091358966   expected = 1091358966 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1064054708   expected = 1064054708 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1093420191   expected = 1093420191 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1068027969   expected = 1068027969 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1102713975   expected = 1102713975 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1102505530   expected = 1102505530 
+
+ Pd18 = 1090923627   expected = 1090923627 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1091640649   expected = 1091640649 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1092919535   expected = 1092919535 
+
+ Pd18 = 1067411383   expected = 1067411383 
+
+ Pd18 = 1093017960   expected = 1093017960 
+
+ Pd18 = 1094221541   expected = 1094221541 
+
+ Pd18 = 1088948577   expected = 1088948577 
+
+ Pd18 = 1083107226   expected = 1083107226 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1084348436   expected = 1084348436 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1086098250   expected = 1086098250 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1091582715   expected = 1091582715 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1074577393   expected = 1074577393 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1100577165   expected = 1100577165 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1077380009   expected = 1077380009 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1066768758   expected = 1066768758 
+
+ Pd18 = 1057993136   expected = 1057993136 
+
+ Pd18 = 1061233782   expected = 1061233782 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1091090360   expected = 1091090360 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1095481975   expected = 1095481975 
+
+ Pd18 = 1093188449   expected = 1093188449 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1091061794   expected = 1091061794 
+
+ Pd18 = 1103203925   expected = 1103203925 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1091916811   expected = 1091916811 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1089272473   expected = 1089272473 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1102813387   expected = 1102813387 
+
+ Pd18 = 1063974588   expected = 1063974588 
+
+ Pd18 = 1081969080   expected = 1081969080 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1093197312   expected = 1093197312 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1084385297   expected = 1084385297 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1087673562   expected = 1087673562 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+ Pd18 = 1089832614   expected = 1089832614 
+
+ Pd18 = 1089194550   expected = 1089194550 
+
+ Pd18 = 1132462080   expected = 1132462080 
+
+Simulation ended after                 8371 cycles.
 
 Simulation completed with success
 
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:247: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:215: Verilog $finish
 No more values found. Simulation(s) executed:           2.
 
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:288: Verilog $finish
-- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:288: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 3019 cycles;
-2. Simulation completed with SUCCESS; Execution time 3029 cycles;
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:256: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromTaffo_fpbench_triangle/synthesis_with_opt/HLS_output//simulation/testbench_test_tb.v:256: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 8125 cycles;
+2. Simulation completed with SUCCESS; Execution time 8371 cycles;
 Analyzing Xilinx synthesis results
-  Total cycles             : 6048 cycles
+  Total cycles             : 16496 cycles
   Number of executions     : 2
-  Average execution        : 3024 cycles
-  Slices                   : 1964
-  Luts                     : 6078
-  Lut FF Pairs             : 6078
-  Power                    : 0.36499999999999999
-  Registers                : 1949
-  DSPs                     : 48
+  Average execution        : 8248 cycles
+  Slices                   : 1059
+  Luts                     : 3212
+  Lut FF Pairs             : 3212
+  Power                    : 0.36799999999999999
+  Registers                : 1990
+  DSPs                     : 14
   BRAMs                    : 6
   Clock period             : 10
-  Design minimum period    : 11.715
-  Design slack             : -1.7149999999999999
-  Frequency                : 85.360648740930429
-  AreaxTime                : 215320.20048
-  Time                     : 35.426160000000003
-  Tot. Time                : 70.852320000000006
+  Design minimum period    : 11.750999999999999
+  Design slack             : -1.7509999999999994
+  Frequency                : 85.099140498680967
+  AreaxTime                : 311314.26057599997
+  Time                     : 96.922247999999996
+  Tot. Time                : 193.84449599999999

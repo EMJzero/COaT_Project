@@ -1,4 +1,4 @@
- ==  Bambu executed with: /tmp/.mount_bambu-kXl3RS/usr/bin/bambu --use-raw -v 2 --top-fname=mm_1_fixp --compiler=I386_CLANG12 --generate-interface=INFER --interface-xml-filename=interfaces.xml --simulate --simulator=VERILATOR --verilator-parallel test.ll 
+ ==  Bambu executed with: /tmp/.mount_bambu-NFGNtc/usr/bin/bambu --use-raw -v 2 --top-fname=mm_1_fixp --compiler=I386_CLANG12 -lm --simulate --simulator=VERILATOR --verilator-parallel --parallel-backend --libm-std-rounding --generate-interface=INFER --interface-xml-filename=interfaces.xml --evaluation --device-name=xc7vx690t-3ffg1930-VVD ../test.ll 
 
 
 ********************************************************************************
@@ -17,7 +17,7 @@
                 Copyright (C) 2004-2023 Politecnico di Milano
  Version: PandA 2023.1 - Revision 04336c437a53bc96ae90b74052c455629946ec8b-main
 
-Parameters parsed in 0.16 seconds
+Parameters parsed in 0.15 seconds
 
 Target technology = FPGA
 Library Name     : STD_FU
@@ -152,9 +152,9 @@ Available devices:
  - xcku060-3ffva1156-VVD
  - xcu280-2Lfsvh2892-VVD
 Library Name     : STD_FU
-  Total cells    : 3931
+  Total cells    : 3911
   - combinational: 0
-  - others: 3931
+  - others: 3911
 
 warning: overriding the module target triple with i386-unknown-linux-gnu [-Woverride-module]
 1 warning generated.
@@ -223,9 +223,9 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 
 
   Scheduling Information of function mm_1_fixp:
-    Number of control steps: 13
-    Minimum slack: 0.004799995999982487
-    Estimated max frequency (MHz): 100.04802301102592
+    Number of control steps: 11
+    Minimum slack: 1.2067999919999786
+    Estimated max frequency (MHz): 113.72424135584357
   Time to perform scheduling: 0.02 seconds
 
   Number of function call sites = 0
@@ -233,7 +233,7 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   State Transition Graph Information of function mm_1_fixp:
     Number of operations: 161
     Number of basic blocks: 8
-    Number of states: 11
+    Number of states: 9
     Done port is registered
   Time to perform creation of STG: 0.00 seconds
 
@@ -244,7 +244,7 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 
 
   Storage Value Information of function mm_1_fixp:
-    Number of storage values inserted: 47
+    Number of storage values inserted: 36
   Time to compute storage value information: 0.00 seconds
 
   Slack computed in 0.00 seconds
@@ -253,226 +253,226 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
   Iteration 0 completed in 0.00 seconds
 
   Register binding information for function mm_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 42 registers(LB:28)
+    Register allocation algorithm obtains a sub-optimal result: 31 registers(LB:26)
   Time to perform register binding: 0.00 seconds
 
   Iteration 1 completed in 0.00 seconds
   Clique covering computation completed in 0.00 seconds
 
   Module binding information for function mm_1_fixp:
-    Number of modules instantiated: 157
-    Number of performance conflicts: 28
-    Estimated resources area (no Muxes and address logic): 1103
-    Estimated area of MUX21: 136
-    Total estimated area: 1239
-    Estimated number of DSPs: 12
-  Time to perform module binding: 0.00 seconds
+    Number of modules instantiated: 155
+    Number of performance conflicts: 18
+    Estimated resources area (no Muxes and address logic): 1072
+    Estimated area of MUX21: 272
+    Total estimated area: 1344
+    Estimated number of DSPs: 6
+  Time to perform module binding: 0.01 seconds
 
 
   Register binding information for function mm_1_fixp:
-    Register allocation algorithm obtains a sub-optimal result: 42 registers(LB:28)
+    Register allocation algorithm obtains a sub-optimal result: 31 registers(LB:26)
   Time to perform register binding: 0.00 seconds
 
 
   Connection Binding Information for function mm_1_fixp:
-    Number of allocated multiplexers (2-to-1 equivalent): 9
-  Time to perform interconnection binding: 0.01 seconds
+    Number of allocated multiplexers (2-to-1 equivalent): 13
+  Time to perform interconnection binding: 0.00 seconds
 
-  Total number of flip-flops in function mm_1_fixp: 1143
-[0m  Parameter Pd5 (424770) (testvector 0) allocated at 1073741824 : reserved_mem_size = 4096
+  Total number of flip-flops in function mm_1_fixp: 791
+[0m  Parameter Pd5 (475365) (testvector 0) allocated at 1073741824 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 0) allocated at 1073745920 : reserved_mem_size = 4096
+  Parameter Pd6 (475366) (testvector 0) allocated at 1073745920 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd6
-  Parameter Pd7 (424772) (testvector 0) allocated at 1073750016 : reserved_mem_size = 8192
+  Parameter Pd7 (475367) (testvector 0) allocated at 1073750016 : reserved_mem_size = 8192
 Padding of 0 for parameter Pd7
-  Parameter Pd5 (424770) (testvector 1) allocated at 1073758208 : reserved_mem_size = 4096
+  Parameter Pd5 (475365) (testvector 1) allocated at 1073758208 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 1) allocated at 1073762304 : reserved_mem_size = 4096
+  Parameter Pd6 (475366) (testvector 1) allocated at 1073762304 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd6
-  Parameter Pd7 (424772) (testvector 1) allocated at 1073766400 : reserved_mem_size = 8192
+  Parameter Pd7 (475367) (testvector 1) allocated at 1073766400 : reserved_mem_size = 8192
 Padding of 0 for parameter Pd7
-  Parameter Pd5 (424770) (testvector 2) allocated at 1073774592 : reserved_mem_size = 4096
+  Parameter Pd5 (475365) (testvector 2) allocated at 1073774592 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 2) allocated at 1073778688 : reserved_mem_size = 4096
+  Parameter Pd6 (475366) (testvector 2) allocated at 1073778688 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd6
-  Parameter Pd7 (424772) (testvector 2) allocated at 1073782784 : reserved_mem_size = 8192
+  Parameter Pd7 (475367) (testvector 2) allocated at 1073782784 : reserved_mem_size = 8192
 Padding of 0 for parameter Pd7
-  Parameter Pd5 (424770) (testvector 3) allocated at 1073790976 : reserved_mem_size = 4096
+  Parameter Pd5 (475365) (testvector 3) allocated at 1073790976 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 3) allocated at 1073795072 : reserved_mem_size = 4096
+  Parameter Pd6 (475366) (testvector 3) allocated at 1073795072 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd6
-  Parameter Pd7 (424772) (testvector 3) allocated at 1073799168 : reserved_mem_size = 8192
+  Parameter Pd7 (475367) (testvector 3) allocated at 1073799168 : reserved_mem_size = 8192
 Padding of 0 for parameter Pd7
-  Parameter Pd5 (424770) (testvector 4) allocated at 1073807360 : reserved_mem_size = 4096
+  Parameter Pd5 (475365) (testvector 4) allocated at 1073807360 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 4) allocated at 1073811456 : reserved_mem_size = 4096
+  Parameter Pd6 (475366) (testvector 4) allocated at 1073811456 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd6
-  Parameter Pd7 (424772) (testvector 4) allocated at 1073815552 : reserved_mem_size = 8192
+  Parameter Pd7 (475367) (testvector 4) allocated at 1073815552 : reserved_mem_size = 8192
 Padding of 0 for parameter Pd7
-  Parameter Pd5 (424770) (testvector 5) allocated at 1073823744 : reserved_mem_size = 4096
+  Parameter Pd5 (475365) (testvector 5) allocated at 1073823744 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 5) allocated at 1073827840 : reserved_mem_size = 4096
+  Parameter Pd6 (475366) (testvector 5) allocated at 1073827840 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd6
-  Parameter Pd7 (424772) (testvector 5) allocated at 1073831936 : reserved_mem_size = 8192
+  Parameter Pd7 (475367) (testvector 5) allocated at 1073831936 : reserved_mem_size = 8192
 Padding of 0 for parameter Pd7
-  Parameter Pd5 (424770) (testvector 6) allocated at 1073840128 : reserved_mem_size = 4096
+  Parameter Pd5 (475365) (testvector 6) allocated at 1073840128 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 6) allocated at 1073844224 : reserved_mem_size = 4096
+  Parameter Pd6 (475366) (testvector 6) allocated at 1073844224 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd6
-  Parameter Pd7 (424772) (testvector 6) allocated at 1073848320 : reserved_mem_size = 8192
+  Parameter Pd7 (475367) (testvector 6) allocated at 1073848320 : reserved_mem_size = 8192
 Padding of 0 for parameter Pd7
-  Parameter Pd5 (424770) (testvector 7) allocated at 1073856512 : reserved_mem_size = 4096
+  Parameter Pd5 (475365) (testvector 7) allocated at 1073856512 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd5
-  Parameter Pd6 (424771) (testvector 7) allocated at 1073860608 : reserved_mem_size = 4096
+  Parameter Pd6 (475366) (testvector 7) allocated at 1073860608 : reserved_mem_size = 4096
 Padding of 0 for parameter Pd6
-  Parameter Pd7 (424772) (testvector 7) allocated at 1073864704 : reserved_mem_size = 8192
+  Parameter Pd7 (475367) (testvector 7) allocated at 1073864704 : reserved_mem_size = 8192
 Padding of 0 for parameter Pd7
-  C-based testbench generation for function mm_1_fixp: /home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c
+  C-based testbench generation for function mm_1_fixp: /home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c
   Prepared testbench
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
 clang-12: warning: optimization flag '-ffloat-store' is not supported [-Wignored-optimization-argument]
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:24942:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:24942:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                 ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                    ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:24942:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:24942:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                      ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                          ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:24942:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:24942:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       mm_1_fixp(Pd5, Pd6, Pd7);
                           ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                                 ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:24984:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:24984:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                 ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                    ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:24984:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:24984:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                      ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                          ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:24984:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:24984:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       mm_1_fixp(Pd5, Pd6, Pd7);
                           ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                                 ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25026:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25026:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                 ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                    ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25026:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25026:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                      ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                          ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25026:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25026:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       mm_1_fixp(Pd5, Pd6, Pd7);
                           ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                                 ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25068:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25068:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                 ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                    ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25068:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25068:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                      ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                          ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25068:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25068:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       mm_1_fixp(Pd5, Pd6, Pd7);
                           ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                                 ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25110:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25110:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                 ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                    ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25110:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25110:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                      ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                          ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25110:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25110:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       mm_1_fixp(Pd5, Pd6, Pd7);
                           ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                                 ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25152:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25152:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                 ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                    ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25152:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25152:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                      ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                          ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25152:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25152:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       mm_1_fixp(Pd5, Pd6, Pd7);
                           ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                                 ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25194:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25194:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                 ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                    ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25194:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25194:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                      ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                          ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25194:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25194:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       mm_1_fixp(Pd5, Pd6, Pd7);
                           ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                                 ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25236:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25236:17: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                 ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:20: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                    ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25236:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25236:22: warning: passing 'unsigned int *' to parameter of type 'int *' converts between pointers to integer types with different sign [-Wpointer-sign]
       mm_1_fixp(Pd5, Pd6, Pd7);
                      ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:26: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                          ^
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:25236:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:25236:27: warning: incompatible pointer types passing 'unsigned long long *' to parameter of type 'long *' [-Wincompatible-pointer-types]
       mm_1_fixp(Pd5, Pd6, Pd7);
                           ^~~
-/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
+/home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/values.c:76:33: note: passing argument to parameter here
 void mm_1_fixp(int*, int*, long*);
                                 ^
 24 warnings generated.
@@ -480,7 +480,7 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
 1 warning generated.
 
   Summary of resources:
-     - MUX_GATE: 9
+     - MUX_GATE: 13
      - OR_GATE: 4
      - Pd5_bambu_artificial_ParmMgr_modgen: 1
      - Pd6_bambu_artificial_ParmMgr_modgen: 1
@@ -490,14 +490,14 @@ warning: overriding the module target triple with i386-unknown-linux-gnu [-Wover
      - lut_expr_FU: 2
      - multi_read_cond_FU: 1
      - read_cond_FU: 1
-     - register_SE: 24
-     - register_STD: 18
+     - register_SE: 25
+     - register_STD: 6
      - ui_bit_and_expr_FU: 13
      - ui_bit_ior_concat_expr_FU: 9
      - ui_bit_ior_expr_FU: 3
      - ui_eq_expr_FU: 3
      - ui_lshift_expr_FU: 34
-     - ui_mult_expr_FU: 4
+     - ui_mult_expr_FU: 2
      - ui_plus_expr_FU: 16
      - ui_pointer_plus_expr_FU: 9
      - ui_rshift_expr_FU: 38
@@ -2552,7 +2552,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd7 =  2282647694734262272   expected =  2282647694734262272 
 
-Simulation ended after                51234 cycles.
+Simulation ended after                34850 cycles.
 
 Simulation completed with success
 
@@ -4607,7 +4607,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd7 =  2310074698756521984   expected =  2310074698756521984 
 
-Simulation ended after                51234 cycles.
+Simulation ended after                34850 cycles.
 
 Simulation completed with success
 
@@ -6662,7 +6662,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd7 =  2327732666520043520   expected =  2327732666520043520 
 
-Simulation ended after                51234 cycles.
+Simulation ended after                34850 cycles.
 
 Simulation completed with success
 
@@ -8717,7 +8717,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd7 =  2270339684263526400   expected =  2270339684263526400 
 
-Simulation ended after                51234 cycles.
+Simulation ended after                34850 cycles.
 
 Simulation completed with success
 
@@ -10772,7 +10772,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd7 =  2168249239350542336   expected =  2168249239350542336 
 
-Simulation ended after                51234 cycles.
+Simulation ended after                34850 cycles.
 
 Simulation completed with success
 
@@ -12827,7 +12827,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd7 =  2327939928756846592   expected =  2327939928756846592 
 
-Simulation ended after                51234 cycles.
+Simulation ended after                34850 cycles.
 
 Simulation completed with success
 
@@ -14882,7 +14882,7 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd7 =  2333235855361048576   expected =  2333235855361048576 
 
-Simulation ended after                51234 cycles.
+Simulation ended after                34850 cycles.
 
 Simulation completed with success
 
@@ -16937,25 +16937,40 @@ Reading of vector values from input file completed. Simulation started.
 
  Pd7 =  2135236334007091200   expected =  2135236334007091200 
 
-Simulation ended after                51234 cycles.
+Simulation ended after                34850 cycles.
 
 Simulation completed with success
 
 No more values found. Simulation(s) executed:           8.
 
-- /home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/testbench_mm_1_fixp_tb.v:224: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/testbench_mm_1_fixp_tb.v:224: Verilog $finish
 No more values found. Simulation(s) executed:           8.
 
-- /home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/testbench_mm_1_fixp_tb.v:265: Verilog $finish
-- /home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/HLS_output//simulation/testbench_mm_1_fixp_tb.v:265: Second verilog $finish, exiting
-1. Simulation completed with SUCCESS; Execution time 51234 cycles;
-2. Simulation completed with SUCCESS; Execution time 51234 cycles;
-3. Simulation completed with SUCCESS; Execution time 51234 cycles;
-4. Simulation completed with SUCCESS; Execution time 51234 cycles;
-5. Simulation completed with SUCCESS; Execution time 51234 cycles;
-6. Simulation completed with SUCCESS; Execution time 51234 cycles;
-7. Simulation completed with SUCCESS; Execution time 51234 cycles;
-8. Simulation completed with SUCCESS; Execution time 51234 cycles;
-  Total cycles             : 409872 cycles
+- /home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/testbench_mm_1_fixp_tb.v:265: Verilog $finish
+- /home/zero/Desktop/COaT_project/FromPanda_mm_float_outside_conv/32x32/synthesis_with_opt/HLS_output//simulation/testbench_mm_1_fixp_tb.v:265: Second verilog $finish, exiting
+1. Simulation completed with SUCCESS; Execution time 34850 cycles;
+2. Simulation completed with SUCCESS; Execution time 34850 cycles;
+3. Simulation completed with SUCCESS; Execution time 34850 cycles;
+4. Simulation completed with SUCCESS; Execution time 34850 cycles;
+5. Simulation completed with SUCCESS; Execution time 34850 cycles;
+6. Simulation completed with SUCCESS; Execution time 34850 cycles;
+7. Simulation completed with SUCCESS; Execution time 34850 cycles;
+8. Simulation completed with SUCCESS; Execution time 34850 cycles;
+Analyzing Xilinx synthesis results
+  Total cycles             : 278800 cycles
   Number of executions     : 8
-  Average execution        : 51234 cycles
+  Average execution        : 34850 cycles
+  Slices                   : 289
+  Luts                     : 537
+  Lut FF Pairs             : 537
+  Power                    : 0.35099999999999998
+  Registers                : 411
+  DSPs                     : 8
+  BRAMs                    : 0
+  Clock period             : 10
+  Design minimum period    : 10.089
+  Design slack             : -0.089000000000000412
+  Frequency                : 99.11785112498761
+  AreaxTime                : 188810.08605000001
+  Time                     : 351.60165000000001
+  Tot. Time                : 2812.8132000000001
