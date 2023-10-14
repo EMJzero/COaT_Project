@@ -156,8 +156,12 @@ for res in results:
             name = name_tokens[-3]
     #if 'opt' in name_tokens[-1]:
     #    name += ' - OPT'
-    if 'Pi' not in name and 'SinCos' not in name:
+    if 'Pi' not in name:
         name = name.replace('Compute', '')
+    if 'SinCos' in name:
+        name = 'Cosine'
+    if 'Sqrt' in name:
+        name = 'SquareRoot'
     name = name.replace('FromPanda_mm_float', 'MatrixProduct')
     name = name.replace('max1', '1')
     name = name.replace('FromTaffo_fpbench', 'fpbench')
@@ -192,7 +196,7 @@ for i, row in df.iterrows():
     plt.plot(range(len(df.columns)), row, marker_style + '-', label=test_names[i])
 
 plt.xticks(range(len(df.columns)), df.columns, rotation=0)
-plt.xlabel('Objectives')
+#plt.xlabel('Objectives')
 plt.ylabel('Optimized / Unoptimized')
 
 y_min, y_max = plt.ylim()
@@ -203,12 +207,14 @@ plt.text(-0.4, 1 - 0.07*((curr_y_range)/1.7706771703861004), "better", color='re
 plt.legend(title='Benchmark Name', bbox_to_anchor=(1.02, 0.5), loc='center left')
 
 plt.xlim(-0.5, len(df.columns) - 0.8)
-#plt.ylim(top=3.5)
+#plt.ylim(top=3.2)
+plt.ylim(top=1.6)
 #plt.ylim(bottom=0)
+plt.ylim(bottom=0.2)
 
 #plt.title('Parallel Coordinates Plot for Test Results')
 plt.grid(True)
 plt.tight_layout()
 print_current_plot_range()
-plt.savefig("TAFFO_PandA_plt1_rev9.png")
+#plt.savefig("TAFFO_PandA_plt1_rev9.png")
 plt.show()

@@ -160,8 +160,12 @@ for res in results:
             name = name_tokens[-3]
     #if 'opt' in name_tokens[-1]:
     #    name += ' - OPT'
-    if 'Pi' not in name and 'SinCos' not in name:
+    if 'Pi' not in name:
         name = name.replace('Compute', '')
+    if 'SinCos' in name:
+        name = 'Cosine'
+    if 'Sqrt' in name:
+        name = 'SquareRoot'
     #name = name.replace('SinCos', 'Sin&Cos')    
     name = name.replace('FromPanda_mm_float', 'MatrixProduct')
     name = name.replace('max1', '1')
@@ -201,15 +205,15 @@ for i, name in enumerate(names):
         position = (2, 0.12)
     elif name == 'ConvexHull':
         position = (1.5, -0.3)
-    elif name == 'Sqrt':
-        position = (1, -0.5)
+    elif name == 'SquareRoot':
+        position = (1.5, -0.5)
     elif name == 'MatrixInversion':
         position = (-0.8, -0.7)
     elif name == 'MDPPolicyIteration':
         position = (-1, -1)
     elif name == 'FFT':
         position = (0, -1)
-    elif name == 'ComputeSinCos':
+    elif name == 'Cosine':
         position = (1, 0.6)
     elif name == 'TrainLogisticRegression':
         position = (-2.2, -1)
